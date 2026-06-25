@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>경쟁학원 모니터링</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --acc:#00a891;--acc2:#008f7d;--acc-light:#f0fdfb;--acc-border:#99f0e6;
+  --bg:#f4f5f7;--sur:#fff;--bdr:#e5e7eb;--txt:#111827;--mut:#6b7280;
+}
+body{display:flex;flex-direction:column;height:100vh;overflow:hidden;font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt);font-size:15px;}
+.panel-intro-title{font-size:17px;font-weight:900;color:#111827;letter-spacing:-.02em;}
+
+/* ── 경쟁학원 모니터링 ── */
+#page-monitor{display:flex;flex:1;flex-direction:column;overflow:hidden;height:100%;}
+.mon-filter-bar{background:var(--sur);border-bottom:1px solid var(--bdr);padding:10px 20px;display:flex;align-items:flex-start;gap:12px;flex-shrink:0;flex-wrap:wrap;}
+.mon-filter-label{font-size:11px;font-weight:700;color:var(--mut);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;}
+.mon-pill{font-size:13px;padding:5px 14px;border-radius:99px;border:1px solid var(--bdr);background:var(--sur);color:var(--mut);cursor:pointer;transition:all .15s;white-space:nowrap;}
+.mon-pill:hover{border-color:var(--acc);color:var(--acc);}
+.mon-pill.active-region{background:var(--txt);color:#fff;border-color:var(--txt);}
+.mon-pill.active-date{background:var(--acc);color:#fff;border-color:var(--acc);}
+.mon-sep{width:1px;height:18px;background:var(--bdr);}
+.mon-main{display:flex;flex:1;overflow:hidden;}
+.mon-left{width:38%;border-right:1px solid var(--bdr);display:flex;flex-direction:column;background:var(--sur);overflow:hidden;}
+.mon-left-header{padding:12px 16px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.mon-left-header-title{font-size:14px;font-weight:700;color:var(--txt);}
+.mon-left-header-count{font-size:12px;color:var(--mut);}
+.mon-list-head{display:grid;grid-template-columns:28px 1fr 52px 44px 44px;gap:6px;padding:7px 16px;font-size:11px;font-weight:700;color:var(--mut);letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--bdr);flex-shrink:0;}
+.mon-list-scroll{overflow-y:auto;flex:1;}
+.mon-list-scroll::-webkit-scrollbar{width:4px;}
+.mon-list-scroll::-webkit-scrollbar-track{background:transparent;}
+.mon-list-scroll::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:99px;}
+.mon-ac-row{display:grid;grid-template-columns:28px 1fr 52px 44px 44px;gap:6px;align-items:center;padding:10px 16px;border-bottom:1px solid #f3f4f6;cursor:pointer;transition:background .12s;}
+.mon-ac-row:hover{background:var(--acc-light);}
+.mon-ac-row.selected{background:var(--acc-light);border-left:3px solid var(--acc);padding-left:13px;}
+.mon-rank{font-size:13px;color:var(--mut);text-align:center;}
+.mon-rank.top{color:#f59e0b;font-weight:700;}
+.mon-ac-name-wrap{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.mon-ac-name{font-size:14px;font-weight:500;color:var(--txt);display:flex;align-items:center;gap:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.mon-badge-us{font-size:10px;background:var(--acc-light);color:var(--acc);padding:1px 6px;border-radius:4px;flex-shrink:0;border:1px solid var(--acc-border);font-weight:700;}
+.mon-mini-bar-wrap{height:3px;background:#f3f4f6;border-radius:2px;}
+.mon-mini-bar{height:3px;border-radius:2px;background:var(--acc-border);}
+.mon-mini-bar.us{background:var(--acc);}
+.mon-mention{font-size:13px;color:var(--mut);text-align:center;}
+.mon-pros{font-size:13px;color:#059669;text-align:center;font-weight:600;}
+.mon-cons{font-size:13px;color:#dc2626;text-align:center;font-weight:600;}
+.mon-na{color:#d1d5db;}
+.mon-right{flex:1;display:flex;flex-direction:column;overflow:hidden;background:var(--bg);}
+.mon-right-scroll{overflow-y:auto;flex:1;padding:20px;display:flex;flex-direction:column;gap:14px;}
+.mon-right-scroll::-webkit-scrollbar{width:4px;}
+.mon-right-scroll::-webkit-scrollbar-track{background:transparent;}
+.mon-right-scroll::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:99px;}
+.mon-detail-header{display:flex;align-items:center;justify-content:space-between;}
+.mon-detail-name{font-size:18px;font-weight:900;color:var(--txt);display:flex;align-items:center;gap:8px;letter-spacing:-.02em;}
+.mon-detail-meta{font-size:12px;color:var(--mut);}
+.mon-detail-stats{display:flex;gap:10px;}
+.mon-dstat{background:var(--sur);border:1px solid var(--bdr);border-radius:10px;padding:12px 20px;text-align:center;}
+.mon-dstat-val{font-size:22px;font-weight:900;color:var(--txt);letter-spacing:-.03em;}
+.mon-dstat-val.pos{color:#059669;}
+.mon-dstat-val.neg{color:#dc2626;}
+.mon-dstat-label{font-size:12px;color:var(--mut);margin-top:2px;}
+.mon-section{background:var(--sur);border:1px solid var(--bdr);border-radius:10px;padding:14px 16px;}
+.mon-section-title{font-size:12px;font-weight:700;color:var(--mut);margin-bottom:12px;display:flex;align-items:center;gap:6px;letter-spacing:.04em;text-transform:uppercase;}
+.mon-tags-area{display:flex;gap:8px;flex-wrap:wrap;}
+.mon-tag{font-size:13px;padding:5px 14px;border-radius:99px;border:1px solid;cursor:pointer;display:flex;align-items:center;gap:5px;transition:all .15s;font-weight:500;}
+.mon-tag.pos{background:#f0fdf4;color:#059669;border-color:#6ee7b7;}
+.mon-tag.pos:hover,.mon-tag.pos.sel{background:#059669;color:#fff;border-color:#059669;}
+.mon-tag.neg{background:#fff1f2;color:#dc2626;border-color:#fca5a5;}
+.mon-tag.neg:hover,.mon-tag.neg.sel{background:#dc2626;color:#fff;border-color:#dc2626;}
+.mon-tag-count{opacity:.7;font-size:12px;}
+.mon-posts-box{background:var(--bg);border:1px solid var(--bdr);border-radius:8px;overflow:hidden;margin-top:12px;}
+.mon-posts-box-head{padding:8px 14px;font-size:12px;font-weight:700;color:var(--mut);border-bottom:1px solid var(--bdr);display:flex;align-items:center;gap:8px;background:var(--sur);}
+.mon-active-tag-pill{font-size:12px;padding:2px 8px;border-radius:99px;font-weight:600;}
+.mon-active-tag-pill.pos{background:#059669;color:#fff;}
+.mon-active-tag-pill.neg{background:#dc2626;color:#fff;}
+.mon-post-item{display:flex;align-items:flex-start;justify-content:space-between;padding:11px 14px;border-bottom:1px solid #f3f4f6;gap:10px;}
+.mon-post-item:last-child{border-bottom:none;}
+.mon-post-txt{font-size:13px;color:var(--txt);line-height:1.65;flex:1;}
+.mon-post-link{font-size:12px;color:var(--acc);white-space:nowrap;text-decoration:none;flex-shrink:0;font-weight:600;}
+.mon-post-link:hover{text-decoration:underline;}
+.mon-chart-wrap{position:relative;height:180px;}
+.mon-empty-right{flex:1;display:flex;align-items:center;justify-content:center;color:#d1d5db;font-size:14px;}
+@media(max-width:720px){
+  body{height:auto;overflow:auto;}
+  .mon-main{flex-direction:column;overflow:visible;}
+  .mon-left{width:100%;border-right:none;border-bottom:1px solid var(--bdr);max-height:50vh;}
+  .mon-right{min-height:50vh;}
+}
+</style>
+</head>
+<body>
+
+<div id="page-monitor">
+  <div style="padding:14px 16px 10px;border-bottom:1px solid var(--bdr);background:#fff;flex-shrink:0;">
+    <div class="panel-intro-title">경쟁학원 모니터링</div>
+  </div>
+  <div class="mon-filter-bar">
+    <div class="mon-filter-label">지역</div>
+    <div id="mon-region-group" style="display:flex;gap:6px;align-items:center;">
+      <div class="mon-pill active-region" onclick="monSetRegion(this,'전체')">전체</div>
+      <div class="mon-pill" onclick="monSetRegion(this,'광진')">광진</div>
+      <div class="mon-pill" onclick="monSetRegion(this,'성동')">성동</div>
+      <div class="mon-pill" onclick="monSetRegion(this,'동대문')">동대문</div>
+      <div class="mon-pill" onclick="monSetRegion(this,'중랑')">중랑</div>
+      <div class="mon-pill" onclick="monSetRegion(this,'중계')">중계</div>
+      <div class="mon-pill" onclick="monSetRegion(this,'미사')">미사</div>
+      <div class="mon-pill" onclick="monSetRegion(this,'방이')">방이</div>
+    </div>
+    <div class="mon-sep"></div>
+    <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start;">
+      <div style="display:flex;gap:6px;align-items:center;">
+        <div class="mon-filter-label">기간</div>
+        <div id="mon-date-group" style="display:flex;gap:6px;align-items:center;">
+          <div class="mon-pill active-date" onclick="monSetDate(this,'전체')">전체</div>
+          <div class="mon-pill mon-year-pill" onclick="monToggleYear(this,'2026년')">2026년 ▾</div>
+          <div class="mon-pill mon-year-pill" onclick="monToggleYear(this,'2025년')">2025년 ▾</div>
+          <div class="mon-pill mon-year-pill" onclick="monToggleYear(this,'2024년')">2024년 ▾</div>
+        </div>
+      </div>
+      <div id="mon-month-popup" style="display:none;padding-left:2px;"></div>
+    </div>
+  </div>
+  <div class="mon-main">
+    <div class="mon-left">
+      <div class="mon-left-header">
+        <div class="mon-left-header-title">학원 언급 순위</div>
+        <div class="mon-left-header-count" id="mon-list-count">전체 0개</div>
+      </div>
+      <div class="mon-list-head">
+        <span>#</span><span>학원명</span><span style="text-align:center">언급</span><span style="text-align:center">장점</span><span style="text-align:center">단점</span>
+      </div>
+      <div class="mon-list-scroll" id="mon-ac-list"></div>
+    </div>
+    <div class="mon-right">
+      <div class="mon-right-scroll" id="mon-right-panel">
+        <div class="mon-empty-right">← 학원을 선택하면 상세 내용이 표시됩니다</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/monitor.js"></script>
+<script>monRenderList();</script>
+</body>
+</html>
