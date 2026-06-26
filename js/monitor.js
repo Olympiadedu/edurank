@@ -1,4 +1,4 @@
-var MON_DATA = [
+﻿var MON_DATA = [
   {
     name: '정상', us: false,
     mentions: {
@@ -553,10 +553,14 @@ var MON_DATA = [
     '광진': [1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,2,0,0,0,0]
   },
     pros: [
-
+    {label:'관리/피드백',count:1,posts:[{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400',region:'동대문',date:'2024.08'}]},
+    {label:'차량/접근성',count:2,posts:[{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400',region:'동대문',date:'2024.08'},{text:'중등 수학학원요.',url:'https://cafe.naver.com/richload/10953',region:'동대문',date:'2025.02'}]},
+    {label:'커리큘럼/시스템',count:1,posts:[{text:'씨매스 종암  VS 올림피아드 성동',url:'https://cafe.naver.com/3gumomclub/1517337',region:'성동',date:'2025.12'}]}
   ],
     cons: [
-
+    {label:'가격부담',count:1,posts:[{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400',region:'동대문',date:'2024.08'}]},
+    {label:'숙제/학습량부담',count:1,posts:[{text:'장안동 시매쓰 보내 본 초5 엄마에요.',url:'https://cafe.naver.com/dongbumomschool/4783',region:'동대문',date:'2025.02'}]},
+    {label:'개별관리부족',count:1,posts:[{text:'장안동 시매쓰 보내 본 초5 엄마에요.',url:'https://cafe.naver.com/dongbumomschool/4783',region:'동대문',date:'2025.02'}]}
   ],
     allPosts: [{text:'망우동 학원은 어디로다닐까요',url:'https://cafe.naver.com/jungnangbaby/756126'},{text:'초고학년 장안동 수학학원 괜찮은곳 추천해주세요!',url:'https://cafe.naver.com/dongdaemoonstory/363125'},{text:'신답초로 전학 가요. 학원 문의요..',url:'https://cafe.naver.com/dongdaemoonstory/316901'},{text:'차량 운행되는 영수 학원이 있나요?',url:'https://cafe.naver.com/dongdaemoonstory/316953'},{text:'장안동 시매쓰 보내 본 초5 엄마에요.',url:'https://cafe.naver.com/dongbumomschool/4783'},{text:'왕십리역 뉴파인 수학학원 전화해보고 걱정이네요.',url:'https://cafe.naver.com/dongbumomschool/4977'},{text:'자양. 광진 수학학원',url:'https://cafe.naver.com/dochiya/1315872'},{text:'건대부고 예비고1 수학내신학원 추천부탁드려요~',url:'https://cafe.naver.com/dochiya/1318259'},{text:'광진구 수학학원 추천해주세요',url:'https://cafe.naver.com/dochiya/1276970'},{text:'수학학원 추천 부탁해요',url:'https://cafe.naver.com/dochiya/1286975'}]
   },
@@ -1748,29 +1752,9 @@ var MON_DATE_TO_IDX = {'2024.01':0,'2024.02':1,'2024.03':2,'2024.04':3,'2024.05'
 var MON_YEAR_RANGE = {'2024년':[0,11],'2025년':[12,23],'2026년':[24,28]};
 var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
 var MON_REGION_MAP = {'방이':'송파'};
-var MON_MONTHS = ['24.1','24.2','24.3','24.4','24.5','24.6','24.7','24.8','24.9','24.10','24.11','24.12','25.1','25.2','25.3','25.4','25.5','25.6','25.7','25.8','25.9','25.10','25.11','25.12','26.1','26.2','26.3','26.4','26.5'];
-var MON_DATE_TO_IDX = {'2024.01':0,'2024.02':1,'2024.03':2,'2024.04':3,'2024.05':4,'2024.06':5,'2024.07':6,'2024.08':7,'2024.09':8,'2024.10':9,'2024.11':10,'2024.12':11,'2025.01':12,'2025.02':13,'2025.03':14,'2025.04':15,'2025.05':16,'2025.06':17,'2025.07':18,'2025.08':19,'2025.09':20,'2025.10':21,'2025.11':22,'2025.12':23,'2026.01':24,'2026.02':25,'2026.03':26,'2026.04':27,'2026.05':28};
-var MON_YEAR_RANGE = {'2024년':[0,11],'2025년':[12,23],'2026년':[24,28]};
-var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
-var MON_REGION_MAP = {'방이':'송파'};
-var MON_MONTHS = ['24.1','24.2','24.3','24.4','24.5','24.6','24.7','24.8','24.9','24.10','24.11','24.12','25.1','25.2','25.3','25.4','25.5','25.6','25.7','25.8','25.9','25.10','25.11','25.12','26.1','26.2','26.3','26.4','26.5'];
-var MON_DATE_TO_IDX = {'2024.01':0,'2024.02':1,'2024.03':2,'2024.04':3,'2024.05':4,'2024.06':5,'2024.07':6,'2024.08':7,'2024.09':8,'2024.10':9,'2024.11':10,'2024.12':11,'2025.01':12,'2025.02':13,'2025.03':14,'2025.04':15,'2025.05':16,'2025.06':17,'2025.07':18,'2025.08':19,'2025.09':20,'2025.10':21,'2025.11':22,'2025.12':23,'2026.01':24,'2026.02':25,'2026.03':26,'2026.04':27,'2026.05':28};
-var MON_YEAR_RANGE = {'2024년':[0,11],'2025년':[12,23],'2026년':[24,28]};
-var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
-var MON_REGION_MAP = {'방이':'송파'};
-var MON_MONTHS = ['24.1','24.2','24.3','24.4','24.5','24.6','24.7','24.8','24.9','24.10','24.11','24.12','25.1','25.2','25.3','25.4','25.5','25.6','25.7','25.8','25.9','25.10','25.11','25.12','26.1','26.2','26.3','26.4','26.5'];
-var MON_DATE_TO_IDX = {'2024.01':0,'2024.02':1,'2024.03':2,'2024.04':3,'2024.05':4,'2024.06':5,'2024.07':6,'2024.08':7,'2024.09':8,'2024.10':9,'2024.11':10,'2024.12':11,'2025.01':12,'2025.02':13,'2025.03':14,'2025.04':15,'2025.05':16,'2025.06':17,'2025.07':18,'2025.08':19,'2025.09':20,'2025.10':21,'2025.11':22,'2025.12':23,'2026.01':24,'2026.02':25,'2026.03':26,'2026.04':27,'2026.05':28};
-var MON_YEAR_RANGE = {'2024년':[0,11],'2025년':[12,23],'2026년':[24,28]};
-var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
-var MON_REGION_MAP = {'방이':'송파'};
-var MON_MONTHS = ['24.1','24.2','24.3','24.4','24.5','24.6','24.7','24.8','24.9','24.10','24.11','24.12','25.1','25.2','25.3','25.4','25.5','25.6','25.7','25.8','25.9','25.10','25.11','25.12','26.1','26.2','26.3','26.4','26.5'];
-var MON_DATE_TO_IDX = {'2024.01':0,'2024.02':1,'2024.03':2,'2024.04':3,'2024.05':4,'2024.06':5,'2024.07':6,'2024.08':7,'2024.09':8,'2024.10':9,'2024.11':10,'2024.12':11,'2025.01':12,'2025.02':13,'2025.03':14,'2025.04':15,'2025.05':16,'2025.06':17,'2025.07':18,'2025.08':19,'2025.09':20,'2025.10':21,'2025.11':22,'2025.12':23,'2026.01':24,'2026.02':25,'2026.03':26,'2026.04':27,'2026.05':28};
-var MON_YEAR_RANGE = {'2024년':[0,11],'2025년':[12,23],'2026년':[24,28]};
-var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
-var MON_REGION_MAP = {'방이':'송파'};
 
-var monRegion = '전체', monDate = '전체', monSelected = null, monChart = null;
-var monYearOpen = null;
+
+var monRegion = '전체', monDate = '전체', monSelected = null, monChart = null, monYearOpen = null;
 
 function monSetRegion(el, val) {
   document.querySelectorAll('#mon-region-group .mon-pill').forEach(function(p){ p.classList.remove('active-region'); });
@@ -1827,6 +1811,18 @@ function monGetCount(ac) {
   if (monDate === '전체') return rm['전체'] || 0;
   return rm[monDate] || 0;
 }
+function monFilterList(items) {
+  var regionKey = MON_REGION_MAP[monRegion] || monRegion;
+  return items.map(function(item) {
+    var posts = item.posts.filter(function(post) {
+      if (monRegion !== '전체' && post.region !== regionKey) return false;
+      if (monDate === '전체') return true;
+      if (monDate.indexOf('년') > -1) return post.date && post.date.startsWith(monDate.replace('년', ''));
+      return post.date === monDate;
+    });
+    return {label: item.label, count: posts.length, posts: posts};
+  }).filter(function(item) { return item.count > 0; });
+}
 function monRenderList() {
   var list = monGetFiltered();
   var max = list.length ? monGetCount(list[0]) : 1;
@@ -1855,18 +1851,6 @@ function monSelectAc(idx) {
   monRenderList();
   monRenderDetail(monSelected);
 }
-function monFilterList(items) {
-  var regionKey = MON_REGION_MAP[monRegion] || monRegion;
-  return items.map(function(item) {
-    var posts = item.posts.filter(function(post) {
-      if (monRegion !== '전체' && post.region !== regionKey) return false;
-      if (monDate === '전체') return true;
-      if (monDate.indexOf('년') > -1) return post.date && post.date.startsWith(monDate.replace('년', ''));
-      return post.date === monDate;
-    });
-    return {label: item.label, count: posts.length, posts: posts};
-  }).filter(function(item) { return item.count > 0; });
-}
 function monRenderDetail(ac) {
   var m = monGetCount(ac);
   var filteredPros = monFilterList(ac.pros);
@@ -1878,11 +1862,11 @@ function monRenderDetail(ac) {
 
   var tagsHtml = hasTags ? (
     '<div class="mon-section">' +
-      '<div class="mon-section-title">💬 장점 — 태그를 클릭하면 해당 게시물 표시</div>' +
+      '<div class="mon-section-title">장점 — 태그를 클릭하면 해당 게시물 표시</div>' +
       '<div class="mon-tags-area" id="mon-pos-tags">' +
         (filteredPros.length ? filteredPros.map(function(p){ return '<div class="mon-tag pos" data-label="' + p.label + '" onclick="monShowPosts(\'pos\',' + idx + ',this.getAttribute(\'data-label\'))">' + p.label + ' <span class="mon-tag-count">' + p.count + '</span></div>'; }).join('') : '<span style="font-size:12px;color:#cbd5e1;">데이터 없음</span>') +
       '</div>' +
-      '<div class="mon-section-title" style="margin-top:14px;">⚠️ 단점</div>' +
+      '<div class="mon-section-title" style="margin-top:14px;">단점</div>' +
       '<div class="mon-tags-area" id="mon-neg-tags">' +
         (filteredCons.length ? filteredCons.map(function(c){ return '<div class="mon-tag neg" data-label="' + c.label + '" onclick="monShowPosts(\'neg\',' + idx + ',this.getAttribute(\'data-label\'))">' + c.label + ' <span class="mon-tag-count">' + c.count + '</span></div>'; }).join('') : '<span style="font-size:12px;color:#cbd5e1;">데이터 없음</span>') +
       '</div>' +
@@ -1899,6 +1883,7 @@ function monRenderDetail(ac) {
     chartLabels = ['2024년', '2025년', '2026년'];
     chartData = ['2024년', '2025년', '2026년'].map(function(yr){
       var r = MON_YEAR_RANGE[yr];
+      if (!r) return 0;
       return monthlyData.slice(r[0], r[1] + 1).reduce(function(a, b){ return a + b; }, 0);
     });
     chartColors = ['#99f0e6', '#99f0e6', '#99f0e6'];
@@ -1929,7 +1914,7 @@ function monRenderDetail(ac) {
       '<div class="mon-dstat"><div class="mon-dstat-val pos">' + prosSum + '</div><div class="mon-dstat-label">장점 건수</div></div>' +
       '<div class="mon-dstat"><div class="mon-dstat-val neg">' + consSum + '</div><div class="mon-dstat-label">단점 건수</div></div>' +
     '</div>' +
-    '<div class="mon-section"><div class="mon-section-title">📈 월별 언급 추이</div><div class="mon-chart-wrap"><canvas id="mon-trend-chart"></canvas></div></div>' +
+    '<div class="mon-section"><div class="mon-section-title">월별 언급 추이</div><div class="mon-chart-wrap"><canvas id="mon-trend-chart"></canvas></div></div>' +
     tagsHtml;
 
   if (monChart) { monChart.destroy(); monChart = null; }
@@ -1964,6 +1949,31 @@ function monRenderDetail(ac) {
       }
     }
   });
+}
+function monShowPosts(type, acIdx, label) {
+  var ac = MON_DATA[acIdx];
+  var allItems = type === 'pos' ? ac.pros : ac.cons;
+  var item = allItems.filter(function(t){ return t.label === label; })[0];
+  if (!item) return;
+  var regionKey = MON_REGION_MAP[monRegion] || monRegion;
+  var posts = item.posts.filter(function(post) {
+    if (monRegion !== '전체' && post.region !== regionKey) return false;
+    if (monDate === '전체') return true;
+    if (monDate.indexOf('년') > -1) return post.date && post.date.startsWith(monDate.replace('년', ''));
+    return post.date === monDate;
+  });
+  document.querySelectorAll('.mon-tag').forEach(function(t){ t.classList.remove('sel'); });
+  document.querySelectorAll(type === 'pos' ? '#mon-pos-tags .mon-tag' : '#mon-neg-tags .mon-tag').forEach(function(el){
+    if (el.getAttribute('data-label') === label) el.classList.add('sel');
+  });
+  document.getElementById('mon-posts-container').innerHTML =
+    '<div class="mon-posts-box" style="margin-top:12px;">' +
+      '<div class="mon-posts-box-head">게시물 <span class="mon-active-tag-pill ' + type + '">' + label + '</span> <span style="color:#94a3b8;">' + posts.length + '건</span></div>' +
+      posts.map(function(p){
+        return '<div class="mon-post-item"><div class="mon-post-txt">"' + p.text + '"</div>' +
+          (p.url ? '<a class="mon-post-link" href="' + p.url + '" target="_blank" rel="noopener">원문 →</a>' : '') + '</div>';
+      }).join('') +
+    '</div>';
 }
 function monNavToDate(val) {
   monDate = val;
@@ -2000,29 +2010,4 @@ function monNavToDate(val) {
   }
   monRenderList();
   if (monSelected) monRenderDetail(monSelected);
-}
-function monShowPosts(type, acIdx, label) {
-  var ac = MON_DATA[acIdx];
-  var allItems = type === 'pos' ? ac.pros : ac.cons;
-  var item = allItems.filter(function(t){ return t.label === label; })[0];
-  if (!item) return;
-  var regionKey = MON_REGION_MAP[monRegion] || monRegion;
-  var posts = item.posts.filter(function(post) {
-    if (monRegion !== '전체' && post.region !== regionKey) return false;
-    if (monDate === '전체') return true;
-    if (monDate.indexOf('년') > -1) return post.date && post.date.startsWith(monDate.replace('년', ''));
-    return post.date === monDate;
-  });
-  document.querySelectorAll('.mon-tag').forEach(function(t){ t.classList.remove('sel'); });
-  document.querySelectorAll(type === 'pos' ? '#mon-pos-tags .mon-tag' : '#mon-neg-tags .mon-tag').forEach(function(el){
-    if (el.getAttribute('data-label') === label) el.classList.add('sel');
-  });
-  document.getElementById('mon-posts-container').innerHTML =
-    '<div class="mon-posts-box" style="margin-top:12px;">' +
-      '<div class="mon-posts-box-head">게시물 <span class="mon-active-tag-pill ' + type + '">' + label + '</span> <span style="color:#94a3b8;">' + posts.length + '건</span></div>' +
-      posts.map(function(p){
-        return '<div class="mon-post-item"><div class="mon-post-txt">"' + p.text + '"</div>' +
-          (p.url ? '<a class="mon-post-link" href="' + p.url + '" target="_blank" rel="noopener">원문 →</a>' : '') + '</div>';
-      }).join('') +
-    '</div>';
 }
