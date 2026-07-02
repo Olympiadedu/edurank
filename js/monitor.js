@@ -25,6 +25,41 @@ var MON_DATA = [
     allPosts: [{text:'수학 좀 잘하는 친구는 학원 어디로 가나요?',url:'https://cafe.naver.com/bbbx/848208'},{text:'방이동 청어람 레벨 아시는분 계신가요?~~~',url:'https://cafe.naver.com/everyhomework/842607'},{text:'송파 근처 수학학원 추천',url:'https://cafe.naver.com/mktsesang/1147349'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'수학학원 추천 해주실 수 있을까요?',url:'https://cafe.naver.com/mktsesang/1148867'},{text:'청어람 중3 매주 테스트있나요? 샘들은 어떠신가요?',url:'https://cafe.naver.com/zzandol/752420'},{text:'송파구 문정동에서 중학교 수학학원 어디로 가야할지요?',url:'https://cafe.naver.com/zzandol/754677'},{text:'광장동 학원셔틀?',url:'https://cafe.naver.com/dochiya/1283451'},{text:'방이동 - 수학학원',url:'https://cafe.naver.com/everyhomework/858694'},{text:'잠실쪽 아이 수학학원 추천해주세요',url:'https://cafe.naver.com/everyhomework/858619'}]
   },
   {
+    name: '구주이배', us: false,
+    mentions: {
+    '전체': {'전체':97,'2024년':31,'2025년':37,'2026년':29,'2024.01':3,'2024.02':2,'2024.03':1,'2024.04':1,'2024.06':2,'2024.07':4,'2024.08':4,'2024.09':4,'2024.10':2,'2024.11':5,'2024.12':3,'2025.01':2,'2025.02':7,'2025.03':1,'2025.04':1,'2025.05':3,'2025.06':2,'2025.07':3,'2025.08':4,'2025.09':1,'2025.11':4,'2025.12':9,'2026.01':11,'2026.02':5,'2026.03':7,'2026.04':3,'2026.05':2,'2026.06':1},
+    '미사': {'전체':56,'2024년':19,'2025년':18,'2026년':19,'2024.01':2,'2024.02':2,'2024.03':1,'2024.04':1,'2024.06':2,'2024.07':1,'2024.08':4,'2024.09':2,'2024.10':1,'2024.11':2,'2024.12':1,'2025.01':1,'2025.02':3,'2025.03':1,'2025.04':1,'2025.05':2,'2025.06':1,'2025.07':1,'2025.08':3,'2025.11':3,'2025.12':2,'2026.01':6,'2026.02':3,'2026.03':4,'2026.04':3,'2026.05':2,'2026.06':1},
+    '성동': {'전체':3,'2024년':1,'2026년':2,'2024.07':1,'2026.01':1,'2026.03':1},
+    '광진': {'전체':13,'2024년':1,'2025년':8,'2026년':4,'2024.07':1,'2025.02':4,'2025.12':4,'2026.01':1,'2026.02':2,'2026.03':1},
+    '송파': {'전체':14,'2024년':7,'2025년':5,'2026년':2,'2024.07':1,'2024.09':2,'2024.11':3,'2024.12':1,'2025.06':1,'2025.07':2,'2025.09':1,'2025.12':1,'2026.01':2}
+  },
+    monthly: {
+    '전체': [3,2,1,1,0,2,4,4,4,2,5,3,2,7,1,1,3,2,3,4,1,0,4,9,11,5,7,3,2,1],
+    '미사': [2,2,1,1,0,2,1,4,2,1,2,1,1,3,1,1,2,1,1,3,0,0,3,2,6,3,4,3,2,1],
+    '성동': [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0],
+    '광진': [0,0,0,0,0,0,1,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,4,1,2,1,0,0,0],
+    '송파': [0,0,0,0,0,0,1,0,2,0,3,1,0,0,0,0,0,1,2,0,1,0,0,1,2,0,0,0,0,0]
+  },
+    pros: [
+    {label:'관리/피드백',count:4,posts:[{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09'},{text:'중등 수학학원 추천부탁드립니다',url:'https://cafe.naver.com/ira111/856981',region:'미사',date:'2025.05'},{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12'}]},
+    {label:'셔틀/접근성',count:6,posts:[{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868',region:'강동',date:'2024.01'},{text:'중3 수학학원 문의요',url:'https://cafe.naver.com/kidsinlove/1152552',region:'미사',date:'2025.05'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08'},{text:'초5) 자이쪽 4시30분 이후 수학학원을 찾고있어요',url:'https://cafe.naver.com/ira111/897824',region:'미사',date:'2026.01'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01'}]},
+    {label:'커리큘럼/시스템',count:12,posts:[{text:'미사고,미강고 대입 현황',url:'https://cafe.naver.com/ira111/780732',region:'미사',date:'2024.03'},{text:'구주이배요',url:'https://cafe.naver.com/ira111/813429',region:'미사',date:'2024.08'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09'},{text:'예비초4 대형학원 수학(구주이배&파인만)',url:'https://cafe.naver.com/ira111/839684',region:'미사',date:'2025.01'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08'},{text:'수학',url:'https://cafe.naver.com/ira111/889558',region:'미사',date:'2025.11'},{text:'한홀초 아이들 학원 주로 어디 보내시나요?',url:'https://cafe.naver.com/ira111/892542',region:'미사',date:'2025.12'},{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12'},{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01'},{text:'초3 수학학원 선택하기 어렵네요.',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04'}]},
+    {label:'차량/접근성',count:1,posts:[{text:'중등 2학년 수학학원 좀 추천해주세요~',url:'https://cafe.naver.com/kidsinlove/1122695',region:'미사',date:'2024.08'}]},
+    {label:'선생님/수업',count:3,posts:[{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07'},{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12'}]},
+    {label:'시설/환경',count:1,posts:[{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07'}]},
+    {label:'가격부담',count:1,posts:[{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12'}]},
+    {label:'반복/심화학습',count:1,posts:[{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12'}]},
+    {label:'성적향상/성과',count:1,posts:[{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01'}]}
+  ],
+    cons: [
+    {label:'숙제/학습량부담',count:5,posts:[{text:'아이 학원 정하는게 보통일이 아니네요~',url:'https://cafe.naver.com/ira111/774047',region:'미사',date:'2024.01'},{text:'학원 그만두고 싶대요',url:'https://cafe.naver.com/ira111/800373',region:'미사',date:'2024.06'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09'},{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01'},{text:'청어람 어떤가요??',url:'https://cafe.naver.com/ira111/896175',region:'강동',date:'2026.01'}]},
+    {label:'개별관리부족',count:2,posts:[{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08'},{text:'초등 6학년 영어, 수학 학원 문의드려요!',url:'https://cafe.naver.com/dochiya/1320433',region:'광진',date:'2026.03'}]},
+    {label:'커리큘럼/시스템',count:2,posts:[{text:'구주이배 파인만',url:'https://cafe.naver.com/ira111/885543',region:'미사',date:'2025.11'},{text:'구주이베*파인만',url:'https://cafe.naver.com/ira111/904265',region:'미사',date:'2026.03'}]},
+    {label:'가격부담',count:1,posts:[{text:'청어람 어떤가요??',url:'https://cafe.naver.com/ira111/896175',region:'강동',date:'2026.01'}]}
+  ],
+    allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'신장동 영수학원이요 ^^',url:'https://cafe.naver.com/kidsinlove/1186013'},{text:'미사 구주이배 몇학년 부터',url:'https://cafe.naver.com/ira111/772873'},{text:'아이 학원 정하는게 보통일이 아니네요~',url:'https://cafe.naver.com/ira111/774047'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'예비5학년 수학학원',url:'https://cafe.naver.com/ira111/776866'},{text:'미사고,미강고 대입 현황',url:'https://cafe.naver.com/ira111/780732'},{text:'구주이배 보통 여름방학기간 언제인가요?',url:'https://cafe.naver.com/ira111/792237'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'}]
+  },
+  {
     name: '정상', us: false,
     mentions: {
     '전체': {'전체':97,'2024년':37,'2025년':40,'2026년':20,'2024.01':6,'2024.02':3,'2024.03':1,'2024.05':2,'2024.06':4,'2024.07':1,'2024.08':5,'2024.09':3,'2024.10':3,'2024.11':4,'2024.12':5,'2025.01':5,'2025.02':7,'2025.03':9,'2025.04':1,'2025.05':3,'2025.06':1,'2025.08':2,'2025.09':1,'2025.11':6,'2025.12':5,'2026.01':5,'2026.02':2,'2026.03':5,'2026.04':3,'2026.05':2,'2026.06':3},
@@ -60,39 +95,30 @@ var MON_DATA = [
     allPosts: [{text:'초3 영어 수학 학원 추천부탁드립니다!',url:'https://cafe.naver.com/dochiya/1322184'},{text:'초3아이 수학학원 시간 조율 문의드려요',url:'https://cafe.naver.com/kidsinlove/1184573'},{text:'광장동 영어학원 추천해주세요',url:'https://cafe.naver.com/dochiya/1276971'},{text:'광진구 영어학원 추천해주세요~',url:'https://cafe.naver.com/dochiya/1276768'},{text:'풍산초 학원여부~',url:'https://cafe.naver.com/ira111/773458'},{text:'영어학원. 정상 vs 심슨',url:'https://cafe.naver.com/ira111/771928'},{text:'위례 중등 수학, 영어학원 추천 부탁드려요^^',url:'https://cafe.naver.com/everyhomework/842602'},{text:'노원 영어학원 어디가 괜찮나요?',url:'https://cafe.naver.com/sjkdhj467/900963'},{text:'광진구 영어학원',url:'https://cafe.naver.com/dochiya/1278242'},{text:'광진구 영어학원 괜찮은곳있나요',url:'https://cafe.naver.com/dochiya/1278422'}]
   },
   {
-    name: '구주이배', us: false,
+    name: '늘푸른', us: false,
     mentions: {
-    '전체': {'전체':94,'2024년':31,'2025년':36,'2026년':27,'2024.01':3,'2024.02':2,'2024.03':1,'2024.04':1,'2024.06':2,'2024.07':4,'2024.08':4,'2024.09':4,'2024.10':2,'2024.11':5,'2024.12':3,'2025.01':2,'2025.02':7,'2025.03':1,'2025.04':1,'2025.05':3,'2025.06':2,'2025.07':3,'2025.08':4,'2025.09':1,'2025.11':4,'2025.12':8,'2026.01':11,'2026.02':4,'2026.03':7,'2026.04':2,'2026.05':2,'2026.06':1},
-    '미사': {'전체':55,'2024년':19,'2025년':18,'2026년':18,'2024.01':2,'2024.02':2,'2024.03':1,'2024.04':1,'2024.06':2,'2024.07':1,'2024.08':4,'2024.09':2,'2024.10':1,'2024.11':2,'2024.12':1,'2025.01':1,'2025.02':3,'2025.03':1,'2025.04':1,'2025.05':2,'2025.06':1,'2025.07':1,'2025.08':3,'2025.11':3,'2025.12':2,'2026.01':6,'2026.02':3,'2026.03':4,'2026.04':2,'2026.05':2,'2026.06':1},
-    '성동': {'전체':3,'2024년':1,'2026년':2,'2024.07':1,'2026.01':1,'2026.03':1},
-    '광진': {'전체':11,'2024년':1,'2025년':7,'2026년':3,'2024.07':1,'2025.02':4,'2025.12':3,'2026.01':1,'2026.02':1,'2026.03':1},
-    '송파': {'전체':14,'2024년':7,'2025년':5,'2026년':2,'2024.07':1,'2024.09':2,'2024.11':3,'2024.12':1,'2025.06':1,'2025.07':2,'2025.09':1,'2025.12':1,'2026.01':2}
+    '전체': {'전체':81,'2024년':23,'2025년':41,'2026년':17,'2024.01':2,'2024.02':1,'2024.03':2,'2024.05':1,'2024.06':1,'2024.07':1,'2024.09':2,'2024.10':3,'2024.11':6,'2024.12':4,'2025.01':2,'2025.02':3,'2025.03':2,'2025.04':6,'2025.05':3,'2025.06':2,'2025.07':4,'2025.08':4,'2025.09':1,'2025.10':2,'2025.11':9,'2025.12':3,'2026.01':5,'2026.02':10,'2026.03':1,'2026.06':1},
+    '광진': {'전체':13,'2024년':5,'2025년':5,'2026년':3,'2024.01':1,'2024.02':1,'2024.03':2,'2024.06':1,'2025.01':1,'2025.02':2,'2025.08':1,'2025.12':1,'2026.01':1,'2026.02':2},
+    '송파': {'전체':59,'2024년':16,'2025년':31,'2026년':12,'2024.05':1,'2024.07':1,'2024.09':2,'2024.10':2,'2024.11':6,'2024.12':4,'2025.01':1,'2025.02':1,'2025.03':1,'2025.04':6,'2025.05':2,'2025.06':2,'2025.07':4,'2025.08':3,'2025.09':1,'2025.10':2,'2025.11':7,'2025.12':1,'2026.01':4,'2026.02':7,'2026.06':1},
+    '성동': {'전체':1,'2026년':1,'2026.02':1}
   },
     monthly: {
-    '전체': [3,2,1,1,0,2,4,4,4,2,5,3,2,7,1,1,3,2,3,4,1,0,4,8,11,4,7,2,2,1],
-    '미사': [2,2,1,1,0,2,1,4,2,1,2,1,1,3,1,1,2,1,1,3,0,0,3,2,6,3,4,2,2,1],
-    '성동': [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0],
-    '광진': [0,0,0,0,0,0,1,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,3,1,1,1,0,0,0],
-    '송파': [0,0,0,0,0,0,1,0,2,0,3,1,0,0,0,0,0,1,2,0,1,0,0,1,2,0,0,0,0,0]
+    '전체': [2,1,2,0,1,1,1,0,2,3,6,4,2,3,2,6,3,2,4,4,1,2,9,3,5,10,1,0,0,1],
+    '광진': [1,1,2,0,0,1,0,0,0,0,0,0,1,2,0,0,0,0,0,1,0,0,0,1,1,2,0,0,0,0],
+    '송파': [0,0,0,0,1,0,1,0,2,2,6,4,1,1,1,6,2,2,4,3,1,2,7,1,4,7,0,0,0,1],
+    '성동': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0]
   },
     pros: [
-    {label:'관리/피드백',count:4,posts:[{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09'},{text:'중등 수학학원 추천부탁드립니다',url:'https://cafe.naver.com/ira111/856981',region:'미사',date:'2025.05'},{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12'}]},
-    {label:'셔틀/접근성',count:6,posts:[{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868',region:'강동',date:'2024.01'},{text:'중3 수학학원 문의요',url:'https://cafe.naver.com/kidsinlove/1152552',region:'미사',date:'2025.05'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08'},{text:'초5) 자이쪽 4시30분 이후 수학학원을 찾고있어요',url:'https://cafe.naver.com/ira111/897824',region:'미사',date:'2026.01'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01'}]},
-    {label:'커리큘럼/시스템',count:12,posts:[{text:'미사고,미강고 대입 현황',url:'https://cafe.naver.com/ira111/780732',region:'미사',date:'2024.03'},{text:'구주이배요',url:'https://cafe.naver.com/ira111/813429',region:'미사',date:'2024.08'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09'},{text:'예비초4 대형학원 수학(구주이배&파인만)',url:'https://cafe.naver.com/ira111/839684',region:'미사',date:'2025.01'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08'},{text:'수학',url:'https://cafe.naver.com/ira111/889558',region:'미사',date:'2025.11'},{text:'한홀초 아이들 학원 주로 어디 보내시나요?',url:'https://cafe.naver.com/ira111/892542',region:'미사',date:'2025.12'},{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12'},{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01'},{text:'초3 수학학원 선택하기 어렵네요.',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04'}]},
-    {label:'차량/접근성',count:1,posts:[{text:'중등 2학년 수학학원 좀 추천해주세요~',url:'https://cafe.naver.com/kidsinlove/1122695',region:'미사',date:'2024.08'}]},
-    {label:'선생님/수업',count:3,posts:[{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07'},{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12'}]},
-    {label:'시설/환경',count:1,posts:[{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07'}]},
-    {label:'가격부담',count:1,posts:[{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12'}]},
-    {label:'반복/심화학습',count:1,posts:[{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12'}]},
-    {label:'성적향상/성과',count:1,posts:[{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01'}]}
+    {label:'관리/피드백',count:2,posts:[{text:'예비중 수학학원 궁금합니다.',url:'https://cafe.naver.com/everyhomework/872018',region:'송파',date:'2024.11'},{text:'예비중)안녕하세요. 한빛중 내신 봐주는 수학 학원 있을까요?',url:'https://cafe.naver.com/bbbx/778418',region:'송파',date:'2025.04'}]},
+    {label:'커리큘럼/시스템',count:5,posts:[{text:'예비중 수학학원 궁금합니다.',url:'https://cafe.naver.com/everyhomework/872018',region:'송파',date:'2024.11'},{text:'중등 수학학원 추천부탁드려요.',url:'https://cafe.naver.com/bbbx/780159',region:'송파',date:'2025.04'},{text:'위례 수학학원 문의',url:'https://cafe.naver.com/everyhomework/898563',region:'송파',date:'2025.08'},{text:'초고학년 수학학원 알려주세요~~',url:'https://cafe.naver.com/everyhomework/913146',region:'송파',date:'2026.02'},{text:'강의하는 아이들.',url:'https://cafe.naver.com/everyhomework/912996',region:'송파',date:'2026.02'}]},
+    {label:'시설/환경',count:1,posts:[{text:'광장동 중등수학 추천해주세요.',url:'https://cafe.naver.com/dochiya/1301240',region:'광진',date:'2025.02'}]},
+    {label:'셔틀/접근성',count:2,posts:[{text:'중등 수학학원 추천부탁드려요.',url:'https://cafe.naver.com/bbbx/780159',region:'송파',date:'2025.04'},{text:'송파 초저다닐만한 수학학원있을까요?',url:'https://cafe.naver.com/everyhomework/913305',region:'송파',date:'2026.02'}]},
+    {label:'선생님/수업',count:2,posts:[{text:'초등학교 수학학원 송파 vs 잠실.. 거리 때문에 고민이에요',url:'https://cafe.naver.com/bbbx/827415',region:'송파',date:'2026.01'},{text:'강의하는 아이들.',url:'https://cafe.naver.com/everyhomework/912996',region:'송파',date:'2026.02'}]}
   ],
     cons: [
-    {label:'숙제/학습량부담',count:5,posts:[{text:'아이 학원 정하는게 보통일이 아니네요~',url:'https://cafe.naver.com/ira111/774047',region:'미사',date:'2024.01'},{text:'학원 그만두고 싶대요',url:'https://cafe.naver.com/ira111/800373',region:'미사',date:'2024.06'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09'},{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01'},{text:'청어람 어떤가요??',url:'https://cafe.naver.com/ira111/896175',region:'강동',date:'2026.01'}]},
-    {label:'개별관리부족',count:2,posts:[{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08'},{text:'초등 6학년 영어, 수학 학원 문의드려요!',url:'https://cafe.naver.com/dochiya/1320433',region:'광진',date:'2026.03'}]},
-    {label:'커리큘럼/시스템',count:2,posts:[{text:'구주이배 파인만',url:'https://cafe.naver.com/ira111/885543',region:'미사',date:'2025.11'},{text:'구주이베*파인만',url:'https://cafe.naver.com/ira111/904265',region:'미사',date:'2026.03'}]},
-    {label:'가격부담',count:1,posts:[{text:'청어람 어떤가요??',url:'https://cafe.naver.com/ira111/896175',region:'강동',date:'2026.01'}]}
+    {label:'숙제/학습량부담',count:1,posts:[{text:'초등 고학년 수학학원 고민 중이에요',url:'https://cafe.naver.com/bbbx/810657',region:'송파',date:'2025.11'}]}
   ],
-    allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'신장동 영수학원이요 ^^',url:'https://cafe.naver.com/kidsinlove/1186013'},{text:'미사 구주이배 몇학년 부터',url:'https://cafe.naver.com/ira111/772873'},{text:'아이 학원 정하는게 보통일이 아니네요~',url:'https://cafe.naver.com/ira111/774047'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'예비5학년 수학학원',url:'https://cafe.naver.com/ira111/776866'},{text:'미사고,미강고 대입 현황',url:'https://cafe.naver.com/ira111/780732'},{text:'구주이배 보통 여름방학기간 언제인가요?',url:'https://cafe.naver.com/ira111/792237'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'}]
+    allPosts: [{text:'건대부중 수학학원추천이요',url:'https://cafe.naver.com/dochiya/1275864'},{text:'위례 중등 수학, 영어학원 추천 부탁드려요^^',url:'https://cafe.naver.com/everyhomework/842602'},{text:'광진구 수학학원 추천좀..',url:'https://cafe.naver.com/dochiya/1278125'},{text:'광장동, 구의동 초등3학년 수학학원 추천해주세요!',url:'https://cafe.naver.com/dochiya/1280908'},{text:'구의동 초등수학 추천해주세요',url:'https://cafe.naver.com/dochiya/1280284'},{text:'수학학원 추천 부탁드려요~',url:'https://cafe.naver.com/everyhomework/854398'},{text:'수학학원 추천 부탁해요',url:'https://cafe.naver.com/dochiya/1286975'},{text:'방이동 - 수학학원',url:'https://cafe.naver.com/everyhomework/858694'},{text:'늘푸른수학원 vs 잠실파인만',url:'https://cafe.naver.com/everyhomework/867086'},{text:'방산초 학군 학원이요',url:'https://cafe.naver.com/everyhomework/864857'}]
   },
   {
     name: '심슨', us: false,
@@ -126,39 +152,15 @@ var MON_DATA = [
     allPosts: [{text:'초3 영어 수학 학원 추천부탁드립니다!',url:'https://cafe.naver.com/dochiya/1322184'},{text:'광장동 영어학원 추천해주세요',url:'https://cafe.naver.com/dochiya/1276971'},{text:'예비초 영어학원(어학원)',url:'https://cafe.naver.com/dochiya/1276440'},{text:'영어학원. 정상 vs 심슨',url:'https://cafe.naver.com/ira111/771928'},{text:'광진구 영어학원',url:'https://cafe.naver.com/dochiya/1278242'},{text:'성동구 영어학원 추천 부탁 드립니다.',url:'https://cafe.naver.com/dochiya/1278048'},{text:'초등학생 수학, 영어 학원 어디가 괜찮을까요?',url:'https://cafe.naver.com/dochiya/1280651'},{text:'초저 아이 광장동 영어학원 추천부탁드립니다.',url:'https://cafe.naver.com/dochiya/1286126'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'},{text:'광장동 초저 영어학원 추천해주세요',url:'https://cafe.naver.com/dochiya/1289099'}]
   },
   {
-    name: '늘푸른', us: false,
-    mentions: {
-    '전체': {'전체':71,'2024년':18,'2025년':39,'2026년':14,'2024.01':1,'2024.05':1,'2024.06':1,'2024.07':1,'2024.09':1,'2024.10':3,'2024.11':6,'2024.12':4,'2025.01':2,'2025.02':3,'2025.03':2,'2025.04':6,'2025.05':3,'2025.06':2,'2025.07':3,'2025.08':4,'2025.09':1,'2025.10':2,'2025.11':9,'2025.12':2,'2026.01':4,'2026.02':8,'2026.03':1,'2026.06':1},
-    '송파': {'전체':55,'2024년':15,'2025년':30,'2026년':10,'2024.05':1,'2024.07':1,'2024.09':1,'2024.10':2,'2024.11':6,'2024.12':4,'2025.01':1,'2025.02':1,'2025.03':1,'2025.04':6,'2025.05':2,'2025.06':2,'2025.07':3,'2025.08':3,'2025.09':1,'2025.10':2,'2025.11':7,'2025.12':1,'2026.01':3,'2026.02':6,'2026.06':1},
-    '광진': {'전체':8,'2024년':1,'2025년':4,'2026년':3,'2024.06':1,'2025.01':1,'2025.02':2,'2025.08':1,'2026.01':1,'2026.02':2}
-  },
-    monthly: {
-    '전체': [1,0,0,0,1,1,1,0,1,3,6,4,2,3,2,6,3,2,3,4,1,2,9,2,4,8,1,0,0,1],
-    '송파': [0,0,0,0,1,0,1,0,1,2,6,4,1,1,1,6,2,2,3,3,1,2,7,1,3,6,0,0,0,1],
-    '광진': [0,0,0,0,0,1,0,0,0,0,0,0,1,2,0,0,0,0,0,1,0,0,0,0,1,2,0,0,0,0]
-  },
-    pros: [
-    {label:'관리/피드백',count:2,posts:[{text:'예비중 수학학원 궁금합니다.',url:'https://cafe.naver.com/everyhomework/872018',region:'송파',date:'2024.11'},{text:'예비중)안녕하세요. 한빛중 내신 봐주는 수학 학원 있을까요?',url:'https://cafe.naver.com/bbbx/778418',region:'송파',date:'2025.04'}]},
-    {label:'커리큘럼/시스템',count:5,posts:[{text:'예비중 수학학원 궁금합니다.',url:'https://cafe.naver.com/everyhomework/872018',region:'송파',date:'2024.11'},{text:'중등 수학학원 추천부탁드려요.',url:'https://cafe.naver.com/bbbx/780159',region:'송파',date:'2025.04'},{text:'위례 수학학원 문의',url:'https://cafe.naver.com/everyhomework/898563',region:'송파',date:'2025.08'},{text:'초고학년 수학학원 알려주세요~~',url:'https://cafe.naver.com/everyhomework/913146',region:'송파',date:'2026.02'},{text:'강의하는 아이들.',url:'https://cafe.naver.com/everyhomework/912996',region:'송파',date:'2026.02'}]},
-    {label:'시설/환경',count:1,posts:[{text:'광장동 중등수학 추천해주세요.',url:'https://cafe.naver.com/dochiya/1301240',region:'광진',date:'2025.02'}]},
-    {label:'셔틀/접근성',count:2,posts:[{text:'중등 수학학원 추천부탁드려요.',url:'https://cafe.naver.com/bbbx/780159',region:'송파',date:'2025.04'},{text:'송파 초저다닐만한 수학학원있을까요?',url:'https://cafe.naver.com/everyhomework/913305',region:'송파',date:'2026.02'}]},
-    {label:'선생님/수업',count:2,posts:[{text:'초등학교 수학학원 송파 vs 잠실.. 거리 때문에 고민이에요',url:'https://cafe.naver.com/bbbx/827415',region:'송파',date:'2026.01'},{text:'강의하는 아이들.',url:'https://cafe.naver.com/everyhomework/912996',region:'송파',date:'2026.02'}]}
-  ],
-    cons: [
-    {label:'숙제/학습량부담',count:1,posts:[{text:'초등 고학년 수학학원 고민 중이에요',url:'https://cafe.naver.com/bbbx/810657',region:'송파',date:'2025.11'}]}
-  ],
-    allPosts: [{text:'위례 중등 수학, 영어학원 추천 부탁드려요^^',url:'https://cafe.naver.com/everyhomework/842602'},{text:'수학학원 추천 부탁드려요~',url:'https://cafe.naver.com/everyhomework/854398'},{text:'수학학원 추천 부탁해요',url:'https://cafe.naver.com/dochiya/1286975'},{text:'방이동 - 수학학원',url:'https://cafe.naver.com/everyhomework/858694'},{text:'방산초 학군 학원이요',url:'https://cafe.naver.com/everyhomework/864857'},{text:'강동 초등고학년 교과수학학원',url:'https://cafe.naver.com/everyhomework/870750'},{text:'방이동 고등수학',url:'https://cafe.naver.com/everyhomework/870544'},{text:'둔촌동 학원가 질문이요~',url:'https://cafe.naver.com/everyhomework/867964'},{text:'방이동 청어람 수학학원',url:'https://cafe.naver.com/ira111/827562'},{text:'초6 수학학원 추천부탁드려요',url:'https://cafe.naver.com/everyhomework/873367'}]
-  },
-  {
     name: '파인만', us: false,
     mentions: {
-    '전체': {'전체':56,'2024년':18,'2025년':22,'2026년':16,'2024.01':1,'2024.02':1,'2024.03':1,'2024.09':1,'2024.10':1,'2024.11':7,'2024.12':6,'2025.01':1,'2025.02':1,'2025.03':1,'2025.04':2,'2025.05':2,'2025.06':1,'2025.07':1,'2025.08':1,'2025.09':2,'2025.11':4,'2025.12':6,'2026.01':4,'2026.02':4,'2026.03':4,'2026.05':3,'2026.06':1},
+    '전체': {'전체':61,'2024년':20,'2025년':25,'2026년':16,'2024.01':2,'2024.02':1,'2024.03':1,'2024.09':1,'2024.10':2,'2024.11':7,'2024.12':6,'2025.01':1,'2025.02':1,'2025.03':1,'2025.04':2,'2025.05':2,'2025.06':1,'2025.07':2,'2025.08':2,'2025.09':2,'2025.11':4,'2025.12':7,'2026.01':4,'2026.02':4,'2026.03':4,'2026.05':3,'2026.06':1},
     '미사': {'전체':37,'2024년':11,'2025년':11,'2026년':15,'2024.02':1,'2024.09':1,'2024.11':4,'2024.12':5,'2025.01':1,'2025.02':1,'2025.03':1,'2025.05':1,'2025.06':1,'2025.11':4,'2025.12':2,'2026.01':4,'2026.02':4,'2026.03':3,'2026.05':3,'2026.06':1},
     '송파': {'전체':7,'2024년':3,'2025년':4,'2024.10':1,'2024.11':2,'2025.04':1,'2025.07':1,'2025.09':1,'2025.12':1},
     '성동': {'전체':1,'2025년':1,'2025.04':1}
   },
     monthly: {
-    '전체': [1,1,1,0,0,0,0,0,1,1,7,6,1,1,1,2,2,1,1,1,2,0,4,6,4,4,4,0,3,1],
+    '전체': [2,1,1,0,0,0,0,0,1,2,7,6,1,1,1,2,2,1,2,2,2,0,4,7,4,4,4,0,3,1],
     '미사': [0,1,0,0,0,0,0,0,1,0,4,5,1,1,1,0,1,1,0,0,0,0,4,2,4,4,3,0,3,1],
     '송파': [0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0],
     '성동': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -179,21 +181,21 @@ var MON_DATA = [
     {label:'숙제/학습량부담',count:1,posts:[{text:'파인만 숙제량은 어때요?',url:'https://cafe.naver.com/ira111/892227',region:'미사',date:'2025.12'}]},
     {label:'셔틀불만',count:1,posts:[{text:'청어람,파인만 두학원 어떤가요?',url:'https://cafe.naver.com/ira111/891785',region:'강동',date:'2025.12'}]}
   ],
-    allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'초3 파인만 레벨테스트 후 등록 고민인데요…',url:'https://cafe.naver.com/ira111/914002'},{text:'은가람중 과학학원 어디다니나요?',url:'https://cafe.naver.com/ira111/912725'},{text:'심화수학하는데요',url:'https://cafe.naver.com/ira111/772671'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'강동파인만 수학학원 이요~',url:'https://cafe.naver.com/ira111/780344'},{text:'요즘엔 이런것도 있네요',url:'https://cafe.naver.com/ira111/816138'},{text:'파인만, 청어람 질문이요~',url:'https://cafe.naver.com/ira111/822429'},{text:'깊은생각 수학학원 보내시는 분께 여쭤봅니다.',url:'https://cafe.naver.com/ira111/828557'},{text:'방이동 청어람 수학학원',url:'https://cafe.naver.com/ira111/827562'}]
+    allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'초3 파인만 레벨테스트 후 등록 고민인데요…',url:'https://cafe.naver.com/ira111/914002'},{text:'은가람중 과학학원 어디다니나요?',url:'https://cafe.naver.com/ira111/912725'},{text:'심화수학하는데요',url:'https://cafe.naver.com/ira111/772671'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'강동파인만 수학학원 이요~',url:'https://cafe.naver.com/ira111/780344'},{text:'요즘엔 이런것도 있네요',url:'https://cafe.naver.com/ira111/816138'},{text:'파인만, 청어람 질문이요~',url:'https://cafe.naver.com/ira111/822429'},{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630'}]
   },
   {
     name: '깊은생각', us: false,
     mentions: {
-    '전체': {'전체':48,'2024년':16,'2025년':22,'2026년':10,'2024.01':2,'2024.02':2,'2024.04':1,'2024.06':1,'2024.08':1,'2024.09':1,'2024.10':2,'2024.11':4,'2024.12':2,'2025.01':1,'2025.02':3,'2025.03':3,'2025.05':1,'2025.06':1,'2025.08':1,'2025.09':1,'2025.10':1,'2025.11':6,'2025.12':4,'2026.01':3,'2026.02':4,'2026.04':2,'2026.05':1},
-    '미사': {'전체':16,'2024년':11,'2025년':2,'2026년':3,'2024.01':1,'2024.02':2,'2024.04':1,'2024.06':1,'2024.09':1,'2024.10':2,'2024.11':1,'2024.12':2,'2025.03':1,'2025.08':1,'2026.02':2,'2026.05':1},
+    '전체': {'전체':51,'2024년':17,'2025년':24,'2026년':10,'2024.01':2,'2024.02':2,'2024.04':1,'2024.06':1,'2024.07':1,'2024.08':1,'2024.09':1,'2024.10':2,'2024.11':4,'2024.12':2,'2025.01':2,'2025.02':3,'2025.03':3,'2025.05':1,'2025.06':1,'2025.08':1,'2025.09':1,'2025.10':2,'2025.11':6,'2025.12':4,'2026.01':3,'2026.02':4,'2026.04':2,'2026.05':1},
+    '미사': {'전체':19,'2024년':12,'2025년':4,'2026년':3,'2024.01':1,'2024.02':2,'2024.04':1,'2024.06':1,'2024.07':1,'2024.09':1,'2024.10':2,'2024.11':1,'2024.12':2,'2025.01':1,'2025.03':1,'2025.08':1,'2025.10':1,'2026.02':2,'2026.05':1},
     '동대문': {'전체':4,'2024년':1,'2025년':1,'2026년':2,'2024.08':1,'2025.10':1,'2026.02':1,'2026.04':1},
     '송파': {'전체':16,'2024년':3,'2025년':10,'2026년':3,'2024.11':3,'2025.03':1,'2025.06':1,'2025.11':5,'2025.12':3,'2026.01':3},
     '광진': {'전체':5,'2025년':4,'2026년':1,'2025.02':3,'2025.03':1,'2026.02':1},
     '중랑': {'전체':1,'2026년':1,'2026.04':1}
   },
     monthly: {
-    '전체': [2,2,0,1,0,1,0,1,1,2,4,2,1,3,3,0,1,1,0,1,1,1,6,4,3,4,0,2,1,0],
-    '미사': [1,2,0,1,0,1,0,0,1,2,1,2,0,0,1,0,0,0,0,1,0,0,0,0,0,2,0,0,1,0],
+    '전체': [2,2,0,1,0,1,1,1,1,2,4,2,2,3,3,0,1,1,0,1,1,2,6,4,3,4,0,2,1,0],
+    '미사': [1,2,0,1,0,1,1,0,1,2,1,2,1,0,1,0,0,0,0,1,0,1,0,0,0,2,0,0,1,0],
     '동대문': [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0],
     '송파': [0,0,0,0,0,0,0,0,0,0,3,0,0,0,1,0,0,1,0,0,0,0,5,3,3,0,0,0,0,0],
     '광진': [0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
@@ -212,7 +214,54 @@ var MON_DATA = [
     {label:'숙제/학습량부담',count:1,posts:[{text:'장안동 시매쓰 보내 본 초5 엄마에요.',url:'https://cafe.naver.com/dongbumomschool/4783',region:'동대문',date:'2025.02'}]},
     {label:'선생님/수업',count:1,posts:[{text:'장안동 시매쓰 보내 본 초5 엄마에요.',url:'https://cafe.naver.com/dongbumomschool/4783',region:'동대문',date:'2025.02'}]}
   ],
-    allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'심화수학하는데요',url:'https://cafe.naver.com/ira111/772671'},{text:'레벨테스트 퀄리티가 좋은 수학학원은 없을까요?',url:'https://cafe.naver.com/ira111/768528'},{text:'고등수학 학원 추천',url:'https://cafe.naver.com/ira111/780051'},{text:'초4 수학학원 추천해 주세요.',url:'https://cafe.naver.com/ira111/778745'},{text:'깊.생or가온 수학중 고민중',url:'https://cafe.naver.com/ira111/787450'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'},{text:'장안동 깊은생각 학원',url:'https://cafe.naver.com/dongdaemoonstory/332767'},{text:'요즘엔 이런것도 있네요',url:'https://cafe.naver.com/ira111/816138'},{text:'깊은생각 중등 어떤가요?',url:'https://cafe.naver.com/ira111/823707'}]
+    allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'심화수학하는데요',url:'https://cafe.naver.com/ira111/772671'},{text:'레벨테스트 퀄리티가 좋은 수학학원은 없을까요?',url:'https://cafe.naver.com/ira111/768528'},{text:'고등수학 학원 추천',url:'https://cafe.naver.com/ira111/780051'},{text:'초4 수학학원 추천해 주세요.',url:'https://cafe.naver.com/ira111/778745'},{text:'깊.생or가온 수학중 고민중',url:'https://cafe.naver.com/ira111/787450'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'},{text:'깊은 생각수학 초등부 어떤가요?',url:'https://cafe.naver.com/ira111/806037'},{text:'장안동 깊은생각 학원',url:'https://cafe.naver.com/dongdaemoonstory/332767'},{text:'요즘엔 이런것도 있네요',url:'https://cafe.naver.com/ira111/816138'}]
+  },
+  {
+    name: '토피아', us: false,
+    mentions: {
+    '전체': {'전체':47,'2024년':5,'2025년':22,'2026년':20,'2024.01':1,'2024.07':2,'2024.08':1,'2024.11':1,'2025.02':2,'2025.05':1,'2025.06':1,'2025.07':1,'2025.08':1,'2025.10':2,'2025.11':10,'2025.12':4,'2026.01':8,'2026.02':8,'2026.03':1,'2026.05':2,'2026.06':1},
+    '중계': {'전체':45,'2024년':5,'2025년':20,'2026년':20,'2024.01':1,'2024.07':2,'2024.08':1,'2024.11':1,'2025.02':2,'2025.05':1,'2025.06':1,'2025.08':1,'2025.10':2,'2025.11':10,'2025.12':3,'2026.01':8,'2026.02':8,'2026.03':1,'2026.05':2,'2026.06':1},
+    '동대문': {'전체':1,'2025년':1,'2025.07':1}
+  },
+    monthly: {
+    '전체': [1,0,0,0,0,0,2,1,0,0,1,0,0,2,0,0,1,1,1,1,0,2,10,4,8,8,1,0,2,1],
+    '중계': [1,0,0,0,0,0,2,1,0,0,1,0,0,2,0,0,1,1,0,1,0,2,10,3,8,8,1,0,2,1],
+    '동대문': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0]
+  },
+    pros: [
+    {label:'커리큘럼/시스템',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05'}]},
+    {label:'관리/피드백',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05'}]},
+    {label:'성적향상/성과',count:2,posts:[{text:'은사에서 과고 준비 학원 어디일까요?',url:'https://cafe.naver.com/joonggyeedu/46644',region:'중계',date:'2025.11'},{text:'상명중 내신 영어, 수학 학원 추천해 주세요',url:'https://cafe.naver.com/joonggyeedu/50827',region:'중계',date:'2026.02'}]},
+    {label:'셔틀/접근성',count:3,posts:[{text:'셔틀버스 수학학원',url:'https://cafe.naver.com/joonggyeedu/49170',region:'중계',date:'2026.01'},{text:'셔틀오는 학원',url:'https://cafe.naver.com/joonggyeedu/50594',region:'중계',date:'2026.02'},{text:'셔틀되는 학원',url:'https://cafe.naver.com/joonggyeedu/56149',region:'중계',date:'2026.06'}]}
+  ],
+    cons: [
+
+  ],
+    allPosts: [{text:'하나고 대비 학원',url:'https://cafe.naver.com/joonggyeedu/55354'},{text:'중3 수학 학원',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'노원 영어학원 어디가 괜찮나요?',url:'https://cafe.naver.com/sjkdhj467/900963'},{text:'중계동에 괜찮은 수학학원 있을까요?',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'혹시 최선 토피아 친구할인이 있나요?',url:'https://cafe.naver.com/babymombaby/648995'},{text:'초4 수학,영어 학원 추천부탁드려요~~',url:'https://cafe.naver.com/babymombaby/649503'},{text:'토피아어학원 같이 할인받을분 ?',url:'https://cafe.naver.com/babymombaby/654702'},{text:'영어유치원 생각중이에요',url:'https://cafe.naver.com/nowonmams/290427'},{text:'노원 종합학원 추천해 주세요.',url:'https://cafe.naver.com/sjkdhj467/924147'},{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010'}]
+  },
+  {
+    name: '페르마', us: false,
+    mentions: {
+    '전체': {'전체':46,'2024년':16,'2025년':17,'2026년':13,'2024.01':6,'2024.02':2,'2024.06':2,'2024.10':2,'2024.12':4,'2025.02':3,'2025.03':1,'2025.04':1,'2025.05':2,'2025.07':1,'2025.08':1,'2025.09':2,'2025.10':1,'2025.11':3,'2025.12':2,'2026.01':3,'2026.02':2,'2026.03':3,'2026.04':3,'2026.05':2},
+    '미사': {'전체':42,'2024년':15,'2025년':14,'2026년':13,'2024.01':5,'2024.02':2,'2024.06':2,'2024.10':2,'2024.12':4,'2025.02':3,'2025.03':1,'2025.04':1,'2025.05':2,'2025.07':1,'2025.08':1,'2025.09':1,'2025.10':1,'2025.11':3,'2026.01':3,'2026.02':2,'2026.03':3,'2026.04':3,'2026.05':2}
+  },
+    monthly: {
+    '전체': [6,2,0,0,0,2,0,0,0,2,0,4,0,3,1,1,2,0,1,1,2,1,3,2,3,2,3,3,2,0],
+    '미사': [5,2,0,0,0,2,0,0,0,2,0,4,0,3,1,1,2,0,1,1,1,1,3,0,3,2,3,3,2,0]
+  },
+    pros: [
+    {label:'선생님/수업',count:2,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02'},{text:'안녕하세요 수학학원 추천 부탁드립니다^^',url:'https://cafe.naver.com/ira111/886359',region:'미사',date:'2025.11'}]},
+    {label:'관리/피드백',count:2,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02'},{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11'}]},
+    {label:'성적향상/성과',count:1,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02'}]},
+    {label:'커리큘럼/시스템',count:2,posts:[{text:'신장동 페르마 수학 어때요?',url:'https://cafe.naver.com/kidsinlove/1153267',region:'미사',date:'2025.05'},{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11'}]},
+    {label:'반복/심화학습',count:1,posts:[{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11'}]},
+    {label:'셔틀/접근성',count:1,posts:[{text:'신장초 4학년 영수 학원 추천해주세요^^',url:'https://cafe.naver.com/hsite/164465',region:'미사',date:'2026.02'}]}
+  ],
+    cons: [
+    {label:'개별관리부족',count:2,posts:[{text:'중고등 수학학원',url:'https://cafe.naver.com/ira111/845167',region:'미사',date:'2025.02'},{text:'학원 정말 어려워요~',url:'https://cafe.naver.com/kidsinlove/1182565',region:'미사',date:'2026.04'}]}
+  ],
+    allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'초3아이 수학학원 시간 조율 문의드려요',url:'https://cafe.naver.com/kidsinlove/1184573'},{text:'수학학원 알려주세요',url:'https://cafe.naver.com/ira111/774237'},{text:'풍산초 학원여부~',url:'https://cafe.naver.com/ira111/773458'},{text:'영어학원. 정상 vs 심슨',url:'https://cafe.naver.com/ira111/771928'},{text:'구산상가 수학학원',url:'https://cafe.naver.com/ira111/770700'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'덕풍중 아이들은 수학학원 어디로 많이 다니나요(미사제외)',url:'https://cafe.naver.com/kidsinlove/1096638'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'덕풍동 페르마 수학학원 보내시는분 계실까요?',url:'https://cafe.naver.com/kidsinlove/1102469'}]
   },
   {
     name: '조재필', us: false,
@@ -234,29 +283,6 @@ var MON_DATA = [
 
   ],
     allPosts: [{text:'중3 수학 학원',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'영어 수학 학원 옮기려는데',url:'https://cafe.naver.com/joonggyeedu/55275'},{text:'중계동에 괜찮은 수학학원 있을까요?',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'중계동 학원',url:'https://cafe.naver.com/aldisgo123d/976144'},{text:'중계동으로 이사',url:'https://cafe.naver.com/sjkdhj467/927334'},{text:'안녕하세요. 중학생 학원 궁금해요.',url:'https://cafe.naver.com/jungnangbaby/738543'},{text:'노원 수학학원 알려주세요',url:'https://cafe.naver.com/sjkdhj467/933205'},{text:'은행사거리 고등수학 추천해 주세요',url:'https://cafe.naver.com/joonggyeedu/44265'},{text:'용화여고 1학년 수학 학원 고민입니다.',url:'https://cafe.naver.com/joonggyeedu/45741'},{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845'}]
-  },
-  {
-    name: '페르마', us: false,
-    mentions: {
-    '전체': {'전체':42,'2024년':13,'2025년':17,'2026년':12,'2024.01':5,'2024.02':2,'2024.06':2,'2024.10':1,'2024.12':3,'2025.02':3,'2025.03':1,'2025.04':1,'2025.05':2,'2025.07':1,'2025.08':1,'2025.09':2,'2025.10':1,'2025.11':3,'2025.12':2,'2026.01':3,'2026.02':2,'2026.03':3,'2026.04':2,'2026.05':2},
-    '미사': {'전체':38,'2024년':12,'2025년':14,'2026년':12,'2024.01':4,'2024.02':2,'2024.06':2,'2024.10':1,'2024.12':3,'2025.02':3,'2025.03':1,'2025.04':1,'2025.05':2,'2025.07':1,'2025.08':1,'2025.09':1,'2025.10':1,'2025.11':3,'2026.01':3,'2026.02':2,'2026.03':3,'2026.04':2,'2026.05':2}
-  },
-    monthly: {
-    '전체': [5,2,0,0,0,2,0,0,0,1,0,3,0,3,1,1,2,0,1,1,2,1,3,2,3,2,3,2,2,0],
-    '미사': [4,2,0,0,0,2,0,0,0,1,0,3,0,3,1,1,2,0,1,1,1,1,3,0,3,2,3,2,2,0]
-  },
-    pros: [
-    {label:'선생님/수업',count:2,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02'},{text:'안녕하세요 수학학원 추천 부탁드립니다^^',url:'https://cafe.naver.com/ira111/886359',region:'미사',date:'2025.11'}]},
-    {label:'관리/피드백',count:2,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02'},{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11'}]},
-    {label:'성적향상/성과',count:1,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02'}]},
-    {label:'커리큘럼/시스템',count:2,posts:[{text:'신장동 페르마 수학 어때요?',url:'https://cafe.naver.com/kidsinlove/1153267',region:'미사',date:'2025.05'},{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11'}]},
-    {label:'반복/심화학습',count:1,posts:[{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11'}]},
-    {label:'셔틀/접근성',count:1,posts:[{text:'신장초 4학년 영수 학원 추천해주세요^^',url:'https://cafe.naver.com/hsite/164465',region:'미사',date:'2026.02'}]}
-  ],
-    cons: [
-    {label:'개별관리부족',count:2,posts:[{text:'중고등 수학학원',url:'https://cafe.naver.com/ira111/845167',region:'미사',date:'2025.02'},{text:'학원 정말 어려워요~',url:'https://cafe.naver.com/kidsinlove/1182565',region:'미사',date:'2026.04'}]}
-  ],
-    allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'초3아이 수학학원 시간 조율 문의드려요',url:'https://cafe.naver.com/kidsinlove/1184573'},{text:'수학학원 알려주세요',url:'https://cafe.naver.com/ira111/774237'},{text:'영어학원. 정상 vs 심슨',url:'https://cafe.naver.com/ira111/771928'},{text:'구산상가 수학학원',url:'https://cafe.naver.com/ira111/770700'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'덕풍중 아이들은 수학학원 어디로 많이 다니나요(미사제외)',url:'https://cafe.naver.com/kidsinlove/1096638'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'덕풍동 페르마 수학학원 보내시는분 계실까요?',url:'https://cafe.naver.com/kidsinlove/1102469'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'}]
   },
   {
     name: '미래탐구', us: false,
@@ -284,28 +310,57 @@ var MON_DATA = [
     allPosts: [{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861'},{text:'하나고 대비 학원',url:'https://cafe.naver.com/joonggyeedu/55354'},{text:'중3 수학 학원',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'영어 수학 학원 옮기려는데',url:'https://cafe.naver.com/joonggyeedu/55275'},{text:'중계동에 괜찮은 수학학원 있을까요?',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'안녕하세요. 중학생 학원 궁금해요.',url:'https://cafe.naver.com/jungnangbaby/738543'},{text:'중3 수학, 과학 학원 추천해주세요',url:'https://cafe.naver.com/joonggyeedu/41939'},{text:'kmo & 영과고 대비 학원 추천',url:'https://cafe.naver.com/joonggyeedu/43601'},{text:'노원 수학학원 알려주세요',url:'https://cafe.naver.com/sjkdhj467/933205'},{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845'}]
   },
   {
-    name: '토피아', us: false,
+    name: '수학의힘', us: false,
     mentions: {
-    '전체': {'전체':33,'2024년':4,'2025년':15,'2026년':14,'2024.01':1,'2024.07':2,'2024.08':1,'2025.05':1,'2025.07':1,'2025.08':1,'2025.10':1,'2025.11':8,'2025.12':3,'2026.01':6,'2026.02':4,'2026.03':1,'2026.05':2,'2026.06':1},
-    '중계': {'전체':31,'2024년':4,'2025년':13,'2026년':14,'2024.01':1,'2024.07':2,'2024.08':1,'2025.05':1,'2025.08':1,'2025.10':1,'2025.11':8,'2025.12':2,'2026.01':6,'2026.02':4,'2026.03':1,'2026.05':2,'2026.06':1},
-    '동대문': {'전체':1,'2025년':1,'2025.07':1}
+    '전체': {'전체':34,'2024년':12,'2025년':15,'2026년':7,'2024.01':1,'2024.02':2,'2024.04':1,'2024.05':1,'2024.06':1,'2024.08':1,'2024.10':2,'2024.11':2,'2024.12':1,'2025.01':2,'2025.02':1,'2025.03':1,'2025.05':1,'2025.06':2,'2025.08':2,'2025.09':1,'2025.11':1,'2025.12':4,'2026.01':3,'2026.02':1,'2026.04':2,'2026.05':1},
+    '미사': {'전체':18,'2024년':6,'2025년':6,'2026년':6,'2024.02':1,'2024.04':1,'2024.06':1,'2024.08':1,'2024.10':1,'2024.11':1,'2025.02':1,'2025.03':1,'2025.05':1,'2025.08':1,'2025.09':1,'2025.12':1,'2026.01':2,'2026.02':1,'2026.04':2,'2026.05':1},
+    '동대문': {'전체':1,'2024년':1,'2024.02':1},
+    '송파': {'전체':3,'2024년':2,'2026년':1,'2024.05':1,'2024.11':1,'2026.01':1},
+    '중랑': {'전체':1,'2025년':1,'2025.06':1}
   },
     monthly: {
-    '전체': [1,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,1,0,1,1,0,1,8,3,6,4,1,0,2,1],
-    '중계': [1,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,8,2,6,4,1,0,2,1],
-    '동대문': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0]
+    '전체': [1,2,0,1,1,1,0,1,0,2,2,1,2,1,1,0,1,2,0,2,1,0,1,4,3,1,0,2,1,0],
+    '미사': [0,1,0,1,0,1,0,1,0,1,1,0,0,1,1,0,1,0,0,1,1,0,0,1,2,1,0,2,1,0],
+    '동대문': [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '송파': [0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0],
+    '중랑': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05'}]},
-    {label:'관리/피드백',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05'}]},
-    {label:'성적향상/성과',count:2,posts:[{text:'은사에서 과고 준비 학원 어디일까요?',url:'https://cafe.naver.com/joonggyeedu/46644',region:'중계',date:'2025.11'},{text:'상명중 내신 영어, 수학 학원 추천해 주세요',url:'https://cafe.naver.com/joonggyeedu/50827',region:'중계',date:'2026.02'}]},
-    {label:'셔틀/접근성',count:3,posts:[{text:'셔틀버스 수학학원',url:'https://cafe.naver.com/joonggyeedu/49170',region:'중계',date:'2026.01'},{text:'셔틀오는 학원',url:'https://cafe.naver.com/joonggyeedu/50594',region:'중계',date:'2026.02'},{text:'셔틀되는 학원',url:'https://cafe.naver.com/joonggyeedu/56149',region:'중계',date:'2026.06'}]}
+    {label:'관리/피드백',count:2,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11'}]},
+    {label:'커리큘럼/시스템',count:5,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703',region:'미사',date:'2024.04'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11'},{text:'수학문제집 추천해주세여',url:'https://cafe.naver.com/ira111/862927',region:'미사',date:'2025.06'}]},
+    {label:'선생님/수업',count:3,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'예비중3 수학학원 고민입니다 아주 빡쎈곳 어디일까요..',url:'https://cafe.naver.com/ira111/891364',region:'강동',date:'2025.12'}]},
+    {label:'성적향상/성과',count:2,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'}]},
+    {label:'반복/심화학습',count:4,posts:[{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703',region:'미사',date:'2024.04'},{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11'}]},
+    {label:'흥미/동기부여',count:1,posts:[{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05'}]}
+  ],
+    cons: [
+    {label:'숙제/학습량부담',count:2,posts:[{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05'}]}
+  ],
+    allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'신답초로 전학 가요. 학원 문의요..',url:'https://cafe.naver.com/dongdaemoonstory/316901'},{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703'},{text:'수학학원 추천 부탁드려요~',url:'https://cafe.naver.com/everyhomework/854398'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'},{text:'미사 수학의힘(풍산동) 보내시는분..대표전화 통화가 안되는데 혹시 방학인가요?',url:'https://cafe.naver.com/ira111/810173'},{text:'초등 3학년 교과 수학 학원, 어디가 있어요?',url:'https://cafe.naver.com/ira111/821387'},{text:'강동 초등고학년 교과수학학원',url:'https://cafe.naver.com/everyhomework/870750'}]
+  },
+  {
+    name: '최선', us: false,
+    mentions: {
+    '전체': {'전체':34,'2024년':8,'2025년':15,'2026년':11,'2024.01':1,'2024.04':1,'2024.06':1,'2024.08':1,'2024.09':1,'2024.11':2,'2024.12':1,'2025.01':2,'2025.02':1,'2025.03':1,'2025.05':1,'2025.06':2,'2025.10':2,'2025.11':4,'2025.12':2,'2026.01':4,'2026.02':4,'2026.04':1,'2026.06':2},
+    '미사': {'전체':8,'2024년':3,'2025년':3,'2026년':2,'2024.01':1,'2024.06':1,'2024.08':1,'2025.06':2,'2025.12':1,'2026.01':2},
+    '송파': {'전체':12,'2024년':5,'2025년':4,'2026년':3,'2024.04':1,'2024.09':1,'2024.11':2,'2024.12':1,'2025.02':1,'2025.03':1,'2025.10':1,'2025.11':1,'2026.02':2,'2026.06':1},
+    '광진': {'전체':4,'2025년':2,'2026년':2,'2025.01':1,'2025.12':1,'2026.01':1,'2026.02':1},
+    '중계': {'전체':8,'2025년':4,'2026년':4,'2025.10':1,'2025.11':3,'2026.01':1,'2026.02':1,'2026.04':1,'2026.06':1}
+  },
+    monthly: {
+    '전체': [1,0,0,1,0,1,0,1,1,0,2,1,2,1,1,0,1,2,0,0,0,2,4,2,4,4,0,1,0,2],
+    '미사': [1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,1,2,0,0,0,0,0],
+    '송파': [0,0,0,1,0,0,0,0,1,0,2,1,0,1,1,0,0,0,0,0,0,1,1,0,0,2,0,0,0,1],
+    '광진': [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0],
+    '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,1,1,0,1,0,1]
+  },
+    pros: [
+
   ],
     cons: [
 
   ],
-    allPosts: [{text:'하나고 대비 학원',url:'https://cafe.naver.com/joonggyeedu/55354'},{text:'중3 수학 학원',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'노원 영어학원 어디가 괜찮나요?',url:'https://cafe.naver.com/sjkdhj467/900963'},{text:'중계동에 괜찮은 수학학원 있을까요?',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'혹시 최선 토피아 친구할인이 있나요?',url:'https://cafe.naver.com/babymombaby/648995'},{text:'초4 수학,영어 학원 추천부탁드려요~~',url:'https://cafe.naver.com/babymombaby/649503'},{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010'},{text:'타지역살지만 초4에 학원을 중계로 보내고 싶은데요...(알려주세요)',url:'https://cafe.naver.com/joonggyeedu/42864'},{text:'노원 수학학원 알려주세요',url:'https://cafe.naver.com/sjkdhj467/933205'},{text:'은사 영어학원 추천 해주세요',url:'https://cafe.naver.com/joonggyeedu/45836'}]
+    allPosts: [{text:'아이 학원 정하는게 보통일이 아니네요~',url:'https://cafe.naver.com/ira111/774047'},{text:'광장동 학원셔틀?',url:'https://cafe.naver.com/dochiya/1283451'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'},{text:'중학교 1학년..영어.수학 학원 7시 이후 수업하는곳  있을까요?',url:'https://cafe.naver.com/ira111/811275'},{text:'방산초 학군 학원이요',url:'https://cafe.naver.com/everyhomework/864857'},{text:'올파포에서 보낼 영어학원 수학학원',url:'https://cafe.naver.com/everyhomework/872026'},{text:'중1 수학/영어 셔틀 운행 하는 곳 추천 부탁드려요',url:'https://cafe.naver.com/everyhomework/870920'},{text:'방이동 수학학원 영어학원',url:'https://cafe.naver.com/everyhomework/876267'},{text:'초등 고학년 수학 영어 논술 학원 추천좀여',url:'https://cafe.naver.com/dochiya/1300556'},{text:'초등 학원 문의요~(초고학년)',url:'https://cafe.naver.com/ira111/838273'}]
   },
   {
     name: '청담', us: false,
@@ -334,35 +389,6 @@ var MON_DATA = [
     allPosts: [{text:'풍산초 학원여부~',url:'https://cafe.naver.com/ira111/773458'},{text:'광장동 학원셔틀?',url:'https://cafe.naver.com/dochiya/1283451'},{text:'초4 수학,영어 학원 추천부탁드려요~~',url:'https://cafe.naver.com/babymombaby/649503'},{text:'방산초 학군 학원이요',url:'https://cafe.naver.com/everyhomework/864857'},{text:'올파포에서 보낼 영어학원 수학학원',url:'https://cafe.naver.com/everyhomework/872026'},{text:'방이동 수학학원 영어학원',url:'https://cafe.naver.com/everyhomework/876267'},{text:'초3  올라가는데요~',url:'https://cafe.naver.com/everyhomework/876913'},{text:'고래힐 초5..초3 학원 궁금해요',url:'https://cafe.naver.com/zzandol/789373'},{text:'예비초6  영어학원',url:'https://cafe.naver.com/dochiya/1299536'},{text:'초등 학원 문의요~(초고학년)',url:'https://cafe.naver.com/ira111/838273'}]
   },
   {
-    name: '수학의힘', us: false,
-    mentions: {
-    '전체': {'전체':30,'2024년':11,'2025년':12,'2026년':7,'2024.01':1,'2024.02':1,'2024.04':1,'2024.05':1,'2024.06':1,'2024.08':1,'2024.10':2,'2024.11':2,'2024.12':1,'2025.01':1,'2025.02':1,'2025.03':1,'2025.06':2,'2025.08':2,'2025.09':1,'2025.11':1,'2025.12':3,'2026.01':3,'2026.02':1,'2026.04':2,'2026.05':1},
-    '미사': {'전체':15,'2024년':5,'2025년':4,'2026년':6,'2024.04':1,'2024.06':1,'2024.08':1,'2024.10':1,'2024.11':1,'2025.02':1,'2025.03':1,'2025.08':1,'2025.09':1,'2026.01':2,'2026.02':1,'2026.04':2,'2026.05':1},
-    '동대문': {'전체':1,'2024년':1,'2024.02':1},
-    '송파': {'전체':3,'2024년':2,'2026년':1,'2024.05':1,'2024.11':1,'2026.01':1},
-    '중랑': {'전체':1,'2025년':1,'2025.06':1}
-  },
-    monthly: {
-    '전체': [1,1,0,1,1,1,0,1,0,2,2,1,1,1,1,0,0,2,0,2,1,0,1,3,3,1,0,2,1,0],
-    '미사': [0,0,0,1,0,1,0,1,0,1,1,0,0,1,1,0,0,0,0,1,1,0,0,0,2,1,0,2,1,0],
-    '동대문': [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '송파': [0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0],
-    '중랑': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0]
-  },
-    pros: [
-    {label:'관리/피드백',count:2,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11'}]},
-    {label:'커리큘럼/시스템',count:5,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703',region:'미사',date:'2024.04'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11'},{text:'수학문제집 추천해주세여',url:'https://cafe.naver.com/ira111/862927',region:'미사',date:'2025.06'}]},
-    {label:'선생님/수업',count:3,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'예비중3 수학학원 고민입니다 아주 빡쎈곳 어디일까요..',url:'https://cafe.naver.com/ira111/891364',region:'강동',date:'2025.12'}]},
-    {label:'성적향상/성과',count:2,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'}]},
-    {label:'반복/심화학습',count:4,posts:[{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703',region:'미사',date:'2024.04'},{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11'}]},
-    {label:'흥미/동기부여',count:1,posts:[{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05'}]}
-  ],
-    cons: [
-    {label:'숙제/학습량부담',count:2,posts:[{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05'}]}
-  ],
-    allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'신답초로 전학 가요. 학원 문의요..',url:'https://cafe.naver.com/dongdaemoonstory/316901'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703'},{text:'수학학원 추천 부탁드려요~',url:'https://cafe.naver.com/everyhomework/854398'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'},{text:'미사 수학의힘(풍산동) 보내시는분..대표전화 통화가 안되는데 혹시 방학인가요?',url:'https://cafe.naver.com/ira111/810173'},{text:'초등 3학년 교과 수학 학원, 어디가 있어요?',url:'https://cafe.naver.com/ira111/821387'},{text:'강동 초등고학년 교과수학학원',url:'https://cafe.naver.com/everyhomework/870750'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361'}]
-  },
-  {
     name: '수학에미친사람들', us: false,
     mentions: {
     '전체': {'전체':29,'2024년':1,'2025년':16,'2026년':12,'2024.07':1,'2025.04':1,'2025.08':1,'2025.09':1,'2025.10':1,'2025.11':6,'2025.12':6,'2026.01':5,'2026.02':1,'2026.03':3,'2026.04':1,'2026.05':2},
@@ -381,30 +407,6 @@ var MON_DATA = [
 
   ],
     allPosts: [{text:'중3 수학 학원',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'영어 수학 학원 옮기려는데',url:'https://cafe.naver.com/joonggyeedu/55275'},{text:'중계동에 괜찮은 수학학원 있을까요?',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'중계동으로 이사',url:'https://cafe.naver.com/sjkdhj467/927334'},{text:'노원 수학학원 알려주세요',url:'https://cafe.naver.com/sjkdhj467/933205'},{text:'은행사거리 고등수학 추천해 주세요',url:'https://cafe.naver.com/joonggyeedu/44265'},{text:'용화여고 1학년 수학 학원 고민입니다.',url:'https://cafe.naver.com/joonggyeedu/45741'},{text:'예비중 영어, 수학학원 추천부탁드려요',url:'https://cafe.naver.com/joonggyeedu/47321'},{text:'초등 영어, 수학 학원 리스트 같은거 있을까요?',url:'https://cafe.naver.com/joonggyeedu/46354'},{text:'초5여.초2남 학원조언이네요.',url:'https://cafe.naver.com/joonggyeedu/47148'}]
-  },
-  {
-    name: '최선', us: false,
-    mentions: {
-    '전체': {'전체':29,'2024년':8,'2025년':13,'2026년':8,'2024.01':1,'2024.04':1,'2024.06':1,'2024.08':1,'2024.09':1,'2024.11':2,'2024.12':1,'2025.01':1,'2025.02':1,'2025.03':1,'2025.05':1,'2025.06':1,'2025.10':2,'2025.11':4,'2025.12':2,'2026.01':2,'2026.02':3,'2026.04':1,'2026.06':2},
-    '미사': {'전체':6,'2024년':3,'2025년':2,'2026년':1,'2024.01':1,'2024.06':1,'2024.08':1,'2025.06':1,'2025.12':1,'2026.01':1},
-    '송파': {'전체':11,'2024년':5,'2025년':4,'2026년':2,'2024.04':1,'2024.09':1,'2024.11':2,'2024.12':1,'2025.02':1,'2025.03':1,'2025.10':1,'2025.11':1,'2026.02':1,'2026.06':1},
-    '광진': {'전체':3,'2025년':2,'2026년':1,'2025.01':1,'2025.12':1,'2026.02':1},
-    '중계': {'전체':8,'2025년':4,'2026년':4,'2025.10':1,'2025.11':3,'2026.01':1,'2026.02':1,'2026.04':1,'2026.06':1}
-  },
-    monthly: {
-    '전체': [1,0,0,1,0,1,0,1,1,0,2,1,1,1,1,0,1,1,0,0,0,2,4,2,2,3,0,1,0,2],
-    '미사': [1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0],
-    '송파': [0,0,0,1,0,0,0,0,1,0,2,1,0,1,1,0,0,0,0,0,0,1,1,0,0,1,0,0,0,1],
-    '광진': [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0],
-    '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,1,1,0,1,0,1]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'아이 학원 정하는게 보통일이 아니네요~',url:'https://cafe.naver.com/ira111/774047'},{text:'광장동 학원셔틀?',url:'https://cafe.naver.com/dochiya/1283451'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'},{text:'중학교 1학년..영어.수학 학원 7시 이후 수업하는곳  있을까요?',url:'https://cafe.naver.com/ira111/811275'},{text:'방산초 학군 학원이요',url:'https://cafe.naver.com/everyhomework/864857'},{text:'올파포에서 보낼 영어학원 수학학원',url:'https://cafe.naver.com/everyhomework/872026'},{text:'중1 수학/영어 셔틀 운행 하는 곳 추천 부탁드려요',url:'https://cafe.naver.com/everyhomework/870920'},{text:'방이동 수학학원 영어학원',url:'https://cafe.naver.com/everyhomework/876267'},{text:'초등 고학년 수학 영어 논술 학원 추천좀여',url:'https://cafe.naver.com/dochiya/1300556'},{text:'올파포입주! 예비중1, 예비초5 학원세팅 ㅠ',url:'https://cafe.naver.com/everyhomework/881673'}]
   },
   {
     name: 'CMS', us: false,
@@ -638,6 +640,58 @@ var MON_DATA = [
     allPosts: [{text:'아이 학원 정하는게 보통일이 아니네요~',url:'https://cafe.naver.com/ira111/774047'},{text:'초1 영어 어떻게 해야 할까요?',url:'https://cafe.naver.com/dongbumomschool/4869'},{text:'풍산초 영수학원',url:'https://cafe.naver.com/kidsinlove/1146327'},{text:'둔촌동 초4 수학, 영어학원 추천해 주세요.',url:'https://cafe.naver.com/everyhomework/882817'},{text:'힐데스 학원차량 궁금해요~',url:'https://cafe.naver.com/richload/11182'},{text:'광장동 초등학생 여름방학 특강 있는(+점심) 학원 추천 부탁드려요.',url:'https://cafe.naver.com/dochiya/1308405'},{text:'초등학교 2학년 학원 추천해주세요',url:'https://cafe.naver.com/everyhomework/896297'},{text:'초6 영어 수학학원 추천부탁드려도 될까요?',url:'https://cafe.naver.com/joonggyeedu/46351'},{text:'학원추천해주세요~',url:'https://cafe.naver.com/richload/11585'},{text:'자양2동 셔틀다니는 학원',url:'https://cafe.naver.com/dochiya/1315797'}]
   },
   {
+    name: '닥스', us: false,
+    mentions: {
+    '전체': {'전체':13,'2024년':3,'2025년':9,'2026년':1,'2024.02':1,'2024.06':1,'2024.08':1,'2025.01':1,'2025.03':1,'2025.05':4,'2025.11':3,'2026.01':1},
+    '동대문': {'전체':5,'2024년':2,'2025년':3,'2024.02':1,'2024.06':1,'2025.05':2,'2025.11':1},
+    '중랑': {'전체':3,'2024년':1,'2025년':2,'2024.08':1,'2025.05':1,'2025.11':1},
+    '광진': {'전체':1,'2025년':1,'2025.03':1},
+    '송파': {'전체':1,'2025년':1,'2025.05':1},
+    '중계': {'전체':2,'2025년':1,'2026년':1,'2025.11':1,'2026.01':1}
+  },
+    monthly: {
+    '전체': [0,1,0,0,0,1,0,1,0,0,0,0,1,0,1,0,4,0,0,0,0,0,3,0,1,0,0,0,0,0],
+    '동대문': [0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,1,0,0,0,0,0,0,0],
+    '중랑': [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0],
+    '광진': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '송파': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0]
+  },
+    pros: [
+
+  ],
+    cons: [
+
+  ],
+    allPosts: [{text:'신답초로 전학 가요. 학원 문의요..',url:'https://cafe.naver.com/dongdaemoonstory/316901'},{text:'영어 말하기 쓰기 전문 학원',url:'https://cafe.naver.com/dongdaemoonstory/326039'},{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400'},{text:'초등 학원 문의요~(초고학년)',url:'https://cafe.naver.com/ira111/838273'},{text:'초1 영어 어떻게 해야 할까요?',url:'https://cafe.naver.com/dongbumomschool/4869'},{text:'광장동쪽은 영유연계학원 어디로 보내시나요',url:'https://cafe.naver.com/dochiya/1305918'},{text:'어학원 중등 결정 도와주세욤!',url:'https://cafe.naver.com/dongdaemoonstory/350260'},{text:'이사 와서 학원을 알아봐야 하는데 ㅜ',url:'https://cafe.naver.com/dongdaemoonstory/349753'},{text:'힐데스 학원차량 궁금해요~',url:'https://cafe.naver.com/richload/11182'},{text:'영어학원 선택 어렵네요',url:'https://cafe.naver.com/dongdaemoonstory/359655'}]
+  },
+  {
+    name: '시매쓰', us: false,
+    mentions: {
+    '전체': {'전체':12,'2024년':6,'2025년':5,'2026년':1,'2024.02':3,'2024.03':1,'2024.05':1,'2024.12':1,'2025.03':1,'2025.05':1,'2025.08':1,'2025.09':1,'2025.12':1,'2026.02':1},
+    '동대문': {'전체':1,'2024년':1,'2024.02':1},
+    '미사': {'전체':3,'2024년':3,'2024.02':2,'2024.12':1},
+    '광진': {'전체':1,'2024년':1,'2024.03':1},
+    '성동': {'전체':1,'2024년':1,'2024.05':1},
+    '송파': {'전체':4,'2025년':3,'2026년':1,'2025.03':1,'2025.05':1,'2025.08':1,'2026.02':1}
+  },
+    monthly: {
+    '전체': [0,3,1,0,1,0,0,0,0,0,0,1,0,0,1,0,1,0,0,1,1,0,0,1,0,1,0,0,0,0],
+    '동대문': [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '미사': [0,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '광진': [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '성동': [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '송파': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0]
+  },
+    pros: [
+
+  ],
+    cons: [
+
+  ],
+    allPosts: [{text:'차량 운행되는 영수 학원이 있나요?',url:'https://cafe.naver.com/dongdaemoonstory/316953'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'예비5학년 수학학원',url:'https://cafe.naver.com/ira111/776866'},{text:'구의동 초등수학 추천해주세요',url:'https://cafe.naver.com/dochiya/1280284'},{text:'동자초 앞 영어.수학학원 추천해주세요~~',url:'https://cafe.naver.com/dochiya/1285156'},{text:'구산쪽 차량되는 초등수학학원있을까요?',url:'https://cafe.naver.com/ira111/835815'},{text:'잠실동 수학학원',url:'https://cafe.naver.com/everyhomework/883730'},{text:'수학학원 추천해주세요!',url:'https://cafe.naver.com/everyhomework/888900'},{text:'초등3학년 수학학원추천해주세요',url:'https://cafe.naver.com/everyhomework/897942'},{text:'수학학원조언주세요',url:'https://cafe.naver.com/ira111/875026'}]
+  },
+  {
     name: '예일', us: false,
     mentions: {
     '전체': {'전체':12,'2024년':4,'2025년':7,'2026년':1,'2024.02':2,'2024.06':1,'2024.11':1,'2025.02':1,'2025.03':1,'2025.04':1,'2025.05':2,'2025.10':1,'2025.11':1,'2026.02':1},
@@ -768,32 +822,6 @@ var MON_DATA = [
     allPosts: [{text:'중3 수학 학원',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'중계동에 괜찮은 수학학원 있을까요?',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'kmo & 영과고 대비 학원 추천',url:'https://cafe.naver.com/joonggyeedu/43601'},{text:'학원고민입니다',url:'https://cafe.naver.com/joonggyeedu/45746'},{text:'은사에서 과고 준비 학원 어디일까요?',url:'https://cafe.naver.com/joonggyeedu/46644'},{text:'차량운행 과학학원',url:'https://cafe.naver.com/joonggyeedu/48088'},{text:'셔틀버스 수학학원',url:'https://cafe.naver.com/joonggyeedu/49170'},{text:'예비중 수학학원 추천부탁드려요~',url:'https://cafe.naver.com/joonggyeedu/49491'},{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623'}]
   },
   {
-    name: '씨매스', us: false,
-    mentions: {
-    '전체': {'전체':8,'2024년':4,'2025년':3,'2026년':1,'2024.02':2,'2024.03':1,'2024.05':1,'2025.05':1,'2025.08':1,'2025.12':1,'2026.02':1},
-    '동대문': {'전체':1,'2024년':1,'2024.02':1},
-    '미사': {'전체':1,'2024년':1,'2024.02':1},
-    '광진': {'전체':1,'2024년':1,'2024.03':1},
-    '성동': {'전체':1,'2024년':1,'2024.05':1},
-    '송파': {'전체':3,'2025년':2,'2026년':1,'2025.05':1,'2025.08':1,'2026.02':1}
-  },
-    monthly: {
-    '전체': [0,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,1,0,0,0,0],
-    '동대문': [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '미사': [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '광진': [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '성동': [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '송파': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'차량 운행되는 영수 학원이 있나요?',url:'https://cafe.naver.com/dongdaemoonstory/316953'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'구의동 초등수학 추천해주세요',url:'https://cafe.naver.com/dochiya/1280284'},{text:'동자초 앞 영어.수학학원 추천해주세요~~',url:'https://cafe.naver.com/dochiya/1285156'},{text:'수학학원 추천해주세요!',url:'https://cafe.naver.com/everyhomework/888900'},{text:'초등3학년 수학학원추천해주세요',url:'https://cafe.naver.com/everyhomework/897942'},{text:'강동 수학학원 추천 부탁',url:'https://cafe.naver.com/everyhomework/909452'},{text:'송파 초저다닐만한 수학학원있을까요?',url:'https://cafe.naver.com/everyhomework/913305'}]
-  },
-  {
     name: '웅쌤', us: false,
     mentions: {
     '전체': {'전체':8,'2024년':1,'2025년':5,'2026년':2,'2024.12':1,'2025.02':1,'2025.05':2,'2025.09':1,'2025.10':1,'2026.02':1,'2026.03':1},
@@ -836,6 +864,50 @@ var MON_DATA = [
     allPosts: [{text:'예비중1. 독해력or문해력 문제집추천해주세요',url:'https://cafe.naver.com/ira111/769410'},{text:'6학년 국어(독해,논술)학원 추천좀 부탁드려요~',url:'https://cafe.naver.com/ira111/818242'},{text:'중학생 국어학원 문의요~',url:'https://cafe.naver.com/ira111/828688'},{text:'신내동 논술학원 추천좀해주세요~',url:'https://cafe.naver.com/jungnangbaby/736446'},{text:'초5학년 학원 추천해주세요.(수학, 국어)',url:'https://cafe.naver.com/joonggyeedu/46618'},{text:'현 초3 아이 학원 질문입니다',url:'https://cafe.naver.com/everyhomework/906683'},{text:'학원 추천부탁드려요',url:'https://cafe.naver.com/dochiya/1317543'},{text:'내년초이사계획이에요',url:'https://cafe.naver.com/joonggyeedu/55849'}]
   },
   {
+    name: '해법', us: false,
+    mentions: {
+    '전체': {'전체':8,'2024년':6,'2025년':1,'2026년':1,'2024.05':1,'2024.06':1,'2024.09':2,'2024.10':2,'2025.09':1,'2026.06':1},
+    '송파': {'전체':2,'2024년':2,'2024.05':1,'2024.09':1},
+    '광진': {'전체':1,'2024년':1,'2024.06':1},
+    '성동': {'전체':1,'2024년':1,'2024.09':1},
+    '미사': {'전체':2,'2024년':2,'2024.10':2},
+    '동대문': {'전체':1,'2026년':1,'2026.06':1}
+  },
+    monthly: {
+    '전체': [0,0,0,0,1,1,0,0,2,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1],
+    '송파': [0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '광진': [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '성동': [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '미사': [0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    '동대문': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+  },
+    pros: [
+
+  ],
+    cons: [
+
+  ],
+    allPosts: [{text:'수학학원 추천 부탁드려요~',url:'https://cafe.naver.com/everyhomework/854398'},{text:'수학학원 추천 부탁해요',url:'https://cafe.naver.com/dochiya/1286975'},{text:'왕십리 영어학원 추천해주세요~~~',url:'https://cafe.naver.com/dochiya/1292493'},{text:'방산초 학군 학원이요',url:'https://cafe.naver.com/everyhomework/864857'},{text:'초등 3학년 교과 수학 학원, 어디가 있어요?',url:'https://cafe.naver.com/ira111/821387'},{text:'초등6학년 영,수 학원 문의~',url:'https://cafe.naver.com/kidsinlove/1132958'},{text:'수학학원조언주세요',url:'https://cafe.naver.com/ira111/875026'},{text:'이사가려는데',url:'https://cafe.naver.com/jungnangbaby/760661'}]
+  },
+  {
+    name: 'NPE', us: false,
+    mentions: {
+    '전체': {'전체':7,'2024년':3,'2025년':3,'2026년':1,'2024.01':1,'2024.02':1,'2024.11':1,'2025.02':2,'2025.10':1,'2026.02':1},
+    '미사': {'전체':6,'2024년':2,'2025년':3,'2026년':1,'2024.02':1,'2024.11':1,'2025.02':2,'2025.10':1,'2026.02':1}
+  },
+    monthly: {
+    '전체': [1,1,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0],
+    '미사': [0,1,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0]
+  },
+    pros: [
+
+  ],
+    cons: [
+
+  ],
+    allPosts: [{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'고등수학 학원 추천',url:'https://cafe.naver.com/ira111/780051'},{text:'하남고 아이들은 수학학원 어디로?',url:'https://cafe.naver.com/ira111/826638'},{text:'중고등 수학학원',url:'https://cafe.naver.com/ira111/845167'},{text:'중3 수학학원이요ㅠ',url:'https://cafe.naver.com/misamamsnbaby/85770'},{text:'신장동 주2회 판서식 고등 수학학원 추천해 주세요.',url:'https://cafe.naver.com/kidsinlove/1166100'},{text:'고등학생 수학 추천해주세요',url:'https://cafe.naver.com/kidsinlove/1176984'}]
+  },
+  {
     name: '대치메이드', us: false,
     mentions: {
     '전체': {'전체':7,'2025년':3,'2026년':4,'2025.02':1,'2025.07':1,'2025.12':1,'2026.01':3,'2026.02':1},
@@ -858,6 +930,28 @@ var MON_DATA = [
 
   ],
     allPosts: [{text:'중3 수학학원이요ㅠ',url:'https://cafe.naver.com/misamamsnbaby/85770'},{text:'하남 수학학원이요',url:'https://cafe.naver.com/hsite/160197'},{text:'고등 수학학원 추천',url:'https://cafe.naver.com/dochiya/1316847'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685'},{text:'고등 과학학원정보 부탁드려요',url:'https://cafe.naver.com/ira111/895494'},{text:'초등 수학학원',url:'https://cafe.naver.com/joonggyeedu/49410'},{text:'건대부고 과학내신 학원 추천해주세요',url:'https://cafe.naver.com/dochiya/1318534'}]
+  },
+  {
+    name: '세이노', us: false,
+    mentions: {
+    '전체': {'전체':7,'2025년':5,'2026년':2,'2025.03':1,'2025.07':1,'2025.08':2,'2025.11':1,'2026.03':1,'2026.05':1},
+    '중계': {'전체':2,'2025년':1,'2026년':1,'2025.11':1,'2026.05':1},
+    '미사': {'전체':3,'2025년':2,'2026년':1,'2025.03':1,'2025.07':1,'2026.03':1},
+    '송파': {'전체':2,'2025년':2,'2025.08':2}
+  },
+    monthly: {
+    '전체': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,2,0,0,1,0,0,0,1,0,1,0],
+    '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0],
+    '미사': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0],
+    '송파': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0]
+  },
+    pros: [
+
+  ],
+    cons: [
+
+  ],
+    allPosts: [{text:'영어 수학 학원 옮기려는데',url:'https://cafe.naver.com/joonggyeedu/55275'},{text:'세이노수학이랑 멘토 0819보내시분',url:'https://cafe.naver.com/ira111/846708'},{text:'하남 수학학원이요',url:'https://cafe.naver.com/hsite/160197'},{text:'위례 수학학원 문의',url:'https://cafe.naver.com/everyhomework/898563'},{text:'중학교 학원 추천해주세요 (영,수)',url:'https://cafe.naver.com/everyhomework/896299'},{text:'초6 영어 수학학원 추천부탁드려도 될까요?',url:'https://cafe.naver.com/joonggyeedu/46351'},{text:'파인만 중등은 어떤가요~?',url:'https://cafe.naver.com/ira111/906194'}]
   },
   {
     name: '소마', us: false,
@@ -906,14 +1000,14 @@ var MON_DATA = [
     allPosts: [{text:'차량 운행되는 영수 학원이 있나요?',url:'https://cafe.naver.com/dongdaemoonstory/316953'},{text:'신답초로 전학 가요. 학원 문의요..',url:'https://cafe.naver.com/dongdaemoonstory/316901'},{text:'초1 영어 어떻게 해야 할까요?',url:'https://cafe.naver.com/dongbumomschool/4869'},{text:'광장동학원가 셔틀 운영 학원',url:'https://cafe.naver.com/dochiya/1315539'},{text:'영어학원 선택 어렵네요',url:'https://cafe.naver.com/dongdaemoonstory/359655'},{text:'광장동 만6세 영어학원 추천해 주세요~',url:'https://cafe.naver.com/dochiya/1317386'}]
   },
   {
-    name: '강동파인만', us: false,
+    name: '몬스터', us: false,
     mentions: {
-    '전체': {'전체':6,'2024년':3,'2025년':3,'2024.01':1,'2024.10':1,'2024.11':1,'2025.07':1,'2025.08':1,'2025.12':1},
-    '송파': {'전체':1,'2024년':1,'2024.11':1}
+    '전체': {'전체':6,'2024년':2,'2025년':2,'2026년':2,'2024.03':1,'2024.10':1,'2025.01':1,'2025.12':1,'2026.01':1,'2026.03':1},
+    '광진': {'전체':6,'2024년':2,'2025년':2,'2026년':2,'2024.03':1,'2024.10':1,'2025.01':1,'2025.12':1,'2026.01':1,'2026.03':1}
   },
     monthly: {
-    '전체': [1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,0],
-    '송파': [0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    '전체': [0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0],
+    '광진': [0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0]
   },
     pros: [
 
@@ -921,51 +1015,7 @@ var MON_DATA = [
     cons: [
 
   ],
-    allPosts: [{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630'},{text:'방이동 청어람 수학학원',url:'https://cafe.naver.com/ira111/827562'},{text:'강동파인만 문앞 카드결제 아시는 분~?',url:'https://cafe.naver.com/ira111/869059'},{text:'미사 지역 내 초등관련 설명회 하는 곳 있을까요?',url:'https://cafe.naver.com/ira111/871350'},{text:'예비중 학원 추천해주세요',url:'https://cafe.naver.com/ira111/891823'}]
-  },
-  {
-    name: '늘푸른수학원', us: false,
-    mentions: {
-    '전체': {'전체':6,'2024년':3,'2025년':2,'2026년':1,'2024.03':2,'2024.09':1,'2025.07':1,'2025.12':1,'2026.02':1},
-    '광진': {'전체':3,'2024년':2,'2025년':1,'2024.03':2,'2025.12':1},
-    '송파': {'전체':2,'2024년':1,'2025년':1,'2024.09':1,'2025.07':1},
-    '성동': {'전체':1,'2026년':1,'2026.02':1}
-  },
-    monthly: {
-    '전체': [0,0,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0],
-    '광진': [0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],
-    '송파': [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],
-    '성동': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'광장동, 구의동 초등3학년 수학학원 추천해주세요!',url:'https://cafe.naver.com/dochiya/1280908'},{text:'구의동 초등수학 추천해주세요',url:'https://cafe.naver.com/dochiya/1280284'},{text:'늘푸른수학원 vs 잠실파인만',url:'https://cafe.naver.com/everyhomework/867086'},{text:'중딩 수학학원 추천좀 해주세요~',url:'https://cafe.naver.com/bbbx/790070'},{text:'중2아이 귀국',url:'https://cafe.naver.com/dochiya/1315835'},{text:'건대부고 과학내신 학원 추천해주세요',url:'https://cafe.naver.com/dochiya/1318534'}]
-  },
-  {
-    name: '닥스', us: false,
-    mentions: {
-    '전체': {'전체':6,'2024년':2,'2025년':4,'2024.02':1,'2024.06':1,'2025.03':1,'2025.05':1,'2025.11':2},
-    '동대문': {'전체':4,'2024년':2,'2025년':2,'2024.02':1,'2024.06':1,'2025.05':1,'2025.11':1},
-    '광진': {'전체':1,'2025년':1,'2025.03':1},
-    '중랑': {'전체':1,'2025년':1,'2025.11':1}
-  },
-    monthly: {
-    '전체': [0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,2,0,0,0,0,0,0,0],
-    '동대문': [0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0],
-    '광진': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '중랑': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'신답초로 전학 가요. 학원 문의요..',url:'https://cafe.naver.com/dongdaemoonstory/316901'},{text:'영어 말하기 쓰기 전문 학원',url:'https://cafe.naver.com/dongdaemoonstory/326039'},{text:'초1 영어 어떻게 해야 할까요?',url:'https://cafe.naver.com/dongbumomschool/4869'},{text:'어학원 중등 결정 도와주세욤!',url:'https://cafe.naver.com/dongdaemoonstory/350260'},{text:'영어학원 선택 어렵네요',url:'https://cafe.naver.com/dongdaemoonstory/359655'},{text:'학원추천해주세요~',url:'https://cafe.naver.com/richload/11585'}]
+    allPosts: [{text:'초등학생 수학, 영어 학원 어디가 괜찮을까요?',url:'https://cafe.naver.com/dochiya/1280651'},{text:'초1 영어학원문의요',url:'https://cafe.naver.com/dochiya/1294780'},{text:'구의3동 중2 영어학원추천부탁드려요.',url:'https://cafe.naver.com/dochiya/1299981'},{text:'광장동 학원가 추천',url:'https://cafe.naver.com/dochiya/1316080'},{text:'광장동 만6세 영어학원 추천해 주세요~',url:'https://cafe.naver.com/dochiya/1317386'},{text:'구의역 근처 영어학원',url:'https://cafe.naver.com/dochiya/1319246'}]
   },
   {
     name: '수학의시대', us: false,
@@ -1008,24 +1058,6 @@ var MON_DATA = [
     allPosts: [{text:'초3 영어 수학 학원 추천부탁드립니다!',url:'https://cafe.naver.com/dochiya/1322184'},{text:'동자초 앞 영어.수학학원 추천해주세요~~',url:'https://cafe.naver.com/dochiya/1285156'},{text:'유치원생 어학원',url:'https://cafe.naver.com/dochiya/1296460'},{text:'초등5학년 영어수학',url:'https://cafe.naver.com/dochiya/1298614'},{text:'자양동 영어 수학 학원',url:'https://cafe.naver.com/dochiya/1307056'},{text:'자양2동으로 이사왔어요. 학원추천',url:'https://cafe.naver.com/dochiya/1307954'}]
   },
   {
-    name: '토피아 아카데미', us: false,
-    mentions: {
-    '전체': {'전체':6,'2025년':4,'2026년':2,'2025.02':1,'2025.10':1,'2025.11':2,'2026.02':2},
-    '중계': {'전체':6,'2025년':4,'2026년':2,'2025.02':1,'2025.10':1,'2025.11':2,'2026.02':2}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,2,0,0,2,0,0,0,0],
-    '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,2,0,0,2,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'노원 종합학원 추천해 주세요.',url:'https://cafe.naver.com/sjkdhj467/924147'},{text:'서울외고 학원추천',url:'https://cafe.naver.com/joonggyeedu/45469'},{text:'토피아 아카데미',url:'https://cafe.naver.com/joonggyeedu/47310'},{text:'은사에서 과고 준비 학원 어디일까요?',url:'https://cafe.naver.com/joonggyeedu/46644'},{text:'세일학원',url:'https://cafe.naver.com/joonggyeedu/51661'},{text:'재현고 영어학원',url:'https://cafe.naver.com/joonggyeedu/50858'}]
-  },
-  {
     name: '뉴스터디', us: false,
     mentions: {
     '전체': {'전체':5,'2024년':4,'2026년':1,'2024.01':1,'2024.02':3,'2026.01':1},
@@ -1062,28 +1094,6 @@ var MON_DATA = [
 
   ],
     allPosts: [{text:'용화여고 1학년 수학 학원 고민입니다.',url:'https://cafe.naver.com/joonggyeedu/45741'},{text:'정시학원 정보 알고싶어요~',url:'https://cafe.naver.com/joonggyeedu/48128'},{text:'아이레테보러 은사다녀왔어요',url:'https://cafe.naver.com/joonggyeedu/49933'},{text:'수학학원 추천해주세요(고3)',url:'https://cafe.naver.com/joonggyeedu/52265'},{text:'고2 내신 수학학원 추천',url:'https://cafe.naver.com/joonggyeedu/54004'}]
-  },
-  {
-    name: '세이노', us: false,
-    mentions: {
-    '전체': {'전체':5,'2025년':3,'2026년':2,'2025.07':1,'2025.08':1,'2025.11':1,'2026.03':1,'2026.05':1},
-    '중계': {'전체':2,'2025년':1,'2026년':1,'2025.11':1,'2026.05':1},
-    '미사': {'전체':2,'2025년':1,'2026년':1,'2025.07':1,'2026.03':1},
-    '송파': {'전체':1,'2025년':1,'2025.08':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,1,0,1,0],
-    '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0],
-    '미사': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0],
-    '송파': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'영어 수학 학원 옮기려는데',url:'https://cafe.naver.com/joonggyeedu/55275'},{text:'하남 수학학원이요',url:'https://cafe.naver.com/hsite/160197'},{text:'위례 수학학원 문의',url:'https://cafe.naver.com/everyhomework/898563'},{text:'초6 영어 수학학원 추천부탁드려도 될까요?',url:'https://cafe.naver.com/joonggyeedu/46351'},{text:'파인만 중등은 어떤가요~?',url:'https://cafe.naver.com/ira111/906194'}]
   },
   {
     name: '세일학원', us: false,
@@ -1144,64 +1154,6 @@ var MON_DATA = [
     allPosts: [{text:'초6  광장동 수학 영어요',url:'https://cafe.naver.com/dochiya/1300317'},{text:'광장동 중1 소형 수학 학원 추천해주세요',url:'https://cafe.naver.com/dochiya/1301960'},{text:'광장동 초등 수학 학원',url:'https://cafe.naver.com/dochiya/1302127'},{text:'광장동 학원가',url:'https://cafe.naver.com/dochiya/1312859'},{text:'건대부고 학원',url:'https://cafe.naver.com/dochiya/1318543'}]
   },
   {
-    name: '최선어학원', us: false,
-    mentions: {
-    '전체': {'전체':5,'2025년':2,'2026년':3,'2025.01':1,'2025.06':1,'2026.01':2,'2026.02':1},
-    '미사': {'전체':2,'2025년':1,'2026년':1,'2025.06':1,'2026.01':1},
-    '광진': {'전체':1,'2026년':1,'2026.01':1},
-    '송파': {'전체':1,'2026년':1,'2026.02':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,2,1,0,0,0,0],
-    '미사': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0],
-    '광진': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0],
-    '송파': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'초등 학원 문의요~(초고학년)',url:'https://cafe.naver.com/ira111/838273'},{text:'미사에 초등수학학원 대형 있나요?',url:'https://cafe.naver.com/ira111/862348'},{text:'광장동 만6세 영어학원 추천해 주세요~',url:'https://cafe.naver.com/dochiya/1317386'},{text:'고학년 영.수학원 추천해주세요',url:'https://cafe.naver.com/kidsinlove/1176069'},{text:'영어학원',url:'https://cafe.naver.com/dochiya/1318380'}]
-  },
-  {
-    name: '토피아아카데미', us: false,
-    mentions: {
-    '전체': {'전체':5,'2025년':4,'2026년':1,'2025.02':1,'2025.08':1,'2025.11':1,'2025.12':1,'2026.01':1},
-    '중계': {'전체':5,'2025년':4,'2026년':1,'2025.02':1,'2025.08':1,'2025.11':1,'2025.12':1,'2026.01':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0],
-    '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'영어유치원 생각중이에요',url:'https://cafe.naver.com/nowonmams/290427'},{text:'노원 수학학원 알려주세요',url:'https://cafe.naver.com/sjkdhj467/933205'},{text:'외고 면접 대비 학원 부탁드려요',url:'https://cafe.naver.com/joonggyeedu/46907'},{text:'중학교 내신 학원',url:'https://cafe.naver.com/joonggyeedu/47778'},{text:'셔틀버스 수학학원',url:'https://cafe.naver.com/joonggyeedu/49170'}]
-  },
-  {
-    name: '토피아어학원', us: false,
-    mentions: {
-    '전체': {'전체':5,'2024년':1,'2025년':1,'2026년':3,'2024.11':1,'2025.06':1,'2026.01':1,'2026.02':2},
-    '중계': {'전체':5,'2024년':1,'2025년':1,'2026년':3,'2024.11':1,'2025.06':1,'2026.01':1,'2026.02':2}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,2,0,0,0,0],
-    '중계': [0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,2,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'토피아어학원 같이 할인받을분 ?',url:'https://cafe.naver.com/babymombaby/654702'},{text:'토피아어학원 결제선생 되는지 아시는분 계실까요?',url:'https://cafe.naver.com/junggyekids/11560'},{text:'외고 대비 영어학원은 어디가 좋은지 추천 부탁드립니다.',url:'https://cafe.naver.com/joonggyeedu/49710'},{text:'중계 스터디카페',url:'https://cafe.naver.com/joonggyeedu/50840'},{text:'셔틀오는 학원',url:'https://cafe.naver.com/joonggyeedu/50594'}]
-  },
-  {
     name: '한맥', us: false,
     mentions: {
     '전체': {'전체':5,'2025년':5,'2025.01':1,'2025.02':1,'2025.04':1,'2025.06':1,'2025.12':1},
@@ -1218,24 +1170,6 @@ var MON_DATA = [
 
   ],
     allPosts: [{text:'둔촌동이사',url:'https://cafe.naver.com/everyhomework/877615'},{text:'올파포입주! 예비중1, 예비초5 학원세팅 ㅠ',url:'https://cafe.naver.com/everyhomework/881673'},{text:'위례신도시 중고등생 학원은 어디쪽으로 많이가실까요?',url:'https://cafe.naver.com/everyhomework/885890'},{text:'보성중이랑 오륜중 아이들은 내신 학원 어디 가나요?',url:'https://cafe.naver.com/everyhomework/892058'},{text:'현 초3 아이 학원 질문입니다',url:'https://cafe.naver.com/everyhomework/906683'}]
-  },
-  {
-    name: 'npe', us: false,
-    mentions: {
-    '전체': {'전체':4,'2024년':3,'2025년':1,'2024.01':1,'2024.02':1,'2024.11':1,'2025.10':1},
-    '미사': {'전체':3,'2024년':2,'2025년':1,'2024.02':1,'2024.11':1,'2025.10':1}
-  },
-    monthly: {
-    '전체': [1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0],
-    '미사': [0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'고등수학 학원 추천',url:'https://cafe.naver.com/ira111/780051'},{text:'하남고 아이들은 수학학원 어디로?',url:'https://cafe.naver.com/ira111/826638'},{text:'신장동 주2회 판서식 고등 수학학원 추천해 주세요.',url:'https://cafe.naver.com/kidsinlove/1166100'}]
   },
   {
     name: '고수학', us: false,
@@ -1296,26 +1230,6 @@ var MON_DATA = [
     allPosts: [{text:'6학년 국어(독해,논술)학원 추천좀 부탁드려요~',url:'https://cafe.naver.com/ira111/818242'},{text:'학원 추천부탁드려요',url:'https://cafe.naver.com/dochiya/1317543'},{text:'강동구 고덕동 초중등 영어 수학학원 추천',url:'https://cafe.naver.com/everyhomework/919690'},{text:'내년초이사계획이에요',url:'https://cafe.naver.com/joonggyeedu/55849'}]
   },
   {
-    name: '늘푸른수학', us: false,
-    mentions: {
-    '전체': {'전체':4,'2024년':2,'2026년':2,'2024.01':1,'2024.02':1,'2026.01':1,'2026.02':1},
-    '광진': {'전체':2,'2024년':2,'2024.01':1,'2024.02':1},
-    '송파': {'전체':2,'2026년':2,'2026.01':1,'2026.02':1}
-  },
-    monthly: {
-    '전체': [1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0],
-    '광진': [1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '송파': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'건대부중 수학학원추천이요',url:'https://cafe.naver.com/dochiya/1275864'},{text:'광진구 수학학원 추천좀..',url:'https://cafe.naver.com/dochiya/1278125'},{text:'아이 학원 상담 받을 때마다 없어서요 ㅠㅠ',url:'https://cafe.naver.com/bbbx/827918'},{text:'초고학년 수학학원 알려주세요~~',url:'https://cafe.naver.com/everyhomework/913146'}]
-  },
-  {
     name: '대치성공스토리', us: false,
     mentions: {
     '전체': {'전체':4,'2024년':3,'2025년':1,'2024.08':1,'2024.12':2,'2025.05':1},
@@ -1332,26 +1246,6 @@ var MON_DATA = [
 
   ],
     allPosts: [{text:'중등 2학년 수학학원 좀 추천해주세요~',url:'https://cafe.naver.com/kidsinlove/1122695'},{text:'고등수학은 대치성공vs깊은생각 어디가..?',url:'https://cafe.naver.com/ira111/835730'},{text:'구주이배랑 대치성공스토리, 고등관…',url:'https://cafe.naver.com/ira111/835556'},{text:'중3 수학학원 문의요',url:'https://cafe.naver.com/kidsinlove/1152552'}]
-  },
-  {
-    name: '덕스', us: false,
-    mentions: {
-    '전체': {'전체':4,'2025년':3,'2026년':1,'2025.01':1,'2025.05':1,'2025.11':1,'2026.01':1},
-    '송파': {'전체':1,'2025년':1,'2025.05':1},
-    '중계': {'전체':2,'2025년':1,'2026년':1,'2025.11':1,'2026.01':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0],
-    '송파': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'초등 학원 문의요~(초고학년)',url:'https://cafe.naver.com/ira111/838273'},{text:'광장동쪽은 영유연계학원 어디로 보내시나요',url:'https://cafe.naver.com/dochiya/1305918'},{text:'초6 영어 수학학원 추천부탁드려도 될까요?',url:'https://cafe.naver.com/joonggyeedu/46351'},{text:'외고 대비 영어학원은 어디가 좋은지 추천 부탁드립니다.',url:'https://cafe.naver.com/joonggyeedu/49710'}]
   },
   {
     name: '랭콘', us: false,
@@ -1450,24 +1344,6 @@ var MON_DATA = [
     allPosts: [{text:'예비5학년 수학학원',url:'https://cafe.naver.com/ira111/776866'},{text:'구산쪽 차량되는 초등수학학원있을까요?',url:'https://cafe.naver.com/ira111/835815'},{text:'초등 학원 문의요~(초고학년)',url:'https://cafe.naver.com/ira111/838273'},{text:'학원 정말 어려워요~',url:'https://cafe.naver.com/kidsinlove/1182565'}]
   },
   {
-    name: '수학의 힘', us: false,
-    mentions: {
-    '전체': {'전체':4,'2024년':1,'2025년':3,'2024.02':1,'2025.01':1,'2025.05':1,'2025.12':1},
-    '미사': {'전체':3,'2024년':1,'2025년':2,'2024.02':1,'2025.05':1,'2025.12':1}
-  },
-    monthly: {
-    '전체': [0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0],
-    '미사': [0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509'},{text:'초등 학원 문의요~(초고학년)',url:'https://cafe.naver.com/ira111/838273'},{text:'중3 수학학원 문의요',url:'https://cafe.naver.com/kidsinlove/1152552'},{text:'하늘색 학원 가방 학원이름이 궁금해요',url:'https://cafe.naver.com/ira111/892555'}]
-  },
-  {
     name: '스토리가든', us: false,
     mentions: {
     '전체': {'전체':4,'2024년':3,'2026년':1,'2024.01':2,'2024.12':1,'2026.05':1},
@@ -1484,26 +1360,6 @@ var MON_DATA = [
 
   ],
     allPosts: [{text:'초3아이 수학학원 시간 조율 문의드려요',url:'https://cafe.naver.com/kidsinlove/1184573'},{text:'풍산초 학원여부~',url:'https://cafe.naver.com/ira111/773458'},{text:'영어학원. 정상 vs 심슨',url:'https://cafe.naver.com/ira111/771928'},{text:'수학,영어학원 추천부탁드려요',url:'https://cafe.naver.com/kidsinlove/1139647'}]
-  },
-  {
-    name: '시매쓰', us: false,
-    mentions: {
-    '전체': {'전체':4,'2024년':2,'2025년':2,'2024.02':1,'2024.12':1,'2025.03':1,'2025.09':1},
-    '미사': {'전체':2,'2024년':2,'2024.02':1,'2024.12':1},
-    '송파': {'전체':1,'2025년':1,'2025.03':1}
-  },
-    monthly: {
-    '전체': [0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
-    '미사': [0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '송파': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'예비5학년 수학학원',url:'https://cafe.naver.com/ira111/776866'},{text:'구산쪽 차량되는 초등수학학원있을까요?',url:'https://cafe.naver.com/ira111/835815'},{text:'잠실동 수학학원',url:'https://cafe.naver.com/everyhomework/883730'},{text:'수학학원조언주세요',url:'https://cafe.naver.com/ira111/875026'}]
   },
   {
     name: '와이즈만', us: false,
@@ -1568,84 +1424,6 @@ var MON_DATA = [
     allPosts: [{text:'초4 수학,영어 학원 추천부탁드려요~~',url:'https://cafe.naver.com/babymombaby/649503'},{text:'초5수학 학원',url:'https://cafe.naver.com/joonggyeedu/52857'},{text:'학원 고민입니다.',url:'https://cafe.naver.com/joonggyeedu/52505'},{text:'초6 여아 수학학원',url:'https://cafe.naver.com/joonggyeedu/55679'}]
   },
   {
-    name: '페르마수학', us: false,
-    mentions: {
-    '전체': {'전체':4,'2024년':3,'2026년':1,'2024.01':1,'2024.10':1,'2024.12':1,'2026.04':1},
-    '미사': {'전체':4,'2024년':3,'2026년':1,'2024.01':1,'2024.10':1,'2024.12':1,'2026.04':1}
-  },
-    monthly: {
-    '전체': [1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
-    '미사': [1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'풍산초 학원여부~',url:'https://cafe.naver.com/ira111/773458'},{text:'정상어학원,페르마수학 레테비용',url:'https://cafe.naver.com/ira111/821168'},{text:'수학학원추천(예비고2)',url:'https://cafe.naver.com/ira111/833516'},{text:'초등 페르마수학 어때요?',url:'https://cafe.naver.com/ira111/910180'}]
-  },
-  {
-    name: '해법', us: false,
-    mentions: {
-    '전체': {'전체':4,'2024년':3,'2026년':1,'2024.09':1,'2024.10':2,'2026.06':1},
-    '성동': {'전체':1,'2024년':1,'2024.09':1},
-    '미사': {'전체':2,'2024년':2,'2024.10':2},
-    '동대문': {'전체':1,'2026년':1,'2026.06':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-    '성동': [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '미사': [0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '동대문': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'왕십리 영어학원 추천해주세요~~~',url:'https://cafe.naver.com/dochiya/1292493'},{text:'초등 3학년 교과 수학 학원, 어디가 있어요?',url:'https://cafe.naver.com/ira111/821387'},{text:'초등6학년 영,수 학원 문의~',url:'https://cafe.naver.com/kidsinlove/1132958'},{text:'이사가려는데',url:'https://cafe.naver.com/jungnangbaby/760661'}]
-  },
-  {
-    name: '해법수학', us: false,
-    mentions: {
-    '전체': {'전체':4,'2024년':3,'2025년':1,'2024.05':1,'2024.06':1,'2024.09':1,'2025.09':1},
-    '송파': {'전체':2,'2024년':2,'2024.05':1,'2024.09':1},
-    '광진': {'전체':1,'2024년':1,'2024.06':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
-    '송파': [0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '광진': [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'수학학원 추천 부탁드려요~',url:'https://cafe.naver.com/everyhomework/854398'},{text:'수학학원 추천 부탁해요',url:'https://cafe.naver.com/dochiya/1286975'},{text:'방산초 학군 학원이요',url:'https://cafe.naver.com/everyhomework/864857'},{text:'수학학원조언주세요',url:'https://cafe.naver.com/ira111/875026'}]
-  },
-  {
-    name: 'NPE', us: false,
-    mentions: {
-    '전체': {'전체':3,'2025년':2,'2026년':1,'2025.02':2,'2026.02':1},
-    '미사': {'전체':3,'2025년':2,'2026년':1,'2025.02':2,'2026.02':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0],
-    '미사': [0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'중고등 수학학원',url:'https://cafe.naver.com/ira111/845167'},{text:'중3 수학학원이요ㅠ',url:'https://cafe.naver.com/misamamsnbaby/85770'},{text:'고등학생 수학 추천해주세요',url:'https://cafe.naver.com/kidsinlove/1176984'}]
-  },
-  {
     name: '가온수학', us: false,
     mentions: {
     '전체': {'전체':3,'2024년':2,'2026년':1,'2024.01':1,'2024.12':1,'2026.02':1},
@@ -1682,26 +1460,6 @@ var MON_DATA = [
     allPosts: [{text:'초고 수학학원',url:'https://cafe.naver.com/ira111/843620'},{text:'중2 수학학원 추천부탁드려요',url:'https://cafe.naver.com/ira111/855504'},{text:'중,고등 선행 개별진도에 학습량 많은 수학학원 있을까요?',url:'https://cafe.naver.com/ira111/896493'}]
   },
   {
-    name: '구주이배수학', us: false,
-    mentions: {
-    '전체': {'전체':3,'2025년':1,'2026년':2,'2025.12':1,'2026.02':1,'2026.04':1},
-    '광진': {'전체':2,'2025년':1,'2026년':1,'2025.12':1,'2026.02':1},
-    '미사': {'전체':1,'2026년':1,'2026.04':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0],
-    '광진': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0],
-    '미사': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'광장동 수학, 영어학원 추천',url:'https://cafe.naver.com/dochiya/1316626'},{text:'광장동 수학학원',url:'https://cafe.naver.com/dochiya/1319018'},{text:'초등 페르마수학 어때요?',url:'https://cafe.naver.com/ira111/910180'}]
-  },
-  {
     name: '국풍', us: false,
     mentions: {
     '전체': {'전체':3,'2025년':2,'2026년':1,'2025.11':2,'2026.01':1},
@@ -1718,44 +1476,6 @@ var MON_DATA = [
 
   ],
     allPosts: [{text:'선덕고 학원 추천 부탁드립니다',url:'https://cafe.naver.com/joonggyeedu/46421'},{text:'예비고1 수학학원...추천 부탁드려요',url:'https://cafe.naver.com/joonggyeedu/46231'},{text:'중계동에서 시작한 학원은 무엇이 있을까요?',url:'https://cafe.naver.com/joonggyeedu/49978'}]
-  },
-  {
-    name: '깊은생각수학', us: false,
-    mentions: {
-    '전체': {'전체':3,'2024년':1,'2025년':2,'2024.07':1,'2025.01':1,'2025.10':1},
-    '미사': {'전체':3,'2024년':1,'2025년':2,'2024.07':1,'2025.01':1,'2025.10':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0],
-    '미사': [0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'깊은 생각수학 초등부 어떤가요?',url:'https://cafe.naver.com/ira111/806037'},{text:'깊은생각 수학 보내시는분 계실까요',url:'https://cafe.naver.com/ira111/839940'},{text:'매쓰마스터.깊은생각수학 어떤가요?',url:'https://cafe.naver.com/ira111/881552'}]
-  },
-  {
-    name: '닥스어학원', us: false,
-    mentions: {
-    '전체': {'전체':3,'2024년':1,'2025년':2,'2024.08':1,'2025.05':2},
-    '중랑': {'전체':2,'2024년':1,'2025년':1,'2024.08':1,'2025.05':1},
-    '동대문': {'전체':1,'2025년':1,'2025.05':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '중랑': [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '동대문': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400'},{text:'이사 와서 학원을 알아봐야 하는데 ㅜ',url:'https://cafe.naver.com/dongdaemoonstory/349753'},{text:'힐데스 학원차량 궁금해요~',url:'https://cafe.naver.com/richload/11182'}]
   },
   {
     name: '더원', us: false,
@@ -1816,42 +1536,6 @@ var MON_DATA = [
 
   ],
     allPosts: [{text:'서울외고 학원추천',url:'https://cafe.naver.com/joonggyeedu/45469'},{text:'예비고1 수학학원...추천 부탁드려요',url:'https://cafe.naver.com/joonggyeedu/46231'},{text:'정시학원 정보 알고싶어요~',url:'https://cafe.naver.com/joonggyeedu/48128'}]
-  },
-  {
-    name: '몬스터', us: false,
-    mentions: {
-    '전체': {'전체':3,'2025년':1,'2026년':2,'2025.12':1,'2026.01':1,'2026.03':1},
-    '광진': {'전체':3,'2025년':1,'2026년':2,'2025.12':1,'2026.01':1,'2026.03':1}
-  },
-    monthly: {
-    '전체': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0],
-    '광진': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'광장동 학원가 추천',url:'https://cafe.naver.com/dochiya/1316080'},{text:'광장동 만6세 영어학원 추천해 주세요~',url:'https://cafe.naver.com/dochiya/1317386'},{text:'구의역 근처 영어학원',url:'https://cafe.naver.com/dochiya/1319246'}]
-  },
-  {
-    name: '몬스터어학원', us: false,
-    mentions: {
-    '전체': {'전체':3,'2024년':2,'2025년':1,'2024.03':1,'2024.10':1,'2025.01':1},
-    '광진': {'전체':3,'2024년':2,'2025년':1,'2024.03':1,'2024.10':1,'2025.01':1}
-  },
-    monthly: {
-    '전체': [0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    '광진': [0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-  },
-    pros: [
-
-  ],
-    cons: [
-
-  ],
-    allPosts: [{text:'초등학생 수학, 영어 학원 어디가 괜찮을까요?',url:'https://cafe.naver.com/dochiya/1280651'},{text:'초1 영어학원문의요',url:'https://cafe.naver.com/dochiya/1294780'},{text:'구의3동 중2 영어학원추천부탁드려요.',url:'https://cafe.naver.com/dochiya/1299981'}]
   },
   {
     name: '바디메오', us: false,
@@ -2040,6 +1724,24 @@ var MON_DATA = [
 
   ],
     allPosts: [{text:'재현고 영어학원',url:'https://cafe.naver.com/joonggyeedu/50858'},{text:'상명중 내신 영어, 수학 학원 추천해 주세요',url:'https://cafe.naver.com/joonggyeedu/50827'},{text:'선덕고 전문학원',url:'https://cafe.naver.com/joonggyeedu/50506'}]
+  },
+  {
+    name: '정상페르마', us: false,
+    mentions: {
+    '전체': {'전체':3,'2024년':1,'2025년':2,'2024.01':1,'2025.03':1,'2025.12':1},
+    '미사': {'전체':3,'2024년':1,'2025년':2,'2024.01':1,'2025.03':1,'2025.12':1}
+  },
+    monthly: {
+    '전체': [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],
+    '미사': [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0]
+  },
+    pros: [
+
+  ],
+    cons: [
+
+  ],
+    allPosts: [{text:'나룰초 5학년 수학학원',url:'https://cafe.naver.com/kidsinlove/1099044'},{text:'풍산초 영수학원',url:'https://cafe.naver.com/kidsinlove/1146327'},{text:'신장고 설대수시합격?',url:'https://cafe.naver.com/ira111/891615'}]
   },
   {
     name: '최강수학', us: false,
