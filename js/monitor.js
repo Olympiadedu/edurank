@@ -2488,8 +2488,8 @@ function monRenderDetail(ac) {
       responsive: true, maintainAspectRatio: false,
       plugins: { legend: { display: false } },
       scales: {
-        x: { grid: { display: false }, border: { display: false }, ticks: { font: { size: 11 }, color: '#9ca3af' } },
-        y: { grid: { color: '#f0f0f0' }, border: { display: false }, ticks: { font: { size: 11 }, color: '#9ca3af', stepSize: 2 }, beginAtZero: true }
+        x: { grid: { display: false }, border: { display: false }, ticks: { font: { size: 13 }, color: '#9ca3af' } },
+        y: { grid: { color: '#f0f0f0' }, border: { display: false }, ticks: { font: { size: 13 }, color: '#9ca3af', stepSize: 2 }, beginAtZero: true }
       },
       onClick: function(evt, elements, chart) {
         if (!elements || !elements.length) return;
