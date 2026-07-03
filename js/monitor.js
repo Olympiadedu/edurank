@@ -12,15 +12,65 @@ var MON_DATA = [
     '미사': [0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,1,0,0,0,0,0,0,2,0,0,1]
   },
     pros: [
-    {label:'셔틀/접근성',count:1,posts:[{text:'수학 좀 잘하는 친구는 학원 어디로 가나요?',url:'https://cafe.naver.com/bbbx/848208',region:'위례',date:'2026.05'}]},
-    {label:'반복/심화학습',count:1,posts:[{text:'청어람 중3 매주 테스트있나요? 샘들은 어떠신가요?',url:'https://cafe.naver.com/zzandol/752420',region:'송파',date:'2024.02'}]},
-    {label:'관리/피드백',count:2,posts:[{text:'청어람 중3 매주 테스트있나요? 샘들은 어떠신가요?',url:'https://cafe.naver.com/zzandol/752420',region:'송파',date:'2024.02'},{text:'중학생 학원,,',url:'https://cafe.naver.com/everyhomework/892056',region:'송파',date:'2025.06'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'수학학원 추천해주세요!',url:'https://cafe.naver.com/everyhomework/888900',region:'송파',date:'2025.05'}]}
+    {label:'셔틀/접근성',count:1,posts:[{text:'수학 좀 잘하는 친구는 학원 어디로 가나요?',url:'https://cafe.naver.com/bbbx/848208',region:'위례',date:'2026.05',body:'아이 학년에 따라 다를것같아요
+---
+초등은 황소, 중등 청어람(셔틀운행) , 위례여야 한다면 판다
+---
+수학 잘 하는 친구이면 대형 학원보내세요잘하는 친구들 아주 잘해요
+---
+수학을 잘하는 친구들이 다니는 학원…'}]},
+    {label:'반복/심화학습',count:1,posts:[{text:'청어람 중3 매주 테스트있나요? 샘들은 어떠신가요?',url:'https://cafe.naver.com/zzandol/752420',region:'송파',date:'2024.02',body:'매주 테스트 보고 80점 미만이면 재시, 재재시 재재재시 봅니다!'}]},
+    {label:'관리/피드백',count:2,posts:[{text:'청어람 중3 매주 테스트있나요? 샘들은 어떠신가요?',url:'https://cafe.naver.com/zzandol/752420',region:'송파',date:'2024.02',body:'매주 테스트 보고 80점 미만이면 재시, 재재시 재재재시 봅니다!'},{text:'중학생 학원,,',url:'https://cafe.naver.com/everyhomework/892056',region:'송파',date:'2025.06',body:'저흰 청어람 만족하며 다녔었어요~
+---
+청어람 개인지도 해주시나요? 잘 못쫒아가는 아이도 포기 하지않고 가르쳐 주실까요^^;;;
+---
+감사해요'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'수학학원 추천해주세요!',url:'https://cafe.naver.com/everyhomework/888900',region:'송파',date:'2025.05',body:'유투엠청어람요
+---
+프랜차이즈들은 다 괜찮은거같아요
+---
+청어람 좋아요
+---
+씨매스나 청어람.
+---
+청어람이 선생님들이 열심히 해주셨긴 한거 같아요
+---
+늘푸른이요
+---
+에이스수학 1:1   맞춤형으로 수…'}]}
   ],
     cons: [
-    {label:'숙제/학습량부담',count:3,posts:[{text:'중1 수학/영어 셔틀 운행 하는 곳 추천 부탁드려요',url:'https://cafe.naver.com/everyhomework/870920',region:'송파',date:'2024.11'},{text:'송파구 방이동 방산초 6학년 수학학원',url:'https://cafe.naver.com/mktsesang/1186359',region:'송파',date:'2025.07'},{text:'청어람 초고 수학학원으로 어떨까요?',url:'https://cafe.naver.com/everyhomework/913592',region:'송파',date:'2026.02'}]},
-    {label:'개별관리부족',count:1,posts:[{text:'수학학원 추천해주세요',url:'https://cafe.naver.com/everyhomework/894893',region:'송파',date:'2025.07'}]},
-    {label:'가격부담',count:1,posts:[{text:'청어람 중등 영재관도 과학필수 인가요?',url:'https://cafe.naver.com/bbbx/830515',region:'송파',date:'2026.02'}]}
+    {label:'숙제/학습량부담',count:3,posts:[{text:'중1 수학/영어 셔틀 운행 하는 곳 추천 부탁드려요',url:'https://cafe.naver.com/everyhomework/870920',region:'송파',date:'2024.11',body:'안녕하세요 회원님 \'◡\'등업신청은 \'질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청하기\'…'},{text:'송파구 방이동 방산초 6학년 수학학원',url:'https://cafe.naver.com/mktsesang/1186359',region:'송파',date:'2025.07',body:'수학은 청어람요수영은<아쿠아키즈>. 스위스키즈베이도 있어요.
+---
+넹 감사합니당~~^^
+---
+버버리소녀v오금동도움되시길요
+---
+안녕하세요 회원님 \'◡\'등업신청은 \'지역 질문&답변[등업]\' 게시판에서 질문글 3개…'},{text:'청어람 초고 수학학원으로 어떨까요?',url:'https://cafe.naver.com/everyhomework/913592',region:'송파',date:'2026.02',body:'좋아요강추합니다
+---
+거기..많이가더라구요🤣
+---
+괜찮아요 만족요
+---
+오오 다들 만족하시는군요. 숙제가 많아서 힘들어하진 않나요?
+---
+힘든곳이 맞긴 한데 아이한테 맞음 좋지요
+---
+다닐만하조
+---
+청어…'}]},
+    {label:'개별관리부족',count:1,posts:[{text:'수학학원 추천해주세요',url:'https://cafe.naver.com/everyhomework/894893',region:'송파',date:'2025.07',body:'청어람요
+---
+청어람이나 늘푸른이요
+---
+청어람 레벨 단계가 많아요
+---
+청어람 괜찮더라구요
+---
+정보 얻어갑니다
+---
+저도 요즘 중등아들 수학으로 고민중이에요, 대형은 일대일케어가 어려울것같아 과외도 함께…'}]},
+    {label:'가격부담',count:1,posts:[{text:'청어람 중등 영재관도 과학필수 인가요?',url:'https://cafe.naver.com/bbbx/830515',region:'송파',date:'2026.02',body:'학원에 직접 확인해보시는게 제일 정확할거같아요~'}]}
   ],
     allPosts: [{text:'수학 좀 잘하는 친구는 학원 어디로 가나요?',url:'https://cafe.naver.com/bbbx/848208'},{text:'방이동 청어람 레벨 아시는분 계신가요?~~~',url:'https://cafe.naver.com/everyhomework/842607'},{text:'송파 근처 수학학원 추천',url:'https://cafe.naver.com/mktsesang/1147349'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'수학학원 추천 해주실 수 있을까요?',url:'https://cafe.naver.com/mktsesang/1148867'},{text:'청어람 중3 매주 테스트있나요? 샘들은 어떠신가요?',url:'https://cafe.naver.com/zzandol/752420'},{text:'송파구 문정동에서 중학교 수학학원 어디로 가야할지요?',url:'https://cafe.naver.com/zzandol/754677'},{text:'광장동 학원셔틀?',url:'https://cafe.naver.com/dochiya/1283451'},{text:'방이동 - 수학학원',url:'https://cafe.naver.com/everyhomework/858694'},{text:'잠실쪽 아이 수학학원 추천해주세요',url:'https://cafe.naver.com/everyhomework/858619'}]
   },
@@ -47,15 +97,49 @@ var MON_DATA = [
     '송파': [0,0,0,0,0,0,0,0,1,0,1,2,0,0,1,0,0,0,0,1,0,0,1,0,0,2,0,0,0,0]
   },
     pros: [
-    {label:'관리/피드백',count:1,posts:[{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400',region:'중랑',date:'2024.08'}]},
-    {label:'차량/접근성',count:2,posts:[{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400',region:'중랑',date:'2024.08'},{text:'안녕하세요. 중학생 학원 궁금해요.',url:'https://cafe.naver.com/jungnangbaby/738543',region:'중랑',date:'2025.06'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'신내동 논술학원 추천좀해주세요~',url:'https://cafe.naver.com/jungnangbaby/736446',region:'중랑',date:'2025.05'}]},
-    {label:'성적향상/성과',count:1,posts:[{text:'신내동 논술학원 추천좀해주세요~',url:'https://cafe.naver.com/jungnangbaby/736446',region:'중랑',date:'2025.05'}]},
-    {label:'셔틀/접근성',count:1,posts:[{text:'힐데스 학원차량 궁금해요~',url:'https://cafe.naver.com/richload/11182',region:'중랑',date:'2025.05'}]}
+    {label:'관리/피드백',count:1,posts:[{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400',region:'중랑',date:'2024.08',body:'영어는 무조건 정상어학원입니다
+---
+영어는 교재를 보시고,결정하셔야합니다. 정상어교재는 환타지동화로만 되어있습니다. 영어는 여러 방향으로 골고루 익혀야 어휘가 늡니다. 중랑구 유명한 대형어학원 가보시고 결정하세요.…'}]},
+    {label:'차량/접근성',count:2,posts:[{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400',region:'중랑',date:'2024.08',body:'영어는 무조건 정상어학원입니다
+---
+영어는 교재를 보시고,결정하셔야합니다. 정상어교재는 환타지동화로만 되어있습니다. 영어는 여러 방향으로 골고루 익혀야 어휘가 늡니다. 중랑구 유명한 대형어학원 가보시고 결정하세요.…'},{text:'안녕하세요. 중학생 학원 궁금해요.',url:'https://cafe.naver.com/jungnangbaby/738543',region:'중랑',date:'2025.06',body:'울아들은 학원을 한번도 안가서어디가 좋은지 모르겠네요그래서 챗gpt한테 물어봤지롱요!참고하세요~
+---
+와웅. 감사해요. 똑똑한GPT네요~~
+---
+라이딩이 가능하시면 중계쪽도 알아보셔요.(미래탐구/더원/황소/ U2…'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'신내동 논술학원 추천좀해주세요~',url:'https://cafe.naver.com/jungnangbaby/736446',region:'중랑',date:'2025.05',body:'저희 딸은 지*의숲 다니는데 선생님이 너무 좋으세요굉장히 다정하시고 따뜻한 분이셔서 아이가 오래 다니고 있고~딸 친구는 한*리 다니는데 그곳도 괜찮다고 들었어요두 곳 상담받아보세요~~내 아이의 성향에 맞는 곳 찾으시…'}]},
+    {label:'성적향상/성과',count:1,posts:[{text:'신내동 논술학원 추천좀해주세요~',url:'https://cafe.naver.com/jungnangbaby/736446',region:'중랑',date:'2025.05',body:'저희 딸은 지*의숲 다니는데 선생님이 너무 좋으세요굉장히 다정하시고 따뜻한 분이셔서 아이가 오래 다니고 있고~딸 친구는 한*리 다니는데 그곳도 괜찮다고 들었어요두 곳 상담받아보세요~~내 아이의 성향에 맞는 곳 찾으시…'}]},
+    {label:'셔틀/접근성',count:1,posts:[{text:'힐데스 학원차량 궁금해요~',url:'https://cafe.naver.com/richload/11182',region:'중랑',date:'2025.05',body:'이바인 어학원.정상 어학원 차량 가능합니다
+---
+대형 어학원들 위주로 차량 오나보네요. 감사합니다 :)
+---
+수영장 검도 태권도 차량 되어요이바인은 수학영어국어 과학 하는데 2과목이상 같이하면 할인되어요  고1기…'}]}
   ],
     cons: [
-    {label:'가격부담',count:2,posts:[{text:'광진구 영어학원 추천해주세요~',url:'https://cafe.naver.com/dochiya/1276768',region:'광진',date:'2024.01'},{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400',region:'중랑',date:'2024.08'}]},
-    {label:'숙제/학습량부담',count:1,posts:[{text:'송곡여자중학교 주위 영어학원 추천 부탁드려요~',url:'https://cafe.naver.com/dochiya/1302246',region:'중랑',date:'2025.02'}]}
+    {label:'가격부담',count:2,posts:[{text:'광진구 영어학원 추천해주세요~',url:'https://cafe.naver.com/dochiya/1276768',region:'광진',date:'2024.01',body:'근처 그냥 대형학원으로요
+---
+정상어 많이 가죠. 가격이 좀 비싸요.
+---
+폴리어학원 광진캠퍼스요.
+---
+정상어학원 괜찮아요.
+---
+정상어학원요'},{text:'초3 아이 학원문의드립니다',url:'https://cafe.naver.com/richload/10400',region:'중랑',date:'2024.08',body:'영어는 무조건 정상어학원입니다
+---
+영어는 교재를 보시고,결정하셔야합니다. 정상어교재는 환타지동화로만 되어있습니다. 영어는 여러 방향으로 골고루 익혀야 어휘가 늡니다. 중랑구 유명한 대형어학원 가보시고 결정하세요.…'}]},
+    {label:'숙제/학습량부담',count:1,posts:[{text:'송곡여자중학교 주위 영어학원 추천 부탁드려요~',url:'https://cafe.naver.com/dochiya/1302246',region:'중랑',date:'2025.02',body:'정ㅅ요
+---
+정상어학원이요
+---
+정상어학원추천이요
+---
+영ㅇ다움 추천하고 싶네요
+---
+정ㅅ요
+---
+정상어학원이요 .. 거기 많이 보내시는거 같아요^^근데 숙제가 엄청 많다고... ㅠㅠ
+---
+다들 정보주셔서…'}]}
   ],
     allPosts: [{text:'초3 영어 수학 학원 추천부탁드립니다!',url:'https://cafe.naver.com/dochiya/1322184'},{text:'초3아이 수학학원 시간 조율 문의드려요',url:'https://cafe.naver.com/kidsinlove/1184573'},{text:'광장동 영어학원 추천해주세요',url:'https://cafe.naver.com/dochiya/1276971'},{text:'광진구 영어학원 추천해주세요~',url:'https://cafe.naver.com/dochiya/1276768'},{text:'풍산초 학원여부~',url:'https://cafe.naver.com/ira111/773458'},{text:'영어학원. 정상 vs 심슨',url:'https://cafe.naver.com/ira111/771928'},{text:'나룰초 5학년 수학학원',url:'https://cafe.naver.com/kidsinlove/1099044'},{text:'위례 중등 수학, 영어학원 추천 부탁드려요^^',url:'https://cafe.naver.com/everyhomework/842602'},{text:'노원 영어학원 어디가 괜찮나요?',url:'https://cafe.naver.com/sjkdhj467/900963'},{text:'광진구 영어학원',url:'https://cafe.naver.com/dochiya/1278242'}]
   },
@@ -76,21 +160,145 @@ var MON_DATA = [
     '송파': [0,0,0,0,0,0,1,0,2,0,3,1,0,0,0,0,0,1,2,0,1,0,0,1,2,0,0,0,0,0]
   },
     pros: [
-    {label:'관리/피드백',count:4,posts:[{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09'},{text:'중등 수학학원 추천부탁드립니다',url:'https://cafe.naver.com/ira111/856981',region:'미사',date:'2025.05'},{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12'}]},
-    {label:'셔틀/접근성',count:6,posts:[{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868',region:'강동',date:'2024.01'},{text:'중3 수학학원 문의요',url:'https://cafe.naver.com/kidsinlove/1152552',region:'미사',date:'2025.05'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08'},{text:'초5) 자이쪽 4시30분 이후 수학학원을 찾고있어요',url:'https://cafe.naver.com/ira111/897824',region:'미사',date:'2026.01'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01'}]},
-    {label:'커리큘럼/시스템',count:12,posts:[{text:'미사고,미강고 대입 현황',url:'https://cafe.naver.com/ira111/780732',region:'미사',date:'2024.03'},{text:'구주이배요',url:'https://cafe.naver.com/ira111/813429',region:'미사',date:'2024.08'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09'},{text:'예비초4 대형학원 수학(구주이배&파인만)',url:'https://cafe.naver.com/ira111/839684',region:'미사',date:'2025.01'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08'},{text:'수학',url:'https://cafe.naver.com/ira111/889558',region:'미사',date:'2025.11'},{text:'한홀초 아이들 학원 주로 어디 보내시나요?',url:'https://cafe.naver.com/ira111/892542',region:'미사',date:'2025.12'},{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12'},{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01'},{text:'초3 수학학원 선택하기 어렵네요.',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04'}]},
-    {label:'차량/접근성',count:1,posts:[{text:'중등 2학년 수학학원 좀 추천해주세요~',url:'https://cafe.naver.com/kidsinlove/1122695',region:'미사',date:'2024.08'}]},
-    {label:'선생님/수업',count:3,posts:[{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07'},{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12'}]},
-    {label:'시설/환경',count:1,posts:[{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07'}]},
-    {label:'가격부담',count:1,posts:[{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12'}]},
-    {label:'반복/심화학습',count:1,posts:[{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12'}]},
-    {label:'성적향상/성과',count:1,posts:[{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01'}]}
+    {label:'관리/피드백',count:4,posts:[{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05',body:'5학년 때 깊생, 페르마, 파인만, 구주이배 테스트 보고,  파인만으로 결정했고, 1년 넘었는데 관리 잘해주시는 것 같아요.(지금 윤슬 6학년)
+---
+파인만 미사관으로 다니실까요? 학년별 클래스가 진도별로 여러개인…'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09',body:'한번도 결석하지 않았어요. 3년동안그런다고 잘하지 않습니다..
+---
+헉.대단하세요~~우와~~~이렇게도 가능하군요~~
+---
+결석하면 보강 잘 잡아주셨어요  부담느끼진않았는데 대형학원은  선생님마다 다른것같아요 ..…'},{text:'중등 수학학원 추천부탁드립니다',url:'https://cafe.naver.com/ira111/856981',region:'미사',date:'2025.05',body:'어느쪽에 다니길 바라시는지 써주심좋을것같아요^^구산상가쪽 아님 다른곳..저두맘에드는곳을 아직못봤어요
+---
+수정했습니다감사해요 🙂
+---
+전 구주이배 좋았어요. 오히려 대형학원이 담임제에 관리도 잘되는거 같았어요. …'},{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12',body:'맞아요. ㄱㅈㅇㅂ는 그렇게 해주지만 타 학원은 직전보강 수업횟수로 치더라구요.어떤 학원은 화 목 수업인데 토요일 내신 보강 3번 해준거 돈도 받더라구요.수업 시간 금액이랑 똑같이.학원마다 다 다르겠지만 그런거 보면 …'}]},
+    {label:'셔틀/접근성',count:6,posts:[{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868',region:'강동',date:'2024.01',body:'맞아요~ 어제 걸어보니 그정도 되겠더라구요~ 분명 먼 거리는 아닌데 학원수업 시작이 2시더라구요 학교 쫌만 늦게 끝나면  촉박하겠더라구요 ^^;
+---
+감사합니다^
+---
+고수학학원 셔틀있어요.. 9단지 애들은 자전…'},{text:'중3 수학학원 문의요',url:'https://cafe.naver.com/kidsinlove/1152552',region:'미사',date:'2025.05',body:'구주이배, 대치성공, 포도나무, 수학의 힘 등은 구시가지까지 차가 들어오더라구요.
+---
+플래닛도 차량 운행해요. 대명아파트 앞에 유투엠이 옮긴거더라고요. 미사로 이가가는 학원들이 좀 있어서 속상해요ㅠㅠ
+---
+셔틀…'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07',body:'근데 왜 혼나는걸까요?
+---
+ㅋㅋ혼나죠..2시간 30분 테스트 시간이라고 이야기 안하고 들여보냈으니..ㅋ자녀분 고등 되면 무슨 말인지 아실거에요.고등아들은 자식이 아니라 남자인간입니다.^^
+---
+중간기말수행 만점…'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08',body:'저희집 고1은 송파로 보내는데..이렇게 수학공부 많이 하는거 처음이에요..ㅋ방학은 주3회 하루8시간 개학후에는 일요일 마저도 아침9시30분에 내신 수업 시작..수학을 못할래야 못할수 없겠어요.ㅋ매수업마다 테스트..아…'},{text:'초5) 자이쪽 4시30분 이후 수학학원을 찾고있어요',url:'https://cafe.naver.com/ira111/897824',region:'미사',date:'2026.01',body:'더착한수학 있어요..
+---
+구주이배요~
+---
+수학의힘도 시간 알아보세요
+---
+포도나무수학도있어요
+---
+행복한수학학원도 있어요
+---
+구주이배 셔틀도있고 괜찮던데요 초중등부.고등도있고'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01',body:'수학은 구주이배는 멀지만 셔틀이되고 레벨별로 구분되어있더라구요.소수정예로 갈건지 아님 중.대형으로 갈건지도 정해야겠네요.대치메이드,원칙수학.깊은수학.수학의시대 페르마 등 골고루 다니는거같아요영어는 업영어.목동유샘.열…'}]},
+    {label:'커리큘럼/시스템',count:12,posts:[{text:'미사고,미강고 대입 현황',url:'https://cafe.naver.com/ira111/780732',region:'미사',date:'2024.03',body:'저도 알고 싶네요~ 이사온 지 얼마 안되어서 정보가 별로 없어서ㅜㅜ
+---
+공립고는 하남고처럼 외부(학교외부 부착)에  공개하는 거는 안되는 걸로 알아요..3월 학부모총회때 가면 말씀해주세요
+---
+저두궁금한데 3월…'},{text:'구주이배요',url:'https://cafe.naver.com/ira111/813429',region:'미사',date:'2024.08',body:'자체교재 쓰고 시중문제집 다양하게 프린트 해주세요~
+---
+심화는 자체교재라는 말씀이신거죠?
+---
+아 그렇군요..대략수준은 어느정도일까요?
+---
+저희아이는 따로 구매했네요수학의고수, 수학리더
+---
+너무좋은데요^…'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09',body:'한번도 결석하지 않았어요. 3년동안그런다고 잘하지 않습니다..
+---
+헉.대단하세요~~우와~~~이렇게도 가능하군요~~
+---
+결석하면 보강 잘 잡아주셨어요  부담느끼진않았는데 대형학원은  선생님마다 다른것같아요 ..…'},{text:'예비초4 대형학원 수학(구주이배&파인만)',url:'https://cafe.naver.com/ira111/839684',region:'미사',date:'2025.01',body:'파인만은 모르겠고 구주이배는 괜찮은 것 같아요.선생님 따라 다를 수는 있지만 주변 지인들만 봐도 만족하며 잘 다니고 있어요
+---
+두개다 보세요. 구주이배(자체교재) 파인만은 시중교재로 알고있습니다. 반/선생님 다 …'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07',body:'근데 왜 혼나는걸까요?
+---
+ㅋㅋ혼나죠..2시간 30분 테스트 시간이라고 이야기 안하고 들여보냈으니..ㅋ자녀분 고등 되면 무슨 말인지 아실거에요.고등아들은 자식이 아니라 남자인간입니다.^^
+---
+중간기말수행 만점…'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08',body:'저희집 고1은 송파로 보내는데..이렇게 수학공부 많이 하는거 처음이에요..ㅋ방학은 주3회 하루8시간 개학후에는 일요일 마저도 아침9시30분에 내신 수업 시작..수학을 못할래야 못할수 없겠어요.ㅋ매수업마다 테스트..아…'},{text:'수학',url:'https://cafe.naver.com/ira111/889558',region:'미사',date:'2025.11',body:'5-1 자체가 초등 6년 전 과정 중 젤 중요하고 어렵긴 하죠.한 학기 엄청 오래하지 않으니, 복습 느낌으로 다지고 넘어가도 되지 않을까요? 중요한 학기니.모든 학원 레테가 쉽.. 게 내진 않죠?ㅎ
+---
+5-2 심…'},{text:'한홀초 아이들 학원 주로 어디 보내시나요?',url:'https://cafe.naver.com/ira111/892542',region:'미사',date:'2025.12',body:'아발론도 차량되고 아이들 많이 다녀요^^
+---
+미사에 아발론 있어요? 몰랐네요
+---
+한홀초 근처에 학원 쥔짜 많아요셔틀도 많아서 근처 아닌곳도 많이 다니구요영어는 폴리,코람데오,크레오 도 많이들 가고수학은 파인만…'},{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12',body:'현재 초4인거죠?구주이배 초4반 정원 지금 너무 여유있고 좋아요 추천합니다.
+---
+네 초4예요~  추천감사합니다 구주이배도 레테받아보려구요~
+---
+보통 대형은 커리를 보고 결정하죠.부모고 추구하는 수학 진도 등 …'},{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01',body:'제가볼땐 집에서 가까운곳이 나을거같아요.비슷하다고봅니다.저는 둘다보내봤어요
+---
+둘다위치는 비슷해요!!!
+---
+윤블리이구주이배는 구산쪽아닌것같아서 말씀드렸어요.수학의시대는 구산쪽이고..
+---
+내겐행운구주이배, …'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01',body:'수학은 구주이배는 멀지만 셔틀이되고 레벨별로 구분되어있더라구요.소수정예로 갈건지 아님 중.대형으로 갈건지도 정해야겠네요.대치메이드,원칙수학.깊은수학.수학의시대 페르마 등 골고루 다니는거같아요영어는 업영어.목동유샘.열…'},{text:'초3 수학학원 선택하기 어렵네요.',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04',body:'저도 궁금해요!
+---
+저는 지금 사고력만 보내고 교과는 집에서 하고 있어요. 초등까지는 집공부 가능하다고 생각하고는 있지만 너무 진도가 느려지거나 저와의 관계가 안 좋아질거 같은 조짐이 보이면 학원을 보내야겠다고 …'}]},
+    {label:'차량/접근성',count:1,posts:[{text:'중등 2학년 수학학원 좀 추천해주세요~',url:'https://cafe.naver.com/kidsinlove/1122695',region:'미사',date:'2024.08',body:'신평중 대치성공스토리 많이 다녀요구주이배도 좋은것 같아요둘다 차량 지원됩니다
+---
+감사합니다~'}]},
+    {label:'선생님/수업',count:3,posts:[{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07',body:'구주이배 레테문제가 지역 마다  다른건가요?아직 초등이지만 미사지점 잘 다니고 있거든요.
+---
+지역마다 레테는 같을거에요..구주이배 레테는 선행위주로 시험을 보니 아이가 어디까지 선행했냐에 따라 시험범위가 다르겠죠…'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07',body:'근데 왜 혼나는걸까요?
+---
+ㅋㅋ혼나죠..2시간 30분 테스트 시간이라고 이야기 안하고 들여보냈으니..ㅋ자녀분 고등 되면 무슨 말인지 아실거에요.고등아들은 자식이 아니라 남자인간입니다.^^
+---
+중간기말수행 만점…'},{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12',body:'맞아요. ㄱㅈㅇㅂ는 그렇게 해주지만 타 학원은 직전보강 수업횟수로 치더라구요.어떤 학원은 화 목 수업인데 토요일 내신 보강 3번 해준거 돈도 받더라구요.수업 시간 금액이랑 똑같이.학원마다 다 다르겠지만 그런거 보면 …'}]},
+    {label:'시설/환경',count:1,posts:[{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07',body:'구주이배 레테문제가 지역 마다  다른건가요?아직 초등이지만 미사지점 잘 다니고 있거든요.
+---
+지역마다 레테는 같을거에요..구주이배 레테는 선행위주로 시험을 보니 아이가 어디까지 선행했냐에 따라 시험범위가 다르겠죠…'}]},
+    {label:'가격부담',count:1,posts:[{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12',body:'맞아요. ㄱㅈㅇㅂ는 그렇게 해주지만 타 학원은 직전보강 수업횟수로 치더라구요.어떤 학원은 화 목 수업인데 토요일 내신 보강 3번 해준거 돈도 받더라구요.수업 시간 금액이랑 똑같이.학원마다 다 다르겠지만 그런거 보면 …'}]},
+    {label:'반복/심화학습',count:1,posts:[{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12',body:'현재 초4인거죠?구주이배 초4반 정원 지금 너무 여유있고 좋아요 추천합니다.
+---
+네 초4예요~  추천감사합니다 구주이배도 레테받아보려구요~
+---
+보통 대형은 커리를 보고 결정하죠.부모고 추구하는 수학 진도 등 …'}]},
+    {label:'성적향상/성과',count:1,posts:[{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01',body:'제가볼땐 집에서 가까운곳이 나을거같아요.비슷하다고봅니다.저는 둘다보내봤어요
+---
+둘다위치는 비슷해요!!!
+---
+윤블리이구주이배는 구산쪽아닌것같아서 말씀드렸어요.수학의시대는 구산쪽이고..
+---
+내겐행운구주이배, …'}]}
   ],
     cons: [
-    {label:'숙제/학습량부담',count:5,posts:[{text:'아이 학원 정하는게 보통일이 아니네요~',url:'https://cafe.naver.com/ira111/774047',region:'미사',date:'2024.01'},{text:'학원 그만두고 싶대요',url:'https://cafe.naver.com/ira111/800373',region:'미사',date:'2024.06'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09'},{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01'},{text:'청어람 어떤가요??',url:'https://cafe.naver.com/ira111/896175',region:'강동',date:'2026.01'}]},
-    {label:'개별관리부족',count:2,posts:[{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08'},{text:'초등 6학년 영어, 수학 학원 문의드려요!',url:'https://cafe.naver.com/dochiya/1320433',region:'광진',date:'2026.03'}]},
-    {label:'커리큘럼/시스템',count:2,posts:[{text:'구주이배 파인만',url:'https://cafe.naver.com/ira111/885543',region:'미사',date:'2025.11'},{text:'구주이베*파인만',url:'https://cafe.naver.com/ira111/904265',region:'미사',date:'2026.03'}]},
-    {label:'가격부담',count:1,posts:[{text:'청어람 어떤가요??',url:'https://cafe.naver.com/ira111/896175',region:'강동',date:'2026.01'}]}
+    {label:'숙제/학습량부담',count:5,posts:[{text:'아이 학원 정하는게 보통일이 아니네요~',url:'https://cafe.naver.com/ira111/774047',region:'미사',date:'2024.01',body:'예비초3 학원 처음다니는 아이인데 이바인영어 너무 잘다니고 있어요. 차량되구용
+---
+저희아이랑 같은 학년이네요~ 이왕이면 센자쪽 상가 학원들로 알아보려고 하고는 있는데 구산상가에 많네요ㅠㅠ
+---
+꼼꼼귀요미고학년 …'},{text:'학원 그만두고 싶대요',url:'https://cafe.naver.com/ira111/800373',region:'미사',date:'2024.06',body:'과외 시키면 안될까요
+---
+중1이면 수학은 쉬면서 집에서 심화문제집을 풀어보던가 하면서 해도 될듯해요 영어는 꾸준히 가며 좋을텐테 쉬면서 다른곳 레벨테스트도 보고 본인 스타일 학원 알아보도록 해보세요 작년부터 저희…'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09',body:'한번도 결석하지 않았어요. 3년동안그런다고 잘하지 않습니다..
+---
+헉.대단하세요~~우와~~~이렇게도 가능하군요~~
+---
+결석하면 보강 잘 잡아주셨어요  부담느끼진않았는데 대형학원은  선생님마다 다른것같아요 ..…'},{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01',body:'제가볼땐 집에서 가까운곳이 나을거같아요.비슷하다고봅니다.저는 둘다보내봤어요
+---
+둘다위치는 비슷해요!!!
+---
+윤블리이구주이배는 구산쪽아닌것같아서 말씀드렸어요.수학의시대는 구산쪽이고..
+---
+내겐행운구주이배, …'},{text:'청어람 어떤가요??',url:'https://cafe.naver.com/ira111/896175',region:'강동',date:'2026.01',body:'1시부터 10시까지면....중3이고 닥터반 이상이겠네요^^이번방학 다음 여름방학까지 그렇게 할꺼에요..엉덩이힘과 더불어 수학 엄청늘껍니다.물론 아이는 꽤 힘들거에요 ㅠ ㅠ 하지만, 그양과 수준이 꽤 좋습니다! 다른과…'}]},
+    {label:'개별관리부족',count:2,posts:[{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08',body:'저희집 고1은 송파로 보내는데..이렇게 수학공부 많이 하는거 처음이에요..ㅋ방학은 주3회 하루8시간 개학후에는 일요일 마저도 아침9시30분에 내신 수업 시작..수학을 못할래야 못할수 없겠어요.ㅋ매수업마다 테스트..아…'},{text:'초등 6학년 영어, 수학 학원 문의드려요!',url:'https://cafe.naver.com/dochiya/1320433',region:'광진',date:'2026.03',body:'감사합니다!! 정상은 잘 다니고 있어서 ㅠㅠ 사실 심슨은 듣기만한 곳이라 상담 받아봐야겠네요! 구주이배는 평이 좋은가봐요~ 너무 대형이라 개별케어 안될까 염려했는데 알아보겠습니다!
+---
+안녕하세요 회원님 \'◡\'등업…'}]},
+    {label:'커리큘럼/시스템',count:2,posts:[{text:'구주이배 파인만',url:'https://cafe.naver.com/ira111/885543',region:'미사',date:'2025.11',body:'저도 넘 궁금해요!!지난주에 파인만 먼저 보고 일단 등록은 했는데담주에 구주이베 레테 예약 해놨어요...
+---
+비슷해요~차이점은 구주는 자체교재 파인은 시중교재요~
+---
+두군데 혹시 숙제나 보강은 어디가 더 많은…'},{text:'구주이베*파인만',url:'https://cafe.naver.com/ira111/904265',region:'미사',date:'2026.03',body:'파인만 추천드립니다~!
+---
+감사합니다~~^^댓글주셔서
+---
+파인만 강추해요.관리잘해주세요.
+---
+댓글감사합니다^^많은도움이되었어요!
+---
+둘다 보내봤는데 전 파인만 추천이요!
+---
+넘감사해요~~!  파인만…'}]},
+    {label:'가격부담',count:1,posts:[{text:'청어람 어떤가요??',url:'https://cafe.naver.com/ira111/896175',region:'강동',date:'2026.01',body:'1시부터 10시까지면....중3이고 닥터반 이상이겠네요^^이번방학 다음 여름방학까지 그렇게 할꺼에요..엉덩이힘과 더불어 수학 엄청늘껍니다.물론 아이는 꽤 힘들거에요 ㅠ ㅠ 하지만, 그양과 수준이 꽤 좋습니다! 다른과…'}]}
   ],
     allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'신장동 영수학원이요 ^^',url:'https://cafe.naver.com/kidsinlove/1186013'},{text:'미사 구주이배 몇학년 부터',url:'https://cafe.naver.com/ira111/772873'},{text:'아이 학원 정하는게 보통일이 아니네요~',url:'https://cafe.naver.com/ira111/774047'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'예비5학년 수학학원',url:'https://cafe.naver.com/ira111/776866'},{text:'미사고,미강고 대입 현황',url:'https://cafe.naver.com/ira111/780732'},{text:'구주이배 보통 여름방학기간 언제인가요?',url:'https://cafe.naver.com/ira111/792237'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'}]
   },
@@ -109,14 +317,48 @@ var MON_DATA = [
     '성동': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0]
   },
     pros: [
-    {label:'관리/피드백',count:2,posts:[{text:'예비중 수학학원 궁금합니다.',url:'https://cafe.naver.com/everyhomework/872018',region:'송파',date:'2024.11'},{text:'예비중)안녕하세요. 한빛중 내신 봐주는 수학 학원 있을까요?',url:'https://cafe.naver.com/bbbx/778418',region:'송파',date:'2025.04'}]},
-    {label:'커리큘럼/시스템',count:5,posts:[{text:'예비중 수학학원 궁금합니다.',url:'https://cafe.naver.com/everyhomework/872018',region:'송파',date:'2024.11'},{text:'중등 수학학원 추천부탁드려요.',url:'https://cafe.naver.com/bbbx/780159',region:'송파',date:'2025.04'},{text:'위례 수학학원 문의',url:'https://cafe.naver.com/everyhomework/898563',region:'송파',date:'2025.08'},{text:'초고학년 수학학원 알려주세요~~',url:'https://cafe.naver.com/everyhomework/913146',region:'송파',date:'2026.02'},{text:'강의하는 아이들.',url:'https://cafe.naver.com/everyhomework/912996',region:'송파',date:'2026.02'}]},
-    {label:'시설/환경',count:1,posts:[{text:'광장동 중등수학 추천해주세요.',url:'https://cafe.naver.com/dochiya/1301240',region:'광진',date:'2025.02'}]},
-    {label:'셔틀/접근성',count:2,posts:[{text:'중등 수학학원 추천부탁드려요.',url:'https://cafe.naver.com/bbbx/780159',region:'송파',date:'2025.04'},{text:'송파 초저다닐만한 수학학원있을까요?',url:'https://cafe.naver.com/everyhomework/913305',region:'송파',date:'2026.02'}]},
-    {label:'선생님/수업',count:2,posts:[{text:'초등학교 수학학원 송파 vs 잠실.. 거리 때문에 고민이에요',url:'https://cafe.naver.com/bbbx/827415',region:'송파',date:'2026.01'},{text:'강의하는 아이들.',url:'https://cafe.naver.com/everyhomework/912996',region:'송파',date:'2026.02'}]}
+    {label:'관리/피드백',count:2,posts:[{text:'예비중 수학학원 궁금합니다.',url:'https://cafe.naver.com/everyhomework/872018',region:'송파',date:'2024.11',body:'안녕하세요 회원님 \'◡\'등업신청은 \'질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청하기\'…'},{text:'예비중)안녕하세요. 한빛중 내신 봐주는 수학 학원 있을까요?',url:'https://cafe.naver.com/bbbx/778418',region:'송파',date:'2025.04',body:'전 늘푸른보내요 모의고사도 자주봐주고 관리도 잘해주시더라고요.
+---
+정말 많이들 다니나봐요~ 거의 다 여기 보내는 거 같아요 감사합니다~^^
+---
+리본리본전화하니까 6학년은 무조건 주3회라고 해요~
+---
+리본리…'}]},
+    {label:'커리큘럼/시스템',count:5,posts:[{text:'예비중 수학학원 궁금합니다.',url:'https://cafe.naver.com/everyhomework/872018',region:'송파',date:'2024.11',body:'안녕하세요 회원님 \'◡\'등업신청은 \'질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청하기\'…'},{text:'중등 수학학원 추천부탁드려요.',url:'https://cafe.naver.com/bbbx/780159',region:'송파',date:'2025.04',body:'어딜가나 힘들지만 저도 세번 옮겼어요. 옮길때 테스트 보는것도 힘들고~그래도 옮긴곳은 1년됐는데 선생님이 관리 잘해주고 그래서인지 아직까지 아이가 힘들어하진 않네요.
+---
+혹 어디 다니는지 정보 부탁드려요 ㅜㅜ 벌…'},{text:'위례 수학학원 문의',url:'https://cafe.naver.com/everyhomework/898563',region:'송파',date:'2025.08',body:'판다요,0시까지남긴대요위례에 늘푸른도있음당
+---
+와 판다 중타에있는곳이죠?0시까지 👍개인진도로 봐주는곳을 찾고있어서요ㅠㅠ 답글 감사합니다
+---
+윤자매맘개인진도면..세이노ㅎㅎ
+---
+뵤리뵤리확인해볼게요 감사합니다 …'},{text:'초고학년 수학학원 알려주세요~~',url:'https://cafe.naver.com/everyhomework/913146',region:'송파',date:'2026.02',body:'늘푸른수학요1교시는 선행,2교시는 현행 심화로 진행해요.
+---
+천사세요정말!!!♡♡내일 이은재 레테보러 가는데 늘푸른도 얼른 가봐야 겠습니다.너무 감사해요^^
+---
+지봉쓰이은재좋죠
+---
+선행을 많이 하지 않으셨…'},{text:'강의하는 아이들.',url:'https://cafe.naver.com/everyhomework/912996',region:'송파',date:'2026.02',body:'안녕하세요 회원님 \'◡\'등업신청은 \'지역 질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청…'}]},
+    {label:'시설/환경',count:1,posts:[{text:'광장동 중등수학 추천해주세요.',url:'https://cafe.naver.com/dochiya/1301240',region:'광진',date:'2025.02',body:'저도 궁금하네요.
+---
+발품팔아 해강, 깊생,허윤호,늘푸른 상담했는데늘푸른으로 정했어요~~해강은 맞춤관리 잘 해줄것 같은데 전반적으로 학원이 어수선해요ㅋㅋ정리를 잘 안하신듯ㅋㅋ깊생은 테스트 너무 어려워요.그것부터 …'}]},
+    {label:'셔틀/접근성',count:2,posts:[{text:'중등 수학학원 추천부탁드려요.',url:'https://cafe.naver.com/bbbx/780159',region:'송파',date:'2025.04',body:'어딜가나 힘들지만 저도 세번 옮겼어요. 옮길때 테스트 보는것도 힘들고~그래도 옮긴곳은 1년됐는데 선생님이 관리 잘해주고 그래서인지 아직까지 아이가 힘들어하진 않네요.
+---
+혹 어디 다니는지 정보 부탁드려요 ㅜㅜ 벌…'},{text:'송파 초저다닐만한 수학학원있을까요?',url:'https://cafe.naver.com/everyhomework/913305',region:'송파',date:'2026.02',body:'안녕하세요 회원님 \'◡\'등업신청은 \'지역 질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청…'}]},
+    {label:'선생님/수업',count:2,posts:[{text:'초등학교 수학학원 송파 vs 잠실.. 거리 때문에 고민이에요',url:'https://cafe.naver.com/bbbx/827415',region:'송파',date:'2026.01',body:'아이랑 잘 맞는 곳으로 보내세요
+---
+그냥 가까운데 다니세요 늘푸른이나 판다도 쌤들 잘가르칩니다. 황소, 깊생도 있고
+---
+오 감사해요~ 늘푸른이랑 판다 찾아볼게요!
+---
+일단 근처로 다녀보시고 괜찮으시면 보냈…'},{text:'강의하는 아이들.',url:'https://cafe.naver.com/everyhomework/912996',region:'송파',date:'2026.02',body:'안녕하세요 회원님 \'◡\'등업신청은 \'지역 질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청…'}]}
   ],
     cons: [
-    {label:'숙제/학습량부담',count:1,posts:[{text:'초등 고학년 수학학원 고민 중이에요',url:'https://cafe.naver.com/bbbx/810657',region:'송파',date:'2025.11'}]}
+    {label:'숙제/학습량부담',count:1,posts:[{text:'초등 고학년 수학학원 고민 중이에요',url:'https://cafe.naver.com/bbbx/810657',region:'송파',date:'2025.11',body:'깊생 보내는데 시스템이 잘 되어 있어서 개념정리부터 응용까지 단계별로 잡아주시더라구요~ 조용한 분위기라 좋은듯요. 늘푸른은 안보내봤어요^^;
+---
+자세히 알려주셔서 감사해요~ 상담 좀 가보려구요
+---
+전 늘푸른 …'}]}
   ],
     allPosts: [{text:'건대부중 수학학원추천이요',url:'https://cafe.naver.com/dochiya/1275864'},{text:'위례 중등 수학, 영어학원 추천 부탁드려요^^',url:'https://cafe.naver.com/everyhomework/842602'},{text:'광진구 수학학원 추천좀..',url:'https://cafe.naver.com/dochiya/1278125'},{text:'광장동, 구의동 초등3학년 수학학원 추천해주세요!',url:'https://cafe.naver.com/dochiya/1280908'},{text:'구의동 초등수학 추천해주세요',url:'https://cafe.naver.com/dochiya/1280284'},{text:'수학학원 추천 부탁드려요~',url:'https://cafe.naver.com/everyhomework/854398'},{text:'수학학원 추천 부탁해요',url:'https://cafe.naver.com/dochiya/1286975'},{text:'방이동 - 수학학원',url:'https://cafe.naver.com/everyhomework/858694'},{text:'늘푸른수학원 vs 잠실파인만',url:'https://cafe.naver.com/everyhomework/867086'},{text:'방산초 학군 학원이요',url:'https://cafe.naver.com/everyhomework/864857'}]
   },
@@ -141,13 +383,31 @@ var MON_DATA = [
     '동대문': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:3,posts:[{text:'광장동 비바키즈 vs 심슨 어학원 저학년 영어학원 고민',url:'https://cafe.naver.com/dochiya/1302616',region:'광진',date:'2025.03'},{text:'성동구에 초 6, 중 3 영어 학원 추천 부탁드립니다~',url:'https://cafe.naver.com/dochiya/1304001',region:'성동',date:'2025.03'},{text:'광장동  영어학원이요',url:'https://cafe.naver.com/dochiya/1302681',region:'광진',date:'2025.03'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'광장동 비바키즈 vs 심슨 어학원 저학년 영어학원 고민',url:'https://cafe.naver.com/dochiya/1302616',region:'광진',date:'2025.03'}]},
-    {label:'셔틀/접근성',count:1,posts:[{text:'광장동학원가 셔틀 운영 학원',url:'https://cafe.naver.com/dochiya/1315539',region:'광진',date:'2025.11'}]},
-    {label:'성적향상/성과',count:1,posts:[{text:'광장동 초등영어 심슨&정상',url:'https://cafe.naver.com/dochiya/1319716',region:'광진',date:'2026.03'}]}
+    {label:'커리큘럼/시스템',count:3,posts:[{text:'광장동 비바키즈 vs 심슨 어학원 저학년 영어학원 고민',url:'https://cafe.naver.com/dochiya/1302616',region:'광진',date:'2025.03',body:'안녕하세요 회원님 \'◡\'등업신청은 \'지역 질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청…'},{text:'성동구에 초 6, 중 3 영어 학원 추천 부탁드립니다~',url:'https://cafe.naver.com/dochiya/1304001',region:'성동',date:'2025.03',body:'안녕하세요 회원님 \'◡\'등업신청은 \'지역 질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청…'},{text:'광장동  영어학원이요',url:'https://cafe.naver.com/dochiya/1302681',region:'광진',date:'2025.03',body:'안녕하세요 회원님 \'◡\'등업신청은 \'지역 질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청…'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'광장동 비바키즈 vs 심슨 어학원 저학년 영어학원 고민',url:'https://cafe.naver.com/dochiya/1302616',region:'광진',date:'2025.03',body:'안녕하세요 회원님 \'◡\'등업신청은 \'지역 질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청…'}]},
+    {label:'셔틀/접근성',count:1,posts:[{text:'광장동학원가 셔틀 운영 학원',url:'https://cafe.naver.com/dochiya/1315539',region:'광진',date:'2025.11',body:'영어는 아발론, 심슨, ecc 수학은 cms정도 셔틀 있었던 것 같아요
+---
+초1인데 학원을 보내시는 경우는 보통 맞벌이 하시는 분들이 많던데,고민이 많으시겠어요.'}]},
+    {label:'성적향상/성과',count:1,posts:[{text:'광장동 초등영어 심슨&정상',url:'https://cafe.naver.com/dochiya/1319716',region:'광진',date:'2026.03',body:'둘다 숙제는 비슷하게 많지 않나요? 원래학원은 처음부터 빡센데 보내는거라고요 널널에서 빡센곳은 절대 적응 못한다고욪
+---
+심슨이 시험두 많구 성적이 우수합니다
+---
+저는 정상도좋아요
+---
+정상어학원 좋죠
+---…'}]}
   ],
     cons: [
-    {label:'숙제/학습량부담',count:3,posts:[{text:'광장동 비바키즈 vs 심슨 어학원 저학년 영어학원 고민',url:'https://cafe.naver.com/dochiya/1302616',region:'광진',date:'2025.03'},{text:'심슨  단어시험',url:'https://cafe.naver.com/dochiya/1316839',region:'광진',date:'2025.12'},{text:'광장동 초등영어 심슨&정상',url:'https://cafe.naver.com/dochiya/1319716',region:'광진',date:'2026.03'}]}
+    {label:'숙제/학습량부담',count:3,posts:[{text:'광장동 비바키즈 vs 심슨 어학원 저학년 영어학원 고민',url:'https://cafe.naver.com/dochiya/1302616',region:'광진',date:'2025.03',body:'안녕하세요 회원님 \'◡\'등업신청은 \'지역 질문&답변[등업]\' 게시판에서 질문글 3개를 올려주시고, 다른 회원님의 질문글에 10개의 답변 댓글을 달아주시면 등업이 완료 됩니다.자세한 사항은 위에 있는 \'등업 바로 신청…'},{text:'심슨  단어시험',url:'https://cafe.naver.com/dochiya/1316839',region:'광진',date:'2025.12',body:'레벨별로 다른데주 1회 단어시험있고 한번에 30개,40개,50개 봐요
+---
+오 자세한 답변 지나치지않고 남겨주셔서 너무나도 감사드려요 ^^'},{text:'광장동 초등영어 심슨&정상',url:'https://cafe.naver.com/dochiya/1319716',region:'광진',date:'2026.03',body:'둘다 숙제는 비슷하게 많지 않나요? 원래학원은 처음부터 빡센데 보내는거라고요 널널에서 빡센곳은 절대 적응 못한다고욪
+---
+심슨이 시험두 많구 성적이 우수합니다
+---
+저는 정상도좋아요
+---
+정상어학원 좋죠
+---…'}]}
   ],
     allPosts: [{text:'초3 영어 수학 학원 추천부탁드립니다!',url:'https://cafe.naver.com/dochiya/1322184'},{text:'광장동 영어학원 추천해주세요',url:'https://cafe.naver.com/dochiya/1276971'},{text:'예비초 영어학원(어학원)',url:'https://cafe.naver.com/dochiya/1276440'},{text:'영어학원. 정상 vs 심슨',url:'https://cafe.naver.com/ira111/771928'},{text:'광진구 영어학원',url:'https://cafe.naver.com/dochiya/1278242'},{text:'성동구 영어학원 추천 부탁 드립니다.',url:'https://cafe.naver.com/dochiya/1278048'},{text:'초등학생 수학, 영어 학원 어디가 괜찮을까요?',url:'https://cafe.naver.com/dochiya/1280651'},{text:'초저 아이 광장동 영어학원 추천부탁드립니다.',url:'https://cafe.naver.com/dochiya/1286126'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'},{text:'광장동 초저 영어학원 추천해주세요',url:'https://cafe.naver.com/dochiya/1289099'}]
   },
@@ -166,20 +426,154 @@ var MON_DATA = [
     '성동': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
   },
     pros: [
-    {label:'성적향상/성과',count:4,posts:[{text:'은가람중 과학학원 어디다니나요?',url:'https://cafe.naver.com/ira111/912725',region:'미사',date:'2026.05'},{text:'아이들.. 겨울방학계획 머리아파요.',url:'https://cafe.naver.com/ira111/830193',region:'강동',date:'2024.11'},{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12'},{text:'중학생 수학학원 추천 부탁드립니다.',url:'https://cafe.naver.com/ira111/916446',region:'미사',date:'2026.06'}]},
-    {label:'흥미/동기부여',count:4,posts:[{text:'은가람중 과학학원 어디다니나요?',url:'https://cafe.naver.com/ira111/912725',region:'미사',date:'2026.05'},{text:'초등4학년 수학학원 어디로보내야하나요 ㅠ',url:'https://cafe.naver.com/ira111/895305',region:'미사',date:'2026.01'},{text:'수학때문에 걱정이 많아요(학원)',url:'https://cafe.naver.com/ira111/902423',region:'미사',date:'2026.02'},{text:'중학생 수학학원 추천 부탁드립니다.',url:'https://cafe.naver.com/ira111/916446',region:'미사',date:'2026.06'}]},
-    {label:'관리/피드백',count:8,posts:[{text:'강동파인만 수학학원 이요~',url:'https://cafe.naver.com/ira111/780344',region:'강동',date:'2024.03'},{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630',region:'강동',date:'2024.10'},{text:'파인만 미사 레테',url:'https://cafe.naver.com/ira111/828983',region:'미사',date:'2024.11'},{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12'},{text:'강동 청어람수학. 윤슬중 내신 궁금해요~',url:'https://cafe.naver.com/ira111/891400',region:'강동',date:'2025.12'},{text:'고등 과학학원정보 부탁드려요',url:'https://cafe.naver.com/ira111/895494',region:'미사',date:'2026.01'},{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05'},{text:'중학생 수학학원 추천 부탁드립니다.',url:'https://cafe.naver.com/ira111/916446',region:'미사',date:'2026.06'}]},
-    {label:'커리큘럼/시스템',count:4,posts:[{text:'강동파인만 수학학원 이요~',url:'https://cafe.naver.com/ira111/780344',region:'강동',date:'2024.03'},{text:'왕수학, 최상위 심화 가능한 수학학원 있을까요?(대형X)',url:'https://cafe.naver.com/ira111/839821',region:'강동',date:'2025.01'},{text:'파인만 숙제량은 어때요?',url:'https://cafe.naver.com/ira111/892227',region:'미사',date:'2025.12'},{text:'영과고 합격전략설명회 후기에요~~',url:'https://cafe.naver.com/ira111/901408',region:'미사',date:'2026.02'}]},
-    {label:'반복/심화학습',count:5,posts:[{text:'파인만, 청어람 질문이요~',url:'https://cafe.naver.com/ira111/822429',region:'송파',date:'2024.10'},{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630',region:'강동',date:'2024.10'},{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12'},{text:'파인만 숙제량은 어때요?',url:'https://cafe.naver.com/ira111/892227',region:'미사',date:'2025.12'},{text:'강동 청어람수학. 윤슬중 내신 궁금해요~',url:'https://cafe.naver.com/ira111/891400',region:'강동',date:'2025.12'}]},
-    {label:'셔틀/접근성',count:3,posts:[{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630',region:'강동',date:'2024.10'},{text:'아이들.. 겨울방학계획 머리아파요.',url:'https://cafe.naver.com/ira111/830193',region:'강동',date:'2024.11'},{text:'예비중 학원 추천해주세요',url:'https://cafe.naver.com/ira111/891823',region:'강동',date:'2025.12'}]},
-    {label:'선생님/수업',count:3,posts:[{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12'},{text:'초등4학년 수학학원 어디로보내야하나요 ㅠ',url:'https://cafe.naver.com/ira111/895305',region:'미사',date:'2026.01'},{text:'중학생 수학학원 추천 부탁드립니다.',url:'https://cafe.naver.com/ira111/916446',region:'미사',date:'2026.06'}]},
-    {label:'차량/접근성',count:1,posts:[{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12'}]}
+    {label:'성적향상/성과',count:4,posts:[{text:'은가람중 과학학원 어디다니나요?',url:'https://cafe.naver.com/ira111/912725',region:'미사',date:'2026.05',body:'바디메오 은가람중 내신 개설 한다고 알고 있어요..원장님 개인 번호 챗 드릴께요.상담 해보셔요. ^^
+---
+앗 정말요? 은가람 중3 내신반은 없어서 다른학교 진도맞는반에서 들어야한다 하시던데 아닌가보네요 감사합니다…'},{text:'아이들.. 겨울방학계획 머리아파요.',url:'https://cafe.naver.com/ira111/830193',region:'강동',date:'2024.11',body:'유럽캠프는 어떤걸까요?? 궁금해요~
+---
+안데르센이요. 작년 1월 유럽 3개국 보내봤는데 괜찮아요!!^^
+---
+학년이 올라가면 좀더 심플해지는 것 같아요.학원에 있는 시간이 기니어딜 가지 못 하고 ㅎ
+---
+ㅎㅎ…'},{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12',body:'어디일까요?^^
+---
+파인만이요.. 미사 오픈했죠.. 강동관에서 아이들과 샘들 함께 이사왔어여!!^^
+---
+두아들연년생엄마혹시 차량될까요?
+---
+나의봄날넵!! 강일관 차량이 미사로 다 왔어요!!^^
+---
+두아…'},{text:'중학생 수학학원 추천 부탁드립니다.',url:'https://cafe.naver.com/ira111/916446',region:'미사',date:'2026.06',body:'파인만이요.^^
+---
+추천 감사합니다.  대형학원 가기 싫어해서 잘 설득 해 봐야 할것 같아요.
+---
+개구쟁이맘관리잘되는 대형이에요.레테보고 상담해보세요. 저희애는 소규모다니다 중2때 들어갔는데,드라마틱하게 성적…'}]},
+    {label:'흥미/동기부여',count:4,posts:[{text:'은가람중 과학학원 어디다니나요?',url:'https://cafe.naver.com/ira111/912725',region:'미사',date:'2026.05',body:'바디메오 은가람중 내신 개설 한다고 알고 있어요..원장님 개인 번호 챗 드릴께요.상담 해보셔요. ^^
+---
+앗 정말요? 은가람 중3 내신반은 없어서 다른학교 진도맞는반에서 들어야한다 하시던데 아닌가보네요 감사합니다…'},{text:'초등4학년 수학학원 어디로보내야하나요 ㅠ',url:'https://cafe.naver.com/ira111/895305',region:'미사',date:'2026.01',body:'초5 인데 유투엠보내고 있습니다
+---
+초4 올라가는데파인만 보내고 있어요.아이가 선생님과 케미가 잘 맞는 듯 해요.빠르게 적응하고, 잘 다니고 있습니다.
+---
+파인만은 원비가 어떻게 되나요?학원에 물어보기 좀 그…'},{text:'수학때문에 걱정이 많아요(학원)',url:'https://cafe.naver.com/ira111/902423',region:'미사',date:'2026.02',body:'학원은 이렇게 추천해 달라고 올리시면 일부는 아니지만 학원 관계자 등 광고가 많을거에요.솔직히 다른 아이는 맞아도 내가 안 맞을수 있어서, 직접 가서 상담하고 다녀보는 수 밖에 없는 것 같아요.학원 추천 글 많은데,…'},{text:'중학생 수학학원 추천 부탁드립니다.',url:'https://cafe.naver.com/ira111/916446',region:'미사',date:'2026.06',body:'파인만이요.^^
+---
+추천 감사합니다.  대형학원 가기 싫어해서 잘 설득 해 봐야 할것 같아요.
+---
+개구쟁이맘관리잘되는 대형이에요.레테보고 상담해보세요. 저희애는 소규모다니다 중2때 들어갔는데,드라마틱하게 성적…'}]},
+    {label:'관리/피드백',count:8,posts:[{text:'강동파인만 수학학원 이요~',url:'https://cafe.naver.com/ira111/780344',region:'강동',date:'2024.03',body:'숙제량은 타 대형보단 적은것 같은데 그것도 선생님에 따라 조금 달라요. 아이가 중등인가요? 저희 아이는 아직 초등이라 클리닉이 수,토 중에 선택인데.. 중등은 토요일이라 들었고 잘은 모르겠어요. 클리닉은 들어야해요
+…'},{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630',region:'강동',date:'2024.10',body:'청어람에 한 표요~티오가 있다면요
+---
+답변감사해요~~ 혹시 이유를 여쭤봐도 될까요?
+---
+부라타치즈청이. 아웃풋이 잘 나와요.물론 그만큼 많이 풉니다.그래선지 자리가 없어서못 들어가더라고요.어디든 인기많아서꽉찬…'},{text:'파인만 미사 레테',url:'https://cafe.naver.com/ira111/828983',region:'미사',date:'2024.11',body:'아이가 몇학년인가요? 저도 전화로 이것저것 문의드리긴했는데 무학년제에 일단 전화받으시는 분이 진짜 귀찮음 티나게 말씀하셔서 좀 그랬거든요
+---
+전화로 연결된 분은 혹시 데스크에 계신 분 아니셨을까요? 저는 아이 레…'},{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12',body:'어디일까요?^^
+---
+파인만이요.. 미사 오픈했죠.. 강동관에서 아이들과 샘들 함께 이사왔어여!!^^
+---
+두아들연년생엄마혹시 차량될까요?
+---
+나의봄날넵!! 강일관 차량이 미사로 다 왔어요!!^^
+---
+두아…'},{text:'강동 청어람수학. 윤슬중 내신 궁금해요~',url:'https://cafe.naver.com/ira111/891400',region:'강동',date:'2025.12',body:'중학교내신은 학교근처가 최고에요수학은 아니고 영어학원 고덕에서 빡센데 보냈는데. 내신 적중률은 그닥이었어요. 대신 고등모고 대비는 된것같아요. 아무래도 강동학교들 중점이에요
+---
+청어람에 윤슬중 재원수가 어느정도 …'},{text:'고등 과학학원정보 부탁드려요',url:'https://cafe.naver.com/ira111/895494',region:'미사',date:'2026.01',body:'파인만 과학 꼼꼼하게 봐주세요. 1월 개강반은 전화해보세요.
+---
+미사는 중3까지 밖에 없네요ㅠㅠ
+---
+도토리율맘그래요? 아고 지금 중3반 다니고 있는데 고등부 없는지 몰랐네요.
+---
+고등들보니까 바디메오도 많…'},{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05',body:'5학년 때 깊생, 페르마, 파인만, 구주이배 테스트 보고,  파인만으로 결정했고, 1년 넘었는데 관리 잘해주시는 것 같아요.(지금 윤슬 6학년)
+---
+파인만 미사관으로 다니실까요? 학년별 클래스가 진도별로 여러개인…'},{text:'중학생 수학학원 추천 부탁드립니다.',url:'https://cafe.naver.com/ira111/916446',region:'미사',date:'2026.06',body:'파인만이요.^^
+---
+추천 감사합니다.  대형학원 가기 싫어해서 잘 설득 해 봐야 할것 같아요.
+---
+개구쟁이맘관리잘되는 대형이에요.레테보고 상담해보세요. 저희애는 소규모다니다 중2때 들어갔는데,드라마틱하게 성적…'}]},
+    {label:'커리큘럼/시스템',count:4,posts:[{text:'강동파인만 수학학원 이요~',url:'https://cafe.naver.com/ira111/780344',region:'강동',date:'2024.03',body:'숙제량은 타 대형보단 적은것 같은데 그것도 선생님에 따라 조금 달라요. 아이가 중등인가요? 저희 아이는 아직 초등이라 클리닉이 수,토 중에 선택인데.. 중등은 토요일이라 들었고 잘은 모르겠어요. 클리닉은 들어야해요
+…'},{text:'왕수학, 최상위 심화 가능한 수학학원 있을까요?(대형X)',url:'https://cafe.naver.com/ira111/839821',region:'강동',date:'2025.01',body:'심화를 해주는 소규모 학원이 있을까싶어요저는 심화학원 찾다 황소 갔어요알아본 학원중에 강동 파인만이 최상위 교재 쓴다고 했었구요심화를 해주는 학원이 많지는 않은것 같아요
+---
+네ㅜㅜ 그런것같아요.우선황소테스트예약하…'},{text:'파인만 숙제량은 어때요?',url:'https://cafe.naver.com/ira111/892227',region:'미사',date:'2025.12',body:'저도 궁금하네요.
+---
+저희아이도 파인만이고, 중등에 고등진도 나가고있구요개인차가 있겠지만 아이말로는 평균3시간 정도라고해요~고등진도는 생각보다 양이많아요...ㅜ ㅜ양이 어느정도 받쳐줘야 할수있어요..진도만 나간다…'},{text:'영과고 합격전략설명회 후기에요~~',url:'https://cafe.naver.com/ira111/901408',region:'미사',date:'2026.02',body:'공유해주셔서 감사합니다^^ 고등 입학도 너무 어렵네용 ㅠㅠ
+---
+듣고와도 어렵고 부족해요 ㅠ ㅠ,그래도 또 공부해보아요
+---
+맞아요.수.과 선행은 해도 되는게 아니고 해야하죠.과학은 영과고 커리랑자사고 포함 일반…'}]},
+    {label:'반복/심화학습',count:5,posts:[{text:'파인만, 청어람 질문이요~',url:'https://cafe.naver.com/ira111/822429',region:'송파',date:'2024.10',body:'파인만은 KMO반 없는 걸로 알아요.미사에서 셔틀 다니는 학원 중 KMO대비하려면 청어람 (경시반) 만 가능한 걸로 알고 있어요. 강동 청어람은 미사까지 셔틀 오고, 송파는 안 올거에요. 더 정보 있으신 분계시면 댓…'},{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630',region:'강동',date:'2024.10',body:'청어람에 한 표요~티오가 있다면요
+---
+답변감사해요~~ 혹시 이유를 여쭤봐도 될까요?
+---
+부라타치즈청이. 아웃풋이 잘 나와요.물론 그만큼 많이 풉니다.그래선지 자리가 없어서못 들어가더라고요.어디든 인기많아서꽉찬…'},{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12',body:'어디일까요?^^
+---
+파인만이요.. 미사 오픈했죠.. 강동관에서 아이들과 샘들 함께 이사왔어여!!^^
+---
+두아들연년생엄마혹시 차량될까요?
+---
+나의봄날넵!! 강일관 차량이 미사로 다 왔어요!!^^
+---
+두아…'},{text:'파인만 숙제량은 어때요?',url:'https://cafe.naver.com/ira111/892227',region:'미사',date:'2025.12',body:'저도 궁금하네요.
+---
+저희아이도 파인만이고, 중등에 고등진도 나가고있구요개인차가 있겠지만 아이말로는 평균3시간 정도라고해요~고등진도는 생각보다 양이많아요...ㅜ ㅜ양이 어느정도 받쳐줘야 할수있어요..진도만 나간다…'},{text:'강동 청어람수학. 윤슬중 내신 궁금해요~',url:'https://cafe.naver.com/ira111/891400',region:'강동',date:'2025.12',body:'중학교내신은 학교근처가 최고에요수학은 아니고 영어학원 고덕에서 빡센데 보냈는데. 내신 적중률은 그닥이었어요. 대신 고등모고 대비는 된것같아요. 아무래도 강동학교들 중점이에요
+---
+청어람에 윤슬중 재원수가 어느정도 …'}]},
+    {label:'셔틀/접근성',count:3,posts:[{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630',region:'강동',date:'2024.10',body:'청어람에 한 표요~티오가 있다면요
+---
+답변감사해요~~ 혹시 이유를 여쭤봐도 될까요?
+---
+부라타치즈청이. 아웃풋이 잘 나와요.물론 그만큼 많이 풉니다.그래선지 자리가 없어서못 들어가더라고요.어디든 인기많아서꽉찬…'},{text:'아이들.. 겨울방학계획 머리아파요.',url:'https://cafe.naver.com/ira111/830193',region:'강동',date:'2024.11',body:'유럽캠프는 어떤걸까요?? 궁금해요~
+---
+안데르센이요. 작년 1월 유럽 3개국 보내봤는데 괜찮아요!!^^
+---
+학년이 올라가면 좀더 심플해지는 것 같아요.학원에 있는 시간이 기니어딜 가지 못 하고 ㅎ
+---
+ㅎㅎ…'},{text:'예비중 학원 추천해주세요',url:'https://cafe.naver.com/ira111/891823',region:'강동',date:'2025.12',body:'수학은 강동파인만, 유투엠 셔틀 있어요~~
+---
+구산상가는 아니지만 옆쪽 심슨어학원도 셔틀있어요 ^^
+---
+정상이랑 페르마도 셔틀다녀요
+---
+모두 감사드립니다 ^^'}]},
+    {label:'선생님/수업',count:3,posts:[{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12',body:'어디일까요?^^
+---
+파인만이요.. 미사 오픈했죠.. 강동관에서 아이들과 샘들 함께 이사왔어여!!^^
+---
+두아들연년생엄마혹시 차량될까요?
+---
+나의봄날넵!! 강일관 차량이 미사로 다 왔어요!!^^
+---
+두아…'},{text:'초등4학년 수학학원 어디로보내야하나요 ㅠ',url:'https://cafe.naver.com/ira111/895305',region:'미사',date:'2026.01',body:'초5 인데 유투엠보내고 있습니다
+---
+초4 올라가는데파인만 보내고 있어요.아이가 선생님과 케미가 잘 맞는 듯 해요.빠르게 적응하고, 잘 다니고 있습니다.
+---
+파인만은 원비가 어떻게 되나요?학원에 물어보기 좀 그…'},{text:'중학생 수학학원 추천 부탁드립니다.',url:'https://cafe.naver.com/ira111/916446',region:'미사',date:'2026.06',body:'파인만이요.^^
+---
+추천 감사합니다.  대형학원 가기 싫어해서 잘 설득 해 봐야 할것 같아요.
+---
+개구쟁이맘관리잘되는 대형이에요.레테보고 상담해보세요. 저희애는 소규모다니다 중2때 들어갔는데,드라마틱하게 성적…'}]},
+    {label:'차량/접근성',count:1,posts:[{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12',body:'어디일까요?^^
+---
+파인만이요.. 미사 오픈했죠.. 강동관에서 아이들과 샘들 함께 이사왔어여!!^^
+---
+두아들연년생엄마혹시 차량될까요?
+---
+나의봄날넵!! 강일관 차량이 미사로 다 왔어요!!^^
+---
+두아…'}]}
   ],
     cons: [
-    {label:'가격부담',count:1,posts:[{text:'파인만 미사 레테',url:'https://cafe.naver.com/ira111/828983',region:'미사',date:'2024.11'}]},
-    {label:'기타개선점',count:1,posts:[{text:'파인만 미사 레테',url:'https://cafe.naver.com/ira111/828983',region:'미사',date:'2024.11'}]},
-    {label:'숙제/학습량부담',count:1,posts:[{text:'파인만 숙제량은 어때요?',url:'https://cafe.naver.com/ira111/892227',region:'미사',date:'2025.12'}]},
-    {label:'셔틀불만',count:1,posts:[{text:'청어람,파인만 두학원 어떤가요?',url:'https://cafe.naver.com/ira111/891785',region:'강동',date:'2025.12'}]}
+    {label:'가격부담',count:1,posts:[{text:'파인만 미사 레테',url:'https://cafe.naver.com/ira111/828983',region:'미사',date:'2024.11',body:'아이가 몇학년인가요? 저도 전화로 이것저것 문의드리긴했는데 무학년제에 일단 전화받으시는 분이 진짜 귀찮음 티나게 말씀하셔서 좀 그랬거든요
+---
+전화로 연결된 분은 혹시 데스크에 계신 분 아니셨을까요? 저는 아이 레…'}]},
+    {label:'기타개선점',count:1,posts:[{text:'파인만 미사 레테',url:'https://cafe.naver.com/ira111/828983',region:'미사',date:'2024.11',body:'아이가 몇학년인가요? 저도 전화로 이것저것 문의드리긴했는데 무학년제에 일단 전화받으시는 분이 진짜 귀찮음 티나게 말씀하셔서 좀 그랬거든요
+---
+전화로 연결된 분은 혹시 데스크에 계신 분 아니셨을까요? 저는 아이 레…'}]},
+    {label:'숙제/학습량부담',count:1,posts:[{text:'파인만 숙제량은 어때요?',url:'https://cafe.naver.com/ira111/892227',region:'미사',date:'2025.12',body:'저도 궁금하네요.
+---
+저희아이도 파인만이고, 중등에 고등진도 나가고있구요개인차가 있겠지만 아이말로는 평균3시간 정도라고해요~고등진도는 생각보다 양이많아요...ㅜ ㅜ양이 어느정도 받쳐줘야 할수있어요..진도만 나간다…'}]},
+    {label:'셔틀불만',count:1,posts:[{text:'청어람,파인만 두학원 어떤가요?',url:'https://cafe.naver.com/ira111/891785',region:'강동',date:'2025.12',body:'저희 오늘청어람 시험보고 왔는데, 파인만도 궁금하네요 저도 수학학원 고민중이에요
+---
+저도 두곳 시험 봤고... 거의 비슷한 레벨의 반으로 배정받았어요. 저는 청어람으로 생각이 기울었어요^^
+---
+교육정보 게시판…'}]}
   ],
     allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'초3 파인만 레벨테스트 후 등록 고민인데요…',url:'https://cafe.naver.com/ira111/914002'},{text:'은가람중 과학학원 어디다니나요?',url:'https://cafe.naver.com/ira111/912725'},{text:'심화수학하는데요',url:'https://cafe.naver.com/ira111/772671'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'강동파인만 수학학원 이요~',url:'https://cafe.naver.com/ira111/780344'},{text:'요즘엔 이런것도 있네요',url:'https://cafe.naver.com/ira111/816138'},{text:'파인만, 청어람 질문이요~',url:'https://cafe.naver.com/ira111/822429'},{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630'}]
   },
@@ -202,17 +596,63 @@ var MON_DATA = [
     '중랑': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:4,posts:[{text:'심화수학하는데요',url:'https://cafe.naver.com/ira111/772671',region:'강동',date:'2024.01'},{text:'레벨테스트 퀄리티가 좋은 수학학원은 없을까요?',url:'https://cafe.naver.com/ira111/768528',region:'미사',date:'2024.01'},{text:'초 고학년 수학 최상위보다 좀 더 심화 다뤄주는 학원 있을까요?(황소 제외)',url:'https://cafe.naver.com/ira111/824344',region:'미사',date:'2024.10'},{text:'송파 수학학원 상담 후 느낀 점, 어떤 차별점이 있을까?',url:'https://cafe.naver.com/nihongokkureomi/428753',region:'송파',date:'2025.11'}]},
-    {label:'관리/피드백',count:4,posts:[{text:'깊은생각 수학학원 보내시는 분께 여쭤봅니다.',url:'https://cafe.naver.com/ira111/828557',region:'미사',date:'2024.11'},{text:'초4수학학원.. 고민되요..',url:'https://cafe.naver.com/ira111/847108',region:'미사',date:'2025.03'},{text:'내년 예비중1 수학학원 4군데 다녀왔는데 어디가젤나을까요',url:'https://cafe.naver.com/ira111/870550',region:'미사',date:'2025.08'},{text:'송파 수학학원 상담 후 느낀 점, 어떤 차별점이 있을까?',url:'https://cafe.naver.com/nihongokkureomi/428753',region:'송파',date:'2025.11'}]},
-    {label:'선생님/수업',count:4,posts:[{text:'깊은생각 수학학원 보내시는 분께 여쭤봅니다.',url:'https://cafe.naver.com/ira111/828557',region:'미사',date:'2024.11'},{text:'초4수학학원.. 고민되요..',url:'https://cafe.naver.com/ira111/847108',region:'미사',date:'2025.03'},{text:'내년 예비중1 수학학원 4군데 다녀왔는데 어디가젤나을까요',url:'https://cafe.naver.com/ira111/870550',region:'미사',date:'2025.08'},{text:'송파 수학학원 상담 후 느낀 점, 어떤 차별점이 있을까?',url:'https://cafe.naver.com/nihongokkureomi/428753',region:'송파',date:'2025.11'}]},
-    {label:'반복/심화학습',count:1,posts:[{text:'내년 예비중1 수학학원 4군데 다녀왔는데 어디가젤나을까요',url:'https://cafe.naver.com/ira111/870550',region:'미사',date:'2025.08'}]},
-    {label:'성적향상/성과',count:1,posts:[{text:'예비 고1 수학학원 문의드립니다.',url:'https://cafe.naver.com/ira111/879784',region:'강동',date:'2025.09'}]},
-    {label:'시설/환경',count:1,posts:[{text:'예비 고1 수학학원 문의드립니다.',url:'https://cafe.naver.com/ira111/879784',region:'강동',date:'2025.09'}]}
+    {label:'커리큘럼/시스템',count:4,posts:[{text:'심화수학하는데요',url:'https://cafe.naver.com/ira111/772671',region:'강동',date:'2024.01',body:'강동파인만~강일역근처에 있는학원이고 초등은 최상위가 필수에요^^ 중딩은 일품이 필수이고.. 에이급도 합니다
+---
+감사합니다 거기도 유심히 볼께요
+---
+파인만 보내고 있는데, 보내다 보니 오답노트는 점점 안하고 있…'},{text:'레벨테스트 퀄리티가 좋은 수학학원은 없을까요?',url:'https://cafe.naver.com/ira111/768528',region:'미사',date:'2024.01',body:'깊은생각 레테도 분석표 쫙 나오고 좋더라고요. 함 봐보세요.
+---
+네^^ 이름부터 맘에 드네요ㅎ 감사합니다~~
+---
+저도 깊생 레테요  아마 대치본사와 같은 것을 사용하지 않을까 싶은데요
+---
+영어 레테 괜찮은…'},{text:'초 고학년 수학 최상위보다 좀 더 심화 다뤄주는 학원 있을까요?(황소 제외)',url:'https://cafe.naver.com/ira111/824344',region:'미사',date:'2024.10',body:'깊은생각 심화해요 ~중등은 자체교재 심화교재 쓰던데 초등은 상담한번 받아보세요
+---
+점프왕수학을 해주는 학원은 못봤는데 저도 궁금하네요
+---
+개별수업 하는곳은그걸 풀 실력되는 아이라면그렇게 진행해주세요.단, 진도…'},{text:'송파 수학학원 상담 후 느낀 점, 어떤 차별점이 있을까?',url:'https://cafe.naver.com/nihongokkureomi/428753',region:'송파',date:'2025.11',body:'오! 깊은생각 송파 괜찮네용~ 지나치지 않아 좋다
+---
+아이 성적이 쑥쑥 오르겠네요!'}]},
+    {label:'관리/피드백',count:4,posts:[{text:'깊은생각 수학학원 보내시는 분께 여쭤봅니다.',url:'https://cafe.naver.com/ira111/828557',region:'미사',date:'2024.11',body:'고1 아이 깊생 보내고 있어요 신경써서 관리해주시고 잘가르쳐주셔서 나름 만족하며 보냅니다
+---
+앗! 알려주셔서 감사합니다~~'},{text:'초4수학학원.. 고민되요..',url:'https://cafe.naver.com/ira111/847108',region:'미사',date:'2025.03',body:'수준이 떨어지는거 아님 그냥 러닝센터 쭉 보내도 되지않을까요? 학원은 주변에 친구들 의식하면 한번가볼까 할때가 오더라고요 ㅎㅎ 그때까지 좋은 관계유지하심이^^
+---
+네 좋은관계 유지하고 싶어요..^^ 러닝센터에 눌…'},{text:'내년 예비중1 수학학원 4군데 다녀왔는데 어디가젤나을까요',url:'https://cafe.naver.com/ira111/870550',region:'미사',date:'2025.08',body:'저희 아들래미, 깊은생각 다녀요. 다닌지 8,9개월 정도??이고요. 진짜 수학 유목민에서 정착했어요. 학원 알아보는것도 진짜 일이더라고요 ㅠㅠ그리고 학원은 진짜 선생님이 진짜 중요한거 같아요.선생님이 애 파악도 빠르…'},{text:'송파 수학학원 상담 후 느낀 점, 어떤 차별점이 있을까?',url:'https://cafe.naver.com/nihongokkureomi/428753',region:'송파',date:'2025.11',body:'오! 깊은생각 송파 괜찮네용~ 지나치지 않아 좋다
+---
+아이 성적이 쑥쑥 오르겠네요!'}]},
+    {label:'선생님/수업',count:4,posts:[{text:'깊은생각 수학학원 보내시는 분께 여쭤봅니다.',url:'https://cafe.naver.com/ira111/828557',region:'미사',date:'2024.11',body:'고1 아이 깊생 보내고 있어요 신경써서 관리해주시고 잘가르쳐주셔서 나름 만족하며 보냅니다
+---
+앗! 알려주셔서 감사합니다~~'},{text:'초4수학학원.. 고민되요..',url:'https://cafe.naver.com/ira111/847108',region:'미사',date:'2025.03',body:'수준이 떨어지는거 아님 그냥 러닝센터 쭉 보내도 되지않을까요? 학원은 주변에 친구들 의식하면 한번가볼까 할때가 오더라고요 ㅎㅎ 그때까지 좋은 관계유지하심이^^
+---
+네 좋은관계 유지하고 싶어요..^^ 러닝센터에 눌…'},{text:'내년 예비중1 수학학원 4군데 다녀왔는데 어디가젤나을까요',url:'https://cafe.naver.com/ira111/870550',region:'미사',date:'2025.08',body:'저희 아들래미, 깊은생각 다녀요. 다닌지 8,9개월 정도??이고요. 진짜 수학 유목민에서 정착했어요. 학원 알아보는것도 진짜 일이더라고요 ㅠㅠ그리고 학원은 진짜 선생님이 진짜 중요한거 같아요.선생님이 애 파악도 빠르…'},{text:'송파 수학학원 상담 후 느낀 점, 어떤 차별점이 있을까?',url:'https://cafe.naver.com/nihongokkureomi/428753',region:'송파',date:'2025.11',body:'오! 깊은생각 송파 괜찮네용~ 지나치지 않아 좋다
+---
+아이 성적이 쑥쑥 오르겠네요!'}]},
+    {label:'반복/심화학습',count:1,posts:[{text:'내년 예비중1 수학학원 4군데 다녀왔는데 어디가젤나을까요',url:'https://cafe.naver.com/ira111/870550',region:'미사',date:'2025.08',body:'저희 아들래미, 깊은생각 다녀요. 다닌지 8,9개월 정도??이고요. 진짜 수학 유목민에서 정착했어요. 학원 알아보는것도 진짜 일이더라고요 ㅠㅠ그리고 학원은 진짜 선생님이 진짜 중요한거 같아요.선생님이 애 파악도 빠르…'}]},
+    {label:'성적향상/성과',count:1,posts:[{text:'예비 고1 수학학원 문의드립니다.',url:'https://cafe.naver.com/ira111/879784',region:'강동',date:'2025.09',body:'저 입시할땐 깊은생각학원도 좋앗엇는데 미사에도 있긴하더라구요..
+---
+감사합니다 ^^
+---
+오늘을감사하며네네 가셔서 상담받아보세요^^ 나름의 전통있는 학원이긴합니다
+---
+저희 아이는 페르마 수학만 쭉 다녔어서 …'}]},
+    {label:'시설/환경',count:1,posts:[{text:'예비 고1 수학학원 문의드립니다.',url:'https://cafe.naver.com/ira111/879784',region:'강동',date:'2025.09',body:'저 입시할땐 깊은생각학원도 좋앗엇는데 미사에도 있긴하더라구요..
+---
+감사합니다 ^^
+---
+오늘을감사하며네네 가셔서 상담받아보세요^^ 나름의 전통있는 학원이긴합니다
+---
+저희 아이는 페르마 수학만 쭉 다녔어서 …'}]}
   ],
     cons: [
-    {label:'셔틀불만',count:1,posts:[{text:'장안동 깊은생각 학원',url:'https://cafe.naver.com/dongdaemoonstory/332767',region:'동대문',date:'2024.08'}]},
-    {label:'숙제/학습량부담',count:1,posts:[{text:'장안동 시매쓰 보내 본 초5 엄마에요.',url:'https://cafe.naver.com/dongbumomschool/4783',region:'동대문',date:'2025.02'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'장안동 시매쓰 보내 본 초5 엄마에요.',url:'https://cafe.naver.com/dongbumomschool/4783',region:'동대문',date:'2025.02'}]}
+    {label:'셔틀불만',count:1,posts:[{text:'장안동 깊은생각 학원',url:'https://cafe.naver.com/dongdaemoonstory/332767',region:'동대문',date:'2024.08',body:'셔틀운영하고 분기마다 보는 것을 알고 있습니다. 11월에도 있다고 합니다.
+---
+초등아이들도 오는 한양키○즈 하우스요.저희 첫째 아이 예비초등학생인데 여기 학원 다녀요. 선생님도 좋고 아이한테 설명도 잘 해주세요.…'}]},
+    {label:'숙제/학습량부담',count:1,posts:[{text:'장안동 시매쓰 보내 본 초5 엄마에요.',url:'https://cafe.naver.com/dongbumomschool/4783',region:'동대문',date:'2025.02',body:'혹시 깊은생각 수학은 어떠셨어요? 저희애는 올림피아드를 다녔다가 옮기고자 하거든요~
+---
+아이는 힘들어 하지만 엄마 입장에서는 사실 만족스럽습니다..숙제가 좀 많은편..ㅎㅎ저는오히려 아이가 넘. 힘들어해서 올림피아…'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'장안동 시매쓰 보내 본 초5 엄마에요.',url:'https://cafe.naver.com/dongbumomschool/4783',region:'동대문',date:'2025.02',body:'혹시 깊은생각 수학은 어떠셨어요? 저희애는 올림피아드를 다녔다가 옮기고자 하거든요~
+---
+아이는 힘들어 하지만 엄마 입장에서는 사실 만족스럽습니다..숙제가 좀 많은편..ㅎㅎ저는오히려 아이가 넘. 힘들어해서 올림피아…'}]}
   ],
     allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'심화수학하는데요',url:'https://cafe.naver.com/ira111/772671'},{text:'레벨테스트 퀄리티가 좋은 수학학원은 없을까요?',url:'https://cafe.naver.com/ira111/768528'},{text:'고등수학 학원 추천',url:'https://cafe.naver.com/ira111/780051'},{text:'초4 수학학원 추천해 주세요.',url:'https://cafe.naver.com/ira111/778745'},{text:'깊.생or가온 수학중 고민중',url:'https://cafe.naver.com/ira111/787450'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'},{text:'깊은 생각수학 초등부 어떤가요?',url:'https://cafe.naver.com/ira111/806037'},{text:'장안동 깊은생각 학원',url:'https://cafe.naver.com/dongdaemoonstory/332767'},{text:'요즘엔 이런것도 있네요',url:'https://cafe.naver.com/ira111/816138'}]
   },
@@ -227,15 +667,53 @@ var MON_DATA = [
     '미사': [6,2,0,0,0,2,0,0,0,2,0,4,0,3,2,1,2,0,1,1,1,1,3,1,3,2,3,3,2,0]
   },
     pros: [
-    {label:'선생님/수업',count:2,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02'},{text:'안녕하세요 수학학원 추천 부탁드립니다^^',url:'https://cafe.naver.com/ira111/886359',region:'미사',date:'2025.11'}]},
-    {label:'관리/피드백',count:2,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02'},{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11'}]},
-    {label:'성적향상/성과',count:1,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02'}]},
-    {label:'커리큘럼/시스템',count:2,posts:[{text:'신장동 페르마 수학 어때요?',url:'https://cafe.naver.com/kidsinlove/1153267',region:'미사',date:'2025.05'},{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11'}]},
-    {label:'반복/심화학습',count:1,posts:[{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11'}]},
-    {label:'셔틀/접근성',count:1,posts:[{text:'신장초 4학년 영수 학원 추천해주세요^^',url:'https://cafe.naver.com/hsite/164465',region:'미사',date:'2026.02'}]}
+    {label:'선생님/수업',count:2,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02',body:'태그는 삭제해주세요~
+---
+테그는 삭제했는데요.. 왜 그런거에요?
+---
+방향감각네이버에 이 글이 노출되서 상단에 떠 홍보로 연결 될 수 있어 태그는 카페 내 금지입니다
+---
+저도 선행은 안시키고ㅜ현행만 중시하는…'},{text:'안녕하세요 수학학원 추천 부탁드립니다^^',url:'https://cafe.naver.com/ira111/886359',region:'미사',date:'2025.11',body:'저희아이 페르마 다니는데 아주 잘다니고있어요...숙제도 많지도 적지도 않고..선생님들도 다 좋으시고^^
+---
+저는 엠베스트 추천합니다. 가서 한번 상담 받아보시고 결정하세요'}]},
+    {label:'관리/피드백',count:2,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02',body:'태그는 삭제해주세요~
+---
+테그는 삭제했는데요.. 왜 그런거에요?
+---
+방향감각네이버에 이 글이 노출되서 상단에 떠 홍보로 연결 될 수 있어 태그는 카페 내 금지입니다
+---
+저도 선행은 안시키고ㅜ현행만 중시하는…'},{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11',body:'전 아들 셋맘인데요.큰애때 정상어 영어학원 보내면서페르마까지 보낼생각이였는데...방학특강을 해도 실력이 안늘었어서..ㅜ키즈킹 창의보습학원 보냈어요.지금 둘째까지도 만족하며보내고 있답니다.영어던 수학이던 소수정예라 확…'}]},
+    {label:'성적향상/성과',count:1,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02',body:'태그는 삭제해주세요~
+---
+테그는 삭제했는데요.. 왜 그런거에요?
+---
+방향감각네이버에 이 글이 노출되서 상단에 떠 홍보로 연결 될 수 있어 태그는 카페 내 금지입니다
+---
+저도 선행은 안시키고ㅜ현행만 중시하는…'}]},
+    {label:'커리큘럼/시스템',count:2,posts:[{text:'신장동 페르마 수학 어때요?',url:'https://cafe.naver.com/kidsinlove/1153267',region:'미사',date:'2025.05',body:'대형은 잘하는 애들한테는 진짜 너무 좋은학원이고 잘 못따라가면 힘든학원이예요. 선행 만큼은 대형따라갈곳 없죠😊
+---
+그렇죠? 일단 테스트랑 상담 한 번 가 봐야겠어요~웅쌤은 레테는 잘 봤는데 선행이 안 되어있어서 …'},{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11',body:'전 아들 셋맘인데요.큰애때 정상어 영어학원 보내면서페르마까지 보낼생각이였는데...방학특강을 해도 실력이 안늘었어서..ㅜ키즈킹 창의보습학원 보냈어요.지금 둘째까지도 만족하며보내고 있답니다.영어던 수학이던 소수정예라 확…'}]},
+    {label:'반복/심화학습',count:1,posts:[{text:'페르마 수학 초등 보내시는분 계실까요 ?',url:'https://cafe.naver.com/kidsinlove/1169598',region:'미사',date:'2025.11',body:'전 아들 셋맘인데요.큰애때 정상어 영어학원 보내면서페르마까지 보낼생각이였는데...방학특강을 해도 실력이 안늘었어서..ㅜ키즈킹 창의보습학원 보냈어요.지금 둘째까지도 만족하며보내고 있답니다.영어던 수학이던 소수정예라 확…'}]},
+    {label:'셔틀/접근성',count:1,posts:[{text:'신장초 4학년 영수 학원 추천해주세요^^',url:'https://cafe.naver.com/hsite/164465',region:'미사',date:'2026.02',body:'하남캠퍼스 말씀 하시는거죠?
+---
+네네!
+---
+shadowborn여기 괜찮더라구요
+---
+쭈니쭈나진짜 감사합니다!!
+---
+페르마 학교랑 가까워서 좋죠
+---
+답변주셔서 감사합니다 참고하겠습니다!
+---
+원스탑이…'}]}
   ],
     cons: [
-    {label:'개별관리부족',count:2,posts:[{text:'중고등 수학학원',url:'https://cafe.naver.com/ira111/845167',region:'미사',date:'2025.02'},{text:'학원 정말 어려워요~',url:'https://cafe.naver.com/kidsinlove/1182565',region:'미사',date:'2026.04'}]}
+    {label:'개별관리부족',count:2,posts:[{text:'중고등 수학학원',url:'https://cafe.naver.com/ira111/845167',region:'미사',date:'2025.02',body:'저희 아들(중3)은 페르마 다니고 있는데 아이는 그럭저럭 만족하고 있지만 솔직히 인원이 많은 것 같아서 소수정예로 옮기고 싶은 생각은 있어요. 제가 알기로 수학 많이 다니는 곳은 NPE, 페르마, 메이드? 이런 학원…'},{text:'학원 정말 어려워요~',url:'https://cafe.naver.com/kidsinlove/1182565',region:'미사',date:'2026.04',body:'저희집 중등도 괜찮은 수학학원이 없어서 아직도 혼자하고 있어요 ^^;;
+---
+와~혼자 대단해요~~고민도많고 화도나는 주말을 보내고 있답니다ㅜㅜ
+---
+까칠한그녀정확하게 Ebs샘과 함께하는거죠고등과정부터는 어디든 보…'}]}
   ],
     allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'초3아이 수학학원 시간 조율 문의드려요',url:'https://cafe.naver.com/kidsinlove/1184573'},{text:'수학학원 알려주세요',url:'https://cafe.naver.com/ira111/774237'},{text:'풍산초 학원여부~',url:'https://cafe.naver.com/ira111/773458'},{text:'영어학원. 정상 vs 심슨',url:'https://cafe.naver.com/ira111/771928'},{text:'구산상가 수학학원',url:'https://cafe.naver.com/ira111/770700'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'나룰초 5학년 수학학원',url:'https://cafe.naver.com/kidsinlove/1099044'},{text:'덕풍중 아이들은 수학학원 어디로 많이 다니나요(미사제외)',url:'https://cafe.naver.com/kidsinlove/1096638'},{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'}]
   },
@@ -252,11 +730,49 @@ var MON_DATA = [
     '동대문': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05'}]},
-    {label:'관리/피드백',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05'}]},
-    {label:'성적향상/성과',count:2,posts:[{text:'은사에서 과고 준비 학원 어디일까요?',url:'https://cafe.naver.com/joonggyeedu/46644',region:'중계',date:'2025.11'},{text:'상명중 내신 영어, 수학 학원 추천해 주세요',url:'https://cafe.naver.com/joonggyeedu/50827',region:'중계',date:'2026.02'}]},
-    {label:'셔틀/접근성',count:3,posts:[{text:'셔틀버스 수학학원',url:'https://cafe.naver.com/joonggyeedu/49170',region:'중계',date:'2026.01'},{text:'셔틀오는 학원',url:'https://cafe.naver.com/joonggyeedu/50594',region:'중계',date:'2026.02'},{text:'셔틀되는 학원',url:'https://cafe.naver.com/joonggyeedu/56149',region:'중계',date:'2026.06'}]}
+    {label:'커리큘럼/시스템',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05',body:'저는 토피아 좋습니다 잘 다니고 있구요 숙제가 많다는 소문이있어서 저도 걱정했는데 ㅈㅅ이 더 많았어서 학원서 그만큼 하고오더라구요 그리고 문법개념을 잘 잡아줘서 아이가 다니면서 모든 영역에 실력이 늘었어요 독해도 교…'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05',body:'저는 토피아 좋습니다 잘 다니고 있구요 숙제가 많다는 소문이있어서 저도 걱정했는데 ㅈㅅ이 더 많았어서 학원서 그만큼 하고오더라구요 그리고 문법개념을 잘 잡아줘서 아이가 다니면서 모든 영역에 실력이 늘었어요 독해도 교…'}]},
+    {label:'관리/피드백',count:1,posts:[{text:'영어학원 고민이요~',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05',body:'저는 토피아 좋습니다 잘 다니고 있구요 숙제가 많다는 소문이있어서 저도 걱정했는데 ㅈㅅ이 더 많았어서 학원서 그만큼 하고오더라구요 그리고 문법개념을 잘 잡아줘서 아이가 다니면서 모든 영역에 실력이 늘었어요 독해도 교…'}]},
+    {label:'성적향상/성과',count:2,posts:[{text:'은사에서 과고 준비 학원 어디일까요?',url:'https://cafe.naver.com/joonggyeedu/46644',region:'중계',date:'2025.11',body:'미탐이 제일 무난하실듯요
+---
+의견 감사합니다~
+---
+미탐이 제일 속도가 빠르고cms는 비슷한데 무학년제이고알로곤이 시수가 적어 가성비 좋지만 그만큼 엄마가 더 신경써야해요
+---
+안녕하세요, 이해하기 쉽게 비교…'},{text:'상명중 내신 영어, 수학 학원 추천해 주세요',url:'https://cafe.naver.com/joonggyeedu/50827',region:'중계',date:'2026.02',body:'안녕하세요 어머니 미라정영어학원입니다. 상명중 내신대비 열심히 준비시키고 있습니다.
+---
+상담하고싶었는데 오늘 학원휴무네요~
+---
+이제 상명 졸업하는데 영어는 코어가 대비를 잘시키고(문제를 직접 원장님이 만드시고…'}]},
+    {label:'셔틀/접근성',count:3,posts:[{text:'셔틀버스 수학학원',url:'https://cafe.naver.com/joonggyeedu/49170',region:'중계',date:'2026.01',body:'미탐이요~
+---
+앗 미탐들어봤어요!감사합니다!
+---
+조재필이요*.*
+---
+감사합니다!
+---
+중등이면 알로곤도 될겁니다
+---
+감사합니다!
+---
+증등이면 토피아아카데미도 있네요.
+---
+감사합니다!
+---
+유…'},{text:'셔틀오는 학원',url:'https://cafe.naver.com/joonggyeedu/50594',region:'중계',date:'2026.02',body:'토피아어학원 셔틀 다녀요~
+---
+청담 토피아 최선 심슨이 예수사랑교회쪽 도로 지나가던데 각 학원에 초등수업 여부는 알아보셔요^^
+---
+단과는 많이 안다니나요..?'},{text:'셔틀되는 학원',url:'https://cafe.naver.com/joonggyeedu/56149',region:'중계',date:'2026.06',body:'정상, 최선 등등 지나가는거 봤어요
+---
+감사합니다^^
+---
+랭콘도있고 심슨도 차량있어요
+---
+토피아도 있어요.
+---
+이바인'}]}
   ],
     cons: [
 
@@ -276,8 +792,10 @@ var MON_DATA = [
     '중랑': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:1,posts:[{text:'중계동 학원',url:'https://cafe.naver.com/aldisgo123d/976144',region:'중계',date:'2024.10'}]},
-    {label:'셔틀/접근성',count:1,posts:[{text:'소규모 수학학원 차량 지원되는 곳 추천 부탁드립니다.',url:'https://cafe.naver.com/joonggyeedu/48991',region:'중계',date:'2025.12'}]}
+    {label:'커리큘럼/시스템',count:1,posts:[{text:'중계동 학원',url:'https://cafe.naver.com/aldisgo123d/976144',region:'중계',date:'2024.10',body:'대형이 좋은데 진도가 좀 느리면 조재필수학은 반이 있을수도 있어요
+---
+저희 아이도 보내야 하는데 정보 감사해요'}]},
+    {label:'셔틀/접근성',count:1,posts:[{text:'소규모 수학학원 차량 지원되는 곳 추천 부탁드립니다.',url:'https://cafe.naver.com/joonggyeedu/48991',region:'중계',date:'2025.12',body:'소규모 학원인데 차량지원을 기대하시는 건 불가능합니다.차량지원은 모두 대형이거나 종합학원입니다.차량지원이 필수시라면 대형이나 종합학원 중 적은 인원으로 운영되는 별도의 반이나 과정을 찾아보셔야 할 듯합니다. (없지는…'}]}
   ],
     cons: [
 
@@ -297,15 +815,67 @@ var MON_DATA = [
     '중랑': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:3,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05'},{text:'중3 수학, 과학 학원 추천해주세요',url:'https://cafe.naver.com/joonggyeedu/41939',region:'중계',date:'2025.06'},{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11'}]},
-    {label:'관리/피드백',count:1,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05'}]},
-    {label:'반복/심화학습',count:1,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'영어 수학 학원 바꿔보려구요',url:'https://cafe.naver.com/joonggyeedu/49863',region:'중계',date:'2026.01'}]}
+    {label:'커리큘럼/시스템',count:3,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05',body:'여기는 초3부터인가요..?
+---
+네~ 초3올라갈적 겨울 다녓어요~
+---
+호호호호감사합니다!
+---
+혹시 아이가 숙제하는 데 걸리는 시간이 어느 정도일까요? 저도 미탐 고려 중인데 영어학원 숙제와 함께하면 감당이 …'},{text:'중3 수학, 과학 학원 추천해주세요',url:'https://cafe.naver.com/joonggyeedu/41939',region:'중계',date:'2025.06',body:'저는 수학은 미♡, 과학은 s♡ 권해요 저희딸이 만족하고 다녀요 ^^
+---
+공부습관 잘 잡혀있다면 인강이 더 도움될거에요~ 학원 왔다갔다 하는시간에 한글자라도 더 보게하려고 엠베ㅅㅌ 결제해줬거든요 잘 아는부분은 패…'},{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11',body:'교과 문제만 풀리지 마시고 근본적으로 문제를 해결할수 있는 사고력을 같이 하면 나중에 더 도움이 되실거 같아요!
+---
+사고력! 감사해요!
+---
+조재필 추천 드립니다. 저희 아이 3학년말때  6개월 정도 보냈었는데…'}]},
+    {label:'관리/피드백',count:1,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05',body:'여기는 초3부터인가요..?
+---
+네~ 초3올라갈적 겨울 다녓어요~
+---
+호호호호감사합니다!
+---
+혹시 아이가 숙제하는 데 걸리는 시간이 어느 정도일까요? 저도 미탐 고려 중인데 영어학원 숙제와 함께하면 감당이 …'}]},
+    {label:'반복/심화학습',count:1,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05',body:'여기는 초3부터인가요..?
+---
+네~ 초3올라갈적 겨울 다녓어요~
+---
+호호호호감사합니다!
+---
+혹시 아이가 숙제하는 데 걸리는 시간이 어느 정도일까요? 저도 미탐 고려 중인데 영어학원 숙제와 함께하면 감당이 …'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'영어 수학 학원 바꿔보려구요',url:'https://cafe.naver.com/joonggyeedu/49863',region:'중계',date:'2026.01',body:'저희 아이도 그랬는데 수학은 미래탐구에 잘 적응했어요~ 담임쌤에 따라 성향 차이가 있긴 하지만 다른 대형학원보다는 따뜻하달까요? ㅎㅎ
+---
+감사합니다^^
+---
+안녕하세요^^저도 영어학원 정보좀 얻어보려고 오늘가입…'}]}
   ],
     cons: [
-    {label:'숙제/학습량부담',count:2,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05'},{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11'}]},
-    {label:'개별관리부족',count:1,posts:[{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11'}]},
-    {label:'기타개선점',count:1,posts:[{text:'미탐은 정보가 원래 잘 없나요',url:'https://cafe.naver.com/joonggyeedu/48618',region:'중계',date:'2025.12'}]}
+    {label:'숙제/학습량부담',count:2,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05',body:'여기는 초3부터인가요..?
+---
+네~ 초3올라갈적 겨울 다녓어요~
+---
+호호호호감사합니다!
+---
+혹시 아이가 숙제하는 데 걸리는 시간이 어느 정도일까요? 저도 미탐 고려 중인데 영어학원 숙제와 함께하면 감당이 …'},{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11',body:'교과 문제만 풀리지 마시고 근본적으로 문제를 해결할수 있는 사고력을 같이 하면 나중에 더 도움이 되실거 같아요!
+---
+사고력! 감사해요!
+---
+조재필 추천 드립니다. 저희 아이 3학년말때  6개월 정도 보냈었는데…'}]},
+    {label:'개별관리부족',count:1,posts:[{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11',body:'교과 문제만 풀리지 마시고 근본적으로 문제를 해결할수 있는 사고력을 같이 하면 나중에 더 도움이 되실거 같아요!
+---
+사고력! 감사해요!
+---
+조재필 추천 드립니다. 저희 아이 3학년말때  6개월 정도 보냈었는데…'}]},
+    {label:'기타개선점',count:1,posts:[{text:'미탐은 정보가 원래 잘 없나요',url:'https://cafe.naver.com/joonggyeedu/48618',region:'중계',date:'2025.12',body:'전화해야되더라구요
+---
+ㅎㅎㅎ 아날로그하네요
+---
+초5하이파이브그니까요^^
+---
+미탐은 그렇더라고요. 생각보다 정보 찾기가 어려워요..
+---
+통화로 해결했어요 ㅎㅎㅎ 블로그 있음 좋았을걸 아쉽네요
+---
+나름…'}]}
   ],
     allPosts: [{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861'},{text:'하나고 대비 학원',url:'https://cafe.naver.com/joonggyeedu/55354'},{text:'중3 수학 학원',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'영어 수학 학원 옮기려는데',url:'https://cafe.naver.com/joonggyeedu/55275'},{text:'중계동에 괜찮은 수학학원 있을까요?',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'안녕하세요. 중학생 학원 궁금해요.',url:'https://cafe.naver.com/jungnangbaby/738543'},{text:'중3 수학, 과학 학원 추천해주세요',url:'https://cafe.naver.com/joonggyeedu/41939'},{text:'kmo & 영과고 대비 학원 추천',url:'https://cafe.naver.com/joonggyeedu/43601'},{text:'노원 수학학원 알려주세요',url:'https://cafe.naver.com/sjkdhj467/933205'},{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845'}]
   },
@@ -326,15 +896,79 @@ var MON_DATA = [
     '중랑': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0]
   },
     pros: [
-    {label:'관리/피드백',count:2,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11'}]},
-    {label:'커리큘럼/시스템',count:5,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703',region:'미사',date:'2024.04'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11'},{text:'수학문제집 추천해주세여',url:'https://cafe.naver.com/ira111/862927',region:'미사',date:'2025.06'}]},
-    {label:'선생님/수업',count:3,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'예비중3 수학학원 고민입니다 아주 빡쎈곳 어디일까요..',url:'https://cafe.naver.com/ira111/891364',region:'강동',date:'2025.12'}]},
-    {label:'성적향상/성과',count:2,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'}]},
-    {label:'반복/심화학습',count:4,posts:[{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703',region:'미사',date:'2024.04'},{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11'}]},
-    {label:'흥미/동기부여',count:1,posts:[{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05'}]}
+    {label:'관리/피드백',count:2,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02',body:'중2.중3성적 전체 들어가요.봉사랑 상장이랑 이런것도 그걸 산출해서 고등학교 갑니다😊
+---
+와.. 봉사 장장도 들어가는군요 여태 중학교 성적 관리 안했는데.. 걱정이네요 ㅠ
+---
+레몬차35지금부터라도 하셔야죠..…'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11',body:'학년별에 학교별로 꼼꼼히잡아주세요 ~^^ 학교별 내신특강까지 수학은 믿고 있네요
+---
+학년별 레벨이 나뉘어져있고요. 반복학습이 잘되어 있는거 같습니다.중1인데 내신관리는 잘되는편인거같아요수행평가나 지필도 괜찮아요.'}]},
+    {label:'커리큘럼/시스템',count:5,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02',body:'중2.중3성적 전체 들어가요.봉사랑 상장이랑 이런것도 그걸 산출해서 고등학교 갑니다😊
+---
+와.. 봉사 장장도 들어가는군요 여태 중학교 성적 관리 안했는데.. 걱정이네요 ㅠ
+---
+레몬차35지금부터라도 하셔야죠..…'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03',body:'채팅남깁니다
+---
+저와 비슷한 상황이네요저도 도움받고 싶네요..
+---
+상담받아볼까해요..^^
+---
+제이엠 수학 중1 아이 다닌지 4달 되가는데 공부 습관이나 식 정리하는 것까지 꼼꼼하게 챙겨주셔서 요즘 너무 태…'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703',region:'미사',date:'2024.04',body:'하남고 앞 한수학이요~ 현행위주고 개념 확실히 하고 진도 나가요^^
+---
+그래도 학교 앞 작은 학원이나 교습소는 일대일로 진도 나가니 그런곳이 좋지 않을까요??
+---
+저희 아이 초3 2학기때 현행진도로 수학의힘 …'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11',body:'학년별에 학교별로 꼼꼼히잡아주세요 ~^^ 학교별 내신특강까지 수학은 믿고 있네요
+---
+학년별 레벨이 나뉘어져있고요. 반복학습이 잘되어 있는거 같습니다.중1인데 내신관리는 잘되는편인거같아요수행평가나 지필도 괜찮아요.'},{text:'수학문제집 추천해주세여',url:'https://cafe.naver.com/ira111/862927',region:'미사',date:'2025.06',body:'천재교육 수학의힘 추천.제가 가르치는애들 교재로 사용하고있어요.레벨별로있으니까 서점가서 비교해보세요.
+---
+수학 960이요'}]},
+    {label:'선생님/수업',count:3,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02',body:'중2.중3성적 전체 들어가요.봉사랑 상장이랑 이런것도 그걸 산출해서 고등학교 갑니다😊
+---
+와.. 봉사 장장도 들어가는군요 여태 중학교 성적 관리 안했는데.. 걱정이네요 ㅠ
+---
+레몬차35지금부터라도 하셔야죠..…'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03',body:'채팅남깁니다
+---
+저와 비슷한 상황이네요저도 도움받고 싶네요..
+---
+상담받아볼까해요..^^
+---
+제이엠 수학 중1 아이 다닌지 4달 되가는데 공부 습관이나 식 정리하는 것까지 꼼꼼하게 챙겨주셔서 요즘 너무 태…'},{text:'예비중3 수학학원 고민입니다 아주 빡쎈곳 어디일까요..',url:'https://cafe.naver.com/ira111/891364',region:'강동',date:'2025.12',body:'자기주도 좀 되면. -몰입수학- 개별학습 하는곳인데. 학생이 의지가 있다면 구멍없이 학습할수 잇더라구요. 오답 그냥 안넘기고 몇십문제더 풀고 그러더라구요. 저희애는 의지가 부족해서ㅠ
+---
+지나가다 문의 드려요. 실…'}]},
+    {label:'성적향상/성과',count:2,posts:[{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509',region:'미사',date:'2024.02',body:'중2.중3성적 전체 들어가요.봉사랑 상장이랑 이런것도 그걸 산출해서 고등학교 갑니다😊
+---
+와.. 봉사 장장도 들어가는군요 여태 중학교 성적 관리 안했는데.. 걱정이네요 ㅠ
+---
+레몬차35지금부터라도 하셔야죠..…'},{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03',body:'채팅남깁니다
+---
+저와 비슷한 상황이네요저도 도움받고 싶네요..
+---
+상담받아볼까해요..^^
+---
+제이엠 수학 중1 아이 다닌지 4달 되가는데 공부 습관이나 식 정리하는 것까지 꼼꼼하게 챙겨주셔서 요즘 너무 태…'}]},
+    {label:'반복/심화학습',count:4,posts:[{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03',body:'채팅남깁니다
+---
+저와 비슷한 상황이네요저도 도움받고 싶네요..
+---
+상담받아볼까해요..^^
+---
+제이엠 수학 중1 아이 다닌지 4달 되가는데 공부 습관이나 식 정리하는 것까지 꼼꼼하게 챙겨주셔서 요즘 너무 태…'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703',region:'미사',date:'2024.04',body:'하남고 앞 한수학이요~ 현행위주고 개념 확실히 하고 진도 나가요^^
+---
+그래도 학교 앞 작은 학원이나 교습소는 일대일로 진도 나가니 그런곳이 좋지 않을까요??
+---
+저희 아이 초3 2학기때 현행진도로 수학의힘 …'},{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05',body:'황소의 큰 장점은 수학심화문제를 풀 수 있는 능력이 길러진다는거에요~!!결국 수능에서 고득점 받기 위해서는 어려운 심화문제를 풀 수 있느냐/없느냐로 갈리기 때문에 인기가 많은거 같아요~황소수학과 관련된 유튜브나 관련…'},{text:'중등 수학의 힘',url:'https://cafe.naver.com/ira111/829361',region:'미사',date:'2024.11',body:'학년별에 학교별로 꼼꼼히잡아주세요 ~^^ 학교별 내신특강까지 수학은 믿고 있네요
+---
+학년별 레벨이 나뉘어져있고요. 반복학습이 잘되어 있는거 같습니다.중1인데 내신관리는 잘되는편인거같아요수행평가나 지필도 괜찮아요.'}]},
+    {label:'흥미/동기부여',count:1,posts:[{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05',body:'황소의 큰 장점은 수학심화문제를 풀 수 있는 능력이 길러진다는거에요~!!결국 수능에서 고득점 받기 위해서는 어려운 심화문제를 풀 수 있느냐/없느냐로 갈리기 때문에 인기가 많은거 같아요~황소수학과 관련된 유튜브나 관련…'}]}
   ],
     cons: [
-    {label:'숙제/학습량부담',count:2,posts:[{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03'},{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05'}]}
+    {label:'숙제/학습량부담',count:2,posts:[{text:'매쓰온 수학 보내시는 맘님들..',url:'https://cafe.naver.com/ira111/781987',region:'미사',date:'2024.03',body:'채팅남깁니다
+---
+저와 비슷한 상황이네요저도 도움받고 싶네요..
+---
+상담받아볼까해요..^^
+---
+제이엠 수학 중1 아이 다닌지 4달 되가는데 공부 습관이나 식 정리하는 것까지 꼼꼼하게 챙겨주셔서 요즘 너무 태…'},{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'미사',date:'2024.05',body:'황소의 큰 장점은 수학심화문제를 풀 수 있는 능력이 길러진다는거에요~!!결국 수능에서 고득점 받기 위해서는 어려운 심화문제를 풀 수 있느냐/없느냐로 갈리기 때문에 인기가 많은거 같아요~황소수학과 관련된 유튜브나 관련…'}]}
   ],
     allPosts: [{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'셔틀있는 수학학원 추천부탁드립니당~',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'신답초로 전학 가요. 학원 문의요..',url:'https://cafe.naver.com/dongdaemoonstory/316901'},{text:'고등 입시 비평준화 설명좀 부탁드려요..ㅠ',url:'https://cafe.naver.com/ira111/778509'},{text:'선행 안되어 있는 초3 남아 수학학원 어디 있을까여???',url:'https://cafe.naver.com/ira111/788703'},{text:'수학학원 추천 부탁드려요~',url:'https://cafe.naver.com/everyhomework/854398'},{text:'대형 수학 . 영어학원 뭐뭐있을까요?',url:'https://cafe.naver.com/ira111/802939'},{text:'미사 수학의힘(풍산동) 보내시는분..대표전화 통화가 안되는데 혹시 방학인가요?',url:'https://cafe.naver.com/ira111/810173'},{text:'초등 3학년 교과 수학 학원, 어디가 있어요?',url:'https://cafe.naver.com/ira111/821387'},{text:'강동 초등고학년 교과수학학원',url:'https://cafe.naver.com/everyhomework/870750'}]
   },
@@ -381,7 +1015,16 @@ var MON_DATA = [
     '동대문': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1]
   },
     pros: [
-    {label:'셔틀/접근성',count:2,posts:[{text:'광장동 학원셔틀?',url:'https://cafe.naver.com/dochiya/1283451',region:'송파',date:'2024.04'},{text:'이사가려는데',url:'https://cafe.naver.com/jungnangbaby/760661',region:'동대문',date:'2026.06'}]}
+    {label:'셔틀/접근성',count:2,posts:[{text:'광장동 학원셔틀?',url:'https://cafe.naver.com/dochiya/1283451',region:'송파',date:'2024.04',body:'네 라이딩 합니다
+---
+합니다!
+---
+송파구에서 학원셔틀이 온다는 거죠? ^^
+---
+방이동에 있는 청어람, 최선에서 오는 버스 봤습니다.
+---
+광장동에서 대치는 대중교통이 불편해서 보통은 라이딩합니다.
+---…'},{text:'이사가려는데',url:'https://cafe.naver.com/jungnangbaby/760661',region:'동대문',date:'2026.06',body:'면목동이 엄청 넓어요. 사가정아이파크 근처에 수학은 해법,리드인 있고 영어는 송그리쉬 있는데 동대문 청담어학원이랑 광장동 심슨어학원 아이파크로 셔틀 오는거 봤어요. 저희애는 초등이라 중학교는 잘 모르겠지만 장안동에 …'}]}
   ],
     cons: [
 
@@ -451,8 +1094,12 @@ var MON_DATA = [
     '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,0]
   },
     pros: [
-    {label:'관리/피드백',count:2,posts:[{text:'중학생 영수학원 알아보고 있어요(상위권, 고등내용 잘 알려주는곳이면 합니다.)',url:'https://cafe.naver.com/3gumomclub/1542644',region:'성북',date:'2026.05'},{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05'}]},
-    {label:'커리큘럼/시스템',count:1,posts:[{text:'중학생 영수학원 알아보고 있어요(상위권, 고등내용 잘 알려주는곳이면 합니다.)',url:'https://cafe.naver.com/3gumomclub/1542644',region:'성북',date:'2026.05'}]}
+    {label:'관리/피드백',count:2,posts:[{text:'중학생 영수학원 알아보고 있어요(상위권, 고등내용 잘 알려주는곳이면 합니다.)',url:'https://cafe.naver.com/3gumomclub/1542644',region:'성북',date:'2026.05',body:'저희 아인 수학 유투엠으로 다녀요. 저흰 쭉 여기만 다녀서 다른 곳과 비교하기는 어렵지만, 내신 신경써주시고 아이가 숙제만 성실히 잘 해간다면 선행도 잘 이끌어주시는 것 같아요. 어디든 아이 하기 나름이긴 하지만요
+…'},{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05',body:'5학년 때 깊생, 페르마, 파인만, 구주이배 테스트 보고,  파인만으로 결정했고, 1년 넘었는데 관리 잘해주시는 것 같아요.(지금 윤슬 6학년)
+---
+파인만 미사관으로 다니실까요? 학년별 클래스가 진도별로 여러개인…'}]},
+    {label:'커리큘럼/시스템',count:1,posts:[{text:'중학생 영수학원 알아보고 있어요(상위권, 고등내용 잘 알려주는곳이면 합니다.)',url:'https://cafe.naver.com/3gumomclub/1542644',region:'성북',date:'2026.05',body:'저희 아인 수학 유투엠으로 다녀요. 저흰 쭉 여기만 다녀서 다른 곳과 비교하기는 어렵지만, 내신 신경써주시고 아이가 숙제만 성실히 잘 해간다면 선행도 잘 이끌어주시는 것 같아요. 어디든 아이 하기 나름이긴 하지만요
+…'}]}
   ],
     cons: [
 
@@ -702,15 +1349,57 @@ var MON_DATA = [
     '동대문': [0,2,0,0,0,1,0,0,0,0,1,0,0,1,1,1,2,0,0,0,0,1,1,0,0,1,0,0,0,0]
   },
     pros: [
-    {label:'차량/접근성',count:2,posts:[{text:'차량 운행되는 영수 학원이 있나요?',url:'https://cafe.naver.com/dongdaemoonstory/316953',region:'동대문',date:'2024.02'},{text:'이사 와서 학원을 알아봐야 하는데 ㅜ',url:'https://cafe.naver.com/dongdaemoonstory/349753',region:'동대문',date:'2025.05'}]},
-    {label:'커리큘럼/시스템',count:2,posts:[{text:'예1어학원 어떤가요?( 중고등생)',url:'https://cafe.naver.com/jangantalk/301490',region:'동대문',date:'2024.11'},{text:'어학원 중등 결정 도와주세욤!',url:'https://cafe.naver.com/dongdaemoonstory/350260',region:'동대문',date:'2025.05'}]},
-    {label:'선생님/수업',count:2,posts:[{text:'예1어학원 어떤가요?( 중고등생)',url:'https://cafe.naver.com/jangantalk/301490',region:'동대문',date:'2024.11'},{text:'야외체험(숲같은)이 많은 유치원은 어디인가요? (ㄱ림, ㅇㅖ일은 어떤가요?)',url:'https://cafe.naver.com/dongdaemoonstory/346051',region:'동대문',date:'2025.03'}]},
-    {label:'관리/피드백',count:1,posts:[{text:'중등영어학원 찾고 있어요',url:'https://cafe.naver.com/imundong/193351',region:'동대문',date:'2025.04'}]},
-    {label:'셔틀/접근성',count:1,posts:[{text:'어학원 중등 결정 도와주세욤!',url:'https://cafe.naver.com/dongdaemoonstory/350260',region:'동대문',date:'2025.05'}]}
+    {label:'차량/접근성',count:2,posts:[{text:'차량 운행되는 영수 학원이 있나요?',url:'https://cafe.naver.com/dongdaemoonstory/316953',region:'동대문',date:'2024.02',body:'영어학원은 보습학원 아님 다 올껄요 ecc April 정상 아발론 예일 폴리 리딩에비뉴 스콜렉스 등 이요 성동구쪽도 있고요 slp  프랜시스파커 등등 참 많아요수학은 씨매스 소마 올림피아드는 봤네요
+---
+앗 감사합…'},{text:'이사 와서 학원을 알아봐야 하는데 ㅜ',url:'https://cafe.naver.com/dongdaemoonstory/349753',region:'동대문',date:'2025.05',body:'장안동 쪽애눈 학원이 많이 보이긴 하던데 저희집도 이문동으로 이사예정인데 학원이 너무 걱정이네요 근처에 편의점도 없는곳이라 ~
+---
+학원차량이 잘 되어 있어서 이용하면 될 것 같습니다. 중학은 수재, 예일, 대성 …'}]},
+    {label:'커리큘럼/시스템',count:2,posts:[{text:'예1어학원 어떤가요?( 중고등생)',url:'https://cafe.naver.com/jangantalk/301490',region:'동대문',date:'2024.11',body:'질문도 가능하고 상담도 잘해주세요숙제는 많아요
+---
+저희 애들 초등 때 예일 다녔었는데(지금은 이사했어요) 여러 학원 다녀본 딸이 예일이 가장 괜찮았다고 하더라구요. 제 생각에도 거기서 탄탄히 많이 배운거 같아요~'},{text:'어학원 중등 결정 도와주세욤!',url:'https://cafe.naver.com/dongdaemoonstory/350260',region:'동대문',date:'2025.05',body:'두군데 아이가 다녀보지는 않았으나 주위보면 닥스 다녔다 초5~6때 예일로 옮기더라구요.
+---
+네 그런 분위기군요!
+---
+혹시 중등 학원 추천까진 아니더라도 주변에 어딜 다니는지.. 앞글자라도 부탁드려봐도 될까요?…'}]},
+    {label:'선생님/수업',count:2,posts:[{text:'예1어학원 어떤가요?( 중고등생)',url:'https://cafe.naver.com/jangantalk/301490',region:'동대문',date:'2024.11',body:'질문도 가능하고 상담도 잘해주세요숙제는 많아요
+---
+저희 애들 초등 때 예일 다녔었는데(지금은 이사했어요) 여러 학원 다녀본 딸이 예일이 가장 괜찮았다고 하더라구요. 제 생각에도 거기서 탄탄히 많이 배운거 같아요~'},{text:'야외체험(숲같은)이 많은 유치원은 어디인가요? (ㄱ림, ㅇㅖ일은 어떤가요?)',url:'https://cafe.naver.com/dongdaemoonstory/346051',region:'동대문',date:'2025.03',body:'예1 괜찮아요~
+---
+감사합니다~ 나중에 설명회 가봐야겠어요^^
+---
+예일추천해요 원장님 원감님 선생님 다 좋았어요 ~~
+---
+네 감사합니다~ 나중에 긍정적으로 생각해봐야겠어요^^
+---
+ㅈㅇ도 월 2회 숲체험…'}]},
+    {label:'관리/피드백',count:1,posts:[{text:'중등영어학원 찾고 있어요',url:'https://cafe.naver.com/imundong/193351',region:'동대문',date:'2025.04',body:'신이문역 근방영어학원 보내고 있어요 !영어 배우기 전엔 무섭고 두려워하더니 지금 많이 좋아졌어요 ㅎㅎ
+---
+장안동 예일 보내요관리 잘 해주는 것 같아요
+---
+회기사거리에 영어학원 보내고있어요 소수정예로 잘봐주세요…'}]},
+    {label:'셔틀/접근성',count:1,posts:[{text:'어학원 중등 결정 도와주세욤!',url:'https://cafe.naver.com/dongdaemoonstory/350260',region:'동대문',date:'2025.05',body:'두군데 아이가 다녀보지는 않았으나 주위보면 닥스 다녔다 초5~6때 예일로 옮기더라구요.
+---
+네 그런 분위기군요!
+---
+혹시 중등 학원 추천까진 아니더라도 주변에 어딜 다니는지.. 앞글자라도 부탁드려봐도 될까요?…'}]}
   ],
     cons: [
-    {label:'숙제/학습량부담',count:5,posts:[{text:'영어공부 체계적으로 잘 하는 곳 추천',url:'https://cafe.naver.com/dongdaemoonstory/318149',region:'동대문',date:'2024.02'},{text:'예1어학원 어떤가요?( 중고등생)',url:'https://cafe.naver.com/jangantalk/301490',region:'동대문',date:'2024.11'},{text:'어학원 중등 결정 도와주세욤!',url:'https://cafe.naver.com/dongdaemoonstory/350260',region:'동대문',date:'2025.05'},{text:'수재학원',url:'https://cafe.naver.com/dongdaemoonstory/357921',region:'동대문',date:'2025.10'},{text:'영어학원 선택 어렵네요',url:'https://cafe.naver.com/dongdaemoonstory/359655',region:'동대문',date:'2025.11'}]},
-    {label:'개별관리부족',count:1,posts:[{text:'영어학원 선택 어렵네요',url:'https://cafe.naver.com/dongdaemoonstory/359655',region:'동대문',date:'2025.11'}]}
+    {label:'숙제/학습량부담',count:5,posts:[{text:'영어공부 체계적으로 잘 하는 곳 추천',url:'https://cafe.naver.com/dongdaemoonstory/318149',region:'동대문',date:'2024.02',body:'초등학생 때 영어를 끝내 놓으시는게 아무래도 중학생 되기전에 마음이 편하죠 중등부 같이 있는 학원가시는게 좋구요  ㅎㅎ 예일 어학원 추천드려요
+---
+예일은 공부 너무 많이 시키는거 같아 4학년이라 좀 그래서요 ㅠㅠ…'},{text:'예1어학원 어떤가요?( 중고등생)',url:'https://cafe.naver.com/jangantalk/301490',region:'동대문',date:'2024.11',body:'질문도 가능하고 상담도 잘해주세요숙제는 많아요
+---
+저희 애들 초등 때 예일 다녔었는데(지금은 이사했어요) 여러 학원 다녀본 딸이 예일이 가장 괜찮았다고 하더라구요. 제 생각에도 거기서 탄탄히 많이 배운거 같아요~'},{text:'어학원 중등 결정 도와주세욤!',url:'https://cafe.naver.com/dongdaemoonstory/350260',region:'동대문',date:'2025.05',body:'두군데 아이가 다녀보지는 않았으나 주위보면 닥스 다녔다 초5~6때 예일로 옮기더라구요.
+---
+네 그런 분위기군요!
+---
+혹시 중등 학원 추천까진 아니더라도 주변에 어딜 다니는지.. 앞글자라도 부탁드려봐도 될까요?…'},{text:'수재학원',url:'https://cafe.naver.com/dongdaemoonstory/357921',region:'동대문',date:'2025.10',body:'둘다 경험했어요전 셔틀 싫어서 수재에 영어수학 다니게하고 있어요경험상 예일도 수재도 둘다 좋은 거 같아요맘님이 끌리는 곳으로 선택하시면 될 것 같아요
+---
+댓글 감사해요예일이 숙제양이 많다고 하던데 수재와 비교했을…'},{text:'영어학원 선택 어렵네요',url:'https://cafe.naver.com/dongdaemoonstory/359655',region:'동대문',date:'2025.11',body:'저도 고민이네요. 상담받고 청담 보냈는데 잘한선택인지는 모르겠어요.
+---
+그나마 이동네는 내신은 예일 많이 가더라구요. 첫째도 다니고 있고요. 청*은 다녀본 지인이 점점 별로라 그만뒀어요 이번에. 원생이 점점 줄어…'}]},
+    {label:'개별관리부족',count:1,posts:[{text:'영어학원 선택 어렵네요',url:'https://cafe.naver.com/dongdaemoonstory/359655',region:'동대문',date:'2025.11',body:'저도 고민이네요. 상담받고 청담 보냈는데 잘한선택인지는 모르겠어요.
+---
+그나마 이동네는 내신은 예일 많이 가더라구요. 첫째도 다니고 있고요. 청*은 다녀본 지인이 점점 별로라 그만뒀어요 이번에. 원생이 점점 줄어…'}]}
   ],
     allPosts: [{text:'차량 운행되는 영수 학원이 있나요?',url:'https://cafe.naver.com/dongdaemoonstory/316953'},{text:'신답초로 전학 가요. 학원 문의요..',url:'https://cafe.naver.com/dongdaemoonstory/316901'},{text:'영어 말하기 쓰기 전문 학원',url:'https://cafe.naver.com/dongdaemoonstory/326039'},{text:'예1어학원 어떤가요?( 중고등생)',url:'https://cafe.naver.com/jangantalk/301490'},{text:'휘경여고 형설반 문의',url:'https://cafe.naver.com/dongdaemoonstory/343041'},{text:'야외체험(숲같은)이 많은 유치원은 어디인가요? (ㄱ림, ㅇㅖ일은 어떤가요?)',url:'https://cafe.naver.com/dongdaemoonstory/346051'},{text:'중등영어학원 찾고 있어요',url:'https://cafe.naver.com/imundong/193351'},{text:'어학원 중등 결정 도와주세욤!',url:'https://cafe.naver.com/dongdaemoonstory/350260'},{text:'이사 와서 학원을 알아봐야 하는데 ㅜ',url:'https://cafe.naver.com/dongdaemoonstory/349753'},{text:'수재학원',url:'https://cafe.naver.com/dongdaemoonstory/357921'}]
   },
@@ -839,11 +1528,11 @@ var MON_DATA = [
     '중계': [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,2,0,0,0,1,1]
   },
     pros: [
-    {label:'선생님/수업',count:1,posts:[{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06'}]},
-    {label:'가격부담',count:1,posts:[{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06'}]}
+    {label:'선생님/수업',count:1,posts:[{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06',body:'아이가 자기 주도되면 추천해요. 3개월에 한 학기씩 진도빼요. 학원 진도 계획에 맞춰서 판서 진도 나가고, 숙제 질문 하면 풀어주고 하는 방식이에요. 앉아서 선생님 문제풀이 하는거 구경만 하다 올 것 같으면 비추입니…'}]},
+    {label:'가격부담',count:1,posts:[{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06',body:'아이가 자기 주도되면 추천해요. 3개월에 한 학기씩 진도빼요. 학원 진도 계획에 맞춰서 판서 진도 나가고, 숙제 질문 하면 풀어주고 하는 방식이에요. 앉아서 선생님 문제풀이 하는거 구경만 하다 올 것 같으면 비추입니…'}]}
   ],
     cons: [
-    {label:'개별관리부족',count:1,posts:[{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06'}]}
+    {label:'개별관리부족',count:1,posts:[{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06',body:'아이가 자기 주도되면 추천해요. 3개월에 한 학기씩 진도빼요. 학원 진도 계획에 맞춰서 판서 진도 나가고, 숙제 질문 하면 풀어주고 하는 방식이에요. 앉아서 선생님 문제풀이 하는거 구경만 하다 올 것 같으면 비추입니…'}]}
   ],
     allPosts: [{text:'중3 수학 학원',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'중계동에 괜찮은 수학학원 있을까요?',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'kmo & 영과고 대비 학원 추천',url:'https://cafe.naver.com/joonggyeedu/43601'},{text:'학원고민입니다',url:'https://cafe.naver.com/joonggyeedu/45746'},{text:'은사에서 과고 준비 학원 어디일까요?',url:'https://cafe.naver.com/joonggyeedu/46644'},{text:'차량운행 과학학원',url:'https://cafe.naver.com/joonggyeedu/48088'},{text:'셔틀버스 수학학원',url:'https://cafe.naver.com/joonggyeedu/49170'},{text:'예비중 수학학원 추천부탁드려요~',url:'https://cafe.naver.com/joonggyeedu/49491'},{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623'}]
   },
@@ -2010,7 +2699,9 @@ function monShowPosts(type, acIdx, label) {
     '<div class="mon-posts-box" style="margin-top:12px;">' +
       '<div class="mon-posts-box-head">게시물 <span class="mon-active-tag-pill ' + type + '">' + label + '</span> <span style="color:#94a3b8;">' + posts.length + '건</span></div>' +
       posts.map(function(p){
-        return '<div class="mon-post-item"><div class="mon-post-txt">"' + p.text + '"</div>' +
+        return '<div class="mon-post-item"><div class="mon-post-content"><div class="mon-post-txt">"' + p.text + '"</div>' +
+          (p.body ? '<div class="mon-post-body">' + p.body + '</div>' : '') +
+          '</div>' +
           (p.url ? '<a class="mon-post-link" href="' + p.url + '" target="_blank" rel="noopener">원문 →</a>' : '') + '</div>';
       }).join('') +
     '</div>';
