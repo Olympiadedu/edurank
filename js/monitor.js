@@ -2010,8 +2010,8 @@ function monShowPosts(type, acIdx, label) {
     '<div class="mon-posts-box" style="margin-top:12px;">' +
       '<div class="mon-posts-box-head">게시물 <span class="mon-active-tag-pill ' + type + '">' + label + '</span> <span style="color:#94a3b8;">' + posts.length + '건</span></div>' +
       posts.map(function(p){
-        return '<div class="mon-post-item"><div class="mon-post-content"><div class="mon-post-txt">"' + p.text + '"</div>' +
-          (p.body ? '<div class="mon-post-body">' + p.body + '</div>' : '') +
+        return '<div class="mon-post-item"><div class="mon-post-content">' +
+          (p.quote ? '<div class="mon-post-quote">"' + p.quote + '"</div>' : '<div class="mon-post-txt">' + p.text + '</div>') +
           '</div>' +
           (p.url ? '<a class="mon-post-link" href="' + p.url + '" target="_blank" rel="noopener">원문 →</a>' : '') + '</div>';
       }).join('') +
