@@ -118,6 +118,19 @@ body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSy
 .mon-eval-link:hover{text-decoration:underline;}
 .mon-detail-notice{font-size:13px;color:var(--txt-dim);padding-top:4px;}
 
+/* HIGHLIGHT CARDS */
+.mon-highlights{margin-bottom:16px;}
+.mon-highlights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.mon-hl-card{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:18px 20px;}
+.mon-hl-label{font-size:12px;font-weight:700;color:var(--txt-dim);letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px;}
+.mon-hl-value{font-size:22px;font-weight:700;color:var(--black);letter-spacing:-.03em;line-height:1.2;margin-bottom:6px;}
+.mon-hl-sub{font-size:14px;color:var(--txt-mid);line-height:1.5;}
+.mon-hl-sub strong{color:var(--acc);font-weight:700;}
+@media(max-width:640px){.mon-highlights-grid{grid-template-columns:1fr;}}
+
+/* SUBTITLE */
+.mon-subtitle{font-size:14px;color:var(--txt-dim);margin-bottom:14px;margin-top:-2px;}
+
 /* CRITERIA */
 .mon-criteria{background:var(--white);border:1px solid var(--bdr);border-radius:10px;margin-top:14px;overflow:hidden;}
 .mon-criteria summary{padding:14px 20px;font-size:15px;font-weight:600;color:var(--txt-mid);cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;}
@@ -152,6 +165,7 @@ body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSy
     <!-- HEADER -->
     <div class="mon-header">
       <h1 class="mon-title" id="mon-title">학원 온라인 동향</h1>
+      <div class="mon-subtitle" id="mon-subtitle"></div>
 
       <div class="mon-period-nav">
         <div class="mon-period-row">
@@ -175,6 +189,9 @@ body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSy
         </div>
       </div>
     </div>
+
+    <!-- HIGHLIGHTS -->
+    <div class="mon-highlights" id="mon-highlights"></div>
 
     <!-- TABLE SECTION -->
     <div class="mon-section-hd">
