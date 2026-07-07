@@ -1888,6 +1888,8 @@ var MON_YEAR_RANGE = {'2024년':[0,11],'2025년':[12,23],'2026년':[24,29]};
 var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
 var MON_REGION_MAP = {'방이':'송파'};
 
+var MON_META = {total_posts:1234,updated:'2026.07.07 12:00'};
+
 var monRegion = '전체', monDate = '전체', monOpenId = null;
 
 // ─── PERIOD NAV ───────────────────────────────────────────────────────────────
@@ -2035,19 +2037,102 @@ function monFilterList(items) {
 
 function monRenderAll() {
   var titleEl = document.getElementById('mon-title');
-  if (titleEl) {
-    var label;
-    if (monDate === '전체') {
-      label = '전체 기간 학원 온라인 동향';
-    } else if (monDate.indexOf('년') > -1) {
-      label = monDate + ' 학원 온라인 동향';
-    } else {
-      var p = monDate.split('.');
-      label = parseInt(p[0]) + '년 ' + parseInt(p[1]) + '월 학원 온라인 동향';
-    }
-    titleEl.textContent = label;
+  var label;
+  if (monDate === '전체') {
+    label = '전체 기간 학원 온라인 동향';
+  } else if (monDate.indexOf('년') > -1) {
+    label = monDate + ' 학원 온라인 동향';
+  } else {
+    var p = monDate.split('.');
+    label = parseInt(p[0]) + '년 ' + parseInt(p[1]) + '월 학원 온라인 동향';
   }
+  if (titleEl) titleEl.textContent = label;
+
+  var subtitleEl = document.getElementById('mon-subtitle');
+  if (subtitleEl && typeof MON_META !== 'undefined') {
+    var parts = [label.replace(' 학원 온라인 동향', '')];
+    if (MON_META.total_posts) parts.push('수집 게시물 ' + MON_META.total_posts + '건');
+    if (MON_META.updated) parts.push('최종 업데이트 ' + MON_META.updated);
+    subtitleEl.textContent = parts.join(' · ');
+  }
+
+  monRenderHighlights();
   monRenderTable();
+}
+
+function monRenderHighlights() {
+  var el = document.getElementById('mon-highlights');
+  if (!el) return;
+  var list = monGetFiltered();
+  if (!list.length) { el.innerHTML = ''; return; }
+
+  var top = list[0];
+  var topCur = monGetCount(top);
+  var topPrev = monGetPrevCount(top);
+  var topChgHtml = '';
+  if (topPrev !== null && topPrev > 0) {
+    var pct = Math.round((topCur - topPrev) / topPrev * 100);
+    topChgHtml = ' · 전 기간 대비 <strong>' + (pct >= 0 ? '+' : '') + pct + '%</strong>';
+  } else if (topPrev === 0 && topCur > 0) {
+    topChgHtml = ' · <strong>신규</strong>';
+  }
+
+  var riseAc = null, risePct = -Infinity;
+  list.forEach(function(ac) {
+    var c = monGetCount(ac), prev = monGetPrevCount(ac);
+    if (prev !== null && prev > 0) {
+      var pct = (c - prev) / prev * 100;
+      if (pct > risePct) { risePct = pct; riseAc = ac; }
+    }
+  });
+
+  var tagCounts = {};
+  list.forEach(function(ac) {
+    monFilterList(ac.pros).concat(monFilterList(ac.cons)).forEach(function(item) {
+      tagCounts[item.label] = (tagCounts[item.label] || 0) + item.count;
+    });
+  });
+  var tagEntries = Object.keys(tagCounts).map(function(k) { return [k, tagCounts[k]]; });
+  tagEntries.sort(function(a, b) { return b[1] - a[1]; });
+  var topTag = tagEntries[0];
+
+  var html = '<div class="mon-highlights-grid">';
+  html += '<div class="mon-hl-card">' +
+    '<div class="mon-hl-label">가장 많이 언급된 학원</div>' +
+    '<div class="mon-hl-value">' + top.name + '</div>' +
+    '<div class="mon-hl-sub">' + topCur + '건' + topChgHtml + '</div>' +
+    '</div>';
+
+  if (riseAc && risePct > -Infinity) {
+    html += '<div class="mon-hl-card">' +
+      '<div class="mon-hl-label">관심도 상승 학원</div>' +
+      '<div class="mon-hl-value">' + riseAc.name + '</div>' +
+      '<div class="mon-hl-sub">전 기간 대비 <strong>+' + Math.round(risePct) + '%</strong> 상승</div>' +
+      '</div>';
+  } else {
+    html += '<div class="mon-hl-card">' +
+      '<div class="mon-hl-label">관심도 상승 학원</div>' +
+      '<div class="mon-hl-value">—</div>' +
+      '<div class="mon-hl-sub">비교 데이터 없음</div>' +
+      '</div>';
+  }
+
+  if (topTag) {
+    html += '<div class="mon-hl-card">' +
+      '<div class="mon-hl-label">가장 활발한 평가 주제</div>' +
+      '<div class="mon-hl-value">' + topTag[0] + '</div>' +
+      '<div class="mon-hl-sub">긍정·부정 합산 <strong>' + topTag[1] + '건</strong> 언급</div>' +
+      '</div>';
+  } else {
+    html += '<div class="mon-hl-card">' +
+      '<div class="mon-hl-label">가장 활발한 평가 주제</div>' +
+      '<div class="mon-hl-value">—</div>' +
+      '<div class="mon-hl-sub">평가 데이터 없음</div>' +
+      '</div>';
+  }
+
+  html += '</div>';
+  el.innerHTML = html;
 }
 
 function monChangeHtml(cur, prev) {
@@ -2092,7 +2177,6 @@ function monRenderTable() {
       '<td class="mon-r">' + cur + '<span class="mon-unit">건</span></td>' +
       '<td class="mon-c">' + (prosSum > 0 ? '<span class="mon-pros-num">' + prosSum + '</span>' : '<span class="mon-na">—</span>') + '</td>' +
       '<td class="mon-c">' + (consSum > 0 ? '<span class="mon-cons-num">' + consSum + '</span>' : '<span class="mon-na">—</span>') + '</td>' +
-      '<td class="mon-r">' + monChangeHtml(cur, prev) + '</td>' +
       '<td class="mon-chevron-td"><span class="mon-chevron">▾</span></td>';
     (function(rowId, rowAc, rowFp, rowFc, rowPs, rowCs, rowCur) {
       tr.onclick = function() { monToggleRow(rowId, rowAc, rowFp, rowFc, rowPs, rowCs, rowCur); };
@@ -2103,7 +2187,7 @@ function monRenderTable() {
     dt.className = 'mon-detail-row';
     dt.id = 'dt-' + id;
     var td = document.createElement('td');
-    td.colSpan = 7;
+    td.colSpan = 6;
     td.innerHTML = monDetailHtml(ac, fp, fc, prosSum, consSum, cur);
     dt.appendChild(td);
     tbody.appendChild(dt);
@@ -2176,9 +2260,9 @@ function monDetailHtml(ac, fp, fc, prosSum, consSum, cur) {
   return '<div class="mon-detail-inner">' +
     '<div class="mon-dstats">' +
     '<div class="mon-dstat"><div class="mon-dstat-val">' + cur + '</div><div class="mon-dstat-label">전체 언급<span class="mon-dstat-sub">게시물+댓글 합산</span></div></div>' +
-    '<div class="mon-dstat"><div class="mon-dstat-val acc">' + (prosSum || '—') + '</div><div class="mon-dstat-label">장점<span class="mon-dstat-sub">긍정 평가 글 수</span></div></div>' +
-    '<div class="mon-dstat"><div class="mon-dstat-val">' + (consSum || '—') + '</div><div class="mon-dstat-label">단점<span class="mon-dstat-sub">부정 평가 글 수</span></div></div>' +
-    (chgVal ? '<div class="mon-dstat"><div class="mon-dstat-val ' + chgCls + '">' + chgVal + '</div><div class="mon-dstat-label">전월 대비<span class="mon-dstat-sub">언급 수 증감</span></div></div>' : '') +
+    '<div class="mon-dstat"><div class="mon-dstat-val acc">' + (prosSum || '—') + '</div><div class="mon-dstat-label">긍정 언급<span class="mon-dstat-sub">긍정 평가 글 수</span></div></div>' +
+    '<div class="mon-dstat"><div class="mon-dstat-val">' + (consSum || '—') + '</div><div class="mon-dstat-label">우려 언급<span class="mon-dstat-sub">부정 평가 글 수</span></div></div>' +
+    (chgVal ? '<div class="mon-dstat"><div class="mon-dstat-val ' + chgCls + '">' + chgVal + '</div><div class="mon-dstat-label">전 기간 대비<span class="mon-dstat-sub">언급 수 증감</span></div></div>' : '') +
     '</div>' +
     '<div class="mon-eval-grid">' + monEvalColHtml(fp, 'pos') + monEvalColHtml(fc, 'neg') + '</div>' +
     '<div class="mon-detail-notice">* AI 자동 분석 결과이며 일부 오분류가 있을 수 있습니다.</div>' +

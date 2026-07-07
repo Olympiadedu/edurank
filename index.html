@@ -7,9 +7,9 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --black:#111111;--white:#fff;--ground:#f5f6f7;--bdr:#e4e6e9;
-  --txt:#111111;--txt-mid:#6b7280;--txt-dim:#9ca3af;
-  --acc:#00a891;--acc-bg:#edfaf7;--acc-bdr:#b2ede3;
+  --black:#111111;--white:#fff;--ground:#eeeff1;--bdr:#c8cbd0;
+  --txt:#111111;--txt-mid:#4b5563;--txt-dim:#6b7280;
+  --acc:#00a891;--acc-bg:#d6f5ee;--acc-bdr:#6dd5c0;
 }
 body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--ground);color:var(--txt);font-size:18px;line-height:1.6;min-height:100vh;}
 
@@ -66,6 +66,7 @@ body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSy
 .mon-ac-row td:last-child{padding-right:20px;}
 .mon-ac-row:hover td{background:var(--ground);}
 .mon-ac-row.open td{background:var(--acc-bg);}
+.mon-ac-row.open td:first-child{box-shadow:inset 3px 0 0 var(--acc);}
 .mon-ac-row:last-of-type td{border-bottom:none;}
 
 .mon-rank{font-size:22px;font-weight:300;color:#d1d5db;text-align:center;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
@@ -205,10 +206,9 @@ body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSy
           <tr>
             <th style="width:48px;text-align:center">#</th>
             <th>학원명</th>
-            <th class="mon-r">언급 수<span class="mon-th-sub">게시물+댓글 합산</span></th>
+            <th class="mon-r">전체 언급<span class="mon-th-sub">게시물+댓글 합산</span></th>
             <th class="mon-c" style="min-width:64px">장점<span class="mon-th-sub">긍정 평가 글 수</span></th>
             <th class="mon-c" style="min-width:64px">단점<span class="mon-th-sub">부정 평가 글 수</span></th>
-            <th class="mon-r">전월 대비<span class="mon-th-sub">언급 수 증감</span></th>
             <th style="width:36px"></th>
           </tr>
         </thead>
@@ -230,7 +230,7 @@ body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSy
   </div>
 </div>
 
-<script src="js/monitor.js"></script>
+<script src="js/monitor.js?v=2"></script>
 <script>monInit();</script>
 </body>
 </html>
