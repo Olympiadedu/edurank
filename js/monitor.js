@@ -2309,263 +2309,320 @@ var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방
 var MON_REGION_MAP = {'방이':'송파'};
 
 
-var monRegion = '전체', monDate = '전체', monSelected = null, monChart = null, monYearOpen = null;
+
+var monRegion = '전체', monDate = '전체', monOpenId = null;
+
+// ─── PERIOD NAV ───────────────────────────────────────────────────────────────
+
+function monGetYears() {
+  return Object.keys(MON_YEAR_RANGE).sort().reverse();
+}
+
+function monGetMonthsForYear(yr) {
+  var r = MON_YEAR_RANGE[yr];
+  if (!r) return [];
+  var allKeys = Object.keys(MON_DATE_TO_IDX);
+  var months = [];
+  for (var i = r[1]; i >= r[0]; i--) {
+    for (var k = 0; k < allKeys.length; k++) {
+      if (MON_DATE_TO_IDX[allKeys[k]] === i) { months.push(allKeys[k]); break; }
+    }
+  }
+  return months;
+}
+
+function monBuildYearSelect() {
+  var sel = document.getElementById('mon-year-select');
+  if (!sel) return;
+  var years = monGetYears();
+  sel.innerHTML = years.map(function(yr) {
+    return '<option value="' + yr + '">' + yr + '</option>';
+  }).join('');
+}
+
+function monRenderMonthPills(yr, activeKey) {
+  var pills = document.getElementById('mon-month-pills');
+  if (!pills) return;
+  var months = monGetMonthsForYear(yr);
+  pills.innerHTML = months.map(function(key) {
+    var parts = key.split('.');
+    var display = parseInt(parts[1]) + '월';
+    return '<button class="mon-month-btn' + (key === activeKey ? ' active' : '') + '" onclick="monSetMonth(this,\'' + key + '\')">' + display + '</button>';
+  }).join('');
+}
+
+function monOnYearChange(yr) {
+  var months = monGetMonthsForYear(yr);
+  var btnAll = document.querySelector('.mon-btn-all');
+  if (btnAll) btnAll.classList.remove('active');
+  if (months.length) {
+    monDate = months[0];
+    monRenderMonthPills(yr, monDate);
+  } else {
+    monDate = yr;
+    monRenderMonthPills(yr, null);
+  }
+  monOpenId = null;
+  monRenderAll();
+}
+
+function monSetMonth(btn, key) {
+  monDate = key;
+  document.querySelectorAll('.mon-month-btn').forEach(function(b) { b.classList.remove('active'); });
+  var btnAll = document.querySelector('.mon-btn-all');
+  if (btnAll) btnAll.classList.remove('active');
+  btn.classList.add('active');
+  monOpenId = null;
+  monRenderAll();
+}
+
+function monSetAll(btn) {
+  monDate = '전체';
+  document.querySelectorAll('.mon-month-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  monOpenId = null;
+  monRenderAll();
+}
+
+// ─── REGION ───────────────────────────────────────────────────────────────────
 
 function monSetRegion(el, val) {
-  document.querySelectorAll('#mon-region-group .mon-pill').forEach(function(p){ p.classList.remove('active-region'); });
+  document.querySelectorAll('#mon-region-group .mon-pill').forEach(function(p) { p.classList.remove('active-region'); });
   el.classList.add('active-region');
-  monRegion = val; monSelected = null;
-  if (monChart) { monChart.destroy(); monChart = null; }
-  document.getElementById('mon-right-panel').innerHTML = '<div class="mon-empty-right">← 학원을 선택하면 상세 내용이 표시됩니다</div>';
-  monRenderList();
+  monRegion = val;
+  monOpenId = null;
+  monRenderAll();
 }
-function monSetDate(el, val) {
-  document.querySelectorAll('#mon-date-group .mon-pill, #mon-month-popup .mon-pill').forEach(function(p){ p.classList.remove('active-date'); });
-  el.classList.add('active-date');
-  monDate = val;
-  monRenderList();
-  if (monSelected) monRenderDetail(monSelected);
-}
-function monToggleYear(el, yr) {
-  var popup = document.getElementById('mon-month-popup');
-  if (monYearOpen === yr) {
-    popup.style.display = 'none';
-    monYearOpen = null;
-    return;
-  }
-  monYearOpen = yr;
-  var r = MON_YEAR_RANGE[yr];
-  var months = [];
-  for (var i = r[0]; i <= r[1]; i++) {
-    var m = Object.keys(MON_DATE_TO_IDX).find(function(k){ return MON_DATE_TO_IDX[k] === i; });
-    if (m) months.push(m);
-  }
-  popup.innerHTML = '<div style="display:flex;gap:4px;flex-wrap:wrap;padding:4px 0;">' +
-    months.map(function(m){
-      return '<div class="mon-pill" style="font-size:11px;" onclick="monSetDate(this,\'' + m + '\')">' + MON_MONTHS[MON_DATE_TO_IDX[m]] + '</div>';
-    }).join('') + '</div>';
-  popup.style.display = 'block';
-  monSetDate(el, yr);
-}
-function monGetFiltered() {
-  var regionKey = MON_REGION_MAP[monRegion] || monRegion;
-  return MON_DATA.filter(function(ac){
-    if (monRegion !== '전체') {
-      var rm = ac.mentions[regionKey];
-      if (!rm || (rm['전체'] || 0) === 0) return false;
-    }
-    return monGetCount(ac) > 0;
-  }).slice().sort(function(a, b){
-    return monGetCount(b) - monGetCount(a);
-  });
-}
+
+// ─── DATA HELPERS ─────────────────────────────────────────────────────────────
+
 function monGetCount(ac) {
-  var regionKey = MON_REGION_MAP[monRegion] || monRegion;
-  var rm = ac.mentions[regionKey] || ac.mentions['전체'];
+  var regionKey = (MON_REGION_MAP && MON_REGION_MAP[monRegion]) || monRegion;
+  var rm = (ac.mentions && ac.mentions[regionKey]) || (ac.mentions && ac.mentions['전체']);
   if (!rm) return 0;
   if (monDate === '전체') return rm['전체'] || 0;
   return rm[monDate] || 0;
 }
+
+function monGetPrevCount(ac) {
+  if (monDate === '전체') return null;
+  var regionKey = (MON_REGION_MAP && MON_REGION_MAP[monRegion]) || monRegion;
+  var rm = (ac.mentions && ac.mentions[regionKey]) || (ac.mentions && ac.mentions['전체']);
+  if (!rm) return null;
+  var prevKey;
+  if (monDate.indexOf('년') > -1) {
+    var yr = parseInt(monDate);
+    prevKey = (yr - 1) + '년';
+  } else {
+    var parts = monDate.split('.');
+    var y = parseInt(parts[0]), m = parseInt(parts[1]);
+    m--;
+    if (m === 0) { m = 12; y--; }
+    prevKey = y + '.' + (m < 10 ? '0' + m : '' + m);
+  }
+  return rm[prevKey] !== undefined ? rm[prevKey] : null;
+}
+
+function monGetFiltered() {
+  var regionKey = (MON_REGION_MAP && MON_REGION_MAP[monRegion]) || monRegion;
+  return MON_DATA.filter(function(ac) {
+    if (monRegion !== '전체') {
+      var rm = ac.mentions && ac.mentions[regionKey];
+      if (!rm || (rm['전체'] || 0) === 0) return false;
+    }
+    return monGetCount(ac) > 0;
+  }).slice().sort(function(a, b) {
+    return monGetCount(b) - monGetCount(a);
+  });
+}
+
 function monFilterList(items) {
-  var regionKey = MON_REGION_MAP[monRegion] || monRegion;
+  var regionKey = (MON_REGION_MAP && MON_REGION_MAP[monRegion]) || monRegion;
+  if (!items) return [];
   return items.map(function(item) {
-    var posts = item.posts.filter(function(post) {
+    var posts = (item.posts || []).filter(function(post) {
       if (monRegion !== '전체' && post.region !== regionKey) return false;
       if (monDate === '전체') return true;
-      if (monDate.indexOf('년') > -1) return post.date && post.date.startsWith(monDate.replace('년', ''));
+      if (monDate.indexOf('년') > -1) {
+        var yr = monDate.replace('년', '');
+        return post.date && post.date.startsWith(yr + '.');
+      }
       return post.date === monDate;
     });
-    return {label: item.label, count: posts.length, posts: posts};
+    return { label: item.label, count: posts.length, posts: posts };
   }).filter(function(item) { return item.count > 0; });
 }
-function monRenderList() {
+
+// ─── RENDER ───────────────────────────────────────────────────────────────────
+
+function monRenderAll() {
+  var titleEl = document.getElementById('mon-title');
+  if (titleEl) {
+    var label;
+    if (monDate === '전체') {
+      label = '전체 기간 학원 온라인 동향';
+    } else if (monDate.indexOf('년') > -1) {
+      label = monDate + ' 학원 온라인 동향';
+    } else {
+      var p = monDate.split('.');
+      label = parseInt(p[0]) + '년 ' + parseInt(p[1]) + '월 학원 온라인 동향';
+    }
+    titleEl.textContent = label;
+  }
+  monRenderTable();
+}
+
+function monChangeHtml(cur, prev) {
+  if (prev === null || prev === undefined) return '<span class="mon-na">—</span>';
+  if (prev === 0 && cur === 0) return '<span class="mon-na">—</span>';
+  if (prev === 0) return '<span class="mon-chg up">신규</span>';
+  var pct = Math.round((cur - prev) / prev * 100);
+  if (pct > 0) return '<span class="mon-chg up">▲ ' + pct + '%</span>';
+  if (pct < 0) return '<span class="mon-chg dn">▼ ' + Math.abs(pct) + '%</span>';
+  return '<span class="mon-chg eq">±0%</span>';
+}
+
+function monRenderTable() {
   var list = monGetFiltered();
-  var max = list.length ? monGetCount(list[0]) : 1;
-  document.getElementById('mon-list-count').textContent = (monRegion === '전체' ? '전체' : monRegion) + ' ' + list.length + '개';
-  document.getElementById('mon-ac-list').innerHTML = list.map(function(ac, i) {
-    var m = monGetCount(ac);
-    var pct = max > 0 ? Math.round(m / max * 100) : 0;
-    var fp = monFilterList(ac.pros), fc = monFilterList(ac.cons);
-    var prosSum = fp.reduce(function(s, p){ return s + p.count; }, 0);
-    var consSum = fc.reduce(function(s, c){ return s + c.count; }, 0);
-    var idx = MON_DATA.indexOf(ac);
-    return '<div class="mon-ac-row' + (monSelected === ac ? ' selected' : '') + '" onclick="monSelectAc(' + idx + ')">' +
-      '<div class="mon-rank' + (i < 3 ? ' top' : '') + '">' + (i + 1) + '</div>' +
-      '<div class="mon-ac-name-wrap">' +
-        '<div class="mon-ac-name">' + ac.name + (ac.us ? ' <span class="mon-badge-us">자사</span>' : '') + '</div>' +
-        '<div class="mon-mini-bar-wrap"><div class="mon-mini-bar' + (ac.us ? ' us' : '') + '" style="width:' + pct + '%"></div></div>' +
-      '</div>' +
-      '<div class="mon-mention">' + m + '건</div>' +
-      '<div class="mon-pros' + (prosSum === 0 ? ' mon-na' : '') + '">' + (prosSum > 0 ? prosSum + '건' : '-') + '</div>' +
-      '<div class="mon-cons' + (consSum === 0 ? ' mon-na' : '') + '">' + (consSum > 0 ? consSum + '건' : '-') + '</div>' +
-    '</div>';
-  }).join('');
+  var tbody = document.getElementById('mon-tbody');
+  if (!tbody) return;
+
+  var countEl = document.getElementById('mon-list-count');
+  if (countEl) countEl.textContent = list.length + '개';
+
+  var prevOpenId = monOpenId;
+  monOpenId = null;
+  tbody.innerHTML = '';
+
+  list.forEach(function(ac, i) {
+    var rank = i + 1;
+    var cur = monGetCount(ac);
+    var prev = monGetPrevCount(ac);
+    var fp = monFilterList(ac.pros);
+    var fc = monFilterList(ac.cons);
+    var prosSum = fp.reduce(function(s, p) { return s + p.count; }, 0);
+    var consSum = fc.reduce(function(s, c) { return s + c.count; }, 0);
+    var globalIdx = MON_DATA.indexOf(ac);
+    var id = 'ac-' + globalIdx;
+
+    var tr = document.createElement('tr');
+    tr.className = 'mon-ac-row';
+    tr.id = id;
+    tr.innerHTML =
+      '<td><div class="mon-rank' + (rank <= 3 ? ' top' : '') + '">' + rank + '</div></td>' +
+      '<td><div class="mon-ac-name">' + ac.name + (ac.us ? ' <span class="mon-badge-us">자사</span>' : '') + '</div></td>' +
+      '<td class="mon-r">' + cur + '<span class="mon-unit">건</span></td>' +
+      '<td class="mon-c">' + (prosSum > 0 ? '<span class="mon-pros-num">' + prosSum + '</span>' : '<span class="mon-na">—</span>') + '</td>' +
+      '<td class="mon-c">' + (consSum > 0 ? '<span class="mon-cons-num">' + consSum + '</span>' : '<span class="mon-na">—</span>') + '</td>' +
+      '<td class="mon-r">' + monChangeHtml(cur, prev) + '</td>' +
+      '<td class="mon-chevron-td"><span class="mon-chevron">▾</span></td>';
+    (function(rowId, rowAc, rowFp, rowFc, rowPs, rowCs, rowCur) {
+      tr.onclick = function() { monToggleRow(rowId, rowAc, rowFp, rowFc, rowPs, rowCs, rowCur); };
+    })(id, ac, fp, fc, prosSum, consSum, cur);
+    tbody.appendChild(tr);
+
+    var dt = document.createElement('tr');
+    dt.className = 'mon-detail-row';
+    dt.id = 'dt-' + id;
+    var td = document.createElement('td');
+    td.colSpan = 7;
+    td.innerHTML = monDetailHtml(ac, fp, fc, prosSum, consSum, cur);
+    dt.appendChild(td);
+    tbody.appendChild(dt);
+
+    if (prevOpenId === id) {
+      tr.classList.add('open');
+      dt.classList.add('open');
+      monOpenId = id;
+    }
+  });
 }
-function monSelectAc(idx) {
-  monSelected = MON_DATA[idx];
-  monRenderList();
-  monRenderDetail(monSelected);
-}
-function monRenderDetail(ac) {
-  var m = monGetCount(ac);
-  var filteredPros = monFilterList(ac.pros);
-  var filteredCons = monFilterList(ac.cons);
-  var prosSum = filteredPros.reduce(function(s, p){ return s + p.count; }, 0);
-  var consSum = filteredCons.reduce(function(s, c){ return s + c.count; }, 0);
-  var idx = MON_DATA.indexOf(ac);
-  var hasTags = filteredPros.length || filteredCons.length;
 
-  var tagsHtml = hasTags ? (
-    '<div class="mon-section">' +
-      '<div class="mon-section-title">장점 — 태그를 클릭하면 해당 게시물 표시</div>' +
-      '<div class="mon-tags-area" id="mon-pos-tags">' +
-        (filteredPros.length ? filteredPros.map(function(p){ return '<div class="mon-tag pos" data-label="' + p.label + '" onclick="monShowPosts(\'pos\',' + idx + ',this.getAttribute(\'data-label\'))">' + p.label + ' <span class="mon-tag-count">' + p.count + '</span></div>'; }).join('') : '<span style="font-size:12px;color:#cbd5e1;">데이터 없음</span>') +
-      '</div>' +
-      '<div class="mon-section-title" style="margin-top:14px;">단점</div>' +
-      '<div class="mon-tags-area" id="mon-neg-tags">' +
-        (filteredCons.length ? filteredCons.map(function(c){ return '<div class="mon-tag neg" data-label="' + c.label + '" onclick="monShowPosts(\'neg\',' + idx + ',this.getAttribute(\'data-label\'))">' + c.label + ' <span class="mon-tag-count">' + c.count + '</span></div>'; }).join('') : '<span style="font-size:12px;color:#cbd5e1;">데이터 없음</span>') +
-      '</div>' +
-      '<div id="mon-posts-container"></div>' +
-    '</div>'
-  ) : '';
-
-  var regionKey = MON_REGION_MAP[monRegion] || monRegion;
-  var monthlyData = (ac.monthly[regionKey] || ac.monthly['전체'] || []);
-  var regions = Object.keys(ac.mentions).filter(function(r){ return r !== '전체'; });
-
-  var chartLabels, chartData, chartColors;
-  if (monDate === '전체') {
-    chartLabels = ['2024년', '2025년', '2026년'];
-    chartData = ['2024년', '2025년', '2026년'].map(function(yr){
-      var r = MON_YEAR_RANGE[yr];
-      if (!r) return 0;
-      return monthlyData.slice(r[0], r[1] + 1).reduce(function(a, b){ return a + b; }, 0);
-    });
-    chartColors = ['#d1d5db', '#d1d5db', '#d1d5db'];
-  } else if (monDate.indexOf('년') > -1) {
-    var r = MON_YEAR_RANGE[monDate];
-    var idxs = [];
-    for (var i = r[0]; i <= r[1]; i++) idxs.push(i);
-    chartLabels = idxs.map(function(i){ return MON_MONTHS[i]; });
-    chartData = idxs.map(function(i){ return monthlyData[i] || 0; });
-    chartColors = chartData.map(function(){ return '#d1d5db'; });
-  } else {
-    var ci = MON_DATE_TO_IDX[monDate];
-    var start = Math.max(0, ci - 3), end = Math.min(monthlyData.length - 1, ci + 3);
-    var idxs2 = [];
-    for (var j = start; j <= end; j++) idxs2.push(j);
-    chartLabels = idxs2.map(function(i){ return MON_MONTHS[i]; });
-    chartData = idxs2.map(function(i){ return monthlyData[i] || 0; });
-    chartColors = idxs2.map(function(i){ return i === ci ? '#111111' : '#e4e6e9'; });
+function monToggleRow(id) {
+  if (monOpenId && monOpenId !== id) {
+    var oldTr = document.getElementById(monOpenId);
+    var oldDt = document.getElementById('dt-' + monOpenId);
+    if (oldTr) oldTr.classList.remove('open');
+    if (oldDt) oldDt.classList.remove('open');
   }
-
-  document.getElementById('mon-right-panel').innerHTML =
-    '<div class="mon-detail-header">' +
-      '<div class="mon-detail-name">' + ac.name + (ac.us ? ' <span class="mon-badge-us">자사</span>' : '') + '</div>' +
-      '<div class="mon-detail-meta">' + regions.join(' · ') + '</div>' +
-    '</div>' +
-    '<div class="mon-detail-stats">' +
-      '<div class="mon-dstat"><div class="mon-dstat-val">' + m + '</div><div class="mon-dstat-label">' + (monDate === '전체' ? '전체 누적' : monDate) + ' 언급</div></div>' +
-      '<div class="mon-dstat"><div class="mon-dstat-val pos">' + prosSum + '</div><div class="mon-dstat-label">장점 건수</div></div>' +
-      '<div class="mon-dstat"><div class="mon-dstat-val neg">' + consSum + '</div><div class="mon-dstat-label">단점 건수</div></div>' +
-    '</div>' +
-    '<div class="mon-section"><div class="mon-section-title">월별 언급 추이</div><div class="mon-chart-wrap"><canvas id="mon-trend-chart"></canvas></div></div>' +
-    tagsHtml;
-
-  if (monChart) { monChart.destroy(); monChart = null; }
-  monChart = new Chart(document.getElementById('mon-trend-chart'), {
-    type: 'bar',
-    data: {
-      labels: chartLabels,
-      datasets: [{
-        data: chartData,
-        backgroundColor: chartColors,
-        borderRadius: 3, borderSkipped: false,
-        categoryPercentage: 0.75, barPercentage: 0.9,
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { grid: { display: false }, border: { display: false }, ticks: { font: { size: 13 }, color: '#9ca3af' } },
-        y: { grid: { color: '#f0f0f0' }, border: { display: false }, ticks: { font: { size: 13 }, color: '#9ca3af', stepSize: 2 }, beginAtZero: true }
-      },
-      onClick: function(evt, elements, chart) {
-        if (!elements || !elements.length) return;
-        var barIdx = elements[0].index;
-        var lbl = chart.data.labels[barIdx];
-        var dateKey;
-        if (lbl.indexOf('년') > -1) {
-          dateKey = lbl;
-        } else {
-          dateKey = Object.keys(MON_DATE_TO_IDX).find(function(k){ return MON_MONTHS[MON_DATE_TO_IDX[k]] === lbl; });
-        }
-        if (dateKey) monNavToDate(dateKey);
-      }
-    }
-  });
-}
-function monShowPosts(type, acIdx, label) {
-  var ac = MON_DATA[acIdx];
-  var allItems = type === 'pos' ? ac.pros : ac.cons;
-  var item = allItems.filter(function(t){ return t.label === label; })[0];
-  if (!item) return;
-  var regionKey = MON_REGION_MAP[monRegion] || monRegion;
-  var posts = item.posts.filter(function(post) {
-    if (monRegion !== '전체' && post.region !== regionKey) return false;
-    if (monDate === '전체') return true;
-    if (monDate.indexOf('년') > -1) return post.date && post.date.startsWith(monDate.replace('년', ''));
-    return post.date === monDate;
-  });
-  document.querySelectorAll('.mon-tag').forEach(function(t){ t.classList.remove('sel'); });
-  document.querySelectorAll(type === 'pos' ? '#mon-pos-tags .mon-tag' : '#mon-neg-tags .mon-tag').forEach(function(el){
-    if (el.getAttribute('data-label') === label) el.classList.add('sel');
-  });
-  document.getElementById('mon-posts-container').innerHTML =
-    '<div class="mon-posts-box" style="margin-top:12px;">' +
-      '<div class="mon-posts-box-head">게시물 <span class="mon-active-tag-pill ' + type + '">' + label + '</span> <span style="color:#94a3b8;">' + posts.length + '건</span></div>' +
-      posts.map(function(p){
-        return '<div class="mon-post-item"><div class="mon-post-content">' +
-          (p.quote ? '<div class="mon-post-quote">"' + p.quote + '"</div>' : '<div class="mon-post-txt">' + p.text + '</div>') +
-          '</div>' +
-          (p.url ? '<a class="mon-post-link" href="' + p.url + '" target="_blank" rel="noopener">원문 →</a>' : '') + '</div>';
-      }).join('') +
-    '</div>';
-}
-function monNavToDate(val) {
-  monDate = val;
-  document.querySelectorAll('#mon-date-group .mon-pill').forEach(function(p){ p.classList.remove('active-date'); });
-  document.querySelectorAll('#mon-month-popup .mon-pill').forEach(function(p){ p.classList.remove('active-date'); });
-  var popup = document.getElementById('mon-month-popup');
-  if (val === '전체') {
-    popup.style.display = 'none';
-    monYearOpen = null;
-    document.querySelectorAll('#mon-date-group .mon-pill').forEach(function(p){
-      if ((p.getAttribute('onclick') || '').indexOf("'전체'") > -1) p.classList.add('active-date');
-    });
+  var tr = document.getElementById(id);
+  var dt = document.getElementById('dt-' + id);
+  if (!tr || !dt) return;
+  if (monOpenId === id) {
+    tr.classList.remove('open');
+    dt.classList.remove('open');
+    monOpenId = null;
   } else {
-    var yr = val.indexOf('년') > -1 ? val : val.substring(0, 4) + '년';
-    var r = MON_YEAR_RANGE[yr];
-    if (r) {
-      var months = [];
-      for (var i = r[0]; i <= r[1]; i++) {
-        var m = Object.keys(MON_DATE_TO_IDX).find(function(k){ return MON_DATE_TO_IDX[k] === i; });
-        if (m) months.push(m);
-      }
-      popup.innerHTML = '<div style="display:flex;gap:4px;flex-wrap:wrap;padding:4px 0;">' +
-        months.map(function(m){
-          return '<div class="mon-pill' + (m === val ? ' active-date' : '') + '" style="font-size:11px;" onclick="monSetDate(this,\'' + m + '\')">' + MON_MONTHS[MON_DATE_TO_IDX[m]] + '</div>';
-        }).join('') + '</div>';
-      popup.style.display = 'block';
-      monYearOpen = yr;
-    }
-    if (val.indexOf('년') > -1) {
-      document.querySelectorAll('#mon-date-group .mon-year-pill').forEach(function(p){
-        if ((p.getAttribute('onclick') || '').indexOf(val) > -1) p.classList.add('active-date');
+    tr.classList.add('open');
+    dt.classList.add('open');
+    monOpenId = id;
+    dt.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+function monEvalColHtml(items, type) {
+  var isPos = type === 'pos';
+  var title = isPos ? '긍정적으로 언급된 점' : '부정적으로 언급된 점';
+  var html = '<div class="mon-eval-col"><div class="mon-eval-hd ' + (isPos ? 'pos' : 'neg') + '">' + title + '</div>';
+  if (!items || !items.length) {
+    html += '<div class="mon-eval-empty">분류된 평가 글이 없습니다</div>';
+  } else {
+    items.forEach(function(it) {
+      html += '<div class="mon-eval-item">' +
+        '<div class="mon-eval-item-name">' + it.label + ' <span class="mon-eval-item-cnt">' + it.count + '건</span></div>';
+      it.posts.forEach(function(p) {
+        var q = p.quote || p.text || '';
+        if (q.length > 120) q = q.substring(0, 120) + '…';
+        html += '<div class="mon-eval-post' + (isPos ? ' pos' : '') + '">' +
+          '<span class="mon-eval-quote">"' + q + '"</span>' +
+          (p.url ? '<a class="mon-eval-link" href="' + p.url + '" target="_blank" rel="noopener">원문 ↗</a>' : '') +
+          '</div>';
       });
+      html += '</div>';
+    });
+  }
+  return html + '</div>';
+}
+
+function monDetailHtml(ac, fp, fc, prosSum, consSum, cur) {
+  var prev = monGetPrevCount(ac);
+  var chgVal = '', chgCls = '';
+  if (prev !== null && prev !== undefined) {
+    if (prev === 0 && cur > 0) { chgVal = '신규'; chgCls = 'acc'; }
+    else if (prev > 0) {
+      var pct = Math.round((cur - prev) / prev * 100);
+      chgVal = (pct > 0 ? '+' : '') + pct + '%';
+      chgCls = pct > 0 ? 'acc' : pct < 0 ? 'dim' : '';
     }
   }
-  monRenderList();
-  if (monSelected) monRenderDetail(monSelected);
+  return '<div class="mon-detail-inner">' +
+    '<div class="mon-dstats">' +
+    '<div class="mon-dstat"><div class="mon-dstat-val">' + cur + '</div><div class="mon-dstat-label">전체 언급<span class="mon-dstat-sub">게시물+댓글 합산</span></div></div>' +
+    '<div class="mon-dstat"><div class="mon-dstat-val acc">' + (prosSum || '—') + '</div><div class="mon-dstat-label">장점<span class="mon-dstat-sub">긍정 평가 글 수</span></div></div>' +
+    '<div class="mon-dstat"><div class="mon-dstat-val">' + (consSum || '—') + '</div><div class="mon-dstat-label">단점<span class="mon-dstat-sub">부정 평가 글 수</span></div></div>' +
+    (chgVal ? '<div class="mon-dstat"><div class="mon-dstat-val ' + chgCls + '">' + chgVal + '</div><div class="mon-dstat-label">전월 대비<span class="mon-dstat-sub">언급 수 증감</span></div></div>' : '') +
+    '</div>' +
+    '<div class="mon-eval-grid">' + monEvalColHtml(fp, 'pos') + monEvalColHtml(fc, 'neg') + '</div>' +
+    '<div class="mon-detail-notice">* AI 자동 분석 결과이며 일부 오분류가 있을 수 있습니다.</div>' +
+    '</div>';
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+
+function monInit() {
+  monBuildYearSelect();
+  var years = monGetYears();
+  if (years.length) {
+    var latestYear = years[0];
+    var months = monGetMonthsForYear(latestYear);
+    var sel = document.getElementById('mon-year-select');
+    if (sel) sel.value = latestYear;
+    if (months.length) {
+      monDate = months[0];
+      monRenderMonthPills(latestYear, monDate);
+    } else {
+      monRenderMonthPills(latestYear, null);
+    }
+  }
+  monRenderAll();
 }
