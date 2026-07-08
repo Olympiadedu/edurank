@@ -1996,23 +1996,11 @@ function monFilterList(items) {
 
 function monRenderAll() {
   var titleEl = document.getElementById('mon-title');
-  var label;
-  if (monDate === '전체') {
-    label = '전체 기간 학원 온라인 동향';
-  } else if (monDate.indexOf('년') > -1) {
-    label = monDate + ' 학원 온라인 동향';
-  } else {
-    var p = monDate.split('.');
-    label = parseInt(p[0]) + '년 ' + parseInt(p[1]) + '월 학원 온라인 동향';
-  }
-  if (titleEl) titleEl.textContent = label;
+  if (titleEl) titleEl.textContent = '경쟁학원 모니터링';
 
   var subtitleEl = document.getElementById('mon-subtitle');
-  if (subtitleEl && typeof MON_META !== 'undefined') {
-    var parts = [label.replace(' 학원 온라인 동향', '')];
-    if (MON_META.total_posts) parts.push('수집 게시물 ' + MON_META.total_posts + '건');
-    if (MON_META.updated) parts.push('최종 업데이트 ' + MON_META.updated);
-    subtitleEl.textContent = parts.join(' · ');
+  if (subtitleEl && typeof MON_META !== 'undefined' && MON_META.updated) {
+    subtitleEl.textContent = '최종 업데이트 ' + MON_META.updated;
   }
 
   monRenderHighlights();
