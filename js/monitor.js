@@ -2027,23 +2027,7 @@ function monRenderHighlights() {
 
   var top = list[0];
   var topCur = monGetCount(top);
-  var topPrev = monGetPrevCount(top);
-  var topChgHtml = '';
-  if (topPrev !== null && topPrev > 0) {
-    var pct = Math.round((topCur - topPrev) / topPrev * 100);
-    topChgHtml = ' · 전 기간 대비 <strong>' + (pct >= 0 ? '+' : '') + pct + '%</strong>';
-  } else if (topPrev === 0 && topCur > 0) {
-    topChgHtml = ' · <strong>신규</strong>';
-  }
-
-  var riseAc = null, risePct = -Infinity;
-  list.forEach(function(ac) {
-    var c = monGetCount(ac), prev = monGetPrevCount(ac);
-    if (prev !== null && prev > 0) {
-      var pct = (c - prev) / prev * 100;
-      if (pct > risePct) { risePct = pct; riseAc = ac; }
-    }
-  });
+  var totalPosts = (typeof MON_META !== 'undefined' && MON_META.total_posts) ? MON_META.total_posts : 0;
 
   var tagCounts = {};
   list.forEach(function(ac) {
@@ -2057,30 +2041,22 @@ function monRenderHighlights() {
 
   var html = '<div class="mon-highlights-grid">';
   html += '<div class="mon-hl-card">' +
-    '<div class="mon-hl-label">가장 많이 언급된 학원</div>' +
-    '<div class="mon-hl-value">' + top.name + '</div>' +
-    '<div class="mon-hl-sub">' + topCur + '건' + topChgHtml + '</div>' +
+    '<div class="mon-hl-label">모니터링 현황</div>' +
+    '<div class="mon-hl-value">' + MON_DATA.length + '개 학원</div>' +
+    '<div class="mon-hl-sub">이번 기간 <strong>' + totalPosts + '건</strong> 수집</div>' +
     '</div>';
 
-  if (riseAc && risePct > -Infinity) {
-    html += '<div class="mon-hl-card">' +
-      '<div class="mon-hl-label">관심도 상승 학원</div>' +
-      '<div class="mon-hl-value">' + riseAc.name + '</div>' +
-      '<div class="mon-hl-sub">전 기간 대비 <strong>+' + Math.round(risePct) + '%</strong> 상승</div>' +
-      '</div>';
-  } else {
-    html += '<div class="mon-hl-card">' +
-      '<div class="mon-hl-label">관심도 상승 학원</div>' +
-      '<div class="mon-hl-value">—</div>' +
-      '<div class="mon-hl-sub">비교 데이터 없음</div>' +
-      '</div>';
-  }
+  html += '<div class="mon-hl-card">' +
+    '<div class="mon-hl-label">가장 많이 언급된 학원</div>' +
+    '<div class="mon-hl-value">' + top.name + '</div>' +
+    '<div class="mon-hl-sub">' + topCur + '건 수집</div>' +
+    '</div>';
 
   if (topTag) {
     html += '<div class="mon-hl-card">' +
       '<div class="mon-hl-label">가장 활발한 평가 주제</div>' +
       '<div class="mon-hl-value">' + topTag[0] + '</div>' +
-      '<div class="mon-hl-sub">긍정·부정 합산 <strong>' + topTag[1] + '건</strong> 언급</div>' +
+      '<div class="mon-hl-sub">장단점 합산 <strong>' + topTag[1] + '건</strong> 언급</div>' +
       '</div>';
   } else {
     html += '<div class="mon-hl-card">' +
@@ -2094,15 +2070,6 @@ function monRenderHighlights() {
   el.innerHTML = html;
 }
 
-function monChangeHtml(cur, prev) {
-  if (prev === null || prev === undefined) return '<span class="mon-na">—</span>';
-  if (prev === 0 && cur === 0) return '<span class="mon-na">—</span>';
-  if (prev === 0) return '<span class="mon-chg up">신규</span>';
-  var pct = Math.round((cur - prev) / prev * 100);
-  if (pct > 0) return '<span class="mon-chg up">▲ ' + pct + '%</span>';
-  if (pct < 0) return '<span class="mon-chg dn">▼ ' + Math.abs(pct) + '%</span>';
-  return '<span class="mon-chg eq">±0%</span>';
-}
 
 function monRenderTable() {
   var list = monGetFiltered();
@@ -2183,7 +2150,7 @@ function monToggleRow(id) {
 
 function monEvalColHtml(items, type) {
   var isPos = type === 'pos';
-  var title = isPos ? '긍정적으로 언급된 점' : '부정적으로 언급된 점';
+  var title = isPos ? '장점' : '단점';
   var html = '<div class="mon-eval-col"><div class="mon-eval-hd ' + (isPos ? 'pos' : 'neg') + '">' + title + '</div>';
   if (!items || !items.length) {
     html += '<div class="mon-eval-empty">분류된 평가 글이 없습니다</div>';
@@ -2206,22 +2173,11 @@ function monEvalColHtml(items, type) {
 }
 
 function monDetailHtml(ac, fp, fc, prosSum, consSum, cur) {
-  var prev = monGetPrevCount(ac);
-  var chgVal = '', chgCls = '';
-  if (prev !== null && prev !== undefined) {
-    if (prev === 0 && cur > 0) { chgVal = '신규'; chgCls = 'acc'; }
-    else if (prev > 0) {
-      var pct = Math.round((cur - prev) / prev * 100);
-      chgVal = (pct > 0 ? '+' : '') + pct + '%';
-      chgCls = pct > 0 ? 'acc' : pct < 0 ? 'dim' : '';
-    }
-  }
   return '<div class="mon-detail-inner">' +
     '<div class="mon-dstats">' +
     '<div class="mon-dstat"><div class="mon-dstat-val">' + cur + '</div><div class="mon-dstat-label">전체 언급<span class="mon-dstat-sub">게시물+댓글 합산</span></div></div>' +
-    '<div class="mon-dstat"><div class="mon-dstat-val acc">' + (prosSum || '—') + '</div><div class="mon-dstat-label">긍정 언급<span class="mon-dstat-sub">긍정 평가 글 수</span></div></div>' +
-    '<div class="mon-dstat"><div class="mon-dstat-val">' + (consSum || '—') + '</div><div class="mon-dstat-label">우려 언급<span class="mon-dstat-sub">부정 평가 글 수</span></div></div>' +
-    (chgVal ? '<div class="mon-dstat"><div class="mon-dstat-val ' + chgCls + '">' + chgVal + '</div><div class="mon-dstat-label">전 기간 대비<span class="mon-dstat-sub">언급 수 증감</span></div></div>' : '') +
+    '<div class="mon-dstat"><div class="mon-dstat-val acc">' + (prosSum || '—') + '</div><div class="mon-dstat-label">장점<span class="mon-dstat-sub">긍정 평가 글 수</span></div></div>' +
+    '<div class="mon-dstat"><div class="mon-dstat-val">' + (consSum || '—') + '</div><div class="mon-dstat-label">단점<span class="mon-dstat-sub">부정 평가 글 수</span></div></div>' +
     '</div>' +
     '<div class="mon-eval-grid">' + monEvalColHtml(fp, 'pos') + monEvalColHtml(fc, 'neg') + '</div>' +
     '<div class="mon-detail-notice">* AI 자동 분석 결과이며 일부 오분류가 있을 수 있습니다.</div>' +
