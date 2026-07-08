@@ -14,8 +14,9 @@
 body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--ground);color:var(--txt);font-size:18px;line-height:1.6;min-height:100vh;}
 
 /* TOPBAR */
-.mon-topbar{height:56px;background:var(--white);border-bottom:1px solid var(--bdr);padding:0 28px;display:flex;align-items:center;position:sticky;top:0;z-index:100;}
-.mon-topbar-logo{font-size:17px;font-weight:700;letter-spacing:-.03em;color:var(--black);}
+.mon-topbar{height:52px;background:#111;border-bottom:1px solid #222;padding:0 28px;display:flex;align-items:center;position:sticky;top:0;z-index:100;}
+.mon-topbar-logo{font-size:16px;font-weight:700;letter-spacing:-.03em;color:#fff;display:flex;align-items:center;gap:8px;}
+.mon-topbar-dot{width:8px;height:8px;background:var(--acc);border-radius:50%;}
 
 /* PAGE */
 .mon-page{max-width:960px;margin:0 auto;padding:28px 24px 60px;}
@@ -65,14 +66,15 @@ body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSy
 .mon-ac-row td:first-child{padding-left:20px;}
 .mon-ac-row td:last-child{padding-right:20px;}
 .mon-ac-row:hover td{background:var(--ground);}
-.mon-ac-row.open td{background:var(--acc-bg);}
-.mon-ac-row.open td:first-child{box-shadow:inset 3px 0 0 var(--acc);}
+.mon-ac-row.open td{background:#edfaf6;}
+.mon-ac-row.open td:first-child{box-shadow:inset 5px 0 0 var(--acc);}
 .mon-ac-row:last-of-type td{border-bottom:none;}
 
-.mon-rank{font-size:22px;font-weight:300;color:#d1d5db;text-align:center;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
-.mon-rank.top{color:var(--black);font-weight:700;font-size:18px;}
+.mon-rank{width:28px;height:28px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;background:#f0f1f3;color:#b0b5be;font-variant-numeric:tabular-nums;}
+.mon-rank.top1{background:var(--black);color:#fff;font-weight:800;}
+.mon-rank.top3{background:#e8e9eb;color:var(--txt);}
 .mon-ac-name{font-size:17px;font-weight:600;color:var(--txt);display:flex;align-items:center;gap:6px;letter-spacing:-.02em;}
-.mon-badge-us{font-size:11px;background:var(--black);color:#fff;padding:1px 6px;border-radius:3px;flex-shrink:0;font-weight:700;letter-spacing:.05em;text-transform:uppercase;}
+.mon-badge-us{font-size:11px;background:var(--acc);color:#fff;padding:1px 7px;border-radius:3px;flex-shrink:0;font-weight:700;letter-spacing:.04em;text-transform:uppercase;}
 .mon-unit{font-size:14px;color:var(--txt-dim);margin-left:2px;}
 .mon-pros-num{color:var(--acc);font-weight:700;font-size:17px;}
 .mon-cons-num{color:var(--txt-mid);font-weight:600;font-size:17px;}
@@ -122,11 +124,15 @@ body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSy
 /* HIGHLIGHT CARDS */
 .mon-highlights{margin-bottom:16px;}
 .mon-highlights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
-.mon-hl-card{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:18px 20px;}
-.mon-hl-label{font-size:12px;font-weight:700;color:var(--txt-dim);letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px;}
-.mon-hl-value{font-size:22px;font-weight:700;color:var(--black);letter-spacing:-.03em;line-height:1.2;margin-bottom:6px;}
-.mon-hl-sub{font-size:14px;color:var(--txt-mid);line-height:1.5;}
+.mon-hl-card{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:20px 22px;}
+.mon-hl-card.featured{background:#111;border-color:#111;}
+.mon-hl-label{font-size:11px;font-weight:700;color:var(--txt-dim);letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px;}
+.mon-hl-card.featured .mon-hl-label{color:#5a7a72;}
+.mon-hl-value{font-size:24px;font-weight:800;color:var(--black);letter-spacing:-.04em;line-height:1.15;margin-bottom:6px;}
+.mon-hl-card.featured .mon-hl-value{color:#fff;}
+.mon-hl-sub{font-size:13px;color:var(--txt-mid);line-height:1.5;}
 .mon-hl-sub strong{color:var(--acc);font-weight:700;}
+.mon-hl-card.featured .mon-hl-sub{color:#7a9a92;}
 @media(max-width:640px){.mon-highlights-grid{grid-template-columns:1fr;}}
 
 /* SUBTITLE */
@@ -158,7 +164,7 @@ body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSy
 
 <div id="page-monitor">
   <div class="mon-topbar">
-    <div class="mon-topbar-logo">경쟁학원 모니터링</div>
+    <div class="mon-topbar-logo"><span class="mon-topbar-dot"></span>경쟁학원 모니터링</div>
   </div>
 
   <div class="mon-page">
@@ -230,7 +236,7 @@ body{font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,BlinkMacSy
   </div>
 </div>
 
-<script src="js/monitor.js?v=4"></script>
+<script src="js/monitor.js?v=5"></script>
 <script>monInit();</script>
 </body>
 </html>

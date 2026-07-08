@@ -2028,7 +2028,7 @@ function monRenderHighlights() {
   var topTag = tagEntries[0];
 
   var html = '<div class="mon-highlights-grid">';
-  html += '<div class="mon-hl-card">' +
+  html += '<div class="mon-hl-card featured">' +
     '<div class="mon-hl-label">모니터링 현황</div>' +
     '<div class="mon-hl-value">' + MON_DATA.length + '개 학원</div>' +
     '<div class="mon-hl-sub">이번 기간 <strong>' + totalPosts + '건</strong> 수집</div>' +
@@ -2086,7 +2086,7 @@ function monRenderTable() {
     tr.className = 'mon-ac-row';
     tr.id = id;
     tr.innerHTML =
-      '<td><div class="mon-rank' + (rank <= 3 ? ' top' : '') + '">' + rank + '</div></td>' +
+      '<td class="mon-c"><div class="mon-rank' + (rank === 1 ? ' top1' : rank <= 3 ? ' top3' : '') + '">' + rank + '</div></td>' +
       '<td><div class="mon-ac-name">' + ac.name + (ac.us ? ' <span class="mon-badge-us">자사</span>' : '') + '</div></td>' +
       '<td class="mon-r">' + cur + '<span class="mon-unit">건</span></td>' +
       '<td class="mon-c">' + (prosSum > 0 ? '<span class="mon-pros-num">' + prosSum + '</span>' : '<span class="mon-na">—</span>') + '</td>' +
