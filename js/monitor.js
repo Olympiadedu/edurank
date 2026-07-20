@@ -2234,7 +2234,7 @@ function monRenderHighlights() {
   html += '<div class="mon-hl-card featured">' +
     '<div class="mon-hl-label">모니터링 현황</div>' +
     '<div class="mon-hl-value">' + MON_DATA.length + '개 학원</div>' +
-    '<div class="mon-hl-sub">이번 기간 <strong>' + totalPosts + '건</strong> 수집</div>' +
+    '<div class="mon-hl-sub"><strong>' + totalPosts + '건</strong> 수집</div>' +
     '</div>';
 
   html += '<div class="mon-hl-card">' +
