@@ -2421,7 +2421,7 @@ function monRenderHighlights() {
 
   var top = list[0];
   var topCur = monGetCount(top);
-  var totalPosts = (typeof MON_META !== 'undefined' && MON_META.total_posts) ? MON_META.total_posts : 0;
+  var filteredPosts = list.reduce(function(sum, ac) { return sum + monGetCount(ac); }, 0);
 
   var tagCounts = {};
   list.forEach(function(ac) {
@@ -2436,8 +2436,8 @@ function monRenderHighlights() {
   var html = '<div class="mon-highlights-grid">';
   html += '<div class="mon-hl-card featured">' +
     '<div class="mon-hl-label">모니터링 현황</div>' +
-    '<div class="mon-hl-value">' + MON_DATA.length + '개 학원</div>' +
-    '<div class="mon-hl-sub">이번 기간 <strong>' + totalPosts + '건</strong> 수집</div>' +
+    '<div class="mon-hl-value">' + list.length + '개 학원</div>' +
+    '<div class="mon-hl-sub"><strong>' + filteredPosts + '건</strong> 언급</div>' +
     '</div>';
 
   html += '<div class="mon-hl-card">' +
