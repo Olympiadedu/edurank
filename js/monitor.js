@@ -28,7 +28,7 @@ var MON_DATA = [
     cons: [
     {label:'숙제/학습량부담',count:10,posts:[{text:'',url:'https://cafe.naver.com/ira111/821630',region:'강동',date:'2024.10',quote:'그만큼 많이 풉니다'},{text:'예비중 수학학원 궁금합니다.',url:'https://cafe.naver.com/everyhomework/872018',region:'송파',date:'2024.11',quote:'청어람은 학습량이 많아서'},{text:'중1 수학/영어 셔틀 운행 하는 곳 추천 부탁드려요',url:'https://cafe.naver.com/everyhomework/870920',region:'송파',date:'2024.11',quote:'구주이배는 청어람처럼 숙제가 많나요?'},{text:'',url:'https://cafe.naver.com/everyhomework/892058',region:'송파',date:'2025.06',quote:'청어람 양치기로 빡세서'},{text:'송파구 방이동 방산초 6학년 수학학원',url:'https://cafe.naver.com/mktsesang/1186359',region:'송파',date:'2025.07',quote:'청어람은 좀 빡쎄게시켜요'},{text:'고덕 수학학원',url:'https://cafe.naver.com/ira111/885251',region:'강동',date:'2025.11',quote:'중2.3되면 개고생 각오해야됩니다 / 중2겨울방학부터 13시~10시 까지 시켜요'},{text:'청어람,파인만 두학원 어떤가요?',url:'https://cafe.naver.com/ira111/891785',region:'강동',date:'2025.12',quote:'수업 시간이 길어서 아이가 힘든 것 같아서'},{text:'청어람 어떤가요??',url:'https://cafe.naver.com/ira111/896175',region:'강동',date:'2026.01',quote:'1시반부터 10시까지, 방학특강 의무, 스파르타 교육으로 유명'},{text:'청어람 초고 수학학원으로 어떨까요?',url:'https://cafe.naver.com/everyhomework/913592',region:'송파',date:'2026.02',quote:'숙제가 많아서 힘들어하진 않나요? / 힘든 곳이 맞긴 한데'},{text:'',url:'https://cafe.naver.com/ira111/904265',region:'미사',date:'2026.03',quote:'청어람은 숙제 못하면 복도에서 시킨다고 애들이 말했다고'}]},
     {label:'셔틀불만',count:2,posts:[{text:'방이동 청어람 수학학원',url:'https://cafe.naver.com/ira111/827562',region:'송파',date:'2024.11',quote:'홈페이지상으로는 셔틀버스가 고덕동이나 상일동역까지만 오더라구요. 미사까진 안 들어오나요?'},{text:'고덕역 주변 대형 수학학원 추천 부탁드립니다.',url:'https://cafe.naver.com/everyhomework/891458',region:'광진',date:'2025.06',quote:'셔틀이 다 도는지 모르겠어요'}]},
-    {label:'기타개선점',count:4,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05',quote:'연계되는 청어람은 어렵다고도 하고 추구하는바가 달라서'},{text:'',url:'https://cafe.naver.com/ira111/891364',region:'강동',date:'2025.12',quote:'선생님들 워딩이 좀 쎈편이예요'},{text:'고덕청어람 초등고학년 보내시는 분~',url:'https://cafe.naver.com/ira111/924026',region:'고덕',date:'2026.09',quote:'선생님 개념설명도 그렇고 그냥 저냥 그런느낌'},{text:'중2 <b>수학학원</b> 추천해주세요',url:'https://cafe.naver.com/everyhomework/935952',region:'송파',date:'2026.09',quote:'자리가 없어서 교무실까지 내어서 학습한다고'}]},
+    {label:'기타개선점',count:4,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/41010',region:'중계',date:'2025.05',quote:'연계되는 청어람은 어렵다고도 하고 추구하는바가 달라서'},{text:'',url:'https://cafe.naver.com/ira111/891364',region:'강동',date:'2025.12',quote:'선생님들 워딩이 좀 쎈편이예요'},{text:'고덕청어람 초등고학년 보내시는 분~',url:'https://cafe.naver.com/ira111/924026',region:'고덕',date:'2026.09',quote:'선생님 개념설명도 그렇고 그냥 저냥 그런느낌'},{text:'중2 수학학원 추천해주세요',url:'https://cafe.naver.com/everyhomework/935952',region:'송파',date:'2026.09',quote:'자리가 없어서 교무실까지 내어서 학습한다고'}]},
     {label:'개별관리부족',count:1,posts:[{text:'수학학원 추천해주세요',url:'https://cafe.naver.com/everyhomework/894893',region:'송파',date:'2025.07',quote:'대형은 일대일케어가 어려울것같아 / 수학선행이 안되어 있으면 상급 가기가 어렵습니다'}]}
   ],
     allPosts: [{text:'',url:'https://cafe.naver.com/bbbx/848208'},{text:'방이동 청어람 레벨 아시는분 계신가요?~~~',url:'https://cafe.naver.com/everyhomework/842607'},{text:'송파 근처 수학학원 추천',url:'https://cafe.naver.com/mktsesang/1147349'},{text:'',url:'https://cafe.naver.com/ira111/778452'},{text:'',url:'https://cafe.naver.com/mktsesang/1148867'},{text:'청어람 중3 매주 테스트있나요? 샘들은 어떠신가요?',url:'https://cafe.naver.com/zzandol/752420'},{text:'송파구 문정동에서 중학교 수학학원 어디로 가야할지요?',url:'https://cafe.naver.com/zzandol/754677'},{text:'광장동 학원셔틀?',url:'https://cafe.naver.com/dochiya/1283451'},{text:'',url:'https://cafe.naver.com/everyhomework/858694'},{text:'',url:'https://cafe.naver.com/everyhomework/858619'}]
@@ -50,9 +50,9 @@ var MON_DATA = [
     '송파': [0,0,0,0,0,0,2,0,2,0,3,1,1,0,0,0,0,1,2,0,1,0,0,1,2,0,0,0,0,0,0,1,0]
   },
     pros: [
-    {label:'관리/피드백',count:6,posts:[{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05',quote:'구주이배가 제일 타이트했어요'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09',quote:'4분 지각해도 바로 전화옵니다 / 보강 잘 잡아주셨어요 / 오답 많을때도 따로 불러 보강'},{text:'중등 수학학원 추천부탁드립니다',url:'https://cafe.naver.com/ira111/856981',region:'미사',date:'2025.05',quote:'대형학원이 담임제에 관리도 잘되는거 같았어요'},{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12',quote:'주말에도 담임쌤 재량으로 불러서 관리해주셔서 / 월욜에 수업없는데 두시간씩봐주셨어요'},{text:'광장동 수학학원',url:'https://cafe.naver.com/dochiya/1319018',region:'광진',date:'2026.02',quote:'밀착케어 잘 해주는 학원 질문에 추천됨'},{text:'<b>구주이배</b> 상담',url:'https://cafe.naver.com/ira111/923374',region:'송파',date:'2026.08',quote:'관리적인면이나 학습적인면에서 구주이배가 제일 체계적인 것 같아요'}]},
+    {label:'관리/피드백',count:6,posts:[{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05',quote:'구주이배가 제일 타이트했어요'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09',quote:'4분 지각해도 바로 전화옵니다 / 보강 잘 잡아주셨어요 / 오답 많을때도 따로 불러 보강'},{text:'중등 수학학원 추천부탁드립니다',url:'https://cafe.naver.com/ira111/856981',region:'미사',date:'2025.05',quote:'대형학원이 담임제에 관리도 잘되는거 같았어요'},{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12',quote:'주말에도 담임쌤 재량으로 불러서 관리해주셔서 / 월욜에 수업없는데 두시간씩봐주셨어요'},{text:'광장동 수학학원',url:'https://cafe.naver.com/dochiya/1319018',region:'광진',date:'2026.02',quote:'밀착케어 잘 해주는 학원 질문에 추천됨'},{text:'구주이배 상담',url:'https://cafe.naver.com/ira111/923374',region:'송파',date:'2026.08',quote:'관리적인면이나 학습적인면에서 구주이배가 제일 체계적인 것 같아요'}]},
     {label:'셔틀/접근성',count:7,posts:[{text:'',url:'https://cafe.naver.com/kidsinlove/1097868',region:'강동',date:'2024.01',quote:'구주이배. 강동파인만. 유투엠 셔틀 다닙니다.'},{text:'',url:'https://cafe.naver.com/kidsinlove/1122695',region:'미사',date:'2024.08',quote:'구주이배도 좋은것 같아요 둘다 차량 지원됩니다'},{text:'중3 수학학원 문의요',url:'https://cafe.naver.com/kidsinlove/1152552',region:'하남',date:'2025.05',quote:'구주이배, 대치성공, 포도나무, 수학의 힘 등은 구시가지까지 차가 들어오더라구요'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07',quote:'송파구주이배 셔틀이 집까지 와서 보내볼까 생각하고 있어요'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08',quote:'강동으로 가던데요, 셔틀이 오니 그런가봐요'},{text:'',url:'https://cafe.naver.com/ira111/897824',region:'미사',date:'2026.01',quote:'구주이배 셔틀도있고 괜찮던데요 초중등부.고등도있고'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01',quote:'구주이배는 멀지만 셔틀이되고'}]},
-    {label:'커리큘럼/시스템',count:22,posts:[{text:'미사고,미강고 대입 현황',url:'https://cafe.naver.com/ira111/780732',region:'하남',date:'2024.03',quote:'수학학원 설명회 가보세요~ 작년 구주이배에서 알려주던데요?'},{text:'구주이배요',url:'https://cafe.naver.com/ira111/813429',region:'미사',date:'2024.08',quote:'자체교재 쓰고 시중문제집 다양하게 프린트 / 심화+선행한다고 하시는데'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09',quote:'결석하면 영상 보내주셔서 공부할 수 있게 / 3개월씩 스케쥴대로 진도'},{text:'',url:'https://cafe.naver.com/everyhomework/870750',region:'강동',date:'2024.10',quote:'구주이배 늘푸른 괜찮데요 / 문제풀이 해주세요'},{text:'구주이배 중등 설명회?',url:'https://cafe.naver.com/ira111/827805',region:'송파',date:'2024.11',quote:'늘 도움돼서 거의 별일 없음 가요 / 메인은 1부 내용이에요'},{text:'예비초4 대형학원 수학(구주이배&파인만)',url:'https://cafe.naver.com/ira111/839684',region:'미사',date:'2025.01',quote:'자체교재 / 타 소규모 학원 선생님도 괜찮다 평가'},{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02',quote:'잘 배우고'},{text:'',url:'https://cafe.naver.com/ira111/846708',region:'미사',date:'2025.03',quote:'3개월에 1학기씩 끝내는데 다른 대형도 마찬가지'},{text:'중등 수학학원 추천부탁드립니다',url:'https://cafe.naver.com/ira111/856981',region:'미사',date:'2025.05',quote:'담임제'},{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07',quote:'중등관 고등관이 따로 분리 되어 있어요. 그 부분은 마음에 들더라구요'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07',quote:'정보력, 문제 확보력이 장난 아니라서 시험 앞두면 도움 많이 됨요'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08',quote:'매수업마다 테스트..방학은 주3회 하루8시간'},{text:'수학',url:'https://cafe.naver.com/ira111/889558',region:'미사',date:'2025.11',quote:'학원문제집이 막 쉽지는 않더라구요 특히 도형파트요'},{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12',quote:'내신기간에 학원 재학생 전원 평가 등수 매겨요, 재학중인 학교 공개하구요'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01',quote:'레벨별로 구분되어있더라구요'},{text:'구주이배 미사 M반',url:'https://cafe.naver.com/ira111/902553',region:'미사',date:'2026.02',quote:'AP수업은 이번에 처음하는데 M반도 느낌상 그안에 약간 레벨이 있는것같아요 중등 M계열 M_MA_MB'},{text:'중1  늦게 수업하는 수학학원있을까요?',url:'https://cafe.naver.com/ira111/906184',region:'미사',date:'2026.03',quote:'7시 30분~10시 타임이 있는데, 학년, 레벨 등에 따라 다소 차이가~'},{text:'',url:'https://cafe.naver.com/ira111/910180',region:'미사',date:'2026.04',quote:'이름 있는 학원들은 커리큘럼 자체는 전반적으로 잘 짜여 있는 편'},{text:'',url:'https://cafe.naver.com/ira111/892542',region:'미사',date:'2025.12',quote:'대형 커리를 생각한다면 구주이배나 파인만'},{text:'',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04',quote:'서울 아이들하고 섞여서 다양한 수준 문제 풀어서 좋았어요'},{text:'미적1 나갈수있는반 어디있을까요???',url:'https://cafe.naver.com/ira111/919013',region:'미사',date:'2026.07',quote:'미사에서 이정도 선행하는 학원 거의 없다..구주이배 계속다니는 중'},{text:'<b>구주이배</b> 상담',url:'https://cafe.naver.com/ira111/923374',region:'송파',date:'2026.08',quote:'공수도 과정별로 반이 여러개 / 단계별 교재에 쌍둥이 교재까지 있어요'}]},
+    {label:'커리큘럼/시스템',count:22,posts:[{text:'미사고,미강고 대입 현황',url:'https://cafe.naver.com/ira111/780732',region:'하남',date:'2024.03',quote:'수학학원 설명회 가보세요~ 작년 구주이배에서 알려주던데요?'},{text:'구주이배요',url:'https://cafe.naver.com/ira111/813429',region:'미사',date:'2024.08',quote:'자체교재 쓰고 시중문제집 다양하게 프린트 / 심화+선행한다고 하시는데'},{text:'구주이배 수학보내시는 맘 계신가요',url:'https://cafe.naver.com/ira111/818708',region:'미사',date:'2024.09',quote:'결석하면 영상 보내주셔서 공부할 수 있게 / 3개월씩 스케쥴대로 진도'},{text:'',url:'https://cafe.naver.com/everyhomework/870750',region:'강동',date:'2024.10',quote:'구주이배 늘푸른 괜찮데요 / 문제풀이 해주세요'},{text:'구주이배 중등 설명회?',url:'https://cafe.naver.com/ira111/827805',region:'송파',date:'2024.11',quote:'늘 도움돼서 거의 별일 없음 가요 / 메인은 1부 내용이에요'},{text:'예비초4 대형학원 수학(구주이배&파인만)',url:'https://cafe.naver.com/ira111/839684',region:'미사',date:'2025.01',quote:'자체교재 / 타 소규모 학원 선생님도 괜찮다 평가'},{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02',quote:'잘 배우고'},{text:'',url:'https://cafe.naver.com/ira111/846708',region:'미사',date:'2025.03',quote:'3개월에 1학기씩 끝내는데 다른 대형도 마찬가지'},{text:'중등 수학학원 추천부탁드립니다',url:'https://cafe.naver.com/ira111/856981',region:'미사',date:'2025.05',quote:'담임제'},{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07',quote:'중등관 고등관이 따로 분리 되어 있어요. 그 부분은 마음에 들더라구요'},{text:'송파 구주이배 테스트 왔어요..',url:'https://cafe.naver.com/ira111/866331',region:'송파',date:'2025.07',quote:'정보력, 문제 확보력이 장난 아니라서 시험 앞두면 도움 많이 됨요'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08',quote:'매수업마다 테스트..방학은 주3회 하루8시간'},{text:'수학',url:'https://cafe.naver.com/ira111/889558',region:'미사',date:'2025.11',quote:'학원문제집이 막 쉽지는 않더라구요 특히 도형파트요'},{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12',quote:'내신기간에 학원 재학생 전원 평가 등수 매겨요, 재학중인 학교 공개하구요'},{text:'미사고 예비입학생 영어.수학 학원 어디가 좋을까요?',url:'https://cafe.naver.com/ira111/895685',region:'미사',date:'2026.01',quote:'레벨별로 구분되어있더라구요'},{text:'구주이배 미사 M반',url:'https://cafe.naver.com/ira111/902553',region:'미사',date:'2026.02',quote:'AP수업은 이번에 처음하는데 M반도 느낌상 그안에 약간 레벨이 있는것같아요 중등 M계열 M_MA_MB'},{text:'중1  늦게 수업하는 수학학원있을까요?',url:'https://cafe.naver.com/ira111/906184',region:'미사',date:'2026.03',quote:'7시 30분~10시 타임이 있는데, 학년, 레벨 등에 따라 다소 차이가~'},{text:'',url:'https://cafe.naver.com/ira111/910180',region:'미사',date:'2026.04',quote:'이름 있는 학원들은 커리큘럼 자체는 전반적으로 잘 짜여 있는 편'},{text:'',url:'https://cafe.naver.com/ira111/892542',region:'미사',date:'2025.12',quote:'대형 커리를 생각한다면 구주이배나 파인만'},{text:'',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04',quote:'서울 아이들하고 섞여서 다양한 수준 문제 풀어서 좋았어요'},{text:'미적1 나갈수있는반 어디있을까요???',url:'https://cafe.naver.com/ira111/919013',region:'미사',date:'2026.07',quote:'미사에서 이정도 선행하는 학원 거의 없다..구주이배 계속다니는 중'},{text:'구주이배 상담',url:'https://cafe.naver.com/ira111/923374',region:'송파',date:'2026.08',quote:'공수도 과정별로 반이 여러개 / 단계별 교재에 쌍둥이 교재까지 있어요'}]},
     {label:'반복/심화학습',count:4,posts:[{text:'중등고등수학',url:'https://cafe.naver.com/ira111/845029',region:'미사',date:'2025.02',quote:'구주이배는 학원교재가 따로 있으니 rpm,쎈,풍산자,라이트쎈 중에 필요한 교재 구매하셔서 반복학습 해주세요'},{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08',quote:'꼼꼼함,타임어택,스킬에 중점을 둡니다'},{text:'초4 수학대형학원이 처음이라.. 어떤기준으로 선택하면될까요?',url:'https://cafe.naver.com/ira111/890979',region:'송파',date:'2025.12',quote:'주기적으로 테스트 보니 확인하고 넘어가는게 좀 가능하죠, 잘 하면 올라갈 반이 있는 곳'},{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01',quote:'모고4점 심화 위주로 학습 / 재시험에 스테이되고 혼자 못올라가도'}]},
     {label:'선생님/수업',count:1,posts:[{text:'송파구주이배 레테후기2',url:'https://cafe.naver.com/ira111/866684',region:'송파',date:'2025.07',quote:'상담쌤 어찌 그리 친절하시나요. 친언니 같은 편안함으로 맘편하게 상담했어요'}]},
     {label:'성적향상/성과',count:2,posts:[{text:'중학생 시험전 직전보강',url:'https://cafe.naver.com/ira111/893927',region:'미사',date:'2025.12',quote:'고등까지 견딜수만 있으면 수학은 탑 보장요 / 내신시험뿐 아니라 모고까지요'},{text:'구주이배, 수학의힘 어디가괜찮을까요!!??',url:'https://cafe.naver.com/ira111/899157',region:'송파',date:'2026.01',quote:'고1 탑반애들은 수능도 1등급 98퍼 이상 나온다 / 중학교 올라가 첫시험 100점 맞고 자신감 풀충전'}]},
@@ -63,7 +63,7 @@ var MON_DATA = [
     {label:'커리큘럼/시스템',count:3,posts:[{text:'',url:'https://cafe.naver.com/dochiya/1301240',region:'광진',date:'2025.02',quote:'구주이배는 선행 많이 뺀다고 해서요'},{text:'구주이배 파인만',url:'https://cafe.naver.com/ira111/885543',region:'미사',date:'2025.11',quote:'자체교재 쓰는곳은 시중교재 짜집기한 느낌, 심화라고 하는교재보니 심화도 아니더라구요'},{text:'구주이베*파인만',url:'https://cafe.naver.com/ira111/904265',region:'미사',date:'2026.03',quote:'구주이배는 자체교재라 좀 그렇고'}]},
     {label:'가격부담',count:2,posts:[{text:'고1 수학학원 내돈내산 후기및 추천글 입니다~',url:'https://cafe.naver.com/ira111/841374',region:'미사',date:'2025.02',quote:'수강료가 보내놓고 보니 다른데보다 쎄더군요'},{text:'',url:'https://cafe.naver.com/ira111/896175',region:'강동',date:'2026.01',quote:'원비도 비싸구'}]},
     {label:'기타개선점',count:2,posts:[{text:'',url:'https://cafe.naver.com/everyhomework/892599',region:'송파',date:'2025.06',quote:'샘이 바뀌었는데 나랑 안 맞는다 안 간다'},{text:'',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04',quote:'자체교재라 호불호가 있다고 하고'}]},
-    {label:'개별관리부족',count:4,posts:[{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08',quote:'구주이배 피드백은 다른 아이들 피드백 복붙느낌이 많았다'},{text:'구주이배 미사 M반',url:'https://cafe.naver.com/ira111/902553',region:'미사',date:'2026.02',quote:'M반이 이렇게 많다고? 하는 느낌을 좀 받았어요'},{text:'',url:'https://cafe.naver.com/dochiya/1320433',region:'광진',date:'2026.03',quote:'너무 대형이라 개별케어 안될까 염려했는데'},{text:'<b>구주이배</b> 상담',url:'https://cafe.naver.com/ira111/923374',region:'송파',date:'2026.08',quote:'상담하시는 분이 몇점이다 어디배정이다 이게 설명이 다 / 구체적으로 물어보면 잘 모르시고'}]}
+    {label:'개별관리부족',count:4,posts:[{text:'구주이배 미사 보내시는분 어떠신가요 예비고등입니다.',url:'https://cafe.naver.com/ira111/872071',region:'강동',date:'2025.08',quote:'구주이배 피드백은 다른 아이들 피드백 복붙느낌이 많았다'},{text:'구주이배 미사 M반',url:'https://cafe.naver.com/ira111/902553',region:'미사',date:'2026.02',quote:'M반이 이렇게 많다고? 하는 느낌을 좀 받았어요'},{text:'',url:'https://cafe.naver.com/dochiya/1320433',region:'광진',date:'2026.03',quote:'너무 대형이라 개별케어 안될까 염려했는데'},{text:'구주이배 상담',url:'https://cafe.naver.com/ira111/923374',region:'송파',date:'2026.08',quote:'상담하시는 분이 몇점이다 어디배정이다 이게 설명이 다 / 구체적으로 물어보면 잘 모르시고'}]}
   ],
     allPosts: [{text:'센자 앞 상가 학원 몇살때 혼자?',url:'https://cafe.naver.com/ira111/912966'},{text:'윤슬초 5학년 대형수학 어디로 다니나요?',url:'https://cafe.naver.com/ira111/912613'},{text:'신장동 영수학원이요 ^^',url:'https://cafe.naver.com/kidsinlove/1186013'},{text:'미사 구주이배 몇학년 부터',url:'https://cafe.naver.com/ira111/772873'},{text:'',url:'https://cafe.naver.com/ira111/774047'},{text:'',url:'https://cafe.naver.com/kidsinlove/1097868'},{text:'',url:'https://cafe.naver.com/ira111/778452'},{text:'예비5학년 수학학원',url:'https://cafe.naver.com/ira111/776866'},{text:'미사고,미강고 대입 현황',url:'https://cafe.naver.com/ira111/780732'},{text:'구주이배 보통 여름방학기간 언제인가요?',url:'https://cafe.naver.com/ira111/792237'}]
   },
@@ -95,7 +95,7 @@ var MON_DATA = [
     {label:'선생님/수업',count:1,posts:[{text:'신내동 논술학원 추천좀해주세요~',url:'https://cafe.naver.com/jungnangbaby/736446',region:'중랑',date:'2025.05',quote:'정상논술 샘 너무 좋아요'}]},
     {label:'성적향상/성과',count:1,posts:[{text:'신내동 논술학원 추천좀해주세요~',url:'https://cafe.naver.com/jungnangbaby/736446',region:'중랑',date:'2025.05',quote:'아이 글쓰기 힘들어했는데 이젠 학교에서 논술숙제내줘도 뚝딱합니다'}]},
     {label:'차량/접근성',count:1,posts:[{text:'안녕하세요. 중학생 학원 궁금해요.',url:'https://cafe.naver.com/jungnangbaby/738543',region:'중랑',date:'2025.06',quote:'구청사거리 정상학원 다녀요(영어,수학/차량지원)'}]},
-    {label:'커리큘럼/시스템',count:2,posts:[{text:'',url:'https://cafe.naver.com/dochiya/1317543',region:'광진',date:'2026.01',quote:'정상도 커리큘럼 넘 좋죠'},{text:'중계동 초등 <b>수학학원</b> 어디 보내세요? 고민이 너무 많네요ㅠㅠ',url:'https://cafe.naver.com/applelog/874006',region:'중계',date:'2026.09',quote:'개념부터 차근차근 잡아줘서 만족하고 있어요'}]}
+    {label:'커리큘럼/시스템',count:2,posts:[{text:'',url:'https://cafe.naver.com/dochiya/1317543',region:'광진',date:'2026.01',quote:'정상도 커리큘럼 넘 좋죠'},{text:'중계동 초등 수학학원 어디 보내세요? 고민이 너무 많네요ㅠㅠ',url:'https://cafe.naver.com/applelog/874006',region:'중계',date:'2026.09',quote:'개념부터 차근차근 잡아줘서 만족하고 있어요'}]}
   ],
     cons: [
     {label:'가격부담',count:1,posts:[{text:'광진구 영어학원 추천해주세요~',url:'https://cafe.naver.com/dochiya/1276768',region:'광진',date:'2024.01',quote:'가격이 좀 비싸요'}]},
@@ -160,7 +160,7 @@ var MON_DATA = [
   ],
     cons: [
     {label:'숙제/학습량부담',count:3,posts:[{text:'광장동 비바키즈 vs 심슨 어학원 저학년 영어학원 고민',url:'https://cafe.naver.com/dochiya/1302616',region:'광진',date:'2025.03',quote:'숙제나 분위기가 빡세다는 것 같긴 한데'},{text:'심슨  단어시험',url:'https://cafe.naver.com/dochiya/1316839',region:'광진',date:'2025.12',quote:'공부량 너무 많음 또 힘들어해서'},{text:'광장동 초등영어 심슨&정상',url:'https://cafe.naver.com/dochiya/1319716',region:'광진',date:'2026.03',quote:'숙제도 너무 많고, 재시때문에 힘들다는 말도 많더라구요'}]},
-    {label:'기타개선점',count:2,posts:[{text:'건대부고1영어학원추천부탁드려요',url:'https://cafe.naver.com/dochiya/1302932',region:'광진',date:'2025.03',quote:'심슨은 학원시간 안맞고'},{text:'예비중등 영어&amp;<b>수학학원</b> 어디 보내세요?',url:'https://cafe.naver.com/dongbumomschool/6155',region:'광진',date:'2026.07',quote:'학원이 너무 늦게 끝나서 가깝고 일찍끝나는 곳으로 옮긴지 1년'}]}
+    {label:'기타개선점',count:2,posts:[{text:'건대부고1영어학원추천부탁드려요',url:'https://cafe.naver.com/dochiya/1302932',region:'광진',date:'2025.03',quote:'심슨은 학원시간 안맞고'},{text:'예비중등 영어&amp;수학학원 어디 보내세요?',url:'https://cafe.naver.com/dongbumomschool/6155',region:'광진',date:'2026.07',quote:'학원이 너무 늦게 끝나서 가깝고 일찍끝나는 곳으로 옮긴지 1년'}]}
   ],
     allPosts: [{text:'초3 영어 수학 학원 추천부탁드립니다!',url:'https://cafe.naver.com/dochiya/1322184'},{text:'',url:'https://cafe.naver.com/dochiya/1276971'},{text:'예비초 영어학원(어학원)',url:'https://cafe.naver.com/dochiya/1276440'},{text:'',url:'https://cafe.naver.com/dochiya/1275831'},{text:'',url:'https://cafe.naver.com/ira111/771928'},{text:'광진구 영어학원',url:'https://cafe.naver.com/dochiya/1278242'},{text:'성동구 영어학원 추천 부탁 드립니다.',url:'https://cafe.naver.com/dochiya/1278048'},{text:'',url:'https://cafe.naver.com/dochiya/1280651'},{text:'',url:'https://cafe.naver.com/dochiya/1286126'},{text:'',url:'https://cafe.naver.com/ira111/802939'}]
   },
@@ -187,7 +187,7 @@ var MON_DATA = [
     {label:'셔틀/접근성',count:5,posts:[{text:'',url:'https://cafe.naver.com/kidsinlove/1097868',region:'강동',date:'2024.01',quote:'구주이배. 강동파인만. 유투엠 셔틀 다닙니다.'},{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630',region:'강동',date:'2024.10',quote:'셔틀도 미사까지 와요'},{text:'아이들.. 겨울방학계획 머리아파요.',url:'https://cafe.naver.com/ira111/830193',region:'강동',date:'2024.11',quote:'셔틀 안타고 바로 집앞이고 아이들도 좋아해여'},{text:'예비중 학원 추천해주세요',url:'https://cafe.naver.com/ira111/891823',region:'강동',date:'2025.12',quote:'강동파인만, 유투엠 셔틀 있어요~~'},{text:'',url:'https://cafe.naver.com/ira111/920672',region:'미사',date:'2026.08',quote:'셔틀도 있구요'}]},
     {label:'반복/심화학습',count:6,posts:[{text:'강동파인만 수학학원 이요~',url:'https://cafe.naver.com/ira111/780344',region:'강동',date:'2024.03',quote:'매주 토요일 따로 나와서 내신 심화 봐주세요'},{text:'파인만, 청어람 질문이요~',url:'https://cafe.naver.com/ira111/822429',region:'송파',date:'2024.10',quote:'2주에 한번 토요클래스, 부족한 부분이나 현행심화, 블랙라벨·에이급·최상위·최고득점 교재 사용'},{text:'강동파인만 수학 강일관 보내시는 분계실까요?',url:'https://cafe.naver.com/ira111/821630',region:'강동',date:'2024.10',quote:'심화까지 꼼꼼히 봐주시고 토욜 클리닉 자주 부르시구요'},{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12',quote:'토요일 클리닉.. 못한 숙제 부족한 부분 또 봐주십니다'},{text:'',url:'https://cafe.naver.com/ira111/891400',region:'강동',date:'2025.12',quote:'오답노트, 클리닉, 심화등 꼼꼼하게 봐줍니다'},{text:'파인만 중등은 어떤가요~?',url:'https://cafe.naver.com/ira111/906194',region:'미사',date:'2026.03',quote:'격주로 보충수업도 있고 수업시간도 길어서 공부 양 자체가 많아서'}]},
     {label:'성적향상/성과',count:5,posts:[{text:'아이들.. 겨울방학계획 머리아파요.',url:'https://cafe.naver.com/ira111/830193',region:'강동',date:'2024.11',quote:'둘째 공부 진짜 안하지만 수학은 1-2 올라갔네요'},{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12',quote:'1학년 중간 기말 다 100점'},{text:'초5,6 파인만,손수학 보내시는분들 궁금해요',url:'https://cafe.naver.com/ira111/887208',region:'미사',date:'2025.11',quote:'수학머리있고 선행 생각하심 대형 추천이요'},{text:'중학생 수학학원 추천 부탁드립니다.',url:'https://cafe.naver.com/ira111/916446',region:'미사',date:'2026.06',quote:'드라마틱하게 성적이 올랐어요'},{text:'과학 좀 꼼꼼히 가르쳐주는 학원 없을까요?(중등)',url:'https://cafe.naver.com/ira111/926754',region:'미사',date:'2026.09',quote:'이번 시험도 백점맞아 왔어요'}]},
-    {label:'선생님/수업',count:6,posts:[{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12',quote:'아이 성향에 맞게 끌고 가시고 / 열정 짱입니다'},{text:'초5,6 파인만,손수학 보내시는분들 궁금해요',url:'https://cafe.naver.com/ira111/887208',region:'미사',date:'2025.11',quote:'한분이 계속 가르치세요 / 탑반이라면 전 파인만 보낼것같아요'},{text:'',url:'https://cafe.naver.com/ira111/895305',region:'미사',date:'2026.01',quote:'선생님과 케미가 잘 맞는 듯 해요. 빠르게 적응하고 잘 다니고 있습니다'},{text:'파인만 중등은 어떤가요~?',url:'https://cafe.naver.com/ira111/906194',region:'미사',date:'2026.03',quote:'선생님에 따라 자유롭게 토론식으로 이야기를 나누게도 하다보니 아이는 배우는게 많고 재밌다고해요'},{text:'8단지 앞에 케어 잘 해주는 수학학원 추천 부탁드려요(중2)',url:'https://cafe.naver.com/ira111/899703',region:'미사',date:'2026.02',quote:'선생님들이 꼼꼼히 잘 이끌어주시고 관리가 좋네요'},{text:'중1 <b>수학학원</b> 추천해주세요',url:'https://cafe.naver.com/ira111/917482',region:'미사',date:'2026.07',quote:'아이들을 위해서 훈계도 진심으로 해주시는지라'}]},
+    {label:'선생님/수업',count:6,posts:[{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12',quote:'아이 성향에 맞게 끌고 가시고 / 열정 짱입니다'},{text:'초5,6 파인만,손수학 보내시는분들 궁금해요',url:'https://cafe.naver.com/ira111/887208',region:'미사',date:'2025.11',quote:'한분이 계속 가르치세요 / 탑반이라면 전 파인만 보낼것같아요'},{text:'',url:'https://cafe.naver.com/ira111/895305',region:'미사',date:'2026.01',quote:'선생님과 케미가 잘 맞는 듯 해요. 빠르게 적응하고 잘 다니고 있습니다'},{text:'파인만 중등은 어떤가요~?',url:'https://cafe.naver.com/ira111/906194',region:'미사',date:'2026.03',quote:'선생님에 따라 자유롭게 토론식으로 이야기를 나누게도 하다보니 아이는 배우는게 많고 재밌다고해요'},{text:'8단지 앞에 케어 잘 해주는 수학학원 추천 부탁드려요(중2)',url:'https://cafe.naver.com/ira111/899703',region:'미사',date:'2026.02',quote:'선생님들이 꼼꼼히 잘 이끌어주시고 관리가 좋네요'},{text:'중1 수학학원 추천해주세요',url:'https://cafe.naver.com/ira111/917482',region:'미사',date:'2026.07',quote:'아이들을 위해서 훈계도 진심으로 해주시는지라'}]},
     {label:'차량/접근성',count:1,posts:[{text:'이번 수학학원 담임... 너무 좋아요.',url:'https://cafe.naver.com/ira111/832778',region:'강동',date:'2024.12',quote:'강일관 차량이 미사로 다 왔어요'}]}
   ],
     cons: [
@@ -299,17 +299,17 @@ var MON_DATA = [
     '동대문': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:9,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05',quote:'1년치 커리큘럼이 체계적으로 계획되어 있어 진도가 밀리지 않고 안정적으로 진행'},{text:'중3 수학, 과학 학원 추천해주세요',url:'https://cafe.naver.com/joonggyeedu/41939',region:'중계',date:'2025.06',quote:'과학 미래탐구 체계적으로 좋아요.'},{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11',quote:'미래탐구는 사고력수업이 있어 좋긴하나'},{text:'은사에서 과고 준비 학원 어디일까요?',url:'https://cafe.naver.com/joonggyeedu/46644',region:'중계',date:'2025.11',quote:'미탐이 제일 속도가 빠르고'},{text:'예비중2 수학학원 개별진도 꼼꼼하게 잘 봐주시는 곳 추천 부탁드립니다.',url:'https://cafe.naver.com/joonggyeedu/49709',region:'중계',date:'2026.01',quote:'고등은 학림까지 쭉 이어져 있어서 꾸준히 다니기에도 좋습니다'},{text:'',url:'https://cafe.naver.com/joonggyeedu/52857',region:'중계',date:'2026.03',quote:'인증평가가 있어서 우리 아이 실력 객관적 파악이 가능'},{text:'미래탐구는 현행만 겨우하는 아이는 들어가기 힘들까요?',url:'https://cafe.naver.com/joonggyeedu/56947',region:'중계',date:'2026.07',quote:'레벨별로 있어요. 분기별로 테스트 거쳐서 반 레벨업 할 수도 있습니다'},{text:'한성대~성신여대 <b>수학학원</b> 추천 부탁드려요',url:'https://cafe.naver.com/3gumomclub/1560506',region:'동대문',date:'2026.09',quote:'선행반도 잘 갖춰져 있고요'},{text:'고등과정 들어가는 초등학생 <b>수학학원</b>',url:'https://cafe.naver.com/3gumomclub/1558936',region:'성북',date:'2026.09',quote:'학년 상관없는 선행반들 있어요'}]},
+    {label:'커리큘럼/시스템',count:9,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05',quote:'1년치 커리큘럼이 체계적으로 계획되어 있어 진도가 밀리지 않고 안정적으로 진행'},{text:'중3 수학, 과학 학원 추천해주세요',url:'https://cafe.naver.com/joonggyeedu/41939',region:'중계',date:'2025.06',quote:'과학 미래탐구 체계적으로 좋아요.'},{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11',quote:'미래탐구는 사고력수업이 있어 좋긴하나'},{text:'은사에서 과고 준비 학원 어디일까요?',url:'https://cafe.naver.com/joonggyeedu/46644',region:'중계',date:'2025.11',quote:'미탐이 제일 속도가 빠르고'},{text:'예비중2 수학학원 개별진도 꼼꼼하게 잘 봐주시는 곳 추천 부탁드립니다.',url:'https://cafe.naver.com/joonggyeedu/49709',region:'중계',date:'2026.01',quote:'고등은 학림까지 쭉 이어져 있어서 꾸준히 다니기에도 좋습니다'},{text:'',url:'https://cafe.naver.com/joonggyeedu/52857',region:'중계',date:'2026.03',quote:'인증평가가 있어서 우리 아이 실력 객관적 파악이 가능'},{text:'미래탐구는 현행만 겨우하는 아이는 들어가기 힘들까요?',url:'https://cafe.naver.com/joonggyeedu/56947',region:'중계',date:'2026.07',quote:'레벨별로 있어요. 분기별로 테스트 거쳐서 반 레벨업 할 수도 있습니다'},{text:'한성대~성신여대 수학학원 추천 부탁드려요',url:'https://cafe.naver.com/3gumomclub/1560506',region:'동대문',date:'2026.09',quote:'선행반도 잘 갖춰져 있고요'},{text:'고등과정 들어가는 초등학생 수학학원',url:'https://cafe.naver.com/3gumomclub/1558936',region:'성북',date:'2026.09',quote:'학년 상관없는 선행반들 있어요'}]},
     {label:'관리/피드백',count:1,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05',quote:'월말평가와 분기별 평가 후 선생님과 전화상담 및 대면상담이 이루어져 아이의 현재 수준과 부족한 부분을 자세히 알 수 있어'}]},
     {label:'반복/심화학습',count:2,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05',quote:'틀린 문제를 완전히 이해할 때까지 반복 학습이 이루어져 아이의 실수도 많이 줄어들었습니다'},{text:'고등수학학원',url:'https://cafe.naver.com/joonggyeedu/47559',region:'중계',date:'2025.12',quote:'기본정석, 실력정석하고 블라도 압축해서, 인고기도 풀리고'}]},
     {label:'셔틀/접근성',count:6,posts:[{text:'중계동에 괜찮은 수학학원 있을까요?',url:'https://cafe.naver.com/aldisgo123d/965361',region:'중계',date:'2024.07',quote:'셔틀 이용해야 해서 미탐 알로곤 조재필 알아봤었어요'},{text:'차량운행 과학학원',url:'https://cafe.naver.com/joonggyeedu/48088',region:'중계',date:'2025.12',quote:'미탐만 있을 거예요. 대형수학학원에서 같이하는 과학만 셔틀있을 듯해요.'},{text:'셔틀버스 수학학원',url:'https://cafe.naver.com/joonggyeedu/49170',region:'중계',date:'2026.01',quote:'셔틀버스 운행 학원 질문에 미탐이요~ 추천'},{text:'청구3차 vs 라신청',url:'https://cafe.naver.com/joonggyeedu/51267',region:'중계',date:'2026.02',quote:'건영3차 뒷동이 미탐 토피아 등은 오히려 훨씬 더 가까운데'},{text:'',url:'https://cafe.naver.com/joonggyeedu/53427',region:'중계',date:'2026.04',quote:'최선 미탐 등 셔틀 매시간마다 와요'},{text:'',url:'https://cafe.naver.com/joonggyeedu/57755',region:'중계',date:'2026.08',quote:'초등셔틀되는곳은 미탐.유투엠일거에요'}]},
-    {label:'선생님/수업',count:2,posts:[{text:'영어 수학 학원 바꿔보려구요',url:'https://cafe.naver.com/joonggyeedu/49863',region:'중계',date:'2026.01',quote:'담임쌤에 따라 성향 차이가 있긴 하지만 다른 대형학원보다는 따뜻달까요'},{text:'한성대~성신여대 <b>수학학원</b> 추천 부탁드려요',url:'https://cafe.naver.com/3gumomclub/1560506',region:'동대문',date:'2026.09',quote:'상위반이 선생님들이 더 좋더라고요'}]}
+    {label:'선생님/수업',count:2,posts:[{text:'영어 수학 학원 바꿔보려구요',url:'https://cafe.naver.com/joonggyeedu/49863',region:'중계',date:'2026.01',quote:'담임쌤에 따라 성향 차이가 있긴 하지만 다른 대형학원보다는 따뜻달까요'},{text:'한성대~성신여대 수학학원 추천 부탁드려요',url:'https://cafe.naver.com/3gumomclub/1560506',region:'동대문',date:'2026.09',quote:'상위반이 선생님들이 더 좋더라고요'}]}
   ],
     cons: [
     {label:'숙제/학습량부담',count:4,posts:[{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861',region:'중계',date:'2026.05',quote:'숙제 저희도 걱정이 되었는데요 틈틈히해요 ㅠ 월,화요일 1시간정도씩 하구요'},{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11',quote:'숙제가 최상위 입니다'},{text:'미래탐구는 현행만 겨우하는 아이는 들어가기 힘들까요?',url:'https://cafe.naver.com/joonggyeedu/56947',region:'중계',date:'2026.07',quote:'들어가서 숙제 양을 견딜지...'},{text:'',url:'https://cafe.naver.com/3gumomclub/1556878',region:'동대문',date:'2026.08',quote:'대형학원이라 정해진 일정에 진도가 나가야 해 속도 느리면 벅차할 수 있음'}]},
     {label:'기타개선점',count:2,posts:[{text:'영어 수학 학원 옮기려는데',url:'https://cafe.naver.com/joonggyeedu/55275',region:'중계',date:'2026.05',quote:'화목 다닐라니 학원에 넘 오래있어야 되네요'},{text:'미탐은 정보가 원래 잘 없나요',url:'https://cafe.naver.com/joonggyeedu/48618',region:'중계',date:'2025.12',quote:'온라인 결제 어플도 오류 많고 진짜 아날로그식으로 소통해야 되더라구요'}]},
-    {label:'개별관리부족',count:2,posts:[{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11',quote:'한반에 인원수가 많은데다'},{text:'초6 <b>수학학원</b>',url:'https://cafe.naver.com/joonggyeedu/57312',region:'중계',date:'2026.07',quote:'반평균을 낮추는데 이바지, 레벨업도 쉽지 않으니 정체기'}]},
-    {label:'셔틀불만',count:2,posts:[{text:'차량운행 과학학원',url:'https://cafe.naver.com/joonggyeedu/48088',region:'중계',date:'2025.12',quote:'미탐도 주말수업반은 셔틀 없어요.'},{text:'셔틀되는 초등 교과<b>수학 학원</b> 아시나요?',url:'https://cafe.naver.com/3gumomclub/1555135',region:'동대문',date:'2026.08',quote:'셔틀 승하차 하는 곳이 학원 길건너 큰 도로변이라 횡단보도를 건너는게 마음에 걸려서 고민중'}]}
+    {label:'개별관리부족',count:2,posts:[{text:'초4 수학학원 고민',url:'https://cafe.naver.com/joonggyeedu/46845',region:'중계',date:'2025.11',quote:'한반에 인원수가 많은데다'},{text:'초6 수학학원',url:'https://cafe.naver.com/joonggyeedu/57312',region:'중계',date:'2026.07',quote:'반평균을 낮추는데 이바지, 레벨업도 쉽지 않으니 정체기'}]},
+    {label:'셔틀불만',count:2,posts:[{text:'차량운행 과학학원',url:'https://cafe.naver.com/joonggyeedu/48088',region:'중계',date:'2025.12',quote:'미탐도 주말수업반은 셔틀 없어요.'},{text:'셔틀되는 초등 교과수학 학원 아시나요?',url:'https://cafe.naver.com/3gumomclub/1555135',region:'동대문',date:'2026.08',quote:'셔틀 승하차 하는 곳이 학원 길건너 큰 도로변이라 횡단보도를 건너는게 마음에 걸려서 고민중'}]}
   ],
     allPosts: [{text:'중계 미래탐구 추천해요!',url:'https://cafe.naver.com/babymombaby/678861'},{text:'하나고 대비 학원',url:'https://cafe.naver.com/joonggyeedu/55354'},{text:'중3 수학 학원',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'영어 수학 학원 옮기려는데',url:'https://cafe.naver.com/joonggyeedu/55275'},{text:'중계동에 괜찮은 수학학원 있을까요?',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'자사고 입시설명회..해주는 학원 있을까요?> 은행사거리요',url:'https://cafe.naver.com/babymombaby/663956'},{text:'',url:'https://cafe.naver.com/jungnangbaby/738543'},{text:'중3 수학, 과학 학원 추천해주세요',url:'https://cafe.naver.com/joonggyeedu/41939'},{text:'노원 중학생 학원 어디로 다니시나요?~',url:'https://cafe.naver.com/sjkdhj467/929505'},{text:'',url:'https://cafe.naver.com/joonggyeedu/43601'}]
   },
@@ -396,8 +396,8 @@ var MON_DATA = [
     cons: [
     {label:'개별관리부족',count:1,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/43601',region:'중계',date:'2025.08',quote:'학생 개개인의 플랜보다는 학원커리 강요받습니다'}]},
     {label:'커리큘럼/시스템',count:1,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/43601',region:'중계',date:'2025.08',quote:'개인플레이 느낌 강하고 과고대비는 비추입니다'}]},
-    {label:'셔틀불만',count:3,posts:[{text:'수학학원조언주세요',url:'https://cafe.naver.com/ira111/875026',region:'강동',date:'2025.09',quote:'차량 없어서 직접 라이딩 뛰어야 합니다'},{text:'',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04',quote:'초저는 cms도 좋은데 셔틀안되서 패쓰했구요'},{text:'초1 <b>수학학원</b> 추천해주세요 ^^',url:'https://cafe.naver.com/ira111/923331',region:'미사',date:'2026.08',quote:'cms는 셔틀 없네요'}]},
-    {label:'숙제/학습량부담',count:1,posts:[{text:'초등<b>수학학원</b> (강동구 성내동 부근)추천있을까요?',url:'https://cafe.naver.com/everyhomework/931960',region:'강동',date:'2026.08',quote:'cms가 어렵다고하네요'}]},
+    {label:'셔틀불만',count:3,posts:[{text:'수학학원조언주세요',url:'https://cafe.naver.com/ira111/875026',region:'강동',date:'2025.09',quote:'차량 없어서 직접 라이딩 뛰어야 합니다'},{text:'',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04',quote:'초저는 cms도 좋은데 셔틀안되서 패쓰했구요'},{text:'초1 수학학원 추천해주세요 ^^',url:'https://cafe.naver.com/ira111/923331',region:'미사',date:'2026.08',quote:'cms는 셔틀 없네요'}]},
+    {label:'숙제/학습량부담',count:1,posts:[{text:'초등수학학원 (강동구 성내동 부근)추천있을까요?',url:'https://cafe.naver.com/everyhomework/931960',region:'강동',date:'2026.08',quote:'cms가 어렵다고하네요'}]},
     {label:'기타개선점',count:1,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/57755',region:'중계',date:'2026.08',quote:'cms도 그만두고..시간 일찍 끝나는 좀 작은 학원으로 옮겼어요'}]}
   ],
     allPosts: [{text:'',url:'https://cafe.naver.com/joonggyeedu/55354'},{text:'',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'',url:'https://cafe.naver.com/joonggyeedu/55275'},{text:'',url:'https://cafe.naver.com/ira111/772671'},{text:'',url:'https://cafe.naver.com/ira111/778452'},{text:'',url:'https://cafe.naver.com/dochiya/1291509'},{text:'',url:'https://cafe.naver.com/everyhomework/872026'},{text:'',url:'https://cafe.naver.com/dochiya/1300556'},{text:'',url:'https://cafe.naver.com/everyhomework/882817'},{text:'',url:'https://cafe.naver.com/ira111/860216'}]
@@ -456,7 +456,7 @@ var MON_DATA = [
   },
     pros: [
     {label:'셔틀/접근성',count:4,posts:[{text:'',url:'https://cafe.naver.com/dochiya/1283451',region:'송파',date:'2024.04',quote:'방이동 청담어학원에서도 셔틀옵니다'},{text:'',url:'https://cafe.naver.com/joonggyeedu/45836',region:'중계',date:'2025.10',quote:'셔틀도 되고'},{text:'이사가려는데',url:'https://cafe.naver.com/jungnangbaby/760661',region:'동대문',date:'2026.06',quote:'동대문 청담어학원이랑 광장동 심슨어학원 아이파크로 셔틀 오는거 봤어요'},{text:'',url:'https://cafe.naver.com/ira111/773458',region:'미사',date:'2024.01',quote:'청담어학원 셔틀 풍산초에 온다고 언급'}]},
-    {label:'커리큘럼/시스템',count:3,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/45836',region:'중계',date:'2025.10',quote:'대형이라 커리큘럼도 탄탄하고, 초고~중등까지 ESL 수업도 받을 수 있어서'},{text:'',url:'https://cafe.naver.com/joonggyeedu/47229',region:'중계',date:'2025.11',quote:'레벨업 차근차근해서 지금은 마스터반'},{text:'청담 <b>토피아</b> 정보 좀',url:'https://cafe.naver.com/joonggyeedu/57938',region:'중계',date:'2026.08',quote:'레벨업 계속하면 2년후에 알바나 알쁠까지 가겠네요 / 원서 읽기 좋아하는 아이에게 추천'}]},
+    {label:'커리큘럼/시스템',count:3,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/45836',region:'중계',date:'2025.10',quote:'대형이라 커리큘럼도 탄탄하고, 초고~중등까지 ESL 수업도 받을 수 있어서'},{text:'',url:'https://cafe.naver.com/joonggyeedu/47229',region:'중계',date:'2025.11',quote:'레벨업 차근차근해서 지금은 마스터반'},{text:'청담 토피아 정보 좀',url:'https://cafe.naver.com/joonggyeedu/57938',region:'중계',date:'2026.08',quote:'레벨업 계속하면 2년후에 알바나 알쁠까지 가겠네요 / 원서 읽기 좋아하는 아이에게 추천'}]},
     {label:'성적향상/성과',count:1,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/47229',region:'중계',date:'2025.11',quote:'성실하게 과제하고 꾸준하게 학습하니까 실력이 많이 발전해서 만족'}]},
     {label:'선생님/수업',count:1,posts:[{text:'초4 영어',url:'https://cafe.naver.com/joonggyeedu/57937',region:'중계',date:'2026.08',quote:'영유출신에 회화 원서읽기 잘되면 청담 주로 갑니다'}]},
     {label:'흥미/동기부여',count:1,posts:[{text:'초4 영어',url:'https://cafe.naver.com/joonggyeedu/57937',region:'중계',date:'2026.08',quote:'초4면 영어 토론을 많이해서 비판적 사고 키우는 청담이 좋긴한데'}]}
@@ -484,8 +484,8 @@ var MON_DATA = [
   },
     pros: [
     {label:'관리/피드백',count:4,posts:[{text:'',url:'https://cafe.naver.com/ira111/912613',region:'미사',date:'2026.05',quote:'유투엠 노트 잘 봐주신다해서'},{text:'',url:'https://cafe.naver.com/ira111/824344',region:'미사',date:'2024.10',quote:'오답관리나 스스로 생각해서 풀어내기 깊이있는 심화다루기 등이 잘 되어 있어요'},{text:'',url:'https://cafe.naver.com/everyhomework/891959',region:'송파',date:'2025.06',quote:'유투엠수학학원이 잘 봐준다고 아들을 몇 년 보내더라구요'},{text:'중학생 영수학원 알아보고 있어요(상위권, 고등내용 잘 알려주는곳이면 합니다.)',url:'https://cafe.naver.com/3gumomclub/1542644',region:'성북',date:'2026.05',quote:'내신 신경써주시고 아이가 숙제만 성실히 잘 해간다면'}]},
-    {label:'커리큘럼/시스템',count:7,posts:[{text:'',url:'https://cafe.naver.com/ira111/772671',region:'강동',date:'2024.01',quote:'반별 레벨에따라 최상위수학 교재 나가요'},{text:'',url:'https://cafe.naver.com/ira111/807002',region:'미사',date:'2024.07',quote:'유튜엠에 화목토도 있고요'},{text:'',url:'https://cafe.naver.com/ira111/824344',region:'미사',date:'2024.10',quote:'자체 교재있어서 괜찮아요'},{text:'중학생 영수학원 알아보고 있어요(상위권, 고등내용 잘 알려주는곳이면 합니다.)',url:'https://cafe.naver.com/3gumomclub/1542644',region:'성북',date:'2026.05',quote:'선행도 잘 이끌어주시는 것 같아요'},{text:'중계 유*엠 어떤가요?',url:'https://cafe.naver.com/joonggyeedu/55304',region:'중계',date:'2026.05',quote:'레테보고 상담했었는데 상담내용도 좋아서 신뢰가 갔었어요'},{text:'초3 수학학원 선택하기 어렵네요.',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04',quote:'유투엠 오답 개념노트 맘에 들어서 보내고'},{text:'<b>유투엠</b>과 깊은생각',url:'https://cafe.naver.com/ira111/920672',region:'미사',date:'2026.08',quote:'심화반도 있고, 영재반도 있어요'}]},
-    {label:'셔틀/접근성',count:5,posts:[{text:'',url:'https://cafe.naver.com/kidsinlove/1097868',region:'강동',date:'2024.01',quote:'구주이배. 강동파인만. 유투엠 셔틀 다닙니다.'},{text:'',url:'https://cafe.naver.com/ira111/891823',region:'강동',date:'2025.12',quote:'강동파인만, 유투엠 셔틀 있어요~~'},{text:'',url:'https://cafe.naver.com/joonggyeedu/49170',region:'중계',date:'2026.01',quote:'유투엠도있어요 (셔틀버스 운행 학원 질문에 추천)'},{text:'<b>유투엠</b>과 깊은생각',url:'https://cafe.naver.com/ira111/920672',region:'미사',date:'2026.08',quote:'유투엠 셔틀봤어요 / 유튜엠은 차량있어요'},{text:'',url:'https://cafe.naver.com/joonggyeedu/57755',region:'중계',date:'2026.08',quote:'초등셔틀되는곳은 미탐.유투엠일거에요'}]},
+    {label:'커리큘럼/시스템',count:7,posts:[{text:'',url:'https://cafe.naver.com/ira111/772671',region:'강동',date:'2024.01',quote:'반별 레벨에따라 최상위수학 교재 나가요'},{text:'',url:'https://cafe.naver.com/ira111/807002',region:'미사',date:'2024.07',quote:'유튜엠에 화목토도 있고요'},{text:'',url:'https://cafe.naver.com/ira111/824344',region:'미사',date:'2024.10',quote:'자체 교재있어서 괜찮아요'},{text:'중학생 영수학원 알아보고 있어요(상위권, 고등내용 잘 알려주는곳이면 합니다.)',url:'https://cafe.naver.com/3gumomclub/1542644',region:'성북',date:'2026.05',quote:'선행도 잘 이끌어주시는 것 같아요'},{text:'중계 유*엠 어떤가요?',url:'https://cafe.naver.com/joonggyeedu/55304',region:'중계',date:'2026.05',quote:'레테보고 상담했었는데 상담내용도 좋아서 신뢰가 갔었어요'},{text:'초3 수학학원 선택하기 어렵네요.',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04',quote:'유투엠 오답 개념노트 맘에 들어서 보내고'},{text:'유투엠과 깊은생각',url:'https://cafe.naver.com/ira111/920672',region:'미사',date:'2026.08',quote:'심화반도 있고, 영재반도 있어요'}]},
+    {label:'셔틀/접근성',count:5,posts:[{text:'',url:'https://cafe.naver.com/kidsinlove/1097868',region:'강동',date:'2024.01',quote:'구주이배. 강동파인만. 유투엠 셔틀 다닙니다.'},{text:'',url:'https://cafe.naver.com/ira111/891823',region:'강동',date:'2025.12',quote:'강동파인만, 유투엠 셔틀 있어요~~'},{text:'',url:'https://cafe.naver.com/joonggyeedu/49170',region:'중계',date:'2026.01',quote:'유투엠도있어요 (셔틀버스 운행 학원 질문에 추천)'},{text:'유투엠과 깊은생각',url:'https://cafe.naver.com/ira111/920672',region:'미사',date:'2026.08',quote:'유투엠 셔틀봤어요 / 유튜엠은 차량있어요'},{text:'',url:'https://cafe.naver.com/joonggyeedu/57755',region:'중계',date:'2026.08',quote:'초등셔틀되는곳은 미탐.유투엠일거에요'}]},
     {label:'성적향상/성과',count:1,posts:[{text:'',url:'https://cafe.naver.com/ira111/824344',region:'미사',date:'2024.10',quote:'지금 다들 고등학교가서 1등급 찍어요'}]},
     {label:'흥미/동기부여',count:1,posts:[{text:'초3 수학학원 선택하기 어렵네요.',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04',quote:'밝은 분위기는 유투엠이라고 하더라구요'}]}
   ],
@@ -548,7 +548,7 @@ var MON_DATA = [
     {label:'개별관리부족',count:2,posts:[{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797',region:'대치',date:'2024.05',quote:'어려운 문제가 나와도 선생님께 절대 안 물어보더라구요'},{text:'',url:'https://cafe.naver.com/ira111/824344',region:'미사',date:'2024.10',quote:'황소는 못 알아들어도 각자도생 살아남기이고요'}]},
     {label:'셔틀불만',count:1,posts:[{text:'',url:'https://cafe.naver.com/ira111/842642',region:'미사',date:'2025.02',quote:'황소는 차량이 안되네요'}]},
     {label:'가격부담',count:1,posts:[{text:'',url:'https://cafe.naver.com/ira111/909683',region:'미사',date:'2026.04',quote:'학원비가 쎈데 애는 하루죙일있다오니 비싼게아닌거구나싶구요'}]},
-    {label:'기타개선점',count:1,posts:[{text:'<b>수학 학원</b> ‘생각하는황소’ 사이트 해킹…학생 개인정보 유출 가능성',url:'https://cafe.naver.com/junggyekids/14618',region:'중계',date:'2026.09',quote:'시험 예약 사이트가 해킹을 당해 개인정보 유출 가능성'}]}
+    {label:'기타개선점',count:1,posts:[{text:'수학 학원 ‘생각하는황소’ 사이트 해킹…학생 개인정보 유출 가능성',url:'https://cafe.naver.com/junggyekids/14618',region:'중계',date:'2026.09',quote:'시험 예약 사이트가 해킹을 당해 개인정보 유출 가능성'}]}
   ],
     allPosts: [{text:'수학 좀 잘하는 친구는 학원 어디로 가나요?',url:'https://cafe.naver.com/bbbx/848208'},{text:'',url:'https://cafe.naver.com/ira111/772671'},{text:'대치동에서는 황소수학.',url:'https://cafe.naver.com/ira111/794797'},{text:'',url:'https://cafe.naver.com/ira111/802939'},{text:'',url:'https://cafe.naver.com/dongdaemoonstory/332767'},{text:'초4 수학,영어 학원 추천부탁드려요~~',url:'https://cafe.naver.com/babymombaby/649503'},{text:'요즘엔 이런것도 있네요',url:'https://cafe.naver.com/ira111/816138'},{text:'',url:'https://cafe.naver.com/ira111/824344'},{text:'',url:'https://cafe.naver.com/dochiya/1300556'},{text:'',url:'https://cafe.naver.com/ira111/839821'}]
   },
@@ -646,11 +646,11 @@ var MON_DATA = [
     '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2]
   },
     pros: [
-    {label:'흥미/동기부여',count:9,posts:[{text:'',url:'https://cafe.naver.com/dochiya/1285156',region:'성동',date:'2024.05',quote:'씨매쓰 아이가 좋아해요'},{text:'송파지역 사고력<b>수학학원</b> 문의해요',url:'https://cafe.naver.com/koreakmc/502083',region:'송파',date:'2026.08',quote:'아이도 너무 재미있게 다녀요'},{text:'초3 아이 수학 공부는 무엇부터 시작해야 하나요?',url:'https://cafe.naver.com/zzandol/841769',region:'송파',date:'2026.08',quote:'아이의 수학 흥미뿐 아니라 서술형 논술형도 연습할 수 있어서 좋더라고요'},{text:'초등학교 저학년 학원 몇개씩 보내나요?',url:'https://cafe.naver.com/applelog/872866',region:'중계',date:'2026.08',quote:'시매쓰로 바꾸고 학원가는걸 엄청 좋아하거든요'},{text:'7세 사고력<b>수학학원</b> 시작하신 분!',url:'https://cafe.naver.com/nihongokkureomi/440015',region:'동대문',date:'2026.09',quote:'놀이수업으로 해서 엉덩이 힘도 길러주면서 학습할 수있어'},{text:'',url:'https://cafe.naver.com/phoneinside/450499',region:'동대문',date:'2026.09',quote:'사고력수학 재미나게 배울수 있게'},{text:'문정동 7세<b>수학학원</b> 어디로 보내세요?',url:'https://cafe.naver.com/sojbb2233/645527',region:'송파',date:'2026.09',quote:'아이가 일단 너무 재미있게 다니고 있어요'},{text:'7세 <b>수학학원</b> 엄마표 결정을 못하겠어요',url:'https://cafe.naver.com/applelog/875349',region:'중계',date:'2026.09',quote:'안그래도 좋아하는 수학에 푹 빠져있어요'},{text:'',url:'https://cafe.naver.com/applelog/874926',region:'중계',date:'2026.09',quote:'아이 너무 재미있게 다녀요 학원 가는날만 기다리구요'}]},
-    {label:'선생님/수업',count:3,posts:[{text:'',url:'https://cafe.naver.com/ira111/875026',region:'강동',date:'2025.09',quote:'선생님이 밝고 좋아보이셨어요'},{text:'송파지역 사고력<b>수학학원</b> 문의해요',url:'https://cafe.naver.com/koreakmc/502083',region:'송파',date:'2026.08',quote:'소규모 수업이구 선생님들도 좋으시구요'},{text:'',url:'https://cafe.naver.com/godonghang/193656',region:'송파',date:'2026.09',quote:'수업 분위기도 좋고'}]},
-    {label:'커리큘럼/시스템',count:8,posts:[{text:'송파 초저다닐만한 수학학원있을까요?',url:'https://cafe.naver.com/everyhomework/913305',region:'송파',date:'2026.02',quote:'씨매쓰 사고력 괜찮아요'},{text:'사고력<b>수학학원</b>을 보내보려고 하는데',url:'https://cafe.naver.com/esyori/2744861',region:'송파',date:'2026.07',quote:'습관잡아주고 개념탄탄히 잡을수 있는 베이직반도 있어서요'},{text:'초3 아이 수학 공부는 무엇부터 시작해야 하나요?',url:'https://cafe.naver.com/zzandol/841769',region:'송파',date:'2026.08',quote:'어떻게 풀었는지 서로 생각을 이야기하는 방식으로 다양하게 문제를 활용'},{text:'7세<b>수학학원</b> 알아보고 있어요',url:'https://cafe.naver.com/mamworld/571091',region:'광진',date:'2026.09',quote:'아이 레벨별로 반편성이 이루어지고'},{text:'7세 사고력<b>수학학원</b> 시작하신 분!',url:'https://cafe.naver.com/nihongokkureomi/440015',region:'동대문',date:'2026.09',quote:'사고력수학과 교과목 수학도 학습되요'},{text:'',url:'https://cafe.naver.com/phoneinside/450499',region:'동대문',date:'2026.09',quote:'커리큐럼 구성이 잘되어있어요'},{text:'',url:'https://cafe.naver.com/godonghang/193656',region:'송파',date:'2026.09',quote:'레벨에 맞게 반 설정해 주는거 알고 잘 됐다 싶더라구요'},{text:'',url:'https://cafe.naver.com/applelog/874926',region:'중계',date:'2026.09',quote:'교구활용해서 학습하는것도 넘 좋아하구요'}]},
-    {label:'관리/피드백',count:3,posts:[{text:'사고력<b>수학학원</b>을 보내보려고 하는데',url:'https://cafe.naver.com/esyori/2744861',region:'송파',date:'2026.07',quote:'한달에 한번씩 상담도 해주시고 각 반별 오픈채팅방있어서 수업내용 사진올려주시는데'},{text:'',url:'https://cafe.naver.com/koreakmc/505033',region:'송파',date:'2026.09',quote:'아이 레테보고 반 설정해 주시니까'},{text:'',url:'https://cafe.naver.com/godonghang/193656',region:'송파',date:'2026.09',quote:'선생님 피드백도 잘 주시고'}]},
-    {label:'성적향상/성과',count:3,posts:[{text:'송파지역 사고력<b>수학학원</b> 문의해요',url:'https://cafe.naver.com/koreakmc/502083',region:'송파',date:'2026.08',quote:'다니고서 사고력수학 많이 늘어서 만족합니다'},{text:'',url:'https://cafe.naver.com/godonghang/193656',region:'송파',date:'2026.09',quote:'시매쓰 다니면서 푸는게 확실히 달라진거 같더라구요'},{text:'',url:'https://cafe.naver.com/applelog/874926',region:'중계',date:'2026.09',quote:'시매쓰 다니면서 수감각이 많이 올라왔어요'}]},
+    {label:'흥미/동기부여',count:9,posts:[{text:'',url:'https://cafe.naver.com/dochiya/1285156',region:'성동',date:'2024.05',quote:'씨매쓰 아이가 좋아해요'},{text:'송파지역 사고력수학학원 문의해요',url:'https://cafe.naver.com/koreakmc/502083',region:'송파',date:'2026.08',quote:'아이도 너무 재미있게 다녀요'},{text:'초3 아이 수학 공부는 무엇부터 시작해야 하나요?',url:'https://cafe.naver.com/zzandol/841769',region:'송파',date:'2026.08',quote:'아이의 수학 흥미뿐 아니라 서술형 논술형도 연습할 수 있어서 좋더라고요'},{text:'초등학교 저학년 학원 몇개씩 보내나요?',url:'https://cafe.naver.com/applelog/872866',region:'중계',date:'2026.08',quote:'시매쓰로 바꾸고 학원가는걸 엄청 좋아하거든요'},{text:'7세 사고력수학학원 시작하신 분!',url:'https://cafe.naver.com/nihongokkureomi/440015',region:'동대문',date:'2026.09',quote:'놀이수업으로 해서 엉덩이 힘도 길러주면서 학습할 수있어'},{text:'',url:'https://cafe.naver.com/phoneinside/450499',region:'동대문',date:'2026.09',quote:'사고력수학 재미나게 배울수 있게'},{text:'문정동 7세수학학원 어디로 보내세요?',url:'https://cafe.naver.com/sojbb2233/645527',region:'송파',date:'2026.09',quote:'아이가 일단 너무 재미있게 다니고 있어요'},{text:'7세 수학학원 엄마표 결정을 못하겠어요',url:'https://cafe.naver.com/applelog/875349',region:'중계',date:'2026.09',quote:'안그래도 좋아하는 수학에 푹 빠져있어요'},{text:'',url:'https://cafe.naver.com/applelog/874926',region:'중계',date:'2026.09',quote:'아이 너무 재미있게 다녀요 학원 가는날만 기다리구요'}]},
+    {label:'선생님/수업',count:3,posts:[{text:'',url:'https://cafe.naver.com/ira111/875026',region:'강동',date:'2025.09',quote:'선생님이 밝고 좋아보이셨어요'},{text:'송파지역 사고력수학학원 문의해요',url:'https://cafe.naver.com/koreakmc/502083',region:'송파',date:'2026.08',quote:'소규모 수업이구 선생님들도 좋으시구요'},{text:'',url:'https://cafe.naver.com/godonghang/193656',region:'송파',date:'2026.09',quote:'수업 분위기도 좋고'}]},
+    {label:'커리큘럼/시스템',count:8,posts:[{text:'송파 초저다닐만한 수학학원있을까요?',url:'https://cafe.naver.com/everyhomework/913305',region:'송파',date:'2026.02',quote:'씨매쓰 사고력 괜찮아요'},{text:'사고력수학학원을 보내보려고 하는데',url:'https://cafe.naver.com/esyori/2744861',region:'송파',date:'2026.07',quote:'습관잡아주고 개념탄탄히 잡을수 있는 베이직반도 있어서요'},{text:'초3 아이 수학 공부는 무엇부터 시작해야 하나요?',url:'https://cafe.naver.com/zzandol/841769',region:'송파',date:'2026.08',quote:'어떻게 풀었는지 서로 생각을 이야기하는 방식으로 다양하게 문제를 활용'},{text:'7세수학학원 알아보고 있어요',url:'https://cafe.naver.com/mamworld/571091',region:'광진',date:'2026.09',quote:'아이 레벨별로 반편성이 이루어지고'},{text:'7세 사고력수학학원 시작하신 분!',url:'https://cafe.naver.com/nihongokkureomi/440015',region:'동대문',date:'2026.09',quote:'사고력수학과 교과목 수학도 학습되요'},{text:'',url:'https://cafe.naver.com/phoneinside/450499',region:'동대문',date:'2026.09',quote:'커리큐럼 구성이 잘되어있어요'},{text:'',url:'https://cafe.naver.com/godonghang/193656',region:'송파',date:'2026.09',quote:'레벨에 맞게 반 설정해 주는거 알고 잘 됐다 싶더라구요'},{text:'',url:'https://cafe.naver.com/applelog/874926',region:'중계',date:'2026.09',quote:'교구활용해서 학습하는것도 넘 좋아하구요'}]},
+    {label:'관리/피드백',count:3,posts:[{text:'사고력수학학원을 보내보려고 하는데',url:'https://cafe.naver.com/esyori/2744861',region:'송파',date:'2026.07',quote:'한달에 한번씩 상담도 해주시고 각 반별 오픈채팅방있어서 수업내용 사진올려주시는데'},{text:'',url:'https://cafe.naver.com/koreakmc/505033',region:'송파',date:'2026.09',quote:'아이 레테보고 반 설정해 주시니까'},{text:'',url:'https://cafe.naver.com/godonghang/193656',region:'송파',date:'2026.09',quote:'선생님 피드백도 잘 주시고'}]},
+    {label:'성적향상/성과',count:3,posts:[{text:'송파지역 사고력수학학원 문의해요',url:'https://cafe.naver.com/koreakmc/502083',region:'송파',date:'2026.08',quote:'다니고서 사고력수학 많이 늘어서 만족합니다'},{text:'',url:'https://cafe.naver.com/godonghang/193656',region:'송파',date:'2026.09',quote:'시매쓰 다니면서 푸는게 확실히 달라진거 같더라구요'},{text:'',url:'https://cafe.naver.com/applelog/874926',region:'중계',date:'2026.09',quote:'시매쓰 다니면서 수감각이 많이 올라왔어요'}]},
     {label:'셔틀/접근성',count:1,posts:[{text:'',url:'https://cafe.naver.com/koreakmc/505033',region:'송파',date:'2026.09',quote:'차량도 있고'}]}
   ],
     cons: [
@@ -720,7 +720,7 @@ var MON_DATA = [
     '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,4,4,2,1,1,1,0,2,1,1]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:1,posts:[{text:'은사 <b>수학학원</b> 추천',url:'https://cafe.naver.com/joonggyeedu/57479',region:'중계',date:'2026.07',quote:'수준별로 가능한 거 같은데'}]}
+    {label:'커리큘럼/시스템',count:1,posts:[{text:'은사 수학학원 추천',url:'https://cafe.naver.com/joonggyeedu/57479',region:'중계',date:'2026.07',quote:'수준별로 가능한 거 같은데'}]}
   ],
     cons: [
     {label:'기타개선점',count:1,posts:[{text:'선덕고 학원 추천 부탁드립니다',url:'https://cafe.naver.com/joonggyeedu/46421',region:'중계',date:'2025.11',quote:'초반만 다니다가 옮기는 경우가 제법 있더라구요'}]}
@@ -778,10 +778,10 @@ var MON_DATA = [
   },
     pros: [
     {label:'선생님/수업',count:1,posts:[{text:'',url:'https://cafe.naver.com/ira111/875026',region:'강동',date:'2025.09',quote:'원장쌤 경력이 있으시고 강동에 계시다가 오셨어요'}]},
-    {label:'관리/피드백',count:2,posts:[{text:'위례 초등<b>수학학원</b> 숙제 너무 많지 않은 곳 있을까요?',url:'https://cafe.naver.com/koreakmc/505033',region:'송파',date:'2026.09',quote:'학습 성향을 참고해서 양을 조절해주시더라고요'},{text:'북위례 초등<b>수학학원</b> 상담 꼼꼼한 곳 찾고 있어요',url:'https://cafe.naver.com/zzandol/843822',region:'송파',date:'2026.09',quote:'상담할 때부터 관리 방향이 구체적이라 믿음이 갔어요'}]}
+    {label:'관리/피드백',count:2,posts:[{text:'위례 초등수학학원 숙제 너무 많지 않은 곳 있을까요?',url:'https://cafe.naver.com/koreakmc/505033',region:'송파',date:'2026.09',quote:'학습 성향을 참고해서 양을 조절해주시더라고요'},{text:'북위례 초등수학학원 상담 꼼꼼한 곳 찾고 있어요',url:'https://cafe.naver.com/zzandol/843822',region:'송파',date:'2026.09',quote:'상담할 때부터 관리 방향이 구체적이라 믿음이 갔어요'}]}
   ],
     cons: [
-    {label:'숙제/학습량부담',count:2,posts:[{text:'',url:'https://cafe.naver.com/ira111/875026',region:'강동',date:'2025.09',quote:'좀 빡세게 하는 편이라고 생각하시면 됩니다'},{text:'취학전 <b>수학학원</b> 고민입니다',url:'https://cafe.naver.com/junggyekids/14645',region:'중계',date:'2026.09',quote:'소마는 숙제도 많은 것 같고'}]}
+    {label:'숙제/학습량부담',count:2,posts:[{text:'',url:'https://cafe.naver.com/ira111/875026',region:'강동',date:'2025.09',quote:'좀 빡세게 하는 편이라고 생각하시면 됩니다'},{text:'취학전 수학학원 고민입니다',url:'https://cafe.naver.com/junggyekids/14645',region:'중계',date:'2026.09',quote:'소마는 숙제도 많은 것 같고'}]}
   ],
     allPosts: [{text:'대형수학학원 하남??',url:'https://cafe.naver.com/ira111/778452'},{text:'초등 학원문의 드려요',url:'https://cafe.naver.com/dochiya/1291509'},{text:'',url:'https://cafe.naver.com/everyhomework/889562'},{text:'',url:'https://cafe.naver.com/everyhomework/897621'},{text:'',url:'https://cafe.naver.com/ira111/875026'},{text:'',url:'https://cafe.naver.com/ira111/884128'},{text:'중계',url:'https://cafe.naver.com/joonggyeedu/51411'},{text:'',url:'https://cafe.naver.com/ira111/915435'},{text:'',url:'https://cafe.naver.com/dongdaemoonstory/316953'},{text:'',url:'https://cafe.naver.com/esyori/2744861'}]
   },
@@ -936,12 +936,12 @@ var MON_DATA = [
     pros: [
     {label:'커리큘럼/시스템',count:1,posts:[{text:'',url:'https://cafe.naver.com/dochiya/1307795',region:'광진',date:'2025.06',quote:'개별맞춤형이라 좋아보이던데'}]},
     {label:'셔틀/접근성',count:1,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/48088',region:'중계',date:'2025.12',quote:'와이즈만 셔틀있어요'}]},
-    {label:'흥미/동기부여',count:2,posts:[{text:'초5 <b>수학</b>,논술<b>학원</b> 추천해주세요',url:'https://cafe.naver.com/dongdaemoonstory/371055',region:'동대문',date:'2026.07',quote:'아이가 아주 좋아해요'},{text:'',url:'https://cafe.naver.com/dongdaemoonstory/371695',region:'동대문',date:'2026.08',quote:'아이가 아주 좋아해요'}]}
+    {label:'흥미/동기부여',count:2,posts:[{text:'초5 수학,논술학원 추천해주세요',url:'https://cafe.naver.com/dongdaemoonstory/371055',region:'동대문',date:'2026.07',quote:'아이가 아주 좋아해요'},{text:'',url:'https://cafe.naver.com/dongdaemoonstory/371695',region:'동대문',date:'2026.08',quote:'아이가 아주 좋아해요'}]}
   ],
     cons: [
 
   ],
-    allPosts: [{text:'',url:'https://cafe.naver.com/kidsinlove/1139726'},{text:'',url:'https://cafe.naver.com/dochiya/1307795'},{text:'',url:'https://cafe.naver.com/joonggyeedu/42864'},{text:'',url:'https://cafe.naver.com/esyori/2723634'},{text:'',url:'https://cafe.naver.com/joonggyeedu/48088'},{text:'',url:'https://cafe.naver.com/ira111/915435'},{text:'초5 <b>수학</b>,논술<b>학원</b> 추천해주세요',url:'https://cafe.naver.com/dongdaemoonstory/371055'},{text:'',url:'https://cafe.naver.com/esyori/2744861'},{text:'',url:'https://cafe.naver.com/junggyekids/14376'},{text:'',url:'https://cafe.naver.com/dongdaemoonstory/372307'}]
+    allPosts: [{text:'',url:'https://cafe.naver.com/kidsinlove/1139726'},{text:'',url:'https://cafe.naver.com/dochiya/1307795'},{text:'',url:'https://cafe.naver.com/joonggyeedu/42864'},{text:'',url:'https://cafe.naver.com/esyori/2723634'},{text:'',url:'https://cafe.naver.com/joonggyeedu/48088'},{text:'',url:'https://cafe.naver.com/ira111/915435'},{text:'초5 수학,논술학원 추천해주세요',url:'https://cafe.naver.com/dongdaemoonstory/371055'},{text:'',url:'https://cafe.naver.com/esyori/2744861'},{text:'',url:'https://cafe.naver.com/junggyekids/14376'},{text:'',url:'https://cafe.naver.com/dongdaemoonstory/372307'}]
   },
   {
     name: '해법', us: false,
@@ -965,8 +965,8 @@ var MON_DATA = [
   },
     pros: [
     {label:'흥미/동기부여',count:1,posts:[{text:'',url:'https://cafe.naver.com/ira111/875026',region:'강동',date:'2025.09',quote:'매우 즐겁게 잘다닌걸요'}]},
-    {label:'커리큘럼/시스템',count:1,posts:[{text:'<b>수학학원</b> 추천부탁드려요~',url:'https://cafe.naver.com/bbbx/869865',region:'송파',date:'2026.09',quote:'서술형도 체계적으로 수업하시고'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'<b>수학학원</b> 추천부탁드려요~',url:'https://cafe.naver.com/bbbx/869865',region:'송파',date:'2026.09',quote:'아이가 너무 선생님을 좋아해요'}]}
+    {label:'커리큘럼/시스템',count:1,posts:[{text:'수학학원 추천부탁드려요~',url:'https://cafe.naver.com/bbbx/869865',region:'송파',date:'2026.09',quote:'서술형도 체계적으로 수업하시고'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'수학학원 추천부탁드려요~',url:'https://cafe.naver.com/bbbx/869865',region:'송파',date:'2026.09',quote:'아이가 너무 선생님을 좋아해요'}]}
   ],
     cons: [
     {label:'숙제/학습량부담',count:1,posts:[{text:'초등6학년 영,수 학원 문의~',url:'https://cafe.naver.com/kidsinlove/1132958',region:'미사',date:'2024.10',quote:'영어는 빽빽이 숙제가 너무 힘들다고 울고불고해서 그만두었고'}]},
@@ -991,12 +991,12 @@ var MON_DATA = [
     '송파': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:2,posts:[{text:'',url:'https://cafe.naver.com/dongdaemoonstory/326039',region:'동대문',date:'2024.06',quote:'라이팅은 확실히 많이 늘었어요'},{text:'중랑 <b>닥스</b> 영어 유치원 후기와 설명회일정',url:'https://cafe.naver.com/jungnangbaby/766258',region:'중랑',date:'2026.09',quote:'영어 뿐만 아니라 한글 수학까지도 함께 배울수 있단 점'}]},
+    {label:'커리큘럼/시스템',count:2,posts:[{text:'',url:'https://cafe.naver.com/dongdaemoonstory/326039',region:'동대문',date:'2024.06',quote:'라이팅은 확실히 많이 늘었어요'},{text:'중랑 닥스 영어 유치원 후기와 설명회일정',url:'https://cafe.naver.com/jungnangbaby/766258',region:'중랑',date:'2026.09',quote:'영어 뿐만 아니라 한글 수학까지도 함께 배울수 있단 점'}]},
     {label:'차량/접근성',count:1,posts:[{text:'',url:'https://cafe.naver.com/dongdaemoonstory/349753',region:'동대문',date:'2025.05',quote:'초3도 닥스어학원 등의 차량이 가능해요'}]},
     {label:'셔틀/접근성',count:1,posts:[{text:'',url:'https://cafe.naver.com/richload/11182',region:'중랑',date:'2025.05',quote:'에이프릴이랑 닥스어학원 차도 오더라고요'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'중랑 <b>닥스</b> 영어 유치원 후기와 설명회일정',url:'https://cafe.naver.com/jungnangbaby/766258',region:'중랑',date:'2026.09',quote:'선생님들의 배려였어요'}]},
-    {label:'관리/피드백',count:1,posts:[{text:'중랑 <b>닥스</b> 영어 유치원 후기와 설명회일정',url:'https://cafe.naver.com/jungnangbaby/766258',region:'중랑',date:'2026.09',quote:'아이의 속도에 맞춰 기다려 주고 스스로 할수있도록 도와주는 환경'}]},
-    {label:'성적향상/성과',count:1,posts:[{text:'중랑 <b>닥스</b> 영어 유치원 후기와 설명회일정',url:'https://cafe.naver.com/jungnangbaby/766258',region:'중랑',date:'2026.09',quote:'영어로 말하는게 편하다고 하더라고요'}]}
+    {label:'선생님/수업',count:1,posts:[{text:'중랑 닥스 영어 유치원 후기와 설명회일정',url:'https://cafe.naver.com/jungnangbaby/766258',region:'중랑',date:'2026.09',quote:'선생님들의 배려였어요'}]},
+    {label:'관리/피드백',count:1,posts:[{text:'중랑 닥스 영어 유치원 후기와 설명회일정',url:'https://cafe.naver.com/jungnangbaby/766258',region:'중랑',date:'2026.09',quote:'아이의 속도에 맞춰 기다려 주고 스스로 할수있도록 도와주는 환경'}]},
+    {label:'성적향상/성과',count:1,posts:[{text:'중랑 닥스 영어 유치원 후기와 설명회일정',url:'https://cafe.naver.com/jungnangbaby/766258',region:'중랑',date:'2026.09',quote:'영어로 말하는게 편하다고 하더라고요'}]}
   ],
     cons: [
 
@@ -1091,7 +1091,7 @@ var MON_DATA = [
     cons: [
 
   ],
-    allPosts: [{text:'',url:'https://cafe.naver.com/kidsinlove/1102469'},{text:'',url:'https://cafe.naver.com/dochiya/1310818'},{text:'',url:'https://cafe.naver.com/ira111/875026'},{text:'자녀분들 학원 이것만큼은 꼭 이시기에 보내고싶다라는거 있으실까요?',url:'https://cafe.naver.com/ira111/915435'},{text:'사고력 <b>수학</b> 꼭 <b>학원</b>까지 보내야 할까요?ㅠ',url:'https://cafe.naver.com/joonggomaket/261145'},{text:'하남에 사고력 <b>수학학원</b> 어디있나요??',url:'https://cafe.naver.com/hsite/167084'},{text:'',url:'https://cafe.naver.com/koreakmc/502083'},{text:'초등수학개념문제집 초3 추천 부탁드려요',url:'https://cafe.naver.com/applelog/873241'},{text:'초등 5학년이면 <b>수학학원</b> 다니나요?',url:'https://cafe.naver.com/ira111/925084'},{text:'육아선배님 조언부탁드립니다..23년생 워킹맘, 시립 어린이집 자리 났는데 옮길까요? 너무 고민돼요ㅠㅠ',url:'https://cafe.naver.com/ira111/925276'}]
+    allPosts: [{text:'',url:'https://cafe.naver.com/kidsinlove/1102469'},{text:'',url:'https://cafe.naver.com/dochiya/1310818'},{text:'',url:'https://cafe.naver.com/ira111/875026'},{text:'자녀분들 학원 이것만큼은 꼭 이시기에 보내고싶다라는거 있으실까요?',url:'https://cafe.naver.com/ira111/915435'},{text:'사고력 수학 꼭 학원까지 보내야 할까요?ㅠ',url:'https://cafe.naver.com/joonggomaket/261145'},{text:'하남에 사고력 수학학원 어디있나요??',url:'https://cafe.naver.com/hsite/167084'},{text:'',url:'https://cafe.naver.com/koreakmc/502083'},{text:'초등수학개념문제집 초3 추천 부탁드려요',url:'https://cafe.naver.com/applelog/873241'},{text:'초등 5학년이면 수학학원 다니나요?',url:'https://cafe.naver.com/ira111/925084'},{text:'육아선배님 조언부탁드립니다..23년생 워킹맘, 시립 어린이집 자리 났는데 옮길까요? 너무 고민돼요ㅠㅠ',url:'https://cafe.naver.com/ira111/925276'}]
   },
   {
     name: '홍재룡', us: false,
@@ -1195,16 +1195,16 @@ var MON_DATA = [
     '동대문': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
   },
     pros: [
-    {label:'선생님/수업',count:6,posts:[{text:'',url:'https://cafe.naver.com/ira111/788703',region:'하남',date:'2024.04',quote:'생활도 잘 잡아주시고 남아들이 참 공부하기 좋은 환경으로 지도해주십니다'},{text:'',url:'https://cafe.naver.com/hsite/162279',region:'하남',date:'2025.11',quote:'민정범쌤 수업 좋아요'},{text:'초등학교 수학학원 송파 vs 잠실.. 거리 때문에 고민이에요',url:'https://cafe.naver.com/bbbx/827415',region:'송파',date:'2026.01',quote:'초등 수학은 정말 잘 가르친다고 들어서요 / 엠베스트 잠실 괜찮더라고요'},{text:'<b>수학</b>, 과학을 함께 배울수 있는 <b>학원</b> 추천 부탁드려요.',url:'https://cafe.naver.com/joonggyeedu/56641',region:'중계',date:'2026.07',quote:'개념부터 심화까지 이해 잘 되게 설명해주시니'},{text:'초5 <b>수학학원</b> 추천(8단지 상가)',url:'https://cafe.naver.com/ira111/921534',region:'미사',date:'2026.08',quote:'원장쌤이 기초부터 차근차근 잘 가르쳐 주셔요'},{text:'',url:'https://cafe.naver.com/ira111/926754',region:'미사',date:'2026.09',quote:'장품쌤 수업 좋아요. 저희아이 잘 듣고있어요'}]},
+    {label:'선생님/수업',count:6,posts:[{text:'',url:'https://cafe.naver.com/ira111/788703',region:'하남',date:'2024.04',quote:'생활도 잘 잡아주시고 남아들이 참 공부하기 좋은 환경으로 지도해주십니다'},{text:'',url:'https://cafe.naver.com/hsite/162279',region:'하남',date:'2025.11',quote:'민정범쌤 수업 좋아요'},{text:'초등학교 수학학원 송파 vs 잠실.. 거리 때문에 고민이에요',url:'https://cafe.naver.com/bbbx/827415',region:'송파',date:'2026.01',quote:'초등 수학은 정말 잘 가르친다고 들어서요 / 엠베스트 잠실 괜찮더라고요'},{text:'수학, 과학을 함께 배울수 있는 학원 추천 부탁드려요.',url:'https://cafe.naver.com/joonggyeedu/56641',region:'중계',date:'2026.07',quote:'개념부터 심화까지 이해 잘 되게 설명해주시니'},{text:'초5 수학학원 추천(8단지 상가)',url:'https://cafe.naver.com/ira111/921534',region:'미사',date:'2026.08',quote:'원장쌤이 기초부터 차근차근 잘 가르쳐 주셔요'},{text:'',url:'https://cafe.naver.com/ira111/926754',region:'미사',date:'2026.09',quote:'장품쌤 수업 좋아요. 저희아이 잘 듣고있어요'}]},
     {label:'시설/환경',count:1,posts:[{text:'',url:'https://cafe.naver.com/ira111/788703',region:'하남',date:'2024.04',quote:'남아들이 참 공부하기 좋은 환경으로 지도해주십니다'}]},
     {label:'커리큘럼/시스템',count:2,posts:[{text:'',url:'https://cafe.naver.com/hsite/162279',region:'하남',date:'2025.11',quote:'개념원리부터 최상위나 블랙라벨까지 수준별로 강의 다 있어서'},{text:'',url:'https://cafe.naver.com/ira111/895305',region:'미사',date:'2026.01',quote:'수학은 구멍없는게 좋아서요'}]},
     {label:'관리/피드백',count:2,posts:[{text:'',url:'https://cafe.naver.com/ira111/895305',region:'미사',date:'2026.01',quote:'원장님 보강도 잘해주시고'},{text:'중학생인데 온라인 패드 하시나요?',url:'https://cafe.naver.com/dongdaemoonstory/373176',region:'동대문',date:'2026.09',quote:'1:1 맞춤 관리도 해줘서 자기주도 학습에 도움되는거 같아요'}]},
-    {label:'흥미/동기부여',count:1,posts:[{text:'<b>수학</b>, 과학을 함께 배울수 있는 <b>학원</b> 추천 부탁드려요.',url:'https://cafe.naver.com/joonggyeedu/56641',region:'중계',date:'2026.07',quote:'재미붙이더라구요'}]}
+    {label:'흥미/동기부여',count:1,posts:[{text:'수학, 과학을 함께 배울수 있는 학원 추천 부탁드려요.',url:'https://cafe.naver.com/joonggyeedu/56641',region:'중계',date:'2026.07',quote:'재미붙이더라구요'}]}
   ],
     cons: [
 
   ],
-    allPosts: [{text:'',url:'https://cafe.naver.com/ira111/788703'},{text:'',url:'https://cafe.naver.com/joonggyeedu/41939'},{text:'',url:'https://cafe.naver.com/hsite/162279'},{text:'',url:'https://cafe.naver.com/ira111/886359'},{text:'',url:'https://cafe.naver.com/ira111/895305'},{text:'초등학교 수학학원 송파 vs 잠실.. 거리 때문에 고민이에요',url:'https://cafe.naver.com/bbbx/827415'},{text:'<b>수학</b>, 과학을 함께 배울수 있는 <b>학원</b> 추천 부탁드려요.',url:'https://cafe.naver.com/joonggyeedu/56641'},{text:'초5 <b>수학학원</b> 추천(8단지 상가)',url:'https://cafe.naver.com/ira111/921534'},{text:'중학생인데 온라인 패드 하시나요?',url:'https://cafe.naver.com/dongdaemoonstory/373176'},{text:'',url:'https://cafe.naver.com/ira111/926754'}]
+    allPosts: [{text:'',url:'https://cafe.naver.com/ira111/788703'},{text:'',url:'https://cafe.naver.com/joonggyeedu/41939'},{text:'',url:'https://cafe.naver.com/hsite/162279'},{text:'',url:'https://cafe.naver.com/ira111/886359'},{text:'',url:'https://cafe.naver.com/ira111/895305'},{text:'초등학교 수학학원 송파 vs 잠실.. 거리 때문에 고민이에요',url:'https://cafe.naver.com/bbbx/827415'},{text:'수학, 과학을 함께 배울수 있는 학원 추천 부탁드려요.',url:'https://cafe.naver.com/joonggyeedu/56641'},{text:'초5 수학학원 추천(8단지 상가)',url:'https://cafe.naver.com/ira111/921534'},{text:'중학생인데 온라인 패드 하시나요?',url:'https://cafe.naver.com/dongdaemoonstory/373176'},{text:'',url:'https://cafe.naver.com/ira111/926754'}]
   },
   {
     name: '수재', us: false,
@@ -1238,14 +1238,14 @@ var MON_DATA = [
     pros: [
     {label:'셔틀/접근성',count:2,posts:[{text:'',url:'https://cafe.naver.com/aldisgo123d/965361',region:'중계',date:'2024.07',quote:'셔틀 이용해야 해서 미탐 알로곤 조재필 알아봤었어요'},{text:'',url:'https://cafe.naver.com/joonggyeedu/49170',region:'중계',date:'2026.01',quote:'중등이면 알로곤도 될겁니다'}]},
     {label:'커리큘럼/시스템',count:1,posts:[{text:'학원고민입니다',url:'https://cafe.naver.com/joonggyeedu/45746',region:'중계',date:'2025.10',quote:'알로곤 다니세요. 내공이 탄탄한 곳입니다'}]},
-    {label:'합리적가격',count:2,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/46644',region:'중계',date:'2025.11',quote:'알로곤이 시수가 적어 가성비 좋지만'},{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06',quote:'가격이 저렴하다는 장점'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06',quote:'선생님 설명이 이해가 잘된데요. 질문 잘 받아주시고'}]}
+    {label:'합리적가격',count:2,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/46644',region:'중계',date:'2025.11',quote:'알로곤이 시수가 적어 가성비 좋지만'},{text:'알로곤수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06',quote:'가격이 저렴하다는 장점'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'알로곤수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06',quote:'선생님 설명이 이해가 잘된데요. 질문 잘 받아주시고'}]}
   ],
     cons: [
     {label:'개별관리부족',count:1,posts:[{text:'',url:'https://cafe.naver.com/joonggyeedu/46644',region:'중계',date:'2025.11',quote:'그만큼 엄마가 더 신경써야해요'}]},
-    {label:'기타개선점',count:1,posts:[{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06',quote:'선생님들이 대체적으로 나이가 있으시고 무서워서 여자아이 뿐만 아니라 조용한 남자애들도 비추'}]}
+    {label:'기타개선점',count:1,posts:[{text:'알로곤수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623',region:'중계',date:'2026.06',quote:'선생님들이 대체적으로 나이가 있으시고 무서워서 여자아이 뿐만 아니라 조용한 남자애들도 비추'}]}
   ],
-    allPosts: [{text:'',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'kmo & 영과고 대비 학원 추천',url:'https://cafe.naver.com/joonggyeedu/43601'},{text:'학원고민입니다',url:'https://cafe.naver.com/joonggyeedu/45746'},{text:'',url:'https://cafe.naver.com/joonggyeedu/46644'},{text:'',url:'https://cafe.naver.com/joonggyeedu/48088'},{text:'',url:'https://cafe.naver.com/joonggyeedu/49170'},{text:'',url:'https://cafe.naver.com/joonggyeedu/49491'},{text:'<b>알로곤</b>수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623'}]
+    allPosts: [{text:'',url:'https://cafe.naver.com/joonggyeedu/55131'},{text:'',url:'https://cafe.naver.com/aldisgo123d/965361'},{text:'kmo & 영과고 대비 학원 추천',url:'https://cafe.naver.com/joonggyeedu/43601'},{text:'학원고민입니다',url:'https://cafe.naver.com/joonggyeedu/45746'},{text:'',url:'https://cafe.naver.com/joonggyeedu/46644'},{text:'',url:'https://cafe.naver.com/joonggyeedu/48088'},{text:'',url:'https://cafe.naver.com/joonggyeedu/49170'},{text:'',url:'https://cafe.naver.com/joonggyeedu/49491'},{text:'알로곤수학학원 어떤가요??',url:'https://cafe.naver.com/joonggyeedu/55623'}]
   },
   {
     name: '최강수학', us: false,
@@ -1265,15 +1265,15 @@ var MON_DATA = [
   },
     pros: [
     {label:'셔틀/접근성',count:1,posts:[{text:'동대문구 수학학원',url:'https://cafe.naver.com/3gumomclub/1509284',region:'동대문',date:'2025.10',quote:'청량리 차량 됨'}]},
-    {label:'커리큘럼/시스템',count:2,posts:[{text:'초등학교 고학년 <b>수학</b>-&gt;공통<b>수학</b>1+6학년복습 <b>학원</b>있을까요?~~',url:'https://cafe.naver.com/ira111/922928',region:'미사',date:'2026.08',quote:'개별진도인데 공통1이랑 초6 복습도 가능 할것도 같은데'},{text:'청아초 근처 <b>수학 학원</b> 어디 보내나요?',url:'https://cafe.naver.com/kfromancer/58456',region:'미사',date:'2026.09',quote:'개별 맞춤이라 확실히 아이 속도에 맞춰서 잘 챙겨주시더라구요'}]},
+    {label:'커리큘럼/시스템',count:2,posts:[{text:'초등학교 고학년 수학-&gt;공통수학1+6학년복습 학원있을까요?~~',url:'https://cafe.naver.com/ira111/922928',region:'미사',date:'2026.08',quote:'개별진도인데 공통1이랑 초6 복습도 가능 할것도 같은데'},{text:'청아초 근처 수학 학원 어디 보내나요?',url:'https://cafe.naver.com/kfromancer/58456',region:'미사',date:'2026.09',quote:'개별 맞춤이라 확실히 아이 속도에 맞춰서 잘 챙겨주시더라구요'}]},
     {label:'선생님/수업',count:1,posts:[{text:'미사역 근처 수학학원 추천 부탁드려요',url:'https://cafe.naver.com/mp3musicbox/268412',region:'미사',date:'2026.08',quote:'원장님이 개념을 직접 설명해주시고 문제 풀이와 오답도 아이 진도에 맞춰 관리'}]},
-    {label:'관리/피드백',count:2,posts:[{text:'미사역 근처 수학학원 추천 부탁드려요',url:'https://cafe.naver.com/mp3musicbox/268412',region:'미사',date:'2026.08',quote:'아이 진도에 맞춰 관리해주셔서 괜찮더라고요'},{text:'청아초 근처 <b>수학 학원</b> 어디 보내나요?',url:'https://cafe.naver.com/kfromancer/58456',region:'미사',date:'2026.09',quote:'소수라 선생님이 밀착 관리 잘해주시는 게 제일 마음에 드는데'}]},
+    {label:'관리/피드백',count:2,posts:[{text:'미사역 근처 수학학원 추천 부탁드려요',url:'https://cafe.naver.com/mp3musicbox/268412',region:'미사',date:'2026.08',quote:'아이 진도에 맞춰 관리해주셔서 괜찮더라고요'},{text:'청아초 근처 수학 학원 어디 보내나요?',url:'https://cafe.naver.com/kfromancer/58456',region:'미사',date:'2026.09',quote:'소수라 선생님이 밀착 관리 잘해주시는 게 제일 마음에 드는데'}]},
     {label:'반복/심화학습',count:1,posts:[{text:'미사역 근처 수학학원 추천 부탁드려요',url:'https://cafe.naver.com/mp3musicbox/268412',region:'미사',date:'2026.08',quote:'부족한 부분을 반복해서 봐주셔서 만족하고 있어요'}]}
   ],
     cons: [
 
   ],
-    allPosts: [{text:'',url:'https://cafe.naver.com/everyhomework/876913'},{text:'',url:'https://cafe.naver.com/everyhomework/876513'},{text:'중3 수학학원이요ㅠ',url:'https://cafe.naver.com/misamamsnbaby/85770'},{text:'',url:'https://cafe.naver.com/joonggyeedu/41010'},{text:'동대문구 수학학원',url:'https://cafe.naver.com/3gumomclub/1509284'},{text:'',url:'https://cafe.naver.com/mktsesang/1199225'},{text:'초등학교 고학년 <b>수학</b>-&gt;공통<b>수학</b>1+6학년복습 <b>학원</b>있을까요?~~',url:'https://cafe.naver.com/ira111/922928'},{text:'미사역 근처 수학학원 추천 부탁드려요',url:'https://cafe.naver.com/mp3musicbox/268412'},{text:'청아초 근처 <b>수학 학원</b> 어디 보내나요?',url:'https://cafe.naver.com/kfromancer/58456'}]
+    allPosts: [{text:'',url:'https://cafe.naver.com/everyhomework/876913'},{text:'',url:'https://cafe.naver.com/everyhomework/876513'},{text:'중3 수학학원이요ㅠ',url:'https://cafe.naver.com/misamamsnbaby/85770'},{text:'',url:'https://cafe.naver.com/joonggyeedu/41010'},{text:'동대문구 수학학원',url:'https://cafe.naver.com/3gumomclub/1509284'},{text:'',url:'https://cafe.naver.com/mktsesang/1199225'},{text:'초등학교 고학년 수학-&gt;공통수학1+6학년복습 학원있을까요?~~',url:'https://cafe.naver.com/ira111/922928'},{text:'미사역 근처 수학학원 추천 부탁드려요',url:'https://cafe.naver.com/mp3musicbox/268412'},{text:'청아초 근처 수학 학원 어디 보내나요?',url:'https://cafe.naver.com/kfromancer/58456'}]
   },
   {
     name: 'ECC', us: false,
@@ -1444,14 +1444,14 @@ var MON_DATA = [
     '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
   },
     pros: [
-    {label:'선생님/수업',count:1,posts:[{text:'중학교 <b>수학</b> 시작하니 <b>학원</b> 선택이 고민되네요',url:'https://cafe.naver.com/nihongokkureomi/440147',region:'도봉',date:'2026.09',quote:'선생님이 넘 잘봐주셔서영어까지 여기서 다 다니고있네요'}]},
-    {label:'관리/피드백',count:7,posts:[{text:'중학교 <b>수학</b> 시작하니 <b>학원</b> 선택이 고민되네요',url:'https://cafe.naver.com/nihongokkureomi/440147',region:'도봉',date:'2026.09',quote:'소수정예로 하는곳있어요'},{text:'도봉구 <b>수학</b> 영어 잘가르치는 <b>학원</b> 추천해주세요',url:'https://cafe.naver.com/nihongokkureomi/439868',region:'도봉',date:'2026.09',quote:'소수정예로 수업하고 있어서 아이들 꼼꼼하게 관리해주고'},{text:'쌍문동 수학학원 정보 부탁드립니다!',url:'https://cafe.naver.com/nihongokkureomi/439362',region:'도봉',date:'2026.09',quote:'내신 관리도 잘해주시고 아이가 이해안되는 부분을 꼼꼼하게 봐주셔서'},{text:'쌍문동 영어학원 찾아보고 있어요',url:'https://cafe.naver.com/agameworld/905651',region:'쌍문',date:'2026.09',quote:'소수인원으로 운영되면서 제대로 관리해주시는데요'},{text:'쌍문동 영어학원 어디가 괜찮을까요?',url:'https://cafe.naver.com/aldisgo123d/1031350',region:'노원',date:'2026.09',quote:'선생님이 넘 꼼꼼하게 잘봐주시고해서 영어까지 여기로 다니고 있네요'},{text:'아이 <b>수학학원</b> 고민이 많네요~',url:'https://cafe.naver.com/applelog/874200',region:'중계',date:'2026.09',quote:'반별 인원 많지 않아서 잘 꼼꼼하게 봐주셨고'},{text:'쌍문동 영어학원 어디 다니는지 궁금해요~',url:'https://cafe.naver.com/applelog/874604',region:'쌍문',date:'2026.09',quote:'소수로 수업해서 그런지 아이들 관리도 꼼꼼하고'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'중학교 수학 시작하니 학원 선택이 고민되네요',url:'https://cafe.naver.com/nihongokkureomi/440147',region:'도봉',date:'2026.09',quote:'선생님이 넘 잘봐주셔서영어까지 여기서 다 다니고있네요'}]},
+    {label:'관리/피드백',count:7,posts:[{text:'중학교 수학 시작하니 학원 선택이 고민되네요',url:'https://cafe.naver.com/nihongokkureomi/440147',region:'도봉',date:'2026.09',quote:'소수정예로 하는곳있어요'},{text:'도봉구 수학 영어 잘가르치는 학원 추천해주세요',url:'https://cafe.naver.com/nihongokkureomi/439868',region:'도봉',date:'2026.09',quote:'소수정예로 수업하고 있어서 아이들 꼼꼼하게 관리해주고'},{text:'쌍문동 수학학원 정보 부탁드립니다!',url:'https://cafe.naver.com/nihongokkureomi/439362',region:'도봉',date:'2026.09',quote:'내신 관리도 잘해주시고 아이가 이해안되는 부분을 꼼꼼하게 봐주셔서'},{text:'쌍문동 영어학원 찾아보고 있어요',url:'https://cafe.naver.com/agameworld/905651',region:'쌍문',date:'2026.09',quote:'소수인원으로 운영되면서 제대로 관리해주시는데요'},{text:'쌍문동 영어학원 어디가 괜찮을까요?',url:'https://cafe.naver.com/aldisgo123d/1031350',region:'노원',date:'2026.09',quote:'선생님이 넘 꼼꼼하게 잘봐주시고해서 영어까지 여기로 다니고 있네요'},{text:'아이 수학학원 고민이 많네요~',url:'https://cafe.naver.com/applelog/874200',region:'중계',date:'2026.09',quote:'반별 인원 많지 않아서 잘 꼼꼼하게 봐주셨고'},{text:'쌍문동 영어학원 어디 다니는지 궁금해요~',url:'https://cafe.naver.com/applelog/874604',region:'쌍문',date:'2026.09',quote:'소수로 수업해서 그런지 아이들 관리도 꼼꼼하고'}]},
     {label:'커리큘럼/시스템',count:1,posts:[{text:'쌍문동 영어학원 어디 다니는지 궁금해요~',url:'https://cafe.naver.com/applelog/874604',region:'쌍문',date:'2026.09',quote:'내신 준비도 잘해주셔서 만족하고 있네요'}]}
   ],
     cons: [
 
   ],
-    allPosts: [{text:'중학교 <b>수학</b> 시작하니 <b>학원</b> 선택이 고민되네요',url:'https://cafe.naver.com/nihongokkureomi/440147'},{text:'도봉구 <b>수학</b> 영어 잘가르치는 <b>학원</b> 추천해주세요',url:'https://cafe.naver.com/nihongokkureomi/439868'},{text:'쌍문동 수학학원 정보 부탁드립니다!',url:'https://cafe.naver.com/nihongokkureomi/439362'},{text:'쌍문동 영어학원 찾아보고 있어요',url:'https://cafe.naver.com/agameworld/905651'},{text:'쌍문동 영어학원 어디가 괜찮을까요?',url:'https://cafe.naver.com/aldisgo123d/1031350'},{text:'아이 <b>수학학원</b> 고민이 많네요~',url:'https://cafe.naver.com/applelog/874200'},{text:'쌍문동 영어학원 어디 다니는지 궁금해요~',url:'https://cafe.naver.com/applelog/874604'}]
+    allPosts: [{text:'중학교 수학 시작하니 학원 선택이 고민되네요',url:'https://cafe.naver.com/nihongokkureomi/440147'},{text:'도봉구 수학 영어 잘가르치는 학원 추천해주세요',url:'https://cafe.naver.com/nihongokkureomi/439868'},{text:'쌍문동 수학학원 정보 부탁드립니다!',url:'https://cafe.naver.com/nihongokkureomi/439362'},{text:'쌍문동 영어학원 찾아보고 있어요',url:'https://cafe.naver.com/agameworld/905651'},{text:'쌍문동 영어학원 어디가 괜찮을까요?',url:'https://cafe.naver.com/aldisgo123d/1031350'},{text:'아이 수학학원 고민이 많네요~',url:'https://cafe.naver.com/applelog/874200'},{text:'쌍문동 영어학원 어디 다니는지 궁금해요~',url:'https://cafe.naver.com/applelog/874604'}]
   },
   {
     name: '러셀', us: false,
@@ -1508,7 +1508,7 @@ var MON_DATA = [
     cons: [
 
   ],
-    allPosts: [{text:'',url:'https://cafe.naver.com/joonggyeedu/52857'},{text:'중3 <b>수학학원</b> 추천해주세요',url:'https://cafe.naver.com/joonggyeedu/57574'},{text:'',url:'https://cafe.naver.com/joonggyeedu/57312'},{text:'고1 수학 학원 추천 부탁 드립니다',url:'https://cafe.naver.com/joonggyeedu/57600'},{text:'현 중3 학원 추천해주세요^^',url:'https://cafe.naver.com/joonggyeedu/57588'},{text:'',url:'https://cafe.naver.com/joonggyeedu/57360'},{text:'고등수학',url:'https://cafe.naver.com/joonggyeedu/58444'}]
+    allPosts: [{text:'',url:'https://cafe.naver.com/joonggyeedu/52857'},{text:'중3 수학학원 추천해주세요',url:'https://cafe.naver.com/joonggyeedu/57574'},{text:'',url:'https://cafe.naver.com/joonggyeedu/57312'},{text:'고1 수학 학원 추천 부탁 드립니다',url:'https://cafe.naver.com/joonggyeedu/57600'},{text:'현 중3 학원 추천해주세요^^',url:'https://cafe.naver.com/joonggyeedu/57588'},{text:'',url:'https://cafe.naver.com/joonggyeedu/57360'},{text:'고등수학',url:'https://cafe.naver.com/joonggyeedu/58444'}]
   },
   {
     name: '매시브', us: false,
@@ -1566,7 +1566,7 @@ var MON_DATA = [
     '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
   },
     pros: [
-    {label:'흥미/동기부여',count:3,posts:[{text:'',url:'https://cafe.naver.com/seochomomi/95955',region:'미사',date:'2025.07',quote:'아이가 재밌어하기도하고'},{text:'초1 <b>수학학원</b> 시기 질문입니다',url:'https://cafe.naver.com/sojbb2233/644292',region:'송파',date:'2026.07',quote:'다른 곳 대비 컨텐츠가 재미있는게 많아요, 저학년 애들이 하기 참 좋거든요'},{text:'초4 영어 패드만 하는거 어때요??',url:'https://cafe.naver.com/godonghang/191282',region:'송파',date:'2026.07',quote:'재미있는 컨텐츠도 많고, 아이가 집중 잘할 수밖에 없게 만들어놓은 점도 좋고요'}]},
+    {label:'흥미/동기부여',count:3,posts:[{text:'',url:'https://cafe.naver.com/seochomomi/95955',region:'미사',date:'2025.07',quote:'아이가 재밌어하기도하고'},{text:'초1 수학학원 시기 질문입니다',url:'https://cafe.naver.com/sojbb2233/644292',region:'송파',date:'2026.07',quote:'다른 곳 대비 컨텐츠가 재미있는게 많아요, 저학년 애들이 하기 참 좋거든요'},{text:'초4 영어 패드만 하는거 어때요??',url:'https://cafe.naver.com/godonghang/191282',region:'송파',date:'2026.07',quote:'재미있는 컨텐츠도 많고, 아이가 집중 잘할 수밖에 없게 만들어놓은 점도 좋고요'}]},
     {label:'커리큘럼/시스템',count:4,posts:[{text:'',url:'https://cafe.naver.com/seochomomi/95955',region:'미사',date:'2025.07',quote:'한글 수학 영어 다 노출해주고있어요'},{text:'',url:'https://cafe.naver.com/joonggomaket/261145',region:'',date:'2026.07',quote:'AI가 아이 수준 진단 후 맞춤 학습 추천'},{text:'초4 영어 패드만 하는거 어때요??',url:'https://cafe.naver.com/godonghang/191282',region:'송파',date:'2026.07',quote:'영어 도서관이나 파닉스 콘텐츠가 잘 되어 있어서 아이가 혼자 재미있게 잘 봐요'},{text:'중3 수학 정리하기 좋은 인강 추천해주세요',url:'https://cafe.naver.com/esyori/2749029',region:'송파',date:'2026.08',quote:'아이 난이도에 맞게 수업들으니까 쉽게 이해하기도 하고 내신 대비도 괜찮아요'}]},
     {label:'관리/피드백',count:3,posts:[{text:'',url:'https://cafe.naver.com/joonggomaket/261145',region:'',date:'2026.07',quote:'1:1 선생님이 관리해주심'},{text:'중3 수학 정리하기 좋은 인강 추천해주세요',url:'https://cafe.naver.com/esyori/2749029',region:'송파',date:'2026.08',quote:'AI가 틀린 문제 유형 분석해 줘서 틈틈이 비는 개념 메우기 진짜 유용'},{text:'초3 사고력수학 학습 가능한 패드있을까요?',url:'https://cafe.naver.com/aldisgo123d/1031449',region:'중계',date:'2026.09',quote:'관리 선생님도 있고 일대일로 첨삭과외 같은 것도 해주셔서'}]},
     {label:'선생님/수업',count:1,posts:[{text:'중3 수학 정리하기 좋은 인강 추천해주세요',url:'https://cafe.naver.com/esyori/2749029',region:'송파',date:'2026.08',quote:'1:1 담당 선생님이 주기적으로 학습 진도 체크해 주시고 부족한 파트를 짚어주니까'}]}
@@ -1574,7 +1574,7 @@ var MON_DATA = [
     cons: [
 
   ],
-    allPosts: [{text:'',url:'https://cafe.naver.com/seochomomi/95955'},{text:'',url:'https://cafe.naver.com/joonggomaket/261145'},{text:'초1 <b>수학학원</b> 시기 질문입니다',url:'https://cafe.naver.com/sojbb2233/644292'},{text:'초4 영어 패드만 하는거 어때요??',url:'https://cafe.naver.com/godonghang/191282'},{text:'중3 수학 정리하기 좋은 인강 추천해주세요',url:'https://cafe.naver.com/esyori/2749029'},{text:'초3 사고력수학 학습 가능한 패드있을까요?',url:'https://cafe.naver.com/aldisgo123d/1031449'}]
+    allPosts: [{text:'',url:'https://cafe.naver.com/seochomomi/95955'},{text:'',url:'https://cafe.naver.com/joonggomaket/261145'},{text:'초1 수학학원 시기 질문입니다',url:'https://cafe.naver.com/sojbb2233/644292'},{text:'초4 영어 패드만 하는거 어때요??',url:'https://cafe.naver.com/godonghang/191282'},{text:'중3 수학 정리하기 좋은 인강 추천해주세요',url:'https://cafe.naver.com/esyori/2749029'},{text:'초3 사고력수학 학습 가능한 패드있을까요?',url:'https://cafe.naver.com/aldisgo123d/1031449'}]
   },
   {
     name: '시그마', us: false,
@@ -1667,12 +1667,12 @@ var MON_DATA = [
     pros: [
     {label:'커리큘럼/시스템',count:1,posts:[{text:'중학교 수학 선행 중요한가요ㅠㅠ',url:'https://cafe.naver.com/kidsinlove/1179789',region:'미사',date:'2026.03',quote:'교과 학습 위주로 현행만 잘 따라가는게 중요하다고 생각돼서 상담때 얘기먼저 듣고 정하다보니 행복한 수학학원으로 결정'}]},
     {label:'반복/심화학습',count:1,posts:[{text:'중학교 수학 선행 중요한가요ㅠㅠ',url:'https://cafe.naver.com/kidsinlove/1179789',region:'미사',date:'2026.03',quote:'그 안에서 또 심화학습하고 부족한 부분 채워나가니까 기초 탄탄해지는 것도 보였고요'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'행복한<b>수학학원</b>, 웅쌤<b>수학학원</b> 어떤가요?',url:'https://cafe.naver.com/ira111/919809',region:'미사',date:'2026.07',quote:'꼼꼼하시고 다정하십니다 / 잘가르치시기도 하지만 착하십니다'}]}
+    {label:'선생님/수업',count:1,posts:[{text:'행복한수학학원, 웅쌤수학학원 어떤가요?',url:'https://cafe.naver.com/ira111/919809',region:'미사',date:'2026.07',quote:'꼼꼼하시고 다정하십니다 / 잘가르치시기도 하지만 착하십니다'}]}
   ],
     cons: [
 
   ],
-    allPosts: [{text:'',url:'https://cafe.naver.com/ira111/855504'},{text:'',url:'https://cafe.naver.com/ira111/867104'},{text:'',url:'https://cafe.naver.com/ira111/897824'},{text:'',url:'https://cafe.naver.com/ira111/905190'},{text:'중학교 수학 선행 중요한가요ㅠㅠ',url:'https://cafe.naver.com/kidsinlove/1179789'},{text:'행복한<b>수학학원</b>, 웅쌤<b>수학학원</b> 어떤가요?',url:'https://cafe.naver.com/ira111/919809'}]
+    allPosts: [{text:'',url:'https://cafe.naver.com/ira111/855504'},{text:'',url:'https://cafe.naver.com/ira111/867104'},{text:'',url:'https://cafe.naver.com/ira111/897824'},{text:'',url:'https://cafe.naver.com/ira111/905190'},{text:'중학교 수학 선행 중요한가요ㅠㅠ',url:'https://cafe.naver.com/kidsinlove/1179789'},{text:'행복한수학학원, 웅쌤수학학원 어떤가요?',url:'https://cafe.naver.com/ira111/919809'}]
   },
   {
     name: '공감수학', us: false,
@@ -1816,7 +1816,7 @@ var MON_DATA = [
     cons: [
 
   ],
-    allPosts: [{text:'',url:'https://cafe.naver.com/jungnangbaby/738543'},{text:'',url:'https://cafe.naver.com/joonggyeedu/47148'},{text:'',url:'https://cafe.naver.com/mktsesang/1197054'},{text:'',url:'https://cafe.naver.com/joonggyeedu/49070'},{text:'초6&amp;4 <b>수학학원</b> 추천요~!',url:'https://cafe.naver.com/joonggyeedu/59383'}]
+    allPosts: [{text:'',url:'https://cafe.naver.com/jungnangbaby/738543'},{text:'',url:'https://cafe.naver.com/joonggyeedu/47148'},{text:'',url:'https://cafe.naver.com/mktsesang/1197054'},{text:'',url:'https://cafe.naver.com/joonggyeedu/49070'},{text:'초6&amp;4 수학학원 추천요~!',url:'https://cafe.naver.com/joonggyeedu/59383'}]
   },
   {
     name: '명인', us: false,
@@ -1887,14 +1887,14 @@ var MON_DATA = [
     pros: [
     {label:'관리/피드백',count:2,posts:[{text:'',url:'https://cafe.naver.com/kidsinlove/1186013',region:'신장',date:'2026.05',quote:'맞춤 관리 잘 해주십니다 고학년친구들도 많고'},{text:'',url:'https://cafe.naver.com/kidsinlove/1195491',region:'미사',date:'2026.09',quote:'학생 하나하나 관리 철저하게 잘해주셔요'}]},
     {label:'커리큘럼/시스템',count:1,posts:[{text:'',url:'https://cafe.naver.com/kidsinlove/1186013',region:'신장',date:'2026.05',quote:'선행도 잘 해주시드라고요'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'고1 <b>수학</b> 진도 빡세게 잘 빼주는 <b>학원</b> 있나요',url:'https://cafe.naver.com/kidsinlove/1192278',region:'미사',date:'2026.08',quote:'쌤이 워낙 잘 봐주셔서'}]},
-    {label:'흥미/동기부여',count:1,posts:[{text:'고1 <b>수학</b> 진도 빡세게 잘 빼주는 <b>학원</b> 있나요',url:'https://cafe.naver.com/kidsinlove/1192278',region:'미사',date:'2026.08',quote:'기초 부족하던 애가 파이팅 넘치게 열심히 다녀요'}]},
+    {label:'선생님/수업',count:1,posts:[{text:'고1 수학 진도 빡세게 잘 빼주는 학원 있나요',url:'https://cafe.naver.com/kidsinlove/1192278',region:'미사',date:'2026.08',quote:'쌤이 워낙 잘 봐주셔서'}]},
+    {label:'흥미/동기부여',count:1,posts:[{text:'고1 수학 진도 빡세게 잘 빼주는 학원 있나요',url:'https://cafe.naver.com/kidsinlove/1192278',region:'미사',date:'2026.08',quote:'기초 부족하던 애가 파이팅 넘치게 열심히 다녀요'}]},
     {label:'성적향상/성과',count:1,posts:[{text:'',url:'https://cafe.naver.com/kidsinlove/1195491',region:'미사',date:'2026.09',quote:'내신도 잘 잡아주시고'}]}
   ],
     cons: [
     {label:'셔틀불만',count:1,posts:[{text:'',url:'https://cafe.naver.com/kidsinlove/1186013',region:'신장',date:'2026.05',quote:'여기 셔틀이 없지않나요 / 라클이네 셔틀은 없어요'}]}
   ],
-    allPosts: [{text:'',url:'https://cafe.naver.com/kidsinlove/1186013'},{text:'',url:'https://cafe.naver.com/kidsinlove/1132958'},{text:'',url:'https://cafe.naver.com/kidsinlove/1148862'},{text:'고1 <b>수학</b> 진도 빡세게 잘 빼주는 <b>학원</b> 있나요',url:'https://cafe.naver.com/kidsinlove/1192278'},{text:'',url:'https://cafe.naver.com/kidsinlove/1195491'}]
+    allPosts: [{text:'',url:'https://cafe.naver.com/kidsinlove/1186013'},{text:'',url:'https://cafe.naver.com/kidsinlove/1132958'},{text:'',url:'https://cafe.naver.com/kidsinlove/1148862'},{text:'고1 수학 진도 빡세게 잘 빼주는 학원 있나요',url:'https://cafe.naver.com/kidsinlove/1192278'},{text:'',url:'https://cafe.naver.com/kidsinlove/1195491'}]
   },
   {
     name: '필즈', us: false,
@@ -2288,15 +2288,15 @@ var MON_DATA = [
     '미사': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0]
   },
     pros: [
-    {label:'관리/피드백',count:2,posts:[{text:'중2 <b>수학</b> 영어<b>학원</b> 추천해 주세요ㅜㅜ',url:'https://cafe.naver.com/ira111/917662',region:'미사',date:'2026.07',quote:'소수밀착 + 꼼꼼 + 개별진도 + 언제든 카톡질문에 답변'},{text:'',url:'https://cafe.naver.com/ira111/921534',region:'미사',date:'2026.08',quote:'휴일에도 아무때나 카톡으로 질문하면 친절하게 같이 풀어주세요'}]},
-    {label:'커리큘럼/시스템',count:2,posts:[{text:'중2 <b>수학</b> 영어<b>학원</b> 추천해 주세요ㅜㅜ',url:'https://cafe.naver.com/ira111/917662',region:'미사',date:'2026.07',quote:'현행 + 선행 가능, 아이 수준 봐서 의논해 정함'},{text:'',url:'https://cafe.naver.com/ira111/921534',region:'미사',date:'2026.08',quote:'소수고 개별진도 나가요'}]},
-    {label:'선생님/수업',count:2,posts:[{text:'고등<b>수학 학원</b> 문의해요',url:'https://cafe.naver.com/ira111/917499',region:'미사',date:'2026.07',quote:'고등수학 선생님 재밌어요. 소수정예고 화목토 2반 있는데'},{text:'',url:'https://cafe.naver.com/ira111/921534',region:'미사',date:'2026.08',quote:'선생님 꼼꼼하시고'}]},
-    {label:'흥미/동기부여',count:1,posts:[{text:'고등<b>수학 학원</b> 문의해요',url:'https://cafe.naver.com/ira111/917499',region:'미사',date:'2026.07',quote:'애가 지겨워하지 않아서 괜찮은 것 같아요. 전엔 수학 가기 싫어했거든요.'}]}
+    {label:'관리/피드백',count:2,posts:[{text:'중2 수학 영어학원 추천해 주세요ㅜㅜ',url:'https://cafe.naver.com/ira111/917662',region:'미사',date:'2026.07',quote:'소수밀착 + 꼼꼼 + 개별진도 + 언제든 카톡질문에 답변'},{text:'',url:'https://cafe.naver.com/ira111/921534',region:'미사',date:'2026.08',quote:'휴일에도 아무때나 카톡으로 질문하면 친절하게 같이 풀어주세요'}]},
+    {label:'커리큘럼/시스템',count:2,posts:[{text:'중2 수학 영어학원 추천해 주세요ㅜㅜ',url:'https://cafe.naver.com/ira111/917662',region:'미사',date:'2026.07',quote:'현행 + 선행 가능, 아이 수준 봐서 의논해 정함'},{text:'',url:'https://cafe.naver.com/ira111/921534',region:'미사',date:'2026.08',quote:'소수고 개별진도 나가요'}]},
+    {label:'선생님/수업',count:2,posts:[{text:'고등수학 학원 문의해요',url:'https://cafe.naver.com/ira111/917499',region:'미사',date:'2026.07',quote:'고등수학 선생님 재밌어요. 소수정예고 화목토 2반 있는데'},{text:'',url:'https://cafe.naver.com/ira111/921534',region:'미사',date:'2026.08',quote:'선생님 꼼꼼하시고'}]},
+    {label:'흥미/동기부여',count:1,posts:[{text:'고등수학 학원 문의해요',url:'https://cafe.naver.com/ira111/917499',region:'미사',date:'2026.07',quote:'애가 지겨워하지 않아서 괜찮은 것 같아요. 전엔 수학 가기 싫어했거든요.'}]}
   ],
     cons: [
 
   ],
-    allPosts: [{text:'중2 <b>수학</b> 영어<b>학원</b> 추천해 주세요ㅜㅜ',url:'https://cafe.naver.com/ira111/917662'},{text:'고등<b>수학 학원</b> 문의해요',url:'https://cafe.naver.com/ira111/917499'},{text:'',url:'https://cafe.naver.com/ira111/921534'}]
+    allPosts: [{text:'중2 수학 영어학원 추천해 주세요ㅜㅜ',url:'https://cafe.naver.com/ira111/917662'},{text:'고등수학 학원 문의해요',url:'https://cafe.naver.com/ira111/917499'},{text:'',url:'https://cafe.naver.com/ira111/921534'}]
   },
   {
     name: '영도', us: false,
@@ -2423,13 +2423,13 @@ var MON_DATA = [
     '중계': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:2,posts:[{text:'8세<b>수학학원</b> 어디로 보내시나요??',url:'https://cafe.naver.com/godonghang/193656',region:'송파',date:'2026.09',quote:'개념부터 사고력, 응용, 심화 등 유형별로 다 잡아줄수있어서 편하더라구요'},{text:'수학 싫어하는 초5... 어떻게 할까요ㅠㅠ',url:'https://cafe.naver.com/applelog/875174',region:'중계',date:'2026.09',quote:'아이 수준에 맞게 진도 나가니까 개념도 잘 잡히고'}]},
+    {label:'커리큘럼/시스템',count:2,posts:[{text:'8세수학학원 어디로 보내시나요??',url:'https://cafe.naver.com/godonghang/193656',region:'송파',date:'2026.09',quote:'개념부터 사고력, 응용, 심화 등 유형별로 다 잡아줄수있어서 편하더라구요'},{text:'수학 싫어하는 초5... 어떻게 할까요ㅠㅠ',url:'https://cafe.naver.com/applelog/875174',region:'중계',date:'2026.09',quote:'아이 수준에 맞게 진도 나가니까 개념도 잘 잡히고'}]},
     {label:'반복/심화학습',count:1,posts:[{text:'학원 다니고 있는데 수학학원 하나 더 추가해도 괜찮을까요?',url:'https://cafe.naver.com/godonghang/193575',region:'송파',date:'2026.09',quote:'부족한 개념은 반복학습하면서 제대로 잡아줄수있어서 좋더라구요'}]}
   ],
     cons: [
 
   ],
-    allPosts: [{text:'8세<b>수학학원</b> 어디로 보내시나요??',url:'https://cafe.naver.com/godonghang/193656'},{text:'학원 다니고 있는데 수학학원 하나 더 추가해도 괜찮을까요?',url:'https://cafe.naver.com/godonghang/193575'},{text:'수학 싫어하는 초5... 어떻게 할까요ㅠㅠ',url:'https://cafe.naver.com/applelog/875174'}]
+    allPosts: [{text:'8세수학학원 어디로 보내시나요??',url:'https://cafe.naver.com/godonghang/193656'},{text:'학원 다니고 있는데 수학학원 하나 더 추가해도 괜찮을까요?',url:'https://cafe.naver.com/godonghang/193575'},{text:'수학 싫어하는 초5... 어떻게 할까요ㅠㅠ',url:'https://cafe.naver.com/applelog/875174'}]
   },
   {
     name: '키즈킹', us: false,
@@ -2536,6 +2536,100 @@ var MON_REGION_MAP = {'방이':'송파'};
 var MON_META = {total_posts:2485,updated:'2026.10.07 09:13'};
 
 var monRegion = '전체', monDate = '전체', monOpenId = null;
+var monSearchQuery = '', monOnlyUs = false, monSortBy = 'mentions';
+
+var MON_CONS_ONLY_TAGS = {
+  '숙제/학습량부담': true, '셔틀불만': true, '가격부담': true,
+  '개별관리부족': true, '기타개선점': true, '강사교체/불만': true,
+  '레벨테스트부담': true, '시설불만': true
+};
+var MON_PROS_ONLY_TAGS = {
+  '합리적가격': true, '성적향상/성과': true, '반복/심화학습': true,
+  '흥미/동기부여': true, '셔틀/접근성': true, '차량/접근성': true
+};
+var MON_TAG_NORMALIZE = {
+  '차량/접근성': '셔틀/접근성'
+};
+
+// ─── SANITIZE & NORMALIZE EXISTING DATA ──────────────────────────────────────
+
+function monCleanText(s) {
+  if (!s) return '';
+  return String(s)
+    .replace(/<\/?b>/gi, '')
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#39;/g, "'")
+    .trim();
+}
+
+function monSanitizeData() {
+  if (typeof MON_DATA === 'undefined' || !Array.isArray(MON_DATA)) return;
+
+  MON_DATA.forEach(function(ac) {
+    var prosMap = {};
+    var consMap = {};
+    var urlMeta = {};
+
+    function addPostToMap(map, label, post) {
+      var normLabel = MON_TAG_NORMALIZE[label] || label;
+      if (!map[normLabel]) map[normLabel] = [];
+      var exists = map[normLabel].some(function(p) {
+        return p.url && post.url && p.url === post.url && p.quote === post.quote;
+      });
+      if (!exists) map[normLabel].push(post);
+    }
+
+    (ac.pros || []).forEach(function(item) {
+      var lbl = MON_TAG_NORMALIZE[item.label] || item.label;
+      (item.posts || []).forEach(function(p) {
+        p.text = monCleanText(p.text);
+        p.quote = monCleanText(p.quote);
+        if (p.url) urlMeta[p.url] = { region: p.region || '', date: p.date || '', text: p.text || '' };
+        if (MON_CONS_ONLY_TAGS[lbl]) {
+          addPostToMap(consMap, lbl, p);
+        } else {
+          addPostToMap(prosMap, lbl, p);
+        }
+      });
+    });
+
+    (ac.cons || []).forEach(function(item) {
+      var lbl = MON_TAG_NORMALIZE[item.label] || item.label;
+      (item.posts || []).forEach(function(p) {
+        p.text = monCleanText(p.text);
+        p.quote = monCleanText(p.quote);
+        if (p.url) {
+          if (!urlMeta[p.url]) urlMeta[p.url] = { region: p.region || '', date: p.date || '', text: p.text || '' };
+        }
+        if (MON_PROS_ONLY_TAGS[lbl]) {
+          addPostToMap(prosMap, lbl, p);
+        } else {
+          addPostToMap(consMap, lbl, p);
+        }
+      });
+    });
+
+    ac.pros = Object.keys(prosMap).map(function(k) {
+      return { label: k, count: prosMap[k].length, posts: prosMap[k] };
+    }).sort(function(a, b) { return b.count - a.count; });
+
+    ac.cons = Object.keys(consMap).map(function(k) {
+      return { label: k, count: consMap[k].length, posts: consMap[k] };
+    }).sort(function(a, b) { return b.count - a.count; });
+
+    (ac.allPosts || []).forEach(function(p) {
+      p.text = monCleanText(p.text);
+      if (p.url && urlMeta[p.url]) {
+        if (!p.region && urlMeta[p.url].region) p.region = urlMeta[p.url].region;
+        if (!p.date && urlMeta[p.url].date) p.date = urlMeta[p.url].date;
+        if (!p.text && urlMeta[p.url].text) p.text = urlMeta[p.url].text;
+      }
+    });
+  });
+}
 
 // ─── PERIOD NAV ───────────────────────────────────────────────────────────────
 
@@ -2569,11 +2663,22 @@ function monRenderMonthPills(yr, activeKey) {
   var pills = document.getElementById('mon-month-pills');
   if (!pills) return;
   var months = monGetMonthsForYear(yr);
-  pills.innerHTML = months.map(function(key) {
+  var html = '<button class="mon-month-btn' + (monDate === yr ? ' active' : '') + '" onclick="monSetYearTotal(\'' + yr + '\')">' + yr + ' 전체</button>';
+  html += months.map(function(key) {
     var parts = key.split('.');
-    var display = parseInt(parts[1]) + '월';
+    var display = parseInt(parts[1], 10) + '월';
     return '<button class="mon-month-btn' + (key === activeKey ? ' active' : '') + '" onclick="monSetMonth(this,\'' + key + '\')">' + display + '</button>';
   }).join('');
+  pills.innerHTML = html;
+}
+
+function monSetYearTotal(yr) {
+  monDate = yr;
+  var btnAll = document.querySelector('.mon-btn-all');
+  if (btnAll) btnAll.classList.remove('active');
+  monRenderMonthPills(yr, null);
+  monOpenId = null;
+  monRenderAll();
 }
 
 function monOnYearChange(yr) {
@@ -2609,7 +2714,7 @@ function monSetAll(btn) {
   monRenderAll();
 }
 
-// ─── REGION ───────────────────────────────────────────────────────────────────
+// ─── REGION & FILTERS ─────────────────────────────────────────────────────────
 
 function monSetRegion(el, val) {
   document.querySelectorAll('#mon-region-group .mon-pill').forEach(function(p) { p.classList.remove('active-region'); });
@@ -2617,6 +2722,34 @@ function monSetRegion(el, val) {
   monRegion = val;
   monOpenId = null;
   monRenderAll();
+}
+
+function monOnSearchInput(val) {
+  monSearchQuery = (val || '').trim().toLowerCase();
+  var clearBtn = document.getElementById('mon-search-clear');
+  if (clearBtn) clearBtn.style.display = monSearchQuery ? 'inline-flex' : 'none';
+  monRenderTable();
+}
+
+function monClearSearch() {
+  var inp = document.getElementById('mon-search-input');
+  if (inp) inp.value = '';
+  monOnSearchInput('');
+}
+
+function monToggleUsOnly(btn) {
+  monOnlyUs = !monOnlyUs;
+  if (btn) btn.classList.toggle('active', monOnlyUs);
+  monOpenId = null;
+  monRenderAll();
+}
+
+function monSetSort(val) {
+  monSortBy = val || 'mentions';
+  document.querySelectorAll('.mon-sort-btn').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-sort') === monSortBy);
+  });
+  monRenderTable();
 }
 
 // ─── DATA HELPERS ─────────────────────────────────────────────────────────────
@@ -2636,29 +2769,31 @@ function monGetPrevCount(ac) {
   if (!rm) return null;
   var prevKey;
   if (monDate.indexOf('년') > -1) {
-    var yr = parseInt(monDate);
+    var yr = parseInt(monDate, 10);
     prevKey = (yr - 1) + '년';
   } else {
     var parts = monDate.split('.');
-    var y = parseInt(parts[0]), m = parseInt(parts[1]);
+    var y = parseInt(parts[0], 10), m = parseInt(parts[1], 10);
     m--;
     if (m === 0) { m = 12; y--; }
     prevKey = y + '.' + (m < 10 ? '0' + m : '' + m);
   }
-  return rm[prevKey] !== undefined ? rm[prevKey] : null;
+  return rm[prevKey] !== undefined ? rm[prevKey] : 0;
 }
 
-function monGetFiltered() {
-  var regionKey = (MON_REGION_MAP && MON_REGION_MAP[monRegion]) || monRegion;
-  return MON_DATA.filter(function(ac) {
-    if (monRegion !== '전체') {
-      var rm = ac.mentions && ac.mentions[regionKey];
-      if (!rm || (rm['전체'] || 0) === 0) return false;
-    }
-    return monGetCount(ac) > 0;
-  }).slice().sort(function(a, b) {
-    return monGetCount(b) - monGetCount(a);
-  });
+function monFormatDeltaHtml(cur, prev) {
+  if (prev === null || prev === undefined) return '';
+  var diff = cur - prev;
+  if (prev === 0 && cur > 0) {
+    return '<span class="mon-chg new" title="전기 0건 → 이번 기간 신규 언급">NEW</span>';
+  }
+  if (diff > 0) {
+    return '<span class="mon-chg up" title="전기(' + prev + '건) 대비 +' + diff + '건 증가">▲' + diff + '</span>';
+  }
+  if (diff < 0) {
+    return '<span class="mon-chg dn" title="전기(' + prev + '건) 대비 ' + diff + '건 감소">▼' + Math.abs(diff) + '</span>';
+  }
+  return '<span class="mon-chg eq" title="전기(' + prev + '건)와 동일">-</span>';
 }
 
 function monFilterList(items) {
@@ -2670,7 +2805,7 @@ function monFilterList(items) {
       if (monDate === '전체') return true;
       if (monDate.indexOf('년') > -1) {
         var yr = monDate.replace('년', '');
-        return post.date && post.date.startsWith(yr + '.');
+        return post.date && post.date.indexOf(yr + '.') === 0;
       }
       return post.date === monDate;
     });
@@ -2678,15 +2813,74 @@ function monFilterList(items) {
   }).filter(function(item) { return item.count > 0; });
 }
 
+function monMatchesSearch(ac, fp, fc) {
+  if (!monSearchQuery) return true;
+  if (ac.name.toLowerCase().indexOf(monSearchQuery) > -1) return true;
+  var hit = false;
+  fp.concat(fc).forEach(function(item) {
+    if (item.label.toLowerCase().indexOf(monSearchQuery) > -1) hit = true;
+    (item.posts || []).forEach(function(p) {
+      if ((p.quote && p.quote.toLowerCase().indexOf(monSearchQuery) > -1) ||
+          (p.text && p.text.toLowerCase().indexOf(monSearchQuery) > -1)) {
+        hit = true;
+      }
+    });
+  });
+  return hit;
+}
+
+function monGetBaseFiltered() {
+  var regionKey = (MON_REGION_MAP && MON_REGION_MAP[monRegion]) || monRegion;
+  return MON_DATA.filter(function(ac) {
+    if (monOnlyUs && !ac.us) return false;
+    if (monRegion !== '전체') {
+      var rm = ac.mentions && ac.mentions[regionKey];
+      if (!rm || (rm['전체'] || 0) === 0) return false;
+    }
+    return monGetCount(ac) > 0;
+  });
+}
+
+function monGetFiltered() {
+  var base = monGetBaseFiltered();
+  var filtered = base.filter(function(ac) {
+    var fp = monFilterList(ac.pros);
+    var fc = monFilterList(ac.cons);
+    if (!monMatchesSearch(ac, fp, fc)) return false;
+    return true;
+  });
+
+  return filtered.slice().sort(function(a, b) {
+    if (monSortBy === 'pros') {
+      var pa = monFilterList(a.pros).reduce(function(s, x) { return s + x.count; }, 0);
+      var pb = monFilterList(b.pros).reduce(function(s, x) { return s + x.count; }, 0);
+      if (pb !== pa) return pb - pa;
+    } else if (monSortBy === 'cons') {
+      var ca = monFilterList(a.cons).reduce(function(s, x) { return s + x.count; }, 0);
+      var cb = monFilterList(b.cons).reduce(function(s, x) { return s + x.count; }, 0);
+      if (cb !== ca) return cb - ca;
+    } else if (monSortBy === 'delta') {
+      var da = monGetCount(a) - (monGetPrevCount(a) || 0);
+      var db = monGetCount(b) - (monGetPrevCount(b) || 0);
+      if (db !== da) return db - da;
+    }
+    return monGetCount(b) - monGetCount(a);
+  });
+}
+
 // ─── RENDER ───────────────────────────────────────────────────────────────────
 
 function monRenderAll() {
   var titleEl = document.getElementById('mon-title');
-  if (titleEl) titleEl.textContent = '경쟁학원 모니터링';
+  if (titleEl) titleEl.textContent = '경쟁학원 온라인 모니터링';
 
   var subtitleEl = document.getElementById('mon-subtitle');
   if (subtitleEl && typeof MON_META !== 'undefined' && MON_META.updated) {
-    subtitleEl.textContent = '최종 업데이트 ' + MON_META.updated;
+    var periodLabel = monDate === '전체' ? '전체 기간' : monDate;
+    var regionLabel = monRegion === '전체' ? '전 지역' : monRegion;
+    subtitleEl.innerHTML = '<span>최종 업데이트 ' + MON_META.updated + '</span>' +
+      '<span class="mon-sub-sep">·</span>' +
+      '<span class="mon-sub-active">조회 기준: ' + regionLabel + ' / ' + periodLabel + '</span>';
   }
 
   monRenderHighlights();
@@ -2696,34 +2890,46 @@ function monRenderAll() {
 function monRenderHighlights() {
   var el = document.getElementById('mon-highlights');
   if (!el) return;
-  var list = monGetFiltered();
+  var list = monGetBaseFiltered();
   if (!list.length) { el.innerHTML = ''; return; }
 
-  var top = list[0];
+  var sortedByMentions = list.slice().sort(function(a, b) { return monGetCount(b) - monGetCount(a); });
+  var top = sortedByMentions[0];
   var topCur = monGetCount(top);
+  var topPrev = monGetPrevCount(top);
   var filteredPosts = list.reduce(function(sum, ac) { return sum + monGetCount(ac); }, 0);
 
+  var posTotal = 0, negTotal = 0;
   var tagCounts = {};
   list.forEach(function(ac) {
-    monFilterList(ac.pros).concat(monFilterList(ac.cons)).forEach(function(item) {
+    monFilterList(ac.pros).forEach(function(item) {
+      posTotal += item.count;
+      tagCounts[item.label] = (tagCounts[item.label] || 0) + item.count;
+    });
+    monFilterList(ac.cons).forEach(function(item) {
+      negTotal += item.count;
       tagCounts[item.label] = (tagCounts[item.label] || 0) + item.count;
     });
   });
+
   var tagEntries = Object.keys(tagCounts).map(function(k) { return [k, tagCounts[k]]; });
   tagEntries.sort(function(a, b) { return b[1] - a[1]; });
   var topTag = tagEntries[0];
+
+  var evalTotal = posTotal + negTotal;
+  var posPct = evalTotal > 0 ? Math.round((posTotal / evalTotal) * 100) : 0;
 
   var html = '<div class="mon-highlights-grid">';
   html += '<div class="mon-hl-card featured">' +
     '<div class="mon-hl-label">모니터링 현황</div>' +
     '<div class="mon-hl-value">' + list.length + '개 학원</div>' +
-    '<div class="mon-hl-sub"><strong>' + filteredPosts + '건</strong> 언급</div>' +
+    '<div class="mon-hl-sub">총 <strong>' + filteredPosts + '건</strong> 언급 · 긍정 <strong>' + posPct + '%</strong></div>' +
     '</div>';
 
   html += '<div class="mon-hl-card">' +
-    '<div class="mon-hl-label">가장 많이 언급된 학원</div>' +
+    '<div class="mon-hl-label">최다 언급 학원</div>' +
     '<div class="mon-hl-value">' + top.name + '</div>' +
-    '<div class="mon-hl-sub">' + topCur + '건 수집</div>' +
+    '<div class="mon-hl-sub"><strong>' + topCur + '건</strong> 언급 ' + monFormatDeltaHtml(topCur, topPrev) + '</div>' +
     '</div>';
 
   if (topTag) {
@@ -2736,7 +2942,7 @@ function monRenderHighlights() {
     html += '<div class="mon-hl-card">' +
       '<div class="mon-hl-label">가장 활발한 평가 주제</div>' +
       '<div class="mon-hl-value">—</div>' +
-      '<div class="mon-hl-sub">평가 데이터 없음</div>' +
+      '<div class="mon-hl-sub">해당 기간 분류된 평가 없음</div>' +
       '</div>';
   }
 
@@ -2744,6 +2950,37 @@ function monRenderHighlights() {
   el.innerHTML = html;
 }
 
+function monSentimentBarHtml(prosSum, consSum) {
+  var total = prosSum + consSum;
+  if (total === 0) {
+    return '<div class="mon-sbar-empty">평가 없음</div>';
+  }
+  var posPct = Math.round((prosSum / total) * 100);
+  var negPct = 100 - posPct;
+  return '<div class="mon-sbar-wrap" title="긍정 ' + prosSum + '건 (' + posPct + '%) / 부정 ' + consSum + '건 (' + negPct + '%)">' +
+    '<div class="mon-sbar">' +
+      (prosSum > 0 ? '<div class="mon-sbar-pos" style="width:' + posPct + '%"></div>' : '') +
+      (consSum > 0 ? '<div class="mon-sbar-neg" style="width:' + negPct + '%"></div>' : '') +
+    '</div>' +
+    '<div class="mon-sbar-nums">' +
+      '<span class="mon-pros-num">+' + prosSum + '</span>' +
+      '<span class="mon-sbar-slash">/</span>' +
+      '<span class="mon-cons-num">-' + consSum + '</span>' +
+    '</div>' +
+  '</div>';
+}
+
+function monTopTagsPreviewHtml(fp, fc) {
+  var badges = [];
+  fp.slice(0, 2).forEach(function(it) {
+    badges.push('<span class="mon-mini-tag pos">' + it.label + ' <b>' + it.count + '</b></span>');
+  });
+  fc.slice(0, 1).forEach(function(it) {
+    badges.push('<span class="mon-mini-tag neg">' + it.label + ' <b>' + it.count + '</b></span>');
+  });
+  if (!badges.length) return '';
+  return '<div class="mon-ac-tags">' + badges.join('') + '</div>';
+}
 
 function monRenderTable() {
   var list = monGetFiltered();
@@ -2751,11 +2988,18 @@ function monRenderTable() {
   if (!tbody) return;
 
   var countEl = document.getElementById('mon-list-count');
-  if (countEl) countEl.textContent = list.length + '개';
+  if (countEl) countEl.textContent = list.length + '개 학원';
 
   var prevOpenId = monOpenId;
   monOpenId = null;
   tbody.innerHTML = '';
+
+  if (!list.length) {
+    var emptyTr = document.createElement('tr');
+    emptyTr.innerHTML = '<td colspan="7" class="mon-empty-td">조건에 맞는 학원 데이터가 없습니다. 검색어나 필터를 변경해 보세요.</td>';
+    tbody.appendChild(emptyTr);
+    return;
+  }
 
   list.forEach(function(ac, i) {
     var rank = i + 1;
@@ -2769,26 +3013,38 @@ function monRenderTable() {
     var id = 'ac-' + globalIdx;
 
     var tr = document.createElement('tr');
-    tr.className = 'mon-ac-row';
+    tr.className = 'mon-ac-row' + (ac.us ? ' is-us-row' : '');
     tr.id = id;
     tr.innerHTML =
       '<td class="mon-c"><div class="mon-rank' + (rank === 1 ? ' top1' : rank <= 3 ? ' top3' : '') + '">' + rank + '</div></td>' +
-      '<td><div class="mon-ac-name">' + ac.name + (ac.us ? ' <span class="mon-badge-us">자사</span>' : '') + '</div></td>' +
-      '<td class="mon-r">' + cur + '<span class="mon-unit">건</span></td>' +
+      '<td>' +
+        '<div class="mon-ac-name-wrap">' +
+          '<div class="mon-ac-name">' + ac.name + (ac.us ? ' <span class="mon-badge-us">자사</span>' : '') + '</div>' +
+          monTopTagsPreviewHtml(fp, fc) +
+        '</div>' +
+      '</td>' +
+      '<td class="mon-r">' +
+        '<div class="mon-mention-cell">' +
+          '<span class="mon-mention-val">' + cur + '<span class="mon-unit">건</span></span>' +
+          monFormatDeltaHtml(cur, prev) +
+        '</div>' +
+      '</td>' +
       '<td class="mon-c">' + (prosSum > 0 ? '<span class="mon-pros-num">' + prosSum + '</span>' : '<span class="mon-na">—</span>') + '</td>' +
       '<td class="mon-c">' + (consSum > 0 ? '<span class="mon-cons-num">' + consSum + '</span>' : '<span class="mon-na">—</span>') + '</td>' +
-      '<td class="mon-chevron-td"><span class="mon-chevron">▾</span></td>';
-    (function(rowId, rowAc, rowFp, rowFc, rowPs, rowCs, rowCur) {
-      tr.onclick = function() { monToggleRow(rowId, rowAc, rowFp, rowFc, rowPs, rowCs, rowCur); };
-    })(id, ac, fp, fc, prosSum, consSum, cur);
+      '<td class="mon-c mon-hide-mobile">' + monSentimentBarHtml(prosSum, consSum) + '</td>' +
+      '<td class="mon-c"><span class="mon-chevron">▾</span></td>';
+
+    (function(rowId) {
+      tr.onclick = function() { monToggleRow(rowId); };
+    })(id);
     tbody.appendChild(tr);
 
     var dt = document.createElement('tr');
     dt.className = 'mon-detail-row';
     dt.id = 'dt-' + id;
     var td = document.createElement('td');
-    td.colSpan = 6;
-    td.innerHTML = monDetailHtml(ac, fp, fc, prosSum, consSum, cur);
+    td.colSpan = 7;
+    td.innerHTML = monDetailHtml(ac, fp, fc, prosSum, consSum, cur, prev);
     dt.appendChild(td);
     tbody.appendChild(dt);
 
@@ -2822,23 +3078,69 @@ function monToggleRow(id) {
   }
 }
 
+// ─── SPARKLINE & DETAIL PANEL ────────────────────────────────────────────────
+
+function monSparklineHtml(ac) {
+  if (typeof MON_MONTHS === 'undefined' || !ac.monthly) return '';
+  var regionKey = (MON_REGION_MAP && MON_REGION_MAP[monRegion]) || monRegion;
+  var arr = (ac.monthly && ac.monthly[regionKey]) || (ac.monthly && ac.monthly['전체']);
+  if (!arr || !arr.length) return '';
+
+  // 최근 12개월 (또는 전체가 12개 이하면 전체)
+  var len = arr.length;
+  var startIdx = Math.max(0, len - 12);
+  var slice = arr.slice(startIdx);
+  var labels = MON_MONTHS.slice(startIdx);
+  var maxVal = Math.max.apply(null, slice.concat([1]));
+
+  var activeIdx = (monDate && MON_DATE_TO_IDX && MON_DATE_TO_IDX[monDate] !== undefined)
+    ? (MON_DATE_TO_IDX[monDate] - startIdx)
+    : -1;
+
+  var bars = slice.map(function(v, i) {
+    var h = v > 0 ? Math.max(16, Math.round((v / maxVal) * 100)) : 6;
+    var isCur = i === activeIdx;
+    return '<div class="mon-spark-col' + (isCur ? ' active' : '') + '" title="20' + labels[i] + '월: ' + v + '건">' +
+      '<div class="mon-spark-val">' + (v > 0 ? v : '') + '</div>' +
+      '<div class="mon-spark-bar-wrap"><div class="mon-spark-bar' + (v === 0 ? ' zero' : '') + '" style="height:' + h + '%"></div></div>' +
+      '<div class="mon-spark-lbl">' + labels[i].split('.')[1] + '월</div>' +
+    '</div>';
+  }).join('');
+
+  return '<div class="mon-dstat mon-dstat-chart">' +
+    '<div class="mon-dstat-chart-hd">' +
+      '<span class="mon-dstat-label-inline">월별 언급 추이 (최근 ' + slice.length + '개월)</span>' +
+    '</div>' +
+    '<div class="mon-sparkline">' + bars + '</div>' +
+  '</div>';
+}
+
 function monEvalColHtml(items, type) {
   var isPos = type === 'pos';
-  var title = isPos ? '장점' : '단점';
+  var title = isPos ? '👍 주요 장점 (긍정 평가)' : '👎 주요 단점 / 아쉬운 점';
   var html = '<div class="mon-eval-col"><div class="mon-eval-hd ' + (isPos ? 'pos' : 'neg') + '">' + title + '</div>';
   if (!items || !items.length) {
-    html += '<div class="mon-eval-empty">분류된 평가 글이 없습니다</div>';
+    html += '<div class="mon-eval-empty">선택한 기간/지역에 분류된 ' + (isPos ? '장점' : '단점') + ' 평가가 없습니다.</div>';
   } else {
     items.forEach(function(it) {
       html += '<div class="mon-eval-item">' +
         '<div class="mon-eval-item-name">' + it.label + ' <span class="mon-eval-item-cnt">' + it.count + '건</span></div>';
       it.posts.forEach(function(p) {
         var q = p.quote || p.text || '';
-        if (q.length > 120) q = q.substring(0, 120) + '…';
-        html += '<div class="mon-eval-post' + (isPos ? ' pos' : '') + '">' +
-          '<span class="mon-eval-quote">"' + q + '"</span>' +
-          (p.url ? '<a class="mon-eval-link" href="' + p.url + '" target="_blank" rel="noopener">원문 ↗</a>' : '') +
-          '</div>';
+        if (q.length > 140) q = q.substring(0, 140) + '…';
+        var metaBadges = [];
+        if (p.region) metaBadges.push('<span class="mon-post-meta-badge reg">' + p.region + '</span>');
+        if (p.date) metaBadges.push('<span class="mon-post-meta-badge dt">' + p.date + '</span>');
+        var titleHint = (p.text && p.text !== p.quote) ? '<div class="mon-eval-post-title">📄 ' + p.text + '</div>' : '';
+
+        html += '<div class="mon-eval-post' + (isPos ? ' pos' : ' neg') + '">' +
+          '<div class="mon-eval-post-body">' +
+            '<div class="mon-eval-quote">"' + q + '"</div>' +
+            titleHint +
+            (metaBadges.length ? '<div class="mon-eval-meta">' + metaBadges.join('') + '</div>' : '') +
+          '</div>' +
+          (p.url ? '<a class="mon-eval-link" href="' + p.url + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">원문 ↗</a>' : '') +
+        '</div>';
       });
       html += '</div>';
     });
@@ -2846,21 +3148,101 @@ function monEvalColHtml(items, type) {
   return html + '</div>';
 }
 
-function monDetailHtml(ac, fp, fc, prosSum, consSum, cur) {
+function monRecentPostsHtml(ac, fp, fc) {
+  var regionKey = (MON_REGION_MAP && MON_REGION_MAP[monRegion]) || monRegion;
+  var seenUrls = {};
+  var combined = [];
+
+  function pushPost(p, badge) {
+    if (!p || !p.url) return;
+    if (seenUrls[p.url]) return;
+    if (monRegion !== '전체' && p.region && p.region !== regionKey) return;
+    if (monDate !== '전체' && p.date) {
+      if (monDate.indexOf('년') > -1) {
+        var yr = monDate.replace('년', '');
+        if (p.date.indexOf(yr + '.') !== 0) return;
+      } else if (p.date !== monDate) {
+        return;
+      }
+    }
+    seenUrls[p.url] = true;
+    combined.push({
+      text: p.text || p.quote || '네이버 카페 게시글 원문 보기',
+      url: p.url,
+      region: p.region || '',
+      date: p.date || '',
+      badge: badge || '언급'
+    });
+  }
+
+  fp.forEach(function(it) {
+    (it.posts || []).forEach(function(p) { pushPost(p, '장점 · ' + it.label); });
+  });
+  fc.forEach(function(it) {
+    (it.posts || []).forEach(function(p) { pushPost(p, '단점 · ' + it.label); });
+  });
+  (ac.allPosts || []).forEach(function(p) {
+    pushPost(p, '일반 언급');
+  });
+
+  if (!combined.length) return '';
+
+  combined.sort(function(a, b) {
+    return (b.date || '').localeCompare(a.date || '');
+  });
+
+  var rowsHtml = combined.slice(0, 10).map(function(p) {
+    var isPos = p.badge.indexOf('장점') === 0;
+    var isNeg = p.badge.indexOf('단점') === 0;
+    var badgeCls = isPos ? 'pos' : isNeg ? 'neg' : 'neu';
+    return '<a class="mon-rpost-item" href="' + p.url + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">' +
+      '<div class="mon-rpost-left">' +
+        '<span class="mon-rpost-badge ' + badgeCls + '">' + p.badge + '</span>' +
+        (p.region ? '<span class="mon-post-meta-badge reg">' + p.region + '</span>' : '') +
+        (p.date ? '<span class="mon-post-meta-badge dt">' + p.date + '</span>' : '') +
+        '<span class="mon-rpost-title">' + (p.text || '게시글 원문 확인하기') + '</span>' +
+      '</div>' +
+      '<span class="mon-rpost-link">카페 원문 ↗</span>' +
+    '</a>';
+  }).join('');
+
+  return '<div class="mon-rposts-box">' +
+    '<div class="mon-rposts-hd">💬 관련 카페 게시글 원문 모음 <span>(' + combined.length + '건 중 최근 ' + Math.min(10, combined.length) + '건)</span></div>' +
+    '<div class="mon-rposts-list">' + rowsHtml + '</div>' +
+  '</div>';
+}
+
+function monDetailHtml(ac, fp, fc, prosSum, consSum, cur, prev) {
+  var totalEval = prosSum + consSum;
+  var posPct = totalEval > 0 ? Math.round((prosSum / totalEval) * 100) + '%' : '—';
+  var negPct = totalEval > 0 ? (100 - Math.round((prosSum / totalEval) * 100)) + '%' : '—';
+
   return '<div class="mon-detail-inner">' +
     '<div class="mon-dstats">' +
-    '<div class="mon-dstat"><div class="mon-dstat-val">' + cur + '</div><div class="mon-dstat-label">전체 언급<span class="mon-dstat-sub">게시물+댓글 합산</span></div></div>' +
-    '<div class="mon-dstat"><div class="mon-dstat-val acc">' + (prosSum || '—') + '</div><div class="mon-dstat-label">장점<span class="mon-dstat-sub">긍정 평가 글 수</span></div></div>' +
-    '<div class="mon-dstat"><div class="mon-dstat-val">' + (consSum || '—') + '</div><div class="mon-dstat-label">단점<span class="mon-dstat-sub">부정 평가 글 수</span></div></div>' +
+      '<div class="mon-dstat">' +
+        '<div class="mon-dstat-val-row"><span class="mon-dstat-val">' + cur + '</span>' + monFormatDeltaHtml(cur, prev) + '</div>' +
+        '<div class="mon-dstat-label">전체 언급<span class="mon-dstat-sub">게시물+댓글 합산</span></div>' +
+      '</div>' +
+      '<div class="mon-dstat">' +
+        '<div class="mon-dstat-val-row"><span class="mon-dstat-val acc">' + (prosSum || '—') + '</span>' + (prosSum > 0 ? '<span class="mon-dstat-pct pos">' + posPct + '</span>' : '') + '</div>' +
+        '<div class="mon-dstat-label">장점 평가<span class="mon-dstat-sub">긍정 언급 건수</span></div>' +
+      '</div>' +
+      '<div class="mon-dstat">' +
+        '<div class="mon-dstat-val-row"><span class="mon-dstat-val neg">' + (consSum || '—') + '</span>' + (consSum > 0 ? '<span class="mon-dstat-pct neg">' + negPct + '</span>' : '') + '</div>' +
+        '<div class="mon-dstat-label">단점 평가<span class="mon-dstat-sub">부정 언급 건수</span></div>' +
+      '</div>' +
+      monSparklineHtml(ac) +
     '</div>' +
     '<div class="mon-eval-grid">' + monEvalColHtml(fp, 'pos') + monEvalColHtml(fc, 'neg') + '</div>' +
-    '<div class="mon-detail-notice">* AI 자동 분석 결과이며 일부 오분류가 있을 수 있습니다.</div>' +
-    '</div>';
+    monRecentPostsHtml(ac, fp, fc) +
+    '<div class="mon-detail-notice">* 네이버 지역 맘카페 게시글·댓글을 AI로 자동 분류한 결과이며, 질문·단순 언급 글은 하단 원문 모음에서 확인하실 수 있습니다.</div>' +
+  '</div>';
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 
 function monInit() {
+  monSanitizeData();
   monBuildYearSelect();
   var years = monGetYears();
   if (years.length) {
