@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduRank 관리 콘솔</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --black:#0f172a;
+      --white:#ffffff;
+      --ground:#f4f7f9;
+      --bdr:#e2e8f0;
+      --bdr-strong:#cbd5e1;
+      --txt:#0f172a;
+      --txt-mid:#475569;
+      --txt-dim:#64748b;
+      --acc:#006580;
+      --acc-light:#0284c7;
+      --acc-bg:#eff8fa;
+      --acc-bdr:#bae6fd;
+      --neg:#e11d48;
+      --neg-bg:#fff1f2;
+      --neg-bdr:#fecdd3;
+      --suc:#059669;
+      --suc-bg:#ecfdf5;
+      --suc-bdr:#a7f3d0;
+      --warn:#d97706;
+      --warn-bg:#fffbeb;
+      --warn-bdr:#fde68a;
+      --shadow-sm:0 1px 3px rgba(15,23,42,.05),0 1px 2px rgba(15,23,42,.03);
+      --shadow-md:0 4px 12px rgba(15,23,42,.06),0 1px 3px rgba(15,23,42,.04);
+      --shadow-lg:0 10px 25px -5px rgba(15,23,42,.1),0 8px 10px -6px rgba(15,23,42,.1);
+    }
+    body{
+      font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+      background:var(--ground);
+      color:var(--txt);
+      font-size:15px;
+      line-height:1.55;
+      min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* TOPBAR */
+    .topbar{
+      height:56px;
+      background:var(--black);
+      border-bottom:1px solid #1e293b;
+      padding:0 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+    .topbar-left{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .topbar-logo{
+      font-size:16px;
+      font-weight:800;
+      letter-spacing:-.03em;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      text-decoration:none;
+    }
+    .topbar-dot{
+      width:9px;
+      height:9px;
+      background:#38bdf8;
+      border-radius:50%;
+      box-shadow:0 0 10px #38bdf8;
+    }
+    .topbar-pill{
+      font-size:11px;
+      font-weight:700;
+      color:#38bdf8;
+      background:rgba(56,189,248,0.15);
+      border:1px solid rgba(56,189,248,0.3);
+      padding:3px 8px;
+      border-radius:6px;
+      letter-spacing:.02em;
+    }
+    .topbar-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .topbar-link{
+      color:#94a3b8;
+      font-size:13px;
+      text-decoration:none;
+      font-weight:600;
+      padding:6px 10px;
+      border-radius:6px;
+      transition:all .15s;
+      display:flex;
+      align-items:center;
+      gap:5px;
+    }
+    .topbar-link:hover{
+      color:#fff;
+      background:#1e293b;
+    }
+    .user-badge{
+      display:flex;
+      align-items:center;
+      gap:7px;
+      background:#1e293b;
+      padding:4px 10px 4px 6px;
+      border-radius:99px;
+      font-size:12px;
+      font-weight:600;
+      color:#e2e8f0;
+      border:1px solid #334155;
+    }
+    .user-avatar{
+      width:22px;
+      height:22px;
+      border-radius:50%;
+      background:#38bdf8;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      color:#0f172a;
+      font-size:11px;
+    }
+    .btn-logout{
+      background:none;
+      border:1px solid #475569;
+      color:#94a3b8;
+      padding:4px 10px;
+      border-radius:6px;
+      font-size:12px;
+      font-weight:600;
+      cursor:pointer;
+      transition:all .15s;
+    }
+    .btn-logout:hover{
+      color:#f87171;
+      border-color:#f87171;
+      background:rgba(248,113,113,0.1);
+    }
+
+    /* CONTAINER */
+    .container{
+      max-width:1040px;
+      margin:0 auto;
+      padding:28px 20px 80px;
+    }
+
+    /* LOGIN MODAL / SCREEN */
+    .login-wrap{
+      min-height:calc(100vh - 120px);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+    .login-card{
+      background:var(--white);
+      border:1px solid var(--bdr);
+      border-radius:18px;
+      padding:36px 32px;
+      width:100%;
+      max-width:440px;
+      box-shadow:var(--shadow-lg);
+    }
+    .login-icon{
+      width:48px;
+      height:48px;
+      background:var(--acc-bg);
+      border:1px solid var(--acc-bdr);
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      margin-bottom:16px;
+    }
+    .login-title{
+      font-size:22px;
+      font-weight:800;
+      color:var(--black);
+      letter-spacing:-.03em;
+      margin-bottom:6px;
+    }
+    .login-desc{
+      font-size:14px;
+      color:var(--txt-dim);
+      margin-bottom:24px;
+      line-height:1.5;
+    }
+    .form-group{
+      margin-bottom:18px;
+    }
+    .form-label{
+      display:block;
+      font-size:13px;
+      font-weight:700;
+      color:var(--txt-mid);
+      margin-bottom:6px;
+    }
+    .form-input{
+      width:100%;
+      font-family:inherit;
+      font-size:14px;
+      padding:10px 14px;
+      background:var(--ground);
+      border:1.5px solid var(--bdr);
+      border-radius:9px;
+      color:var(--txt);
+      outline:none;
+      transition:all .15s;
+    }
+    .form-input:focus{
+      background:var(--white);
+      border-color:var(--acc);
+      box-shadow:0 0 0 3px rgba(0,101,128,0.12);
+    }
+    .form-check{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:13px;
+      color:var(--txt-mid);
+      cursor:pointer;
+      margin-bottom:22px;
+    }
+    .form-check input{cursor:pointer;}
+    .btn-primary{
+      width:100%;
+      font-family:inherit;
+      font-size:15px;
+      font-weight:700;
+      color:#fff;
+      background:var(--acc);
+      border:none;
+      border-radius:10px;
+      padding:12px 18px;
+      cursor:pointer;
+      transition:all .15s;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+    }
+    .btn-primary:hover{
+      background:#004f64;
+    }
+    .btn-primary:disabled{
+      background:#94a3b8;
+      cursor:not-allowed;
+    }
+    .login-hint{
+      margin-top:20px;
+      padding:12px;
+      background:var(--ground);
+      border-radius:9px;
+      border:1px dashed var(--bdr-strong);
+      font-size:12px;
+      color:var(--txt-dim);
+      line-height:1.5;
+    }
+    .login-hint a{
+      color:var(--acc);
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    /* STATUS BANNER */
+    .status-banner{
+      background:var(--white);
+      border:1px solid var(--bdr);
+      border-radius:14px;
+      padding:18px 22px;
+      margin-bottom:20px;
+      box-shadow:var(--shadow-sm);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .status-left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .status-indicator{
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      background:#94a3b8;
+    }
+    .status-indicator.running{
+      background:#10b981;
+      box-shadow:0 0 12px #10b981;
+      animation:pulse 1.8s infinite;
+    }
+    @keyframes pulse{
+      0%,100%{opacity:1;transform:scale(1);}
+      50%{opacity:.6;transform:scale(1.2);}
+    }
+    .status-title{
+      font-size:16px;
+      font-weight:800;
+      letter-spacing:-.02em;
+    }
+    .status-desc{
+      font-size:13px;
+      color:var(--txt-dim);
+      margin-top:2px;
+    }
+    .status-actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .btn-stop{
+      background:var(--neg);
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      padding:8px 14px;
+      font-size:13px;
+      font-weight:700;
+      cursor:pointer;
+      transition:all .15s;
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+    .btn-stop:hover{background:#be123c;}
+    .btn-refresh{
+      background:var(--ground);
+      border:1px solid var(--bdr);
+      color:var(--txt-mid);
+      border-radius:8px;
+      padding:8px 12px;
+      font-size:13px;
+      font-weight:600;
+      cursor:pointer;
+      transition:all .15s;
+    }
+    .btn-refresh:hover{background:#e2e8f0;color:var(--txt);}
+
+    /* TARGET MONTH CARD */
+    .month-picker-card{
+      background:var(--white);
+      border:1px solid var(--bdr);
+      border-radius:14px;
+      padding:20px 24px;
+      margin-bottom:20px;
+      box-shadow:var(--shadow-sm);
+    }
+    .month-picker-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:12px;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .month-picker-title{
+      font-size:15px;
+      font-weight:800;
+      color:var(--black);
+      display:flex;
+      align-items:center;
+      gap:7px;
+    }
+    .month-pills{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .month-pill{
+      padding:6px 14px;
+      font-size:13px;
+      font-weight:700;
+      border-radius:8px;
+      background:var(--ground);
+      border:1.5px solid var(--bdr);
+      color:var(--txt-mid);
+      cursor:pointer;
+      transition:all .15s;
+    }
+    .month-pill:hover{
+      border-color:var(--acc);
+      color:var(--acc);
+    }
+    .month-pill.active{
+      background:var(--acc);
+      color:#fff;
+      border-color:var(--acc);
+      box-shadow:0 2px 6px rgba(0,101,128,0.25);
+    }
+    .month-input-wrap{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-top:10px;
+    }
+    .month-input-wrap input{
+      width:140px;
+      padding:7px 12px;
+      font-size:14px;
+      font-weight:700;
+      border-radius:8px;
+      border:1.5px solid var(--bdr);
+      background:var(--ground);
+      color:var(--txt);
+      outline:none;
+    }
+    .month-input-wrap input:focus{
+      border-color:var(--acc);
+      background:#fff;
+    }
+
+    /* ACTION CARDS GRID */
+    .grid-cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+      gap:18px;
+      margin-bottom:24px;
+    }
+    .action-card{
+      background:var(--white);
+      border:1px solid var(--bdr);
+      border-radius:14px;
+      padding:24px 22px;
+      box-shadow:var(--shadow-sm);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      transition:transform .15s,box-shadow .15s;
+    }
+    .action-card:hover{
+      transform:translateY(-2px);
+      box-shadow:var(--shadow-md);
+    }
+    .action-tag-row{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      margin-bottom:12px;
+      flex-wrap:wrap;
+    }
+    .action-tag{
+      font-size:11px;
+      font-weight:700;
+      padding:3px 8px;
+      border-radius:6px;
+      background:var(--ground);
+      color:var(--txt-dim);
+      border:1px solid var(--bdr);
+    }
+    .action-tag.highlight{
+      background:var(--acc-bg);
+      color:var(--acc);
+      border-color:var(--acc-bdr);
+    }
+    .action-title{
+      font-size:18px;
+      font-weight:800;
+      color:var(--black);
+      letter-spacing:-.02em;
+      margin-bottom:8px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .action-desc{
+      font-size:13px;
+      color:var(--txt-dim);
+      line-height:1.55;
+      margin-bottom:20px;
+    }
+    .btn-action{
+      width:100%;
+      padding:12px 16px;
+      font-family:inherit;
+      font-size:14px;
+      font-weight:700;
+      border-radius:10px;
+      border:none;
+      cursor:pointer;
+      transition:all .15s;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+    }
+    .btn-action.collect{
+      background:#0284c7;
+      color:#fff;
+    }
+    .btn-action.collect:hover{background:#0369a1;}
+    .btn-action.ai{
+      background:#6366f1;
+      color:#fff;
+    }
+    .btn-action.ai:hover{background:#4f46e5;}
+    .btn-action.deploy{
+      background:#059669;
+      color:#fff;
+    }
+    .btn-action.deploy:hover{background:#047857;}
+
+    /* TABLE SECTION */
+    .table-section{
+      background:var(--white);
+      border:1px solid var(--bdr);
+      border-radius:14px;
+      padding:22px;
+      box-shadow:var(--shadow-sm);
+    }
+    .table-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:14px;
+    }
+    .table-title{
+      font-size:16px;
+      font-weight:800;
+      color:var(--black);
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .table-wrap{
+      overflow-x:auto;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:13px;
+    }
+    th{
+      background:var(--ground);
+      padding:10px 12px;
+      text-align:left;
+      font-weight:700;
+      color:var(--txt-mid);
+      border-bottom:1px solid var(--bdr);
+      white-space:nowrap;
+    }
+    td{
+      padding:12px;
+      border-bottom:1px solid var(--bdr);
+      color:var(--txt);
+      white-space:nowrap;
+    }
+    tr:last-child td{border-bottom:none;}
+    .status-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+      padding:3px 8px;
+      border-radius:6px;
+      font-size:12px;
+      font-weight:700;
+    }
+    .status-badge.success{background:var(--suc-bg);color:var(--suc);border:1px solid var(--suc-bdr);}
+    .status-badge.in_progress{background:var(--acc-bg);color:var(--acc);border:1px solid var(--acc-bdr);}
+    .status-badge.cancelled{background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1;}
+    .status-badge.failure{background:var(--neg-bg);color:var(--neg);border:1px solid var(--neg-bdr);}
+    .link-log{
+      color:var(--acc);
+      text-decoration:none;
+      font-weight:700;
+      padding:3px 8px;
+      border-radius:5px;
+      background:var(--ground);
+      border:1px solid var(--bdr);
+      transition:all .15s;
+    }
+    .link-log:hover{background:#e2e8f0;}
+
+    /* TOAST NOTIFICATION */
+    .toast{
+      position:fixed;
+      bottom:24px;
+      right:24px;
+      background:var(--black);
+      color:#fff;
+      padding:14px 20px;
+      border-radius:10px;
+      box-shadow:var(--shadow-lg);
+      font-size:14px;
+      font-weight:600;
+      display:none;
+      align-items:center;
+      gap:10px;
+      z-index:999;
+      animation:slideUp .25s ease;
+    }
+    @keyframes slideUp{
+      from{opacity:0;transform:translateY(15px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    /* FOOTER */
+    .footer-links{
+      margin-top:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:20px;
+      font-size:13px;
+      color:var(--txt-dim);
+    }
+    .footer-links a{
+      color:var(--txt-mid);
+      text-decoration:none;
+      font-weight:600;
+    }
+    .footer-links a:hover{color:var(--acc);}
+
+    .hide{display:none !important;}
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="index.html" class="topbar-logo">
+        <div class="topbar-dot"></div>
+        EduRank
+      </a>
+      <span class="topbar-pill">ADMIN CONSOLE</span>
+    </div>
+    <div class="topbar-right" id="topbar-auth" style="display:none;">
+      <a href="index.html" class="topbar-link" target="_blank">🌐 모니터링 사이트 ↗</a>
+      <a href="https://docs.google.com/spreadsheets/d/1BaXI5tcWzmefKNvLuGjjOcMibxVgcuS1-vQeCqkM_4U/edit" class="topbar-link" target="_blank">📋 구글 시트 ↗</a>
+      <div class="user-badge" id="user-badge">
+        <div class="user-avatar" id="user-avatar">A</div>
+        <span id="user-name">관리자</span>
+      </div>
+      <button class="btn-logout" onclick="logout()">로그아웃</button>
+    </div>
+  </header>
+
+  <!-- LOGIN SECTION -->
+  <section class="login-wrap" id="login-section">
+    <div class="login-card">
+      <div class="login-icon">🔐</div>
+      <h1 class="login-title">EduRank 관리자 로그인</h1>
+      <p class="login-desc">GitHub Personal Access Token(PAT)으로 로그인하여 카페 수집 및 AI 분석을 제어합니다.</p>
+      
+      <form onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label class="form-label" for="token-input">GitHub Access Token (PAT)</label>
+          <input type="password" id="token-input" class="form-input" placeholder="ghp_ 또는 gho_ 로 시작하는 토큰 입력" autocomplete="off" required>
+        </div>
+        <label class="form-check">
+          <input type="checkbox" id="remember-token" checked>
+          <span>이 브라우저에서 자동 로그인 유지</span>
+        </label>
+        <button type="submit" class="btn-primary" id="btn-login">
+          <span>관리 콘솔 접속</span>
+        </button>
+      </form>
+
+      <div class="login-hint">
+        💡 <strong>토큰 발급 방법</strong>: GitHub 접속 후 <code>Settings &gt; Developer settings &gt; Personal access tokens (classic)</code>에서 <strong>repo</strong> 및 <strong>workflow</strong> 권한을 체크하여 발급받을 수 있습니다.<br>
+        <a href="https://github.com/settings/tokens/new?scopes=repo,workflow&description=EduRank+Admin+Console" target="_blank">👉 토큰 발급 바로가기 (새창)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD SECTION -->
+  <main class="container hide" id="dashboard-section">
+
+    <!-- STATUS BANNER -->
+    <div class="status-banner" id="status-banner">
+      <div class="status-left">
+        <div class="status-indicator" id="status-indicator"></div>
+        <div>
+          <div class="status-title" id="status-title">상태 확인 중...</div>
+          <div class="status-desc" id="status-desc">GitHub Actions 러너 상태를 조회하고 있습니다.</div>
+        </div>
+      </div>
+      <div class="status-actions">
+        <button class="btn-stop hide" id="btn-stop-workflow" onclick="cancelCurrentRun()">⏹️ 실행 중단</button>
+        <button class="btn-refresh" onclick="fetchRecentRuns(true)">🔄 새로고침</button>
+      </div>
+    </div>
+
+    <!-- TARGET MONTH SELECTOR -->
+    <div class="month-picker-card">
+      <div class="month-picker-header">
+        <div class="month-picker-title">
+          <span>📅</span> 대상 연월 설정 (수집 및 AI 분석 기준)
+        </div>
+        <div class="month-pills" id="month-pills">
+          <!-- Dynamically populated or default buttons -->
+          <button type="button" class="month-pill active" onclick="selectMonth('2026-10')">2026-10 (10월)</button>
+          <button type="button" class="month-pill" onclick="selectMonth('2026-11')">2026-11 (11월)</button>
+          <button type="button" class="month-pill" onclick="selectMonth('2026-09')">2026-09 (9월)</button>
+        </div>
+      </div>
+      <div class="month-input-wrap">
+        <label style="font-size:13px; font-weight:700; color:var(--txt-mid);">직접 입력:</label>
+        <input type="text" id="target-month-input" value="2026-10" placeholder="YYYY-MM" oninput="onCustomMonthInput(this.value)">
+        <span style="font-size:12px; color:var(--txt-dim);">※ 형식: YYYY-MM (예: 2026-10)</span>
+      </div>
+    </div>
+
+    <!-- ACTION CARDS GRID -->
+    <div class="grid-cards">
+      <!-- CARD 1: 맘카페 수집 -->
+      <div class="action-card">
+        <div>
+          <div class="action-tag-row">
+            <span class="action-tag highlight">신규 대댓글 계층화</span>
+            <span class="action-tag">통합검색 제외</span>
+            <span class="action-tag">실시간 10건 저장</span>
+          </div>
+          <div class="action-title">
+            <span>🏠</span> 맘카페 키워드 수집
+          </div>
+          <p class="action-desc">
+            선택된 대상 연월의 맘카페 게시글과 대댓글(답글)을 계층 구조(<code>[댓글]</code> / <code>  └ [답글]</code>) 및 작성자 배지(<code>(글쓴이)</code>)와 함께 구글 시트 <code>📋 검색결과</code>에 실시간 저장합니다.
+          </p>
+        </div>
+        <button class="btn-action collect" onclick="triggerWorkflow('cafe_collect.yml', '맘카페 키워드 수집')">
+          <span>🚀 맘카페 수집 시작</span>
+        </button>
+      </div>
+
+      <!-- CARD 2: Claude AI 분석 -->
+      <div class="action-card">
+        <div>
+          <div class="action-tag-row">
+            <span class="action-tag highlight">Claude Sonnet 5.5</span>
+            <span class="action-tag">경쟁학원 프롬프트(B1)</span>
+          </div>
+          <div class="action-title">
+            <span>🧠</span> Claude AI 판독 실행
+          </div>
+          <p class="action-desc">
+            <code>📋 검색결과</code>에 적재된 대상 연월의 게시글을 Claude Sonnet 5.5가 분석하여 언급 학원, 학원별 장·단점을 정밀 평가하고 <code>📊 AI분석</code> 시트에 저장합니다.
+          </p>
+        </div>
+        <button class="btn-action ai" onclick="triggerWorkflow('ai_analyze.yml', 'Claude AI 판독')">
+          <span>🧠 Claude AI 판독 실행</span>
+        </button>
+      </div>
+
+      <!-- CARD 3: 웹사이트 배포 -->
+      <div class="action-card">
+        <div>
+          <div class="action-tag-row">
+            <span class="action-tag highlight">EduRank 실시간 배포</span>
+            <span class="action-tag">HTML/JS 빌드</span>
+          </div>
+          <div class="action-title">
+            <span>🌐</span> 사이트 데이터 업데이트
+          </div>
+          <p class="action-desc">
+            구글 시트의 <code>📊 AI분석</code> 최신 데이터를 집계하여 EduRank 모니터링 웹사이트(<code>olympiadedu.github.io/edurank</code>)에 즉시 반영 배포합니다.
+          </p>
+        </div>
+        <button class="btn-action deploy" onclick="triggerWorkflow('update_monitor.yml', '모니터링 사이트 업데이트')">
+          <span>🌐 사이트 데이터 배포</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- RECENT RUNS TABLE -->
+    <div class="table-section">
+      <div class="table-header">
+        <div class="table-title">
+          <span>⏱️</span> 최근 작업 실행 내역 (GitHub Actions)
+        </div>
+        <button class="btn-refresh" onclick="fetchRecentRuns(true)" style="padding:4px 10px; font-size:12px;">새로고침</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>작업명</th>
+              <th>상태</th>
+              <th>실행 시작</th>
+              <th>소요 시간</th>
+              <th>실행자</th>
+              <th>상세 로그</th>
+            </tr>
+          </thead>
+          <tbody id="runs-tbody">
+            <tr>
+              <td colspan="6" style="text-align:center; padding:24px; color:var(--txt-dim);">실행 내역을 불러오는 중...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- FOOTER LINKS -->
+    <div class="footer-links">
+      <a href="index.html" target="_blank">📊 EduRank 모니터링 사이트</a>
+      <span>•</span>
+      <a href="https://docs.google.com/spreadsheets/d/1BaXI5tcWzmefKNvLuGjjOcMibxVgcuS1-vQeCqkM_4U/edit" target="_blank">📋 구글 스프레드시트 바로가기</a>
+      <span>•</span>
+      <a href="https://github.com/Olympiadedu/naver-cafe-keyword-monitor/actions" target="_blank">⚙️ GitHub Actions 러너</a>
+    </div>
+
+  </main>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span id="toast-msg">알림 메시지</span>
+  </div>
+
+  <script>
+    const CONFIG = {
+      OWNER: 'Olympiadedu',
+      REPO: 'naver-cafe-keyword-monitor',
+      POLL_INTERVAL_MS: 5000,
+    };
+
+    let authToken = '';
+    let currentTargetMonth = '2026-10';
+    let pollTimer = null;
+    let activeRunId = null;
+
+    // Initialize
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedToken = localStorage.getItem('edurank_admin_token') || sessionStorage.getItem('edurank_admin_token');
+      if (savedToken) {
+        document.getElementById('token-input').value = savedToken;
+        verifyAndLogin(savedToken);
+      }
+    });
+
+    function showToast(msg, duration = 3000) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-msg').innerText = msg;
+      t.style.display = 'flex';
+      setTimeout(() => { t.style.display = 'none'; }, duration);
+    }
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const token = document.getElementById('token-input').value.trim();
+      const remember = document.getElementById('remember-token').checked;
+      const btn = document.getElementById('btn-login');
+
+      if (!token) return;
+
+      btn.disabled = true;
+      btn.innerText = '인증 확인 중...';
+
+      const success = await verifyAndLogin(token, remember);
+      btn.disabled = false;
+      btn.innerText = '관리 콘솔 접속';
+
+      if (!success) {
+        alert('토큰 인증에 실패했습니다. 올바른 GitHub Personal Access Token인지 확인해주세요.');
+      }
+    }
+
+    async function verifyAndLogin(token, remember = false) {
+      try {
+        const res = await fetch('https://api.github.com/user', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/vnd.github+json'
+          }
+        });
+
+        if (!res.ok) return false;
+
+        const user = await res.json();
+        authToken = token;
+
+        if (remember) {
+          localStorage.setItem('edurank_admin_token', token);
+        } else {
+          sessionStorage.setItem('edurank_admin_token', token);
+        }
+
+        // Setup user profile
+        document.getElementById('user-name').innerText = user.login || '관리자';
+        const avatar = document.getElementById('user-avatar');
+        if (user.avatar_url) {
+          avatar.innerHTML = `<img src="${user.avatar_url}" style="width:100%;height:100%;border-radius:50%;" alt="">`;
+        } else {
+          avatar.innerText = (user.login || 'A')[0].toUpperCase();
+        }
+
+        // Show dashboard, hide login
+        document.getElementById('login-section').classList.add('hide');
+        document.getElementById('dashboard-section').classList.remove('hide');
+        document.getElementById('topbar-auth').style.display = 'flex';
+
+        showToast(`환영합니다, ${user.login}님!`);
+
+        // Start polling
+        fetchRecentRuns();
+        if (pollTimer) clearInterval(pollTimer);
+        pollTimer = setInterval(fetchRecentRuns, CONFIG.POLL_INTERVAL_MS);
+
+        return true;
+      } catch (err) {
+        console.error(err);
+        return false;
+      }
+    }
+
+    function logout() {
+      authToken = '';
+      localStorage.removeItem('edurank_admin_token');
+      sessionStorage.removeItem('edurank_admin_token');
+      if (pollTimer) clearInterval(pollTimer);
+
+      document.getElementById('dashboard-section').classList.add('hide');
+      document.getElementById('topbar-auth').style.display = 'none';
+      document.getElementById('login-section').classList.remove('hide');
+      document.getElementById('token-input').value = '';
+    }
+
+    function selectMonth(ym) {
+      currentTargetMonth = ym;
+      document.getElementById('target-month-input').value = ym;
+      document.querySelectorAll('.month-pill').forEach(btn => {
+        if (btn.innerText.includes(ym)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      showToast(`대상 연월이 ${ym}로 설정되었습니다.`);
+    }
+
+    function onCustomMonthInput(val) {
+      const trimmed = val.trim();
+      currentTargetMonth = trimmed;
+      document.querySelectorAll('.month-pill').forEach(btn => {
+        if (btn.innerText.includes(trimmed)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    // Trigger Workflow
+    async function triggerWorkflow(workflowId, label) {
+      if (!authToken) {
+        alert('로그인이 필요합니다.');
+        return;
+      }
+
+      const ym = currentTargetMonth || '2026-10';
+      const confirmMsg = `${label} 작업을 시작하시겠습니까?\n\n• 대상 연월: ${ym}\n• 실행 위치: GitHub Actions`;
+      if (!confirm(confirmMsg)) return;
+
+      let inputs = {};
+      if (workflowId === 'cafe_collect.yml') {
+        inputs = { target_ym: ym };
+      } else if (workflowId === 'ai_analyze.yml') {
+        inputs = {
+          target_ym: ym,
+          limit: '0',
+          overwrite: 'true',
+          prompt_cell: 'B1',
+          ai_provider: 'claude'
+        };
+      } else if (workflowId === 'update_monitor.yml') {
+        inputs = { target_ym: ym };
+      }
+
+      showToast(`[${label}] 실행 요청 전송 중...`);
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${CONFIG.OWNER}/${CONFIG.REPO}/actions/workflows/${workflowId}/dispatches`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${authToken}`,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            ref: 'main',
+            inputs: inputs
+          })
+        });
+
+        if (res.status === 204) {
+          showToast(`✅ [${label}] 작업이 성공적으로 시작되었습니다!`, 4000);
+          setTimeout(() => fetchRecentRuns(true), 1500);
+        } else {
+          const errText = await res.text();
+          alert(`실행 요청 실패 (${res.status}):\n${errText}`);
+        }
+      } catch (err) {
+        alert(`네트워크 오류 발생: ${err.message}`);
+      }
+    }
+
+    // Cancel Active Run
+    async function cancelCurrentRun() {
+      if (!activeRunId) return;
+      if (!confirm('현재 실행 중인 작업을 즉시 중단하시겠습니까?')) return;
+
+      showToast('작업 취소 요청 중...');
+      try {
+        const res = await fetch(`https://api.github.com/repos/${CONFIG.OWNER}/${CONFIG.REPO}/actions/runs/${activeRunId}/cancel`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${authToken}`,
+            'Accept': 'application/vnd.github+json'
+          }
+        });
+
+        if (res.status === 202) {
+          showToast('작업 중단 요청이 전달되었습니다.');
+          setTimeout(() => fetchRecentRuns(true), 1500);
+        } else {
+          alert('작업 취소 실패: ' + (await res.text()));
+        }
+      } catch (err) {
+        alert('오류: ' + err.message);
+      }
+    }
+
+    // Fetch Runs
+    async function fetchRecentRuns(manual = false) {
+      if (!authToken) return;
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${CONFIG.OWNER}/${CONFIG.REPO}/actions/runs?per_page=10`, {
+          headers: {
+            'Authorization': `Bearer ${authToken}`,
+            'Accept': 'application/vnd.github+json'
+          }
+        });
+
+        if (!res.ok) return;
+
+        const data = await res.json();
+        const runs = data.workflow_runs || [];
+
+        renderBanner(runs);
+        renderTable(runs);
+
+        if (manual) {
+          showToast('최신 실행 내역이 갱신되었습니다.', 2000);
+        }
+      } catch (err) {
+        console.error('Fetch runs error:', err);
+      }
+    }
+
+    function renderBanner(runs) {
+      const indicator = document.getElementById('status-indicator');
+      const title = document.getElementById('status-title');
+      const desc = document.getElementById('status-desc');
+      const stopBtn = document.getElementById('btn-stop-workflow');
+
+      const runningRun = runs.find(r => r.status === 'in_progress' || r.status === 'queued');
+
+      if (runningRun) {
+        activeRunId = runningRun.id;
+        indicator.className = 'status-indicator running';
+        title.innerText = `🟢 ${runningRun.name} 실행 중...`;
+        
+        const startTime = new Date(runningRun.created_at);
+        const elapsedSec = Math.floor((Date.now() - startTime.getTime()) / 1000);
+        const mins = Math.floor(elapsedSec / 60);
+        const secs = elapsedSec % 60;
+        const timeStr = `${mins > 0 ? mins + '분 ' : ''}${secs}초 경과`;
+
+        desc.innerText = `실행 ID: ${runningRun.id} • ${timeStr} • 실시간 구글 시트 저장 중`;
+        stopBtn.classList.remove('hide');
+      } else {
+        activeRunId = null;
+        indicator.className = 'status-indicator';
+        title.innerText = '⚪ 현재 유휴 상태 (대기 중)';
+        
+        const lastRun = runs[0];
+        if (lastRun) {
+          const finishedTime = new Date(lastRun.updated_at).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' });
+          desc.innerText = `최근 작업: ${lastRun.name} (${translateConclusion(lastRun.conclusion)}) • ${finishedTime} 완료`;
+        } else {
+          desc.innerText = '실행 중인 작업이 없습니다.';
+        }
+        stopBtn.classList.add('hide');
+      }
+    }
+
+    function renderTable(runs) {
+      const tbody = document.getElementById('runs-tbody');
+      if (!runs.length) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding:16px;">실행 이력이 없습니다.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = runs.map(run => {
+        const isRunning = run.status === 'in_progress' || run.status === 'queued';
+        const badgeClass = isRunning ? 'in_progress' : (run.conclusion || 'neutral');
+        const badgeText = isRunning ? '진행 중' : translateConclusion(run.conclusion);
+
+        const startDate = new Date(run.created_at);
+        const dateStr = startDate.toLocaleDateString('ko-KR', { month: 'numeric', day: 'numeric' }) + ' ' +
+                        startDate.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' });
+
+        const endDate = new Date(run.updated_at);
+        const durationSec = Math.max(1, Math.floor((endDate - startDate) / 1000));
+        const durationStr = isRunning ? '진행 중' : `${Math.floor(durationSec / 60)}분 ${durationSec % 60}초`;
+
+        return `
+          <tr>
+            <td><strong>${run.name}</strong></td>
+            <td><span class="status-badge ${badgeClass}">${badgeText}</span></td>
+            <td>${dateStr}</td>
+            <td>${durationStr}</td>
+            <td>${run.actor?.login || 'system'}</td>
+            <td><a href="${run.html_url}" class="link-log" target="_blank">로그 보기 ↗</a></td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function translateConclusion(c) {
+      switch (c) {
+        case 'success': return '성공';
+        case 'failure': return '실패';
+        case 'cancelled': return '취소됨';
+        case 'timed_out': return '시간초과';
+        default: return c || '-';
+      }
+    }
+  </script>
+</body>
+</html>
