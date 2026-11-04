@@ -1474,6 +1474,7 @@
       updateModalHeader(runName, badgeText, badgeClass, `ID: ${runId}`);
       document.getElementById('log-github-link').href = htmlUrl || `https://github.com/${CONFIG.OWNER}/${CONFIG.REPO}/actions/runs/${runId}`;
       document.getElementById('log-search-input').value = '';
+      document.getElementById('log-line-stats').innerText = '0줄';
 
       document.getElementById('log-terminal').innerHTML = `
         <div style="color:#64748b; text-align:center; padding:40px 0;">
@@ -1570,7 +1571,22 @@
         if (!logRes.ok) {
           if (logRes.status === 404) {
             if (!isPolling) {
-              document.getElementById('log-terminal').innerHTML = '<div style="color:#64748b; text-align:center; padding:40px 0;">러너가 기동 중입니다. 잠시 후 로그 출력이 시작됩니다.</div>';
+              const liveUrl = document.getElementById('log-github-link').href;
+              document.getElementById('log-terminal').innerHTML = `
+                <div style="color:#94a3b8; text-align:center; padding:50px 20px; line-height:1.7;">
+                  <div style="font-size:32px; margin-bottom:12px;">⏳</div>
+                  <div style="font-size:16px; font-weight:600; color:#f1f5f9;">작업이 현재 러너에서 활발히 실행 중입니다.</div>
+                  <div style="font-size:13px; color:#64748b; margin-top:8px; max-width:480px; margin-left:auto; margin-right:auto;">
+                    GitHub API 특성상 장시간 작업은 <b>작업이 완전히 완료된 직후</b> 전체 콘솔 로그 파일이 다운로드됩니다.<br>
+                    실시간 진행 상황은 상단의 <b>[ ↗ GitHub ]</b> 버튼을 누르시면 GitHub 웹페이지에서 실시간 스트리밍으로 보실 수 있습니다.
+                  </div>
+                  <div style="margin-top:20px;">
+                    <a href="${liveUrl}" target="_blank" style="display:inline-block; background:#0284c7; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; font-weight:500; text-decoration:none;">
+                      GitHub 실시간 스트리밍 보기 ↗
+                    </a>
+                  </div>
+                </div>
+              `;
             }
             return;
           }
