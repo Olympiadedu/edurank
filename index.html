@@ -247,8 +247,9 @@ body{
 .mon-month-btn:hover{border-color:var(--acc);color:var(--acc);}
 .mon-month-btn.active{background:var(--acc);color:#fff;border-color:var(--acc);}
 
-/* REGION */
+/* REGION & SUBJECT */
 .mon-region-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:4px;}
+.mon-subject-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:12px;margin-bottom:8px;border-top:1px dashed #e2e8f0;}
 .mon-region-label{font-size:12px;font-weight:800;color:var(--txt-dim);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;min-width:44px;}
 .mon-region-pills{display:flex;gap:6px;flex-wrap:wrap;}
 .mon-pill{
@@ -266,6 +267,28 @@ body{
 }
 .mon-pill:hover{border-color:var(--black);color:var(--black);}
 .mon-pill.active-region{background:var(--black);color:#fff;border-color:var(--black);}
+.mon-pill.active-subject{background:var(--acc);color:#fff;border-color:var(--acc);}
+
+.mon-subject-badge{
+  display:inline-block;
+  font-size:11px;
+  font-weight:700;
+  padding:1.5px 7px;
+  border-radius:99px;
+  margin-left:6px;
+  vertical-align:middle;
+  line-height:1.2;
+}
+.mon-subject-badge.math{
+  background:#eff6ff;
+  color:#1d4ed8;
+  border:1px solid #bfdbfe;
+}
+.mon-subject-badge.eng{
+  background:#fdf2f8;
+  color:#be185d;
+  border:1px solid #fbcfe8;
+}
 
 /* TAG FILTER BAR */
 .mon-tag-bar{
@@ -866,6 +889,15 @@ body{
         <div class="mon-month-pills" id="mon-month-pills"></div>
       </div>
 
+      <div class="mon-subject-bar">
+        <span class="mon-region-label">과목</span>
+        <div id="mon-subject-group" class="mon-region-pills">
+          <div class="mon-pill active-subject" onclick="monSetSubject(this,'전체')">전체 과목</div>
+          <div class="mon-pill" onclick="monSetSubject(this,'수학')">📐 수학</div>
+          <div class="mon-pill" onclick="monSetSubject(this,'영어')">🔤 영어</div>
+        </div>
+      </div>
+
       <div class="mon-region-bar">
         <span class="mon-region-label">지역</span>
         <div id="mon-region-group" class="mon-region-pills">
@@ -929,7 +961,7 @@ body{
   </div>
 </div>
 
-<script src="js/monitor.js?v=20261104_1145"></script>
+<script src="js/monitor.js?v=20261104_1215"></script>
 <script>monInit();</script>
 </body>
 </html>
