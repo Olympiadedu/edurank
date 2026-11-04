@@ -637,7 +637,7 @@ var MON_DATE_TO_IDX = {'2026.10':0};
 var MON_YEAR_RANGE = {'2026년':[0,0]};
 var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
 var MON_REGION_MAP = {'방이':'송파'};
-var MON_META = {total_posts:370,updated:'2026.11.04 11:28'};
+var MON_META = {total_posts:370,updated:'2026.11.04 11:33'};
 
 var monRegion = '전체', monDate = '전체', monOpenId = null;
 var monSearchQuery = '', monOnlyUs = false, monSortBy = 'mentions';
