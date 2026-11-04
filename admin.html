@@ -624,6 +624,188 @@
     .footer-links a:hover{color:var(--acc);}
 
     .hide{display:none !important;}
+
+    /* LIVE LOG & TERMINAL MODAL */
+    .btn-live-log{
+      background:#0f172a;
+      color:#38bdf8;
+      border:1.5px solid #0284c7;
+      border-radius:8px;
+      padding:8px 14px;
+      font-size:13px;
+      font-weight:700;
+      cursor:pointer;
+      transition:all .15s;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      box-shadow:0 0 10px rgba(56,189,248,0.2);
+      animation:livePulse 2s infinite;
+    }
+    @keyframes livePulse{
+      0%,100%{box-shadow:0 0 8px rgba(56,189,248,0.25);}
+      50%{box-shadow:0 0 16px rgba(56,189,248,0.55);}
+    }
+    .btn-live-log:hover{
+      background:#1e293b;
+      color:#7dd3fc;
+      border-color:#38bdf8;
+    }
+    .btn-table-log{
+      background:#0f172a;
+      color:#f8fafc;
+      border:1px solid #334155;
+      border-radius:6px;
+      padding:4px 10px;
+      font-size:12px;
+      font-weight:700;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+      transition:all .15s;
+    }
+    .btn-table-log:hover{
+      background:#1e293b;
+      border-color:#38bdf8;
+      color:#38bdf8;
+    }
+
+    /* MODAL OVERLAY */
+    .log-modal-overlay{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:rgba(15,23,42,0.75);
+      backdrop-filter:blur(4px);
+      z-index:1000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+    .log-modal-dialog{
+      background:#0b1120;
+      border:1px solid #1e293b;
+      border-radius:14px;
+      width:100%;
+      max-width:1100px;
+      height:85vh;
+      display:flex;
+      flex-direction:column;
+      box-shadow:0 25px 50px -12px rgba(0,0,0,0.5);
+      overflow:hidden;
+      color:#e2e8f0;
+      animation:modalPop .2s ease;
+    }
+    @keyframes modalPop{
+      from{opacity:0; transform:scale(0.97);}
+      to{opacity:1; transform:scale(1);}
+    }
+    .log-modal-header{
+      padding:14px 20px;
+      background:#0f172a;
+      border-bottom:1px solid #1e293b;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .log-modal-title-row{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .log-modal-title{
+      font-size:15px;
+      font-weight:800;
+      color:#f8fafc;
+    }
+    .log-modal-controls{
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .log-btn-ctrl{
+      background:#1e293b;
+      border:1px solid #334155;
+      color:#94a3b8;
+      border-radius:6px;
+      padding:6px 11px;
+      font-size:12px;
+      font-weight:600;
+      cursor:pointer;
+      transition:all .15s;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+    }
+    .log-btn-ctrl:hover{
+      background:#334155;
+      color:#fff;
+    }
+    .log-btn-close{
+      background:#ef4444;
+      border-color:#dc2626;
+      color:#fff;
+    }
+    .log-btn-close:hover{
+      background:#dc2626;
+    }
+    .log-toolbar{
+      padding:10px 20px;
+      background:#0b1329;
+      border-bottom:1px solid #1e293b;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      font-size:12px;
+    }
+    .log-search-box{
+      flex:1;
+      max-width:480px;
+      display:flex;
+      align-items:center;
+      background:#070d1e;
+      border:1px solid #1e293b;
+      border-radius:6px;
+      padding:5px 10px;
+      gap:6px;
+    }
+    .log-search-box input{
+      background:transparent;
+      border:none;
+      outline:none;
+      color:#f1f5f9;
+      font-size:12px;
+      width:100%;
+    }
+    .log-search-box input::placeholder{color:#475569;}
+    .log-terminal{
+      flex:1;
+      overflow-y:auto;
+      padding:16px 20px;
+      font-family:'JetBrains Mono','Fira Code','Cascadia Code',Consolas,monospace;
+      font-size:12.5px;
+      line-height:1.65;
+      background:#030712;
+      color:#cbd5e1;
+      white-space:pre-wrap;
+      word-break:break-all;
+      user-select:text;
+    }
+    .terminal-line{margin-bottom:2px;}
+    .terminal-line.success{color:#4ade80;}
+    .terminal-line.warning{color:#fbbf24;}
+    .terminal-line.error{color:#f87171; font-weight:700;}
+    .terminal-line.info{color:#38bdf8;}
+    .terminal-line.subtle{color:#64748b;}
+
   </style>
 </head>
 <body>
@@ -690,6 +872,7 @@
         </div>
       </div>
       <div class="status-actions">
+        <button class="btn-live-log hide" id="btn-live-log" onclick="openCurrentLiveLog()">🖥️ 실시간 로그 보기</button>
         <button class="btn-stop hide" id="btn-stop-workflow" onclick="cancelCurrentRun()">⏹️ 실행 중단</button>
         <button class="btn-refresh" onclick="fetchRecentRuns(true)">🔄 새로고침</button>
       </div>
@@ -702,9 +885,7 @@
           <span>📅</span> 대상 연월 설정 (수집 및 AI 분석 기준)
         </div>
         <div class="month-pills" id="month-pills">
-          <button type="button" class="month-pill active" onclick="selectMonth('2026-10')">2026-10 (10월)</button>
-          <button type="button" class="month-pill" onclick="selectMonth('2026-11')">2026-11 (11월)</button>
-          <button type="button" class="month-pill" onclick="selectMonth('2026-09')">2026-09 (9월)</button>
+          <!-- 최근 6개월 역순(최신순) 자바스크립트 자동 생성 -->
         </div>
       </div>
       <div class="month-input-wrap">
@@ -886,6 +1067,7 @@
 
     // Initialize & Check Auto Login
     window.addEventListener('DOMContentLoaded', async () => {
+      initMonthSelector();
       const savedPass = localStorage.getItem('edurank_admin_pass') || sessionStorage.getItem('edurank_admin_pass');
       const savedUser = localStorage.getItem('edurank_admin_user') || sessionStorage.getItem('edurank_admin_user');
       
@@ -996,11 +1178,42 @@
       document.getElementById('password-input').value = '';
     }
 
+    // 최근 6개월 역순(최신순: 당월 ➔ 전월 ➔ ...) 동적 생성
+    function initMonthSelector() {
+      const container = document.getElementById('month-pills');
+      if (!container) return;
+
+      const now = new Date();
+      const months = [];
+
+      for (let i = 0; i < 6; i++) {
+        const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+        const yyyy = d.getFullYear();
+        const mm = String(d.getMonth() + 1).padStart(2, '0');
+        const ym = `${yyyy}-${mm}`;
+        const monthNum = d.getMonth() + 1;
+
+        let tag = '';
+        if (i === 0) tag = ' · 이번달';
+        else if (i === 1) tag = ' · 지난달';
+
+        months.push({
+          ym: ym,
+          label: `${ym} (${monthNum}월${tag})`
+        });
+      }
+
+      container.innerHTML = months.map(m => {
+        const isActive = (m.ym === currentTargetMonth);
+        return `<button type="button" class="month-pill ${isActive ? 'active' : ''}" onclick="selectMonth('${m.ym}')">${m.label}</button>`;
+      }).join('');
+    }
+
     function selectMonth(ym) {
       currentTargetMonth = ym;
       document.getElementById('target-month-input').value = ym;
       document.querySelectorAll('.month-pill').forEach(btn => {
-        if (btn.innerText.includes(ym)) {
+        if (btn.innerText.startsWith(ym)) {
           btn.classList.add('active');
         } else {
           btn.classList.remove('active');
@@ -1013,7 +1226,7 @@
       const trimmed = val.trim();
       currentTargetMonth = trimmed;
       document.querySelectorAll('.month-pill').forEach(btn => {
-        if (btn.innerText.includes(trimmed)) {
+        if (btn.innerText.startsWith(trimmed)) {
           btn.classList.add('active');
         } else {
           btn.classList.remove('active');
@@ -1137,8 +1350,15 @@
 
       const runningRun = runs.find(r => r.status === 'in_progress' || r.status === 'queued');
 
+      const liveLogBtn = document.getElementById('btn-live-log');
+
       if (runningRun) {
         activeRunId = runningRun.id;
+        activeRunName = runningRun.name;
+        activeRunStatus = runningRun.status;
+        activeRunConclusion = runningRun.conclusion;
+        activeRunUrl = runningRun.html_url;
+
         indicator.className = 'status-indicator running';
         title.innerText = `🟢 ${runningRun.name} 실행 중...`;
         
@@ -1150,6 +1370,12 @@
 
         desc.innerText = `실행 ID: ${runningRun.id} • ${timeStr} • 실시간 구글 시트 저장 중`;
         stopBtn.classList.remove('hide');
+        if (liveLogBtn) liveLogBtn.classList.remove('hide');
+
+        // 만약 현재 모달이 열려있고 실행중인 작업이면 모달 헤더 갱신
+        if (activeViewingRunId === runningRun.id) {
+          updateModalHeader(runningRun.name, '진행 중', 'in_progress', timeStr);
+        }
       } else {
         activeRunId = null;
         indicator.className = 'status-indicator';
@@ -1163,6 +1389,7 @@
           desc.innerText = '실행 중인 작업이 없습니다.';
         }
         stopBtn.classList.add('hide');
+        if (liveLogBtn) liveLogBtn.classList.add('hide');
       }
     }
 
@@ -1185,6 +1412,7 @@
         const endDate = new Date(run.updated_at);
         const durationSec = Math.max(1, Math.floor((endDate - startDate) / 1000));
         const durationStr = isRunning ? '진행 중' : `${Math.floor(durationSec / 60)}분 ${durationSec % 60}초`;
+        const safeName = (run.name || '').replace(/'/g, "\\'");
 
         return `
           <tr>
@@ -1193,7 +1421,11 @@
             <td>${dateStr}</td>
             <td>${durationStr}</td>
             <td>${run.actor?.login || 'system'}</td>
-            <td><a href="${run.html_url}" class="link-log" target="_blank">로그 보기 ↗</a></td>
+            <td>
+              <button type="button" class="btn-table-log" onclick="openLogModal('${run.id}', '${safeName}', '${run.status}', '${run.conclusion}', '${run.html_url}')">
+                📄 로그 보기
+              </button>
+            </td>
           </tr>
         `;
       }).join('');
@@ -1208,6 +1440,275 @@
         default: return c || '-';
       }
     }
+
+    // ========================================================
+    // LOG VIEWER CONSOLE MODAL
+    // ========================================================
+    let activeViewingRunId = null;
+    let activeViewingRunName = '';
+    let logPollTimer = null;
+    let rawLogContent = '';
+    let activeRunName = '';
+    let activeRunStatus = '';
+    let activeRunConclusion = '';
+    let activeRunUrl = '';
+
+    function openCurrentLiveLog() {
+      if (!activeRunId) {
+        showToast('현재 실행 중인 작업이 없습니다.');
+        return;
+      }
+      openLogModal(activeRunId, activeRunName || '실시간 작업', activeRunStatus || 'in_progress', '', activeRunUrl);
+    }
+
+    async function openLogModal(runId, runName, status, conclusion, htmlUrl) {
+      activeViewingRunId = runId;
+      activeViewingRunName = runName;
+      rawLogContent = '';
+
+      const isRunning = (status === 'in_progress' || status === 'queued');
+      const badgeText = isRunning ? '진행 중' : translateConclusion(conclusion);
+      const badgeClass = isRunning ? 'in_progress' : (conclusion || 'neutral');
+
+      document.getElementById('log-modal-title').innerText = `${runName} 콘솔 로그`;
+      updateModalHeader(runName, badgeText, badgeClass, `ID: ${runId}`);
+      document.getElementById('log-github-link').href = htmlUrl || `https://github.com/${CONFIG.OWNER}/${CONFIG.REPO}/actions/runs/${runId}`;
+      document.getElementById('log-search-input').value = '';
+
+      document.getElementById('log-terminal').innerHTML = `
+        <div style="color:#64748b; text-align:center; padding:40px 0;">
+          <div style="font-size:24px; margin-bottom:10px;">⏳</div>
+          <div>러너 실행 로그를 불러오고 있습니다...</div>
+        </div>
+      `;
+
+      document.getElementById('log-modal-overlay').classList.remove('hide');
+
+      await fetchAndDisplayLog(runId);
+
+      // 실행 중이면 3.5초 간격으로 자동 갱신
+      if (logPollTimer) clearInterval(logPollTimer);
+      if (isRunning) {
+        logPollTimer = setInterval(() => {
+          if (activeViewingRunId === runId) {
+            fetchAndDisplayLog(runId, true);
+          }
+        }, 3500);
+      }
+    }
+
+    function updateModalHeader(name, badgeText, badgeClass, subText) {
+      const badge = document.getElementById('log-modal-badge');
+      badge.className = `status-badge ${badgeClass}`;
+      badge.innerText = badgeText;
+      if (subText) {
+        document.getElementById('log-modal-sub').innerText = subText;
+      }
+    }
+
+    function closeLogModal() {
+      document.getElementById('log-modal-overlay').classList.add('hide');
+      if (logPollTimer) clearInterval(logPollTimer);
+      logPollTimer = null;
+      activeViewingRunId = null;
+    }
+
+    function onLogOverlayClick(e) {
+      if (e.target.id === 'log-modal-overlay') {
+        closeLogModal();
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !document.getElementById('log-modal-overlay').classList.contains('hide')) {
+        closeLogModal();
+      }
+    });
+
+    async function refreshCurrentLog() {
+      if (activeViewingRunId) {
+        await fetchAndDisplayLog(activeViewingRunId, false);
+        showToast('로그를 새로고침했습니다.', 1500);
+      }
+    }
+
+    async function fetchAndDisplayLog(runId, isPolling = false) {
+      if (!authToken) return;
+
+      try {
+        // 1. 해당 Run의 Jobs 목록 조회
+        const jobsUrl = `https://api.github.com/repos/${CONFIG.OWNER}/${CONFIG.REPO}/actions/runs/${runId}/jobs`;
+        const jRes = await fetch(jobsUrl, {
+          headers: {
+            'Authorization': `Bearer ${authToken}`,
+            'Accept': 'application/vnd.github+json'
+          }
+        });
+
+        if (!jRes.ok) throw new Error(`작업 목록 조회 실패 (${jRes.status})`);
+        const jData = await jRes.json();
+        const jobs = jData.jobs || [];
+
+        if (!jobs.length) {
+          if (!isPolling) {
+            document.getElementById('log-terminal').innerHTML = '<div style="color:#64748b; text-align:center; padding:40px 0;">작업 러너가 초기화 중입니다... 잠시만 기다려주세요.</div>';
+          }
+          return;
+        }
+
+        // 스케줄가드를 제외한 주 워커 작업 선택 (없으면 마지막 작업)
+        const primaryJob = jobs.find(j => j.name !== 'schedule_guard' && (j.status === 'in_progress' || j.conclusion)) || jobs[jobs.length - 1];
+
+        // 2. Job 로그 조회
+        const logUrl = `https://api.github.com/repos/${CONFIG.OWNER}/${CONFIG.REPO}/actions/jobs/${primaryJob.id}/logs`;
+        const logRes = await fetch(logUrl, {
+          headers: {
+            'Authorization': `Bearer ${authToken}`
+          }
+        });
+
+        if (!logRes.ok) {
+          if (logRes.status === 404) {
+            if (!isPolling) {
+              document.getElementById('log-terminal').innerHTML = '<div style="color:#64748b; text-align:center; padding:40px 0;">러너가 기동 중입니다. 잠시 후 로그 출력이 시작됩니다.</div>';
+            }
+            return;
+          }
+          throw new Error(`로그 다운로드 실패 (${logRes.status})`);
+        }
+
+        const rawText = await logRes.text();
+        rawLogContent = cleanAnsi(rawText);
+
+        renderTerminalLines(rawLogContent, document.getElementById('log-search-input').value.trim());
+
+        // 자동 스크롤
+        if (document.getElementById('log-auto-scroll').checked) {
+          const terminal = document.getElementById('log-terminal');
+          terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        // 작업 완료 시 폴링 중단 및 헤더 갱신
+        if (primaryJob.status === 'completed' && logPollTimer) {
+          clearInterval(logPollTimer);
+          logPollTimer = null;
+          updateModalHeader(primaryJob.name, translateConclusion(primaryJob.conclusion), primaryJob.conclusion, `완료됨 • ${new Date(primaryJob.completed_at).toLocaleTimeString()}`);
+        }
+
+      } catch (err) {
+        console.error('Log fetch error:', err);
+        if (!isPolling) {
+          document.getElementById('log-terminal').innerHTML = `
+            <div style="color:#f87171; text-align:center; padding:40px 0;">
+              <div>⚠️ 로그를 불러오는 중 오류가 발생했습니다.</div>
+              <div style="font-size:12px; color:#64748b; margin-top:8px;">${err.message}</div>
+              <div style="margin-top:16px;">
+                <a href="${document.getElementById('log-github-link').href}" target="_blank" style="color:#38bdf8; text-decoration:underline;">GitHub Actions 페이지에서 직접 확인 ↗</a>
+              </div>
+            </div>
+          `;
+        }
+      }
+    }
+
+    function cleanAnsi(text) {
+      if (!text) return '';
+      return text
+        .replace(/\x1b\[[0-9;]*[a-zA-Z]/g, '')
+        .replace(/##\[group\]/g, '▶ ')
+        .replace(/##\[endgroup\]/g, '')
+        .replace(/##\[error\]/g, '❌ ')
+        .replace(/##\[warning\]/g, '⚠️ ');
+    }
+
+    function renderTerminalLines(text, filterQuery = '') {
+      const terminal = document.getElementById('log-terminal');
+      if (!text) {
+        terminal.innerHTML = '<div style="color:#64748b; padding:20px;">출력된 로그가 없습니다.</div>';
+        document.getElementById('log-line-stats').innerText = '0 줄';
+        return;
+      }
+
+      const allLines = text.split('\n');
+      const q = (filterQuery || '').toLowerCase();
+      const filtered = q ? allLines.filter(l => l.toLowerCase().includes(q)) : allLines;
+
+      document.getElementById('log-line-stats').innerText = q ? `필터: ${filtered.length:,}줄 / 총 ${allLines.length:,}줄` : `총 ${allLines.length:,}줄`;
+
+      const htmlLines = filtered.map(line => {
+        let cls = '';
+        if (line.includes('✓') || line.includes('완료') || line.includes('성공') || line.includes('Successfully')) cls = 'success';
+        else if (line.includes('❌') || line.includes('실패') || line.includes('오류') || line.includes('Error') || line.includes('Failed')) cls = 'error';
+        else if (line.includes('⚠️') || line.includes('경고') || line.includes('Warning') || line.includes('APIError')) cls = 'warning';
+        else if (line.includes('[INFO]') || line.includes('[검색설정]') || line.includes('진행률')) cls = 'info';
+        else if (line.startsWith('##[') || line.includes('Set up') || line.includes('Complete job')) cls = 'subtle';
+
+        // escape HTML
+        const safe = line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        return `<div class="terminal-line ${cls}">${safe}</div>`;
+      }).join('');
+
+      terminal.innerHTML = htmlLines || '<div style="color:#64748b; padding:20px;">검색어와 일치하는 로그 라인이 없습니다.</div>';
+    }
+
+    function filterLogLines(query) {
+      renderTerminalLines(rawLogContent, query);
+    }
+
+    function clearLogSearch() {
+      document.getElementById('log-search-input').value = '';
+      renderTerminalLines(rawLogContent, '');
+    }
+
+    function copyLogText() {
+      if (!rawLogContent) {
+        showToast('복사할 로그가 없습니다.');
+        return;
+      }
+      navigator.clipboard.writeText(rawLogContent).then(() => {
+        showToast('전체 로그가 클립보드에 복사되었습니다.');
+      }).catch(() => {
+        showToast('클립보드 복사 실패');
+      });
+    }
+
   </script>
+
+  <!-- LOG VIEWER MODAL -->
+  <div class="log-modal-overlay hide" id="log-modal-overlay" onclick="onLogOverlayClick(event)">
+    <div class="log-modal-dialog" id="log-modal-dialog">
+      <div class="log-modal-header">
+        <div class="log-modal-title-row">
+          <span style="font-size:18px;">🖥️</span>
+          <div>
+            <div class="log-modal-title" id="log-modal-title">실행 콘솔 로그</div>
+            <div style="font-size:12px; color:#94a3b8;" id="log-modal-sub">작업 ID 조회 중...</div>
+          </div>
+          <span class="status-badge" id="log-modal-badge" style="margin-left:8px;">조회 중</span>
+        </div>
+        <div class="log-modal-controls">
+          <label style="font-size:12px; color:#cbd5e1; display:flex; align-items:center; gap:5px; cursor:pointer;">
+            <input type="checkbox" id="log-auto-scroll" checked> 자동 스크롤
+          </label>
+          <button type="button" class="log-btn-ctrl" onclick="refreshCurrentLog()" title="로그 새로고침">🔄 새로고침</button>
+          <button type="button" class="log-btn-ctrl" onclick="copyLogText()" title="클립보드에 복사">📋 복사</button>
+          <a href="#" class="log-btn-ctrl" id="log-github-link" target="_blank" title="GitHub Actions 원문 보기">↗ GitHub</a>
+          <button type="button" class="log-btn-ctrl log-btn-close" onclick="closeLogModal()" title="닫기 (ESC)">✕ 닫기</button>
+        </div>
+      </div>
+      <div class="log-toolbar">
+        <div class="log-search-box">
+          <span>🔍</span>
+          <input type="text" id="log-search-input" placeholder="로그 필터 검색 (예: 완료, 오류, 수집, 2026-10...)" oninput="filterLogLines(this.value)">
+          <button type="button" onclick="clearLogSearch()" style="background:none;border:none;color:#64748b;cursor:pointer;font-size:13px;">✕</button>
+        </div>
+        <div style="color:#94a3b8; font-size:12px;" id="log-line-stats">총 0 줄</div>
+      </div>
+      <div class="log-terminal" id="log-terminal">
+        <div style="color:#64748b; text-align:center; padding:40px 0;">로그 데이터를 불러오는 중입니다...</div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
