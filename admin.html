@@ -1633,7 +1633,7 @@
       const q = (filterQuery || '').toLowerCase();
       const filtered = q ? allLines.filter(l => l.toLowerCase().includes(q)) : allLines;
 
-      document.getElementById('log-line-stats').innerText = q ? `필터: ${filtered.length:,}줄 / 총 ${allLines.length:,}줄` : `총 ${allLines.length:,}줄`;
+      document.getElementById('log-line-stats').innerText = q ? `필터: ${filtered.length.toLocaleString()}줄 / 총 ${allLines.length.toLocaleString()}줄` : `총 ${allLines.length.toLocaleString()}줄`;
 
       const htmlLines = filtered.map(line => {
         let cls = '';
