@@ -14,11 +14,11 @@ var MON_DATA = [
     '방이': [8]
   },
     pros: [
-    {label:'성적향상/성과',count:2,posts:[{text:'학교 들어가기전에 사고력수학학원이요',url:'https://cafe.naver.com/nihongokkureomi/441648',region:'동대문',date:'2026.10',quote:'도형을 어려워했는데 그부분도 정말 좋아졌어요'},{text:'일유애프터로 사고력수학학원?',url:'https://cafe.naver.com/sojbb2233/646485',region:'방이',date:'2026.10',quote:'사고력수학 문제풀이 해보면 시간도 줄고 많이 는게 보여요'}]},
-    {label:'선생님/수업',count:2,posts:[{text:'수학학원 시매쓰 다니는건 어떤가요?',url:'https://cafe.naver.com/nihongokkureomi/440774',region:'동대문',date:'2026.10',quote:'수업분위기도 좋고'},{text:'계속 고민중인 사고력수학학원',url:'https://cafe.naver.com/esyori/2755428',region:'방이',date:'2026.10',quote:'어떻게 문제를 푸는지 개념을 잘짚어주셔서 좋더라고요'}]},
-    {label:'관리/피드백',count:1,posts:[{text:'수학학원 시매쓰 다니는건 어떤가요?',url:'https://cafe.naver.com/nihongokkureomi/440774',region:'동대문',date:'2026.10',quote:'선생님도 신경써주실거예요'}]},
-    {label:'흥미/동기부여',count:4,posts:[{text:'수학학원 시매쓰 다니는건 어떤가요?',url:'https://cafe.naver.com/nihongokkureomi/440774',region:'동대문',date:'2026.10',quote:'교구 구체물 활용하니 확실히 아이가 좋아해요'},{text:'초1 사고력수학을 시작해보려고하는데요',url:'https://cafe.naver.com/kfromancer/58654',region:'미사',date:'2026.10',quote:'친구들과 대화하면서그속에서 함께 배우는게 전 너무 좋더라고요'},{text:'일유애프터로 사고력수학학원?',url:'https://cafe.naver.com/sojbb2233/646485',region:'방이',date:'2026.10',quote:'아이도 재미있어 하고'},{text:'7세 사고력수학학원추천 해주세요',url:'https://cafe.naver.com/godonghang/195561',region:'방이',date:'2026.10',quote:'아이가 수학을 너무 좋아하는 계기가 되었어요'}]},
-    {label:'반복/심화학습',count:2,posts:[{text:'계속 고민중인 사고력수학학원',url:'https://cafe.naver.com/esyori/2755428',region:'방이',date:'2026.10',quote:'식을 쓰고 체크하는 부분이 많이 좋아졌어요'},{text:'초1 사고력수학학원 vs 보습학원',url:'https://cafe.naver.com/zzandol/845384',region:'방이',date:'2026.10',quote:'문제 확장해서 보는 눈이 생기더라고요'}]},
+    {label:'성적향상/성과',count:2,posts:[{text:'학교 들어가기전에 사고력수학학원이요',url:'https://cafe.naver.com/nihongokkureomi/441648',region:'동대문',date:'2026.10',quote:'도형을 어려워했는데 그부분도 정말 좋아졌어요'},{text:'일유애프터로 사고력수학학원?',url:'https://cafe.naver.com/sojbb2233/646485',region:'방이',date:'2026.10',quote:'문제풀이 해보면 시간도 줄고 많이 는게 보여요'}]},
+    {label:'선생님/수업',count:3,posts:[{text:'수학학원 시매쓰 다니는건 어떤가요?',url:'https://cafe.naver.com/nihongokkureomi/440774',region:'동대문',date:'2026.10',quote:'수업분위기도 좋고 교구 구체물 활용하니'},{text:'초1 사고력수학을 시작해보려고하는데요',url:'https://cafe.naver.com/kfromancer/58654',region:'미사',date:'2026.10',quote:'친구들과 대화하면서그속에서 함께 배우는게 전 너무 좋더라고요'},{text:'계속 고민중인 사고력수학학원',url:'https://cafe.naver.com/esyori/2755428',region:'방이',date:'2026.10',quote:'어떻게 문제를 푸는지 개념을 잘짚어주셔서 좋더라고요'}]},
+    {label:'흥미/동기부여',count:3,posts:[{text:'수학학원 시매쓰 다니는건 어떤가요?',url:'https://cafe.naver.com/nihongokkureomi/440774',region:'동대문',date:'2026.10',quote:'아이 재미있게 다니고있어요'},{text:'일유애프터로 사고력수학학원?',url:'https://cafe.naver.com/sojbb2233/646485',region:'방이',date:'2026.10',quote:'아이도 재미있어 하고'},{text:'7세 사고력수학학원추천 해주세요',url:'https://cafe.naver.com/godonghang/195561',region:'방이',date:'2026.10',quote:'아이가 수학을 너무 좋아하는 계기가 되었어요'}]},
+    {label:'관리/피드백',count:2,posts:[{text:'수학학원 시매쓰 다니는건 어떤가요?',url:'https://cafe.naver.com/nihongokkureomi/440774',region:'동대문',date:'2026.10',quote:'선생님도 신경써주실거예요'},{text:'계속 고민중인 사고력수학학원',url:'https://cafe.naver.com/esyori/2755428',region:'방이',date:'2026.10',quote:'식을 쓰고 체크하는 부분이 많이 좋아졌어요'}]},
+    {label:'반복/심화학습',count:1,posts:[{text:'초1 사고력수학학원 vs 보습학원',url:'https://cafe.naver.com/zzandol/845384',region:'방이',date:'2026.10',quote:'문제 확장해서 보는 눈이 생기더라고요'}]},
     {label:'커리큘럼/시스템',count:1,posts:[{text:'7세 사고력수학학원추천 해주세요',url:'https://cafe.naver.com/godonghang/195561',region:'방이',date:'2026.10',quote:'기초 개념을 탄탄하게 해주고 수학토론이 있는 부분이 맘에 들어서'}]}
   ],
     cons: [
@@ -47,11 +47,11 @@ var MON_DATA = [
     '중계': [3]
   },
     pros: [
-    {label:'선생님/수업',count:6,posts:[{text:'구의동 쪽 초등 고학년 영어학원 추천해주세요!',url:'https://cafe.naver.com/mamworld/572430',region:'광진',date:'2026.10',quote:'원어민 선생님과 한국인 선생님이 각각 회화와 시험대비를 맡고 있는'},{text:'예비초 영어학원은 언제부터 보내는 게 좋을까요?',url:'https://cafe.naver.com/newmusicbox/1108020',region:'성동',date:'2026.10',quote:'원어민 선생님과 영어로 이야기하는 수업이 있어서'},{text:'광진구에서 예비초 영어학원 어디 보내실까요?',url:'https://cafe.naver.com/newmusicbox/1107969',region:'광진',date:'2026.10',quote:'원어민 선생님이랑 영어로 대화하는 수업이 있어서'},{text:'초등 입학 전에 영어학원 보내는게 좋을까요?',url:'https://cafe.naver.com/phoneinside/450982',region:'동대문',date:'2026.10',quote:'투담임제로 회화 수업도 하고'},{text:'성북구 초등 영어학원은 어디로 보내세요?',url:'https://cafe.naver.com/agameworld/906645',region:'중계',date:'2026.10',quote:'원어민쌤이랑 한국인쌤이 계신데 영어회화도 챙길수있어서 좋아요'},{text:'예비초 영어학원 어디가 괜찮을까요??',url:'https://cafe.naver.com/applelog/876795',region:'중계',date:'2026.10',quote:'원어민 선생님과 영어로 대화하는 수업이 있어서 회화 연습하기 좋고'}]},
-    {label:'성적향상/성과',count:3,posts:[{text:'구의동 쪽 초등 고학년 영어학원 추천해주세요!',url:'https://cafe.naver.com/mamworld/572430',region:'광진',date:'2026.10',quote:'특목고나 자사고 입시 실적도 좋은편이에요'},{text:'초등고학년 아이 영어학원 어디로 보낼지 고민이에요',url:'https://cafe.naver.com/baby090/933255',region:'중랑',date:'2026.10',quote:'특목고나 자사고 입시 실적도 좋은 편'},{text:'초등 영어학원 회화랑 문법 같이 하는 곳이 있을까요??',url:'https://cafe.naver.com/esyori/2755471',region:'방이',date:'2026.10',quote:'약했던 회화가 꽤 늘었어요'}]},
-    {label:'커리큘럼/시스템',count:10,posts:[{text:'구의동 쪽 초등 고학년 영어학원 추천해주세요!',url:'https://cafe.naver.com/mamworld/572430',region:'광진',date:'2026.10',quote:'중학교 내신 체계적으로 준비할 수 있어서'},{text:'예비초 영어학원은 언제부터 보내는 게 좋을까요?',url:'https://cafe.naver.com/newmusicbox/1108020',region:'성동',date:'2026.10',quote:'한국인 선생님 수업도 있어서 학습적인 부분까지 함께 챙길 수 있구요'},{text:'광진구에서 예비초 영어학원 어디 보내실까요?',url:'https://cafe.naver.com/newmusicbox/1107969',region:'광진',date:'2026.10',quote:'회화뿐만 아니라 학습까지도 챙길 수 있어요'},{text:'초등 입학 전에 영어학원 보내는게 좋을까요?',url:'https://cafe.naver.com/phoneinside/450982',region:'동대문',date:'2026.10',quote:'기초부터 차근차근 배울 수 있어서 만족하고 있어요'},{text:'초등고학년 아이 영어학원 어디로 보낼지 고민이에요',url:'https://cafe.naver.com/baby090/933255',region:'중랑',date:'2026.10',quote:'초등학교부터 중학교까지 내신 체계적으로 준비할 수 있더라고요'},{text:'초등 영어학원 회화랑 문법 같이 하는 곳이 있을까요??',url:'https://cafe.naver.com/esyori/2755471',region:'방이',date:'2026.10',quote:'초등과정부터 중학교 내신까지 봐주시고'},{text:'초등 고학년 영어학원 다들 어디로 보내시나요?',url:'https://cafe.naver.com/zzandol/844988',region:'방이',date:'2026.10',quote:'회화와 학습을 같이 하다가 중학교 내신까지 이어서 준비할 수 있는 점'},{text:'중계동에서 예비초 영어학원 알아보고 있어요',url:'https://cafe.naver.com/agameworld/907014',region:'중계',date:'2026.10',quote:'원어민 선생님께는 회화를 배우고 한국인 선생님께는 문법이나 시험'},{text:'성북구 초등 영어학원은 어디로 보내세요?',url:'https://cafe.naver.com/agameworld/906645',region:'중계',date:'2026.10',quote:'중3까지 수능 내신 체계적으로다가 준비 같이 할 수 있는 곳이라 좋았네요'},{text:'예비초 영어학원 어디가 괜찮을까요??',url:'https://cafe.naver.com/applelog/876795',region:'중계',date:'2026.10',quote:'회화만 하는 게 아니라 학습적인 부분도 같이 챙길 수 있어서 좋습니다'}]},
-    {label:'흥미/동기부여',count:3,posts:[{text:'예비초 영어학원은 언제부터 보내는 게 좋을까요?',url:'https://cafe.naver.com/newmusicbox/1108020',region:'성동',date:'2026.10',quote:'다니면서 오히려 뿌뜻해 해요'},{text:'중계동에서 예비초 영어학원 알아보고 있어요',url:'https://cafe.naver.com/agameworld/907014',region:'중계',date:'2026.10',quote:'아이도 재미있게 다니고 있어서 추천드려봅니다'},{text:'예비초 영어학원 어디가 괜찮을까요??',url:'https://cafe.naver.com/applelog/876795',region:'중계',date:'2026.10',quote:'아이가 영어에 흥미를 붙이는 데도 도움이 되는 것 같아요'}]},
-    {label:'관리/피드백',count:2,posts:[{text:'중등 영어 내신 학원에서 어디까지 봐주나요?',url:'https://cafe.naver.com/dongdaemoonstory/374296',region:'동대문',date:'2026.10',quote:'시험기간에 본문이랑 틀린 문제까지 같이 봐줘요'},{text:'초등고학년 아이 영어학원 어디로 보낼지 고민이에요',url:'https://cafe.naver.com/baby090/933255',region:'중랑',date:'2026.10',quote:'원어민 선생님은 회화, 한국인 선생님은 시험 대비하는 투담임제'}]}
+    {label:'선생님/수업',count:9,posts:[{text:'구의동 쪽 초등 고학년 영어학원 추천해주세요!',url:'https://cafe.naver.com/mamworld/572430',region:'광진',date:'2026.10',quote:'회화와 시험대비를 맡고 있는 투담임제라서 모두 챙길 수 있는'},{text:'예비초 영어학원은 언제부터 보내는 게 좋을까요?',url:'https://cafe.naver.com/newmusicbox/1108020',region:'성동',date:'2026.10',quote:'원어민 선생님과 영어로 이야기하는 수업이 있어서'},{text:'광진구에서 예비초 영어학원 어디 보내실까요?',url:'https://cafe.naver.com/newmusicbox/1107969',region:'광진',date:'2026.10',quote:'원어민 선생님이랑 영어로 대화하는 수업이 있어서'},{text:'초등 입학 전에 영어학원 보내는게 좋을까요?',url:'https://cafe.naver.com/phoneinside/450982',region:'동대문',date:'2026.10',quote:'투담임제로 회화 수업도 하고'},{text:'초등고학년 아이 영어학원 어디로 보낼지 고민이에요',url:'https://cafe.naver.com/baby090/933255',region:'중랑',date:'2026.10',quote:'원어민 선생님은 회화, 한국인 선생님은 시험 대비하는 투담임제'},{text:'초등 영어학원 회화랑 문법 같이 하는 곳이 있을까요??',url:'https://cafe.naver.com/esyori/2755471',region:'방이',date:'2026.10',quote:'문법이나 내신 지도해주는 선생님이랑 회화 담당하시는 원어민쌤 따로'},{text:'초등 고학년 영어학원 다들 어디로 보내시나요?',url:'https://cafe.naver.com/zzandol/844988',region:'방이',date:'2026.10',quote:'한국인 선생님이 내신이나 문법을 지도해 주는 투 담임제'},{text:'성북구 초등 영어학원은 어디로 보내세요?',url:'https://cafe.naver.com/agameworld/906645',region:'중계',date:'2026.10',quote:'원어민쌤이랑 한국인쌤이 계신데 영어회화도 챙길수있어서 좋아요'},{text:'예비초 영어학원 어디가 괜찮을까요??',url:'https://cafe.naver.com/applelog/876795',region:'중계',date:'2026.10',quote:'원어민 선생님과 영어로 대화하는 수업이 있어서 회화 연습하기 좋고'}]},
+    {label:'커리큘럼/시스템',count:9,posts:[{text:'구의동 쪽 초등 고학년 영어학원 추천해주세요!',url:'https://cafe.naver.com/mamworld/572430',region:'광진',date:'2026.10',quote:'중학교 내신 체계적으로 준비할 수 있어서'},{text:'광진구에서 예비초 영어학원 어디 보내실까요?',url:'https://cafe.naver.com/newmusicbox/1107969',region:'광진',date:'2026.10',quote:'회화뿐만 아니라 학습까지도 챙길 수 있어요'},{text:'초등 입학 전에 영어학원 보내는게 좋을까요?',url:'https://cafe.naver.com/phoneinside/450982',region:'동대문',date:'2026.10',quote:'기초부터 차근차근 배울 수 있어서 만족하고 있어요'},{text:'초등고학년 아이 영어학원 어디로 보낼지 고민이에요',url:'https://cafe.naver.com/baby090/933255',region:'중랑',date:'2026.10',quote:'초등학교부터 중학교까지 내신 체계적으로 준비할 수 있더라고요'},{text:'초등 영어학원 회화랑 문법 같이 하는 곳이 있을까요??',url:'https://cafe.naver.com/esyori/2755471',region:'방이',date:'2026.10',quote:'초등과정부터 중학교 내신까지 봐주시고'},{text:'초등 고학년 영어학원 다들 어디로 보내시나요?',url:'https://cafe.naver.com/zzandol/844988',region:'방이',date:'2026.10',quote:'중학교 내신까지 이어서 준비할 수 있는 점이 마음에 들었어요'},{text:'중계동에서 예비초 영어학원 알아보고 있어요',url:'https://cafe.naver.com/agameworld/907014',region:'중계',date:'2026.10',quote:'원어민 선생님께는 회화를 배우고 한국인 선생님께는 문법이나 시험'},{text:'성북구 초등 영어학원은 어디로 보내세요?',url:'https://cafe.naver.com/agameworld/906645',region:'중계',date:'2026.10',quote:'중3까지 수능 내신 체계적으로다가 준비 같이 할 수 있는 곳이라 좋았네요'},{text:'예비초 영어학원 어디가 괜찮을까요??',url:'https://cafe.naver.com/applelog/876795',region:'중계',date:'2026.10',quote:'학습적인 부분도 같이 챙길 수 있어서 좋습니다'}]},
+    {label:'성적향상/성과',count:3,posts:[{text:'구의동 쪽 초등 고학년 영어학원 추천해주세요!',url:'https://cafe.naver.com/mamworld/572430',region:'광진',date:'2026.10',quote:'특목고나 자사고 입시 실적도 좋은편이에요'},{text:'초등고학년 아이 영어학원 어디로 보낼지 고민이에요',url:'https://cafe.naver.com/baby090/933255',region:'중랑',date:'2026.10',quote:'특목고나 자사고 입시 실적도 좋은 편'},{text:'초등 영어학원 회화랑 문법 같이 하는 곳이 있을까요??',url:'https://cafe.naver.com/esyori/2755471',region:'방이',date:'2026.10',quote:'저희애는 약했던 회화가 꽤 늘었어요'}]},
+    {label:'흥미/동기부여',count:3,posts:[{text:'예비초 영어학원은 언제부터 보내는 게 좋을까요?',url:'https://cafe.naver.com/newmusicbox/1108020',region:'성동',date:'2026.10',quote:'회화가 늘면서 자기가 말할 수 있는게 많아지다보니'},{text:'중계동에서 예비초 영어학원 알아보고 있어요',url:'https://cafe.naver.com/agameworld/907014',region:'중계',date:'2026.10',quote:'아이도 재미있게 다니고 있어서 추천드려봅니다'},{text:'예비초 영어학원 어디가 괜찮을까요??',url:'https://cafe.naver.com/applelog/876795',region:'중계',date:'2026.10',quote:'아이가 영어에 흥미를 붙이는 데도 도움이 되는 것 같아요'}]},
+    {label:'관리/피드백',count:1,posts:[{text:'중등 영어 내신 학원에서 어디까지 봐주나요?',url:'https://cafe.naver.com/dongdaemoonstory/374296',region:'동대문',date:'2026.10',quote:'시험기간에 본문이랑 틀린 문제까지 같이 봐줘요'}]}
   ],
     cons: [
 
@@ -73,9 +73,8 @@ var MON_DATA = [
     '중계': [3]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:3,posts:[{text:'초등 영어학원 회화랑 문법 같이 하는 곳이 있을까요??',url:'https://cafe.naver.com/esyori/2755471',region:'방이',date:'2026.10',quote:'에이프릴이 회화 문법 같이 배울 수 있어요'},{text:'영어학원 4학년 이동하려고 해요',url:'https://cafe.naver.com/esyori/2754987',region:'방이',date:'2026.10',quote:'문법만 한국어로 진행하고 나머지는 100% 영어수업으로 원어민수업해요'},{text:'초등 고학년 영어학원 다들 어디로 보내시나요?',url:'https://cafe.naver.com/zzandol/844988',region:'방이',date:'2026.10',quote:'문법 리딩 까지 공부하면서 중등 준비하기 좋아요'}]},
-    {label:'셔틀/접근성',count:1,posts:[{text:'삼양초학원',url:'https://cafe.naver.com/aldisgo123d/1032215',region:'중계',date:'2026.10',quote:'저도 차량되서 에이프릴 보내고 있어요'}]},
-    {label:'흥미/동기부여',count:1,posts:[{text:'학원 정할 때 아이와 소통 어떻게 하세요?',url:'https://cafe.naver.com/applelog/876035',region:'중계',date:'2026.10',quote:'가고 싶어하는 곳으로요 에이프릴 보내고 있고'}]}
+    {label:'커리큘럼/시스템',count:3,posts:[{text:'초등 영어학원 회화랑 문법 같이 하는 곳이 있을까요??',url:'https://cafe.naver.com/esyori/2755471',region:'방이',date:'2026.10',quote:'에이프릴이 회화 문법 같이 배울 수 있어요'},{text:'영어학원 4학년 이동하려고 해요',url:'https://cafe.naver.com/esyori/2754987',region:'방이',date:'2026.10',quote:'문법만 한국어로 진행하고 나머지는 100% 영어수업으로 원어민수업해요'},{text:'초등 고학년 영어학원 다들 어디로 보내시나요?',url:'https://cafe.naver.com/zzandol/844988',region:'방이',date:'2026.10',quote:'ai 회화공부에 문법 리딩 까지 공부하면서 중등 준비하기 좋아요'}]},
+    {label:'셔틀/접근성',count:1,posts:[{text:'삼양초학원',url:'https://cafe.naver.com/aldisgo123d/1032215',region:'중계',date:'2026.10',quote:'저도 차량되서 에이프릴 보내고 있어요'}]}
   ],
     cons: [
 
@@ -97,9 +96,9 @@ var MON_DATA = [
     pros: [
     {label:'관리/피드백',count:2,posts:[{text:'초등 고학년 영어학원 다들 어디로 보내시나요?',url:'https://cafe.naver.com/zzandol/844988',region:'방이',date:'2026.10',quote:'선생님의 관리도 만족스러워요'},{text:'문정동 영어학원 초5부터 중학교 대비 어떻게 하세요?',url:'https://cafe.naver.com/godonghang/195320',region:'방이',date:'2026.10',quote:'원장님이 직접 커리큘럼을 봐주세요'}]},
     {label:'선생님/수업',count:1,posts:[{text:'초등 고학년 영어학원 다들 어디로 보내시나요?',url:'https://cafe.naver.com/zzandol/844988',region:'방이',date:'2026.10',quote:'선생님들께서 외국에서 오래 계셔서 영어 교육 방식도 만족합니다'}]},
-    {label:'흥미/동기부여',count:2,posts:[{text:'초등 고학년 영어학원 다들 어디로 보내시나요?',url:'https://cafe.naver.com/zzandol/844988',region:'방이',date:'2026.10',quote:'이제는 영어 단어도 즐겁게 암기하고 있어요'},{text:'송파동 영어학원 꾸준히 다닐 수 있는 곳 찾기가 어렵네요',url:'https://cafe.naver.com/godonghang/195236',region:'방이',date:'2026.10',quote:'매달 레벨이 올라가는 게 눈에 보여서 아이가 은근 욕심을 내더라고요'}]},
-    {label:'셔틀/접근성',count:1,posts:[{text:'거원초 근처 영어수학 같이 봐주는 곳 있을까요?',url:'https://cafe.naver.com/zzandol/844212',region:'방이',date:'2026.10',quote:'동선 따로 안 짜도 되는 게 일단 편하더라구요'}]},
-    {label:'커리큘럼/시스템',count:3,posts:[{text:'거원초 근처 영어수학 같이 봐주는 곳 있을까요?',url:'https://cafe.naver.com/zzandol/844212',region:'방이',date:'2026.10',quote:'아이마다 진도도 조금씩 다르게 가는 편이라 저희 애는 잘 맞았어요'},{text:'문정동 영어학원 초5부터 중학교 대비 어떻게 하세요?',url:'https://cafe.naver.com/godonghang/195320',region:'방이',date:'2026.10',quote:'문법이랑 어휘를 조금씩 연결해줘서'},{text:'송파동 영어학원 꾸준히 다닐 수 있는 곳 찾기가 어렵네요',url:'https://cafe.naver.com/godonghang/195236',region:'방이',date:'2026.10',quote:'유치부부터 중등까지 수업이 있어서'}]}
+    {label:'흥미/동기부여',count:2,posts:[{text:'초등 고학년 영어학원 다들 어디로 보내시나요?',url:'https://cafe.naver.com/zzandol/844988',region:'방이',date:'2026.10',quote:'이제는 영어 단어도 즐겁게 암기하고 있어요'},{text:'송파동 영어학원 꾸준히 다닐 수 있는 곳 찾기가 어렵네요',url:'https://cafe.naver.com/godonghang/195236',region:'방이',date:'2026.10',quote:'매달 레벨이 올라가는 게 눈에 보여서'}]},
+    {label:'커리큘럼/시스템',count:4,posts:[{text:'초등 고학년 영어학원 다들 어디로 보내시나요?',url:'https://cafe.naver.com/zzandol/844988',region:'방이',date:'2026.10',quote:'4대영역 집에서 공부할 수 있는 학습으로 괜찮더라구요'},{text:'거원초 근처 영어수학 같이 봐주는 곳 있을까요?',url:'https://cafe.naver.com/zzandol/844212',region:'방이',date:'2026.10',quote:'아이마다 진도도 조금씩 다르게 가는 편이라 저희 애는 잘 맞았어요'},{text:'문정동 영어학원 초5부터 중학교 대비 어떻게 하세요?',url:'https://cafe.naver.com/godonghang/195320',region:'방이',date:'2026.10',quote:'문법이랑 어휘를 조금씩 연결해줘서'},{text:'송파동 영어학원 꾸준히 다닐 수 있는 곳 찾기가 어렵네요',url:'https://cafe.naver.com/godonghang/195236',region:'방이',date:'2026.10',quote:'유치부부터 중등까지 수업이 있어서'}]},
+    {label:'셔틀/접근성',count:1,posts:[{text:'거원초 근처 영어수학 같이 봐주는 곳 있을까요?',url:'https://cafe.naver.com/zzandol/844212',region:'방이',date:'2026.10',quote:'동선 따로 안 짜도 되는 게 일단 편하더라구요'}]}
   ],
     cons: [
 
@@ -119,11 +118,10 @@ var MON_DATA = [
     '방이': [2]
   },
     pros: [
-    {label:'흥미/동기부여',count:1,posts:[{text:'초고학년 이상 어머님들.. 사고력 수학 도움 되나요',url:'https://cafe.naver.com/ira111/928905',region:'미사',date:'2026.10',quote:'결론적으로 아이가 제일 잘하고 좋아하는과목이 수학이에요'}]},
+    {label:'흥미/동기부여',count:2,posts:[{text:'초고학년 이상 어머님들.. 사고력 수학 도움 되나요',url:'https://cafe.naver.com/ira111/928905',region:'미사',date:'2026.10',quote:'아이가 제일 잘하고 좋아하는과목이 수학이에요'},{text:'북위례 초등수학학원 상담부터 마음에 들었어요',url:'https://cafe.naver.com/koreakmc/506056',region:'방이',date:'2026.10',quote:'아이가 첫 수업부터 생각보다 편하게 참여했고'}]},
     {label:'관리/피드백',count:1,posts:[{text:'북위례 초등수학학원 상담부터 마음에 들었어요',url:'https://cafe.naver.com/koreakmc/506056',region:'방이',date:'2026.10',quote:'수업 후 설명도 꼼꼼하게 해주셔서'}]}
   ],
     cons: [
-    {label:'숙제/학습량부담',count:1,posts:[{text:'예비 초1 와이즈만 수학 어떤가요?',url:'https://cafe.naver.com/ira111/929567',region:'미사',date:'2026.10',quote:'스트레스도 많이 받고 힘들어해서'}]},
     {label:'레벨/진도압박',count:1,posts:[{text:'예비 초1 와이즈만 수학 어떤가요?',url:'https://cafe.naver.com/ira111/929567',region:'미사',date:'2026.10',quote:'소마,필즈 모두 엄청 달리는 학원이니'}]}
   ],
     allPosts: [{text:'초고학년 이상 어머님들.. 사고력 수학 도움 되나요',url:'https://cafe.naver.com/ira111/928905',region:'미사',date:'2026.10'},{text:'수학학원은 언제쯤보내야할까요?',url:'https://cafe.naver.com/ira111/928721',region:'미사',date:'2026.10'},{text:'예비 초1 와이즈만 수학 어떤가요?',url:'https://cafe.naver.com/ira111/929567',region:'미사',date:'2026.10'},{text:'북위례 초등수학학원 상담부터 마음에 들었어요',url:'https://cafe.naver.com/koreakmc/506056',region:'방이',date:'2026.10'},{text:'수학학원을 선택하는 기준~',url:'https://cafe.naver.com/mktsesang/1216933',region:'방이',date:'2026.10'}]
@@ -165,9 +163,8 @@ var MON_DATA = [
     '방이': [1]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:1,posts:[{text:'cms?와이즈만?어떤차이가 있을까요?',url:'https://cafe.naver.com/ira111/930188',region:'미사',date:'2026.10',quote:'cms는 체계적인것 같고'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'예비 초1 와이즈만 수학 어떤가요?',url:'https://cafe.naver.com/ira111/929567',region:'미사',date:'2026.10',quote:'교구 수업을 많이 해주셨는데'}]},
-    {label:'흥미/동기부여',count:1,posts:[{text:'예비 초1 와이즈만 수학 어떤가요?',url:'https://cafe.naver.com/ira111/929567',region:'미사',date:'2026.10',quote:'정말 좋아했던 기억입니다'}]}
+    {label:'커리큘럼/시스템',count:1,posts:[{text:'cms?와이즈만?어떤차이가 있을까요?',url:'https://cafe.naver.com/ira111/930188',region:'미사',date:'2026.10',quote:'cms가 더 체계적으로 느껴졌어요'}]},
+    {label:'흥미/동기부여',count:1,posts:[{text:'예비 초1 와이즈만 수학 어떤가요?',url:'https://cafe.naver.com/ira111/929567',region:'미사',date:'2026.10',quote:'교구 수업을 많이 해주셨는데 정말 좋아했던 기억입니다'}]}
   ],
     cons: [
 
@@ -186,8 +183,8 @@ var MON_DATA = [
   },
     pros: [
     {label:'선생님/수업',count:1,posts:[{text:'수학선행은 학원 필수인가요?',url:'https://cafe.naver.com/sojbb2233/646530',region:'방이',date:'2026.10',quote:'눈높이에 가르쳐주셔서 지금은 잘 따라가고 있네요'}]},
-    {label:'관리/피드백',count:1,posts:[{text:'독학 수학 그만 하고 학원 시작해보려고요',url:'https://cafe.naver.com/godonghang/196447',region:'방이',date:'2026.10',quote:'1:1 과외식으로 세세하게 가르쳐줘서'}]},
-    {label:'성적향상/성과',count:1,posts:[{text:'독학 수학 그만 하고 학원 시작해보려고요',url:'https://cafe.naver.com/godonghang/196447',region:'방이',date:'2026.10',quote:'그레이드원 학원 보내고 수학 많이 늘었어요'}]}
+    {label:'관리/피드백',count:2,posts:[{text:'수학선행은 학원 필수인가요?',url:'https://cafe.naver.com/sojbb2233/646530',region:'방이',date:'2026.10',quote:'과외식 학원이라고 1:1로 가르쳐주는 학원도 있어요'},{text:'독학 수학 그만 하고 학원 시작해보려고요',url:'https://cafe.naver.com/godonghang/196447',region:'방이',date:'2026.10',quote:'1:1 과외식으로 세세하게 가르쳐줘서'}]},
+    {label:'성적향상/성과',count:1,posts:[{text:'독학 수학 그만 하고 학원 시작해보려고요',url:'https://cafe.naver.com/godonghang/196447',region:'방이',date:'2026.10',quote:'그레이드원 학원 보내고 수학 많이 늘었어요~'}]}
   ],
     cons: [
 
@@ -205,10 +202,10 @@ var MON_DATA = [
     '중계': [4]
   },
     pros: [
-    {label:'관리/피드백',count:3,posts:[{text:'도봉구 수학학원 어디가 잘 가르칠까요?',url:'https://cafe.naver.com/nihongokkureomi/440825',region:'중계',date:'2026.10',quote:'소수정예로 수업하고 꼼꼼하게 봐주셔서 좋아요'},{text:'중학교 수학 본격적으로 할려니 학원이 고민이 많네요',url:'https://cafe.naver.com/agameworld/906291',region:'중계',date:'2026.10',quote:'소수정예로 잘 봐주셔서 수학 영어 같이 하고 있네요'},{text:'도봉구 수학영어학원 추천받은 곳 공유해요!',url:'https://cafe.naver.com/aldisgo123d/1032006',region:'중계',date:'2026.10',quote:'원장님께서 꼼꼼하시고 친절하셔서 믿음이 갔어요'}]},
-    {label:'흥미/동기부여',count:1,posts:[{text:'도봉구 수학영어학원 추천받은 곳 공유해요!',url:'https://cafe.naver.com/aldisgo123d/1032006',region:'중계',date:'2026.10',quote:'다녀본 학원 중에 제일 좋다고 말하더라고요'}]},
-    {label:'셔틀/접근성',count:1,posts:[{text:'도봉구 수학영어학원 추천받은 곳 공유해요!',url:'https://cafe.naver.com/aldisgo123d/1032006',region:'중계',date:'2026.10',quote:'걸어서 5분거리라서 더 좋아하는 것 같은ㅎㅎ'}]},
-    {label:'선생님/수업',count:1,posts:[{text:'중1 아이 영어학원 고민중이에요..',url:'https://cafe.naver.com/aldisgo123d/1032369',region:'중계',date:'2026.10',quote:'소수정예라 이해를 충분히 시켜주셔서'}]}
+    {label:'관리/피드백',count:4,posts:[{text:'도봉구 수학학원 어디가 잘 가르칠까요?',url:'https://cafe.naver.com/nihongokkureomi/440825',region:'중계',date:'2026.10',quote:'소수정예로 수업하고 꼼꼼하게 봐주셔서 좋아요'},{text:'중학교 수학 본격적으로 할려니 학원이 고민이 많네요',url:'https://cafe.naver.com/agameworld/906291',region:'중계',date:'2026.10',quote:'소수정예로 잘 봐주셔서 수학 영어 같이 하고 있네요'},{text:'도봉구 수학영어학원 추천받은 곳 공유해요!',url:'https://cafe.naver.com/aldisgo123d/1032006',region:'중계',date:'2026.10',quote:'초중고 학교별 내신 관리를 중점적으로 해요'},{text:'중1 아이 영어학원 고민중이에요..',url:'https://cafe.naver.com/aldisgo123d/1032369',region:'중계',date:'2026.10',quote:'소수정예라 이해를 충분히 시켜주셔서'}]},
+    {label:'커리큘럼/시스템',count:1,posts:[{text:'도봉구 수학영어학원 추천받은 곳 공유해요!',url:'https://cafe.naver.com/aldisgo123d/1032006',region:'중계',date:'2026.10',quote:'학교 맞춤으로 수업하는 학원 찾으시면'}]},
+    {label:'선생님/수업',count:2,posts:[{text:'도봉구 수학영어학원 추천받은 곳 공유해요!',url:'https://cafe.naver.com/aldisgo123d/1032006',region:'중계',date:'2026.10',quote:'원장님께서 꼼꼼하시고 친절하셔서 믿음이 갔어요'},{text:'중1 아이 영어학원 고민중이에요..',url:'https://cafe.naver.com/aldisgo123d/1032369',region:'중계',date:'2026.10',quote:'이해를 충분히 시켜주셔서'}]},
+    {label:'셔틀/접근성',count:1,posts:[{text:'도봉구 수학영어학원 추천받은 곳 공유해요!',url:'https://cafe.naver.com/aldisgo123d/1032006',region:'중계',date:'2026.10',quote:'걸어서 5분거리라서 더 좋아하는 것'}]}
   ],
     cons: [
 
@@ -226,7 +223,7 @@ var MON_DATA = [
     '동대문': [4]
   },
     pros: [
-    {label:'반복/심화학습',count:1,posts:[{text:'이상숙영어학원',url:'https://cafe.naver.com/3gumomclub/1564844',region:'동대문',date:'2026.10',quote:'다 외워야 집에 오는건 맞는데 그날그날 교제에 나왔던 단어라서'}]},
+    {label:'반복/심화학습',count:1,posts:[{text:'이상숙영어학원',url:'https://cafe.naver.com/3gumomclub/1564844',region:'동대문',date:'2026.10',quote:'다 외워야 집에 오는건 맞는데'}]},
     {label:'선생님/수업',count:1,posts:[{text:'이상숙영어학원 수업관해서요',url:'https://cafe.naver.com/3gumomclub/1564654',region:'동대문',date:'2026.10',quote:'원장님,,선생님들 넘 좋으셔서 아이들도 잘 따르고 있어요'}]}
   ],
     cons: [
@@ -293,6 +290,52 @@ var MON_DATA = [
     allPosts: [{text:'고등학교 수학학원 추천해주세요',url:'https://cafe.naver.com/everyhomework/938388',region:'방이',date:'2026.10'},{text:'초2 처음 수학학원',url:'https://cafe.naver.com/mktsesang/1217393',region:'방이',date:'2026.10'},{text:'Cms방배 다니시는분계신가요?',url:'https://cafe.naver.com/mktsesang/1216755',region:'방이',date:'2026.10'}]
   },
   {
+    name: '생각하는황소', us: false, subject: '수학',
+    mentions: {
+    '전체': {'전체':3,'2026년':3,'2026.10':3},
+    '동대문': {'전체':1,'2026년':1,'2026.10':1},
+    '미사': {'전체':1,'2026년':1,'2026.10':1},
+    '방이': {'전체':1,'2026년':1,'2026.10':1}
+  },
+    monthly: {
+    '전체': [3],
+    '동대문': [1],
+    '미사': [1],
+    '방이': [1]
+  },
+    pros: [
+
+  ],
+    cons: [
+
+  ],
+    allPosts: [{text:'아이들 수학 공부 이렇게 시키는게 맞아요?',url:'https://cafe.naver.com/3gumomclub/1566467',region:'동대문',date:'2026.10'},{text:'초3 아이가 본 최선 레테',url:'https://cafe.naver.com/ira111/928094',region:'미사',date:'2026.10'},{text:'수학학원을 선택하는 기준~',url:'https://cafe.naver.com/mktsesang/1216933',region:'방이',date:'2026.10'}]
+  },
+  {
+    name: '영도어학원', us: false, subject: '영어',
+    mentions: {
+    '전체': {'전체':3,'2026년':3,'2026.10':3},
+    '동대문': {'전체':1,'2026년':1,'2026.10':1},
+    '방이': {'전체':1,'2026년':1,'2026.10':1},
+    '중계': {'전체':1,'2026년':1,'2026.10':1}
+  },
+    monthly: {
+    '전체': [3],
+    '동대문': [1],
+    '방이': [1],
+    '중계': [1]
+  },
+    pros: [
+
+  ],
+    cons: [
+    {label:'기타개선점',count:1,posts:[{text:'나 참.. 선생님 개인정보 때문에 뭐 전공인지 알려줄 수 없데요',url:'https://cafe.naver.com/3gumomclub/1564531',region:'동대문',date:'2026.10',quote:'상담 그렇게 하는거보고 황당 그 자체였어요'}]},
+    {label:'선생님/수업불만',count:1,posts:[{text:'나 참.. 선생님 개인정보 때문에 뭐 전공인지 알려줄 수 없데요',url:'https://cafe.naver.com/3gumomclub/1564531',region:'동대문',date:'2026.10',quote:'수업하는 모습 보고도 시간 때우기같아 일단 별로였는데'}]},
+    {label:'가격부담',count:1,posts:[{text:'나 참.. 선생님 개인정보 때문에 뭐 전공인지 알려줄 수 없데요',url:'https://cafe.naver.com/3gumomclub/1564531',region:'동대문',date:'2026.10',quote:'영도 원비도 일반 영어학원보다 고가쟎아요'}]}
+  ],
+    allPosts: [{text:'나 참.. 선생님 개인정보 때문에 뭐 전공인지 알려줄 수 없데요',url:'https://cafe.naver.com/3gumomclub/1564531',region:'동대문',date:'2026.10'},{text:'영어학원 보내기 전에 리딩공부 할 수 있는 초1엄마표 영어교재 있을까요?',url:'https://cafe.naver.com/koreakmc/507235',region:'방이',date:'2026.10'},{text:'학원 정할 때 아이와 소통 어떻게 하세요?',url:'https://cafe.naver.com/applelog/876035',region:'중계',date:'2026.10'}]
+  },
+  {
     name: '와이즈만', us: false, subject: '수학',
     mentions: {
     '전체': {'전체':3,'2026년':3,'2026.10':3},
@@ -305,10 +348,10 @@ var MON_DATA = [
     '미사': [2]
   },
     pros: [
-    {label:'셔틀/접근성',count:1,posts:[{text:'롯데캐슬클라시아 근처 수학학원 추천부탁드려요',url:'https://cafe.naver.com/3gumomclub/1565659',region:'동대문',date:'2026.10',quote:'와이즈수학이 도보 가능합니다'}]},
     {label:'관리/피드백',count:1,posts:[{text:'롯데캐슬클라시아 근처 수학학원 추천부탁드려요',url:'https://cafe.naver.com/3gumomclub/1565659',region:'동대문',date:'2026.10',quote:'선생님들도 신경 많이 써주시고요'}]},
+    {label:'셔틀/접근성',count:1,posts:[{text:'롯데캐슬클라시아 근처 수학학원 추천부탁드려요',url:'https://cafe.naver.com/3gumomclub/1565659',region:'동대문',date:'2026.10',quote:'와이즈수학이 도보 가능합니다'}]},
     {label:'흥미/동기부여',count:1,posts:[{text:'cms?와이즈만?어떤차이가 있을까요?',url:'https://cafe.naver.com/ira111/930188',region:'미사',date:'2026.10',quote:'즐겁게 공부할수있을것 같은 유함?이 느껴졌구요'}]},
-    {label:'커리큘럼/시스템',count:1,posts:[{text:'예비 초1 와이즈만 수학 어떤가요?',url:'https://cafe.naver.com/ira111/929567',region:'미사',date:'2026.10',quote:'사고를 더 유연하게 만들어주는 방식인거같네요'}]}
+    {label:'커리큘럼/시스템',count:1,posts:[{text:'예비 초1 와이즈만 수학 어떤가요?',url:'https://cafe.naver.com/ira111/929567',region:'미사',date:'2026.10',quote:'와이즈만이 사고를 더 유연하게 만들어주는 방식인거같네요'}]}
   ],
     cons: [
 
@@ -326,8 +369,7 @@ var MON_DATA = [
     '미사': [3]
   },
     pros: [
-    {label:'커리큘럼/시스템',count:1,posts:[{text:'내년 초1 예정,, 영어학원 왓썹 / 코람데오 문의드려요',url:'https://cafe.naver.com/ira111/928860',region:'미사',date:'2026.10',quote:'왓썹이 좀 더 적극적인 활동들이 있어서 좋은 것 같아요'}]},
-    {label:'흥미/동기부여',count:1,posts:[{text:'왓썹 영어학원... 함께 다니실분 있나요 (27년 예비 초2,초3)',url:'https://cafe.naver.com/kidsinlove/1197721',region:'미사',date:'2026.10',quote:'아이들 표정이 하나같이 너무 신나보였고'}]}
+    {label:'흥미/동기부여',count:2,posts:[{text:'내년 초1 예정,, 영어학원 왓썹 / 코람데오 문의드려요',url:'https://cafe.naver.com/ira111/928860',region:'미사',date:'2026.10',quote:'왓썹이 좀 더 적극적인 활동들이 있어서 좋은 것 같아요'},{text:'왓썹 영어학원... 함께 다니실분 있나요 (27년 예비 초2,초3)',url:'https://cafe.naver.com/kidsinlove/1197721',region:'미사',date:'2026.10',quote:'아이들 표정이 하나같이 너무 신나보였고'}]}
   ],
     cons: [
 
@@ -418,7 +460,7 @@ var MON_DATE_TO_IDX = {'2026.10':0};
 var MON_YEAR_RANGE = {'2026년':[0,0]};
 var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
 var MON_REGION_MAP = {'방이':'송파'};
-var MON_META = {total_posts:263,updated:'2026.11.04 17:15'};
+var MON_META = {total_posts:268,updated:'2026.11.04 18:04'};
 
 var monRegion = '전체', monDate = '전체', monOpenId = null;
 var monSearchQuery = '', monOnlyUs = false, monSortBy = 'mentions', monSubject = '전체';
