@@ -543,7 +543,7 @@ var MON_DATA = [
     allPosts: [{text:'',url:'https://cafe.naver.com/mktsesang/1217393',region:'방이',date:'2026.10'},{text:'',url:'https://cafe.naver.com/mktsesang/1216755',region:'방이',date:'2026.10'},{text:'',url:'https://cafe.naver.com/mktsesang/1216381',region:'방이',date:'2026.10'}]
   },
   {
-    name: '최선', us: false, subject: '영어',
+    name: '최선어학원', us: false, subject: '영어',
     mentions: {
     '전체': {'전체':3,'2026년':3,'2026.10':3},
     '미사': {'전체':2,'2026년':2,'2026.10':2},
@@ -583,7 +583,7 @@ var MON_DATA = [
     allPosts: [{text:'',url:'https://cafe.naver.com/ira111/929946',region:'미사',date:'2026.10'},{text:'',url:'https://cafe.naver.com/ira111/928094',region:'미사',date:'2026.10'},{text:'원어민수업하는 초등영어학원',url:'https://cafe.naver.com/everyhomework/937182',region:'방이',date:'2026.10'}]
   },
   {
-    name: '폴리', us: false, subject: '영어',
+    name: '폴리어학원', us: false, subject: '영어',
     mentions: {
     '전체': {'전체':3,'2026년':3,'2026.10':3},
     '미사': {'전체':2,'2026년':2,'2026.10':2},
@@ -608,7 +608,7 @@ var MON_DATE_TO_IDX = {'2026.10':0};
 var MON_YEAR_RANGE = {'2026년':[0,0]};
 var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
 var MON_REGION_MAP = {'방이':'송파'};
-var MON_META = {total_posts:370,updated:'2026.11.04 12:16'};
+var MON_META = {total_posts:370,updated:'2026.11.04 13:00'};
 
 var monRegion = '전체', monDate = '전체', monOpenId = null;
 var monSearchQuery = '', monOnlyUs = false, monSortBy = 'mentions', monSubject = '전체';
