@@ -956,6 +956,61 @@
       </div>
     </div>
 
+    <!-- REAL-TIME EXECUTION PROGRESS & SHEET LOG -->
+    <div class="month-picker-card" id="exec-log-card" style="margin-bottom:24px;">
+      <div class="month-picker-header" style="margin-bottom:16px;">
+        <div class="month-picker-title">
+          <span>🕓</span> 실시간 작업 진행률 및 실행로그
+          <span id="exec-status-badge" class="status-badge success" style="margin-left:8px; font-size:11px;">연동 대기</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:12px; color:var(--txt-dim);" id="exec-last-sync">실시간 갱신 중</span>
+          <button class="btn-refresh" onclick="fetchSheetExecutionLog(true)" style="padding:4px 10px; font-size:12px;">새로고침</button>
+        </div>
+      </div>
+
+      <!-- ACTIVE PROGRESS BAR (When a task is running) -->
+      <div id="exec-progress-wrap" style="display:none; background:#0f172a; border:1px solid #1e293b; border-radius:10px; padding:16px 20px; margin-bottom:16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span style="font-size:14px; font-weight:800; color:#38bdf8;" id="exec-task-title">AI 판독 진행 중</span>
+          <span style="font-size:13px; font-weight:700; color:#f1f5f9;" id="exec-task-percent">0% (0 / 0)</span>
+        </div>
+        <div style="width:100%; height:10px; background:#1e293b; border-radius:99px; overflow:hidden;">
+          <div id="exec-progress-bar" style="width:0%; height:100%; background:linear-gradient(90deg, #0284c7, #38bdf8); border-radius:99px; transition:width 0.4s ease;"></div>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px; font-size:12px; color:#94a3b8;">
+          <span id="exec-task-msg">진행 상세 정보를 불러오고 있습니다...</span>
+          <span id="exec-task-eta" style="color:#fbbf24; font-weight:600;">예상 소요시간 계산 중</span>
+        </div>
+      </div>
+
+      <!-- EXECUTION LOG TABLE -->
+      <div class="table-wrap" style="max-height:260px; overflow-y:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th style="padding:8px 12px;">실행일시</th>
+              <th style="padding:8px 12px;">구분</th>
+              <th style="padding:8px 12px;">진행률</th>
+              <th style="padding:8px 12px;">건수(현재/전체)</th>
+              <th style="padding:8px 12px;">상태</th>
+              <th style="padding:8px 12px;">진행 상세 메시지</th>
+            </tr>
+          </thead>
+          <tbody id="exec-log-tbody">
+            <tr>
+              <td colspan="6" style="text-align:center; padding:20px; color:var(--txt-dim);">실행로그 데이터를 불러오는 중...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="exec-log-notice" style="display:none; margin-top:12px; padding:10px 14px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; font-size:12.5px; color:#64748b; line-height:1.5;">
+        💡 <b>실시간 구글시트 로그 연동 안내:</b> 구글 시트 우측 상단 <b>[공유]</b> ➔ 일반 액세스를 <b>'링크가 있는 모든 사용자(뷰어)'</b>로 설정하시면 콘솔에서 실시간 진행률(%)이 5초마다 자동 표시됩니다.
+        <a href="https://docs.google.com/spreadsheets/d/1BaXI5tcWzmefKNvLuGjjOcMibxVgcuS1-vQeCqkM_4U/edit" target="_blank" style="color:#0284c7; text-decoration:underline; margin-left:6px; font-weight:600;">구글 시트 바로가기 ↗</a>
+      </div>
+    </div>
+
     <!-- RECENT RUNS TABLE -->
     <div class="table-section">
       <div class="table-header">
@@ -1154,6 +1209,7 @@
 
         // Start polling
         fetchRecentRuns();
+        fetchSheetExecutionLog();
         if (pollTimer) clearInterval(pollTimer);
         pollTimer = setInterval(fetchRecentRuns, CONFIG.POLL_INTERVAL_MS);
 
@@ -1333,6 +1389,7 @@
 
         renderBanner(runs);
         renderTable(runs);
+        fetchSheetExecutionLog();
 
         if (manual) {
           showToast('최신 실행 내역이 갱신되었습니다.', 2000);
