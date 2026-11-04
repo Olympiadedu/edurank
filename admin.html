@@ -931,6 +931,12 @@
             <code>📋 검색결과</code>에 적재된 대상 연월의 게시글을 Claude Sonnet 5.5가 분석하여 언급 학원, 학원별 장·단점을 정밀 평가하고 <code>📊 AI분석</code> 시트에 저장합니다.
           </p>
         </div>
+        <div style="margin-bottom:14px; padding:10px 12px; background:var(--ground); border-radius:8px; border:1px solid var(--bdr);">
+          <label style="display:flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600; color:var(--txt-mid); cursor:pointer;">
+            <input type="checkbox" id="ai-overwrite-check" style="cursor:pointer; width:15px; height:15px;">
+            <span>기존 분석 완료된 행도 처음부터 재판독 (기본: 신규 미분석 행만 판독)</span>
+          </label>
+        </div>
         <button class="btn-action ai" onclick="triggerWorkflow('ai_analyze.yml', 'Claude AI 판독')">
           <span>🧠 Claude AI 판독 실행</span>
         </button>
@@ -1305,10 +1311,11 @@
       if (workflowId === 'cafe_collect.yml') {
         inputs = { target_ym: ym };
       } else if (workflowId === 'ai_analyze.yml') {
+        const isOverwrite = document.getElementById('ai-overwrite-check')?.checked ? 'true' : 'false';
         inputs = {
           target_ym: ym,
           limit: '0',
-          overwrite: 'true',
+          overwrite: isOverwrite,
           prompt_cell: 'B1',
           ai_provider: 'claude'
         };
@@ -1396,6 +1403,128 @@
         }
       } catch (err) {
         console.error('Fetch runs error:', err);
+      }
+    }
+
+    // ========================================================
+    // GOOGLE SHEETS '🕓 실행로그' REAL-TIME SYNC
+    // ========================================================
+    const SHEET_ID = '1BaXI5tcWzmefKNvLuGjjOcMibxVgcuS1-vQeCqkM_4U';
+    const EXEC_SHEET_NAME = '🕓 실행로그';
+
+    async function fetchSheetExecutionLog(manual = false) {
+      const tbody = document.getElementById('exec-log-tbody');
+      const notice = document.getElementById('exec-log-notice');
+      const badge = document.getElementById('exec-status-badge');
+      const progressWrap = document.getElementById('exec-progress-wrap');
+
+      try {
+        const encodedSheet = encodeURIComponent(EXEC_SHEET_NAME);
+        const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${encodedSheet}&headers=1&tq=` + encodeURIComponent('select * order by A desc limit 6');
+        
+        const res = await fetch(url);
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+
+        const raw = await res.text();
+        const jsonMatch = raw.match(/google\.visualization\.Query\.setResponse\((.+)\);?/s);
+        if (!jsonMatch) {
+          throw new Error('응답 포맷 불일치');
+        }
+
+        const data = JSON.parse(jsonMatch[1]);
+        const rows = data.table?.rows || [];
+
+        if (notice) notice.style.display = 'none';
+        if (badge) {
+          badge.className = 'status-badge success';
+          badge.innerText = '실시간 연동됨';
+        }
+        document.getElementById('exec-last-sync').innerText = new Date().toLocaleTimeString('ko-KR') + ' 갱신됨';
+
+        if (!rows.length) {
+          tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding:16px;">기록된 실행로그가 없습니다.</td></tr>';
+          return;
+        }
+
+        let hasActiveTask = false;
+        const html = rows.map((r, idx) => {
+          const c = r.c || [];
+          const dt = c[0]?.f || c[0]?.v || '-';
+          const type = c[1]?.v || '-';
+          const total = parseInt(c[2]?.v || 0, 10);
+          const current = parseInt(c[3]?.v || 0, 10);
+          const status = c[4]?.v || '-';
+          const msg = c[5]?.v || '';
+
+          const pct = total > 0 ? Math.min(100, Math.round((current / total) * 100)) : (status === '완료' ? 100 : 0);
+          let stBadge = 'neutral';
+          if (status === '완료') stBadge = 'success';
+          else if (status === '진행중' || status === '수집중') stBadge = 'in_progress';
+          else if (status === '실패' || status === '오류') stBadge = 'failure';
+
+          if (idx === 0 && (status === '진행중' || status === '수집중')) {
+            hasActiveTask = true;
+            progressWrap.style.display = 'block';
+            document.getElementById('exec-task-title').innerText = `⚡ ${type} 실시간 작업 중`;
+            document.getElementById('exec-task-percent').innerText = `${pct}% (${current.toLocaleString()} / ${total.toLocaleString()}건)`;
+            document.getElementById('exec-progress-bar').style.width = `${pct}%`;
+            document.getElementById('exec-task-msg').innerText = msg;
+            
+            if (current > 0 && total > current) {
+              const estRemainingItems = total - current;
+              const rate = (type === 'AI판독') ? 8 : 25;
+              const estMin = Math.ceil(estRemainingItems / rate);
+              document.getElementById('exec-task-eta').innerText = `예상 완료: 약 ${estMin}분 후`;
+            } else {
+              document.getElementById('exec-task-eta').innerText = `완료 처리 중...`;
+            }
+          }
+
+          return `
+            <tr>
+              <td style="padding:8px 12px; font-size:12px; color:#64748b;">${dt}</td>
+              <td style="padding:8px 12px; font-weight:700;">${type}</td>
+              <td style="padding:8px 12px;">
+                <div style="display:flex; align-items:center; gap:6px;">
+                  <div style="width:60px; height:6px; background:#e2e8f0; border-radius:99px; overflow:hidden;">
+                    <div style="width:${pct}%; height:100%; background:${pct===100 ? '#10b981' : '#0284c7'};"></div>
+                  </div>
+                  <span style="font-size:12px; font-weight:700;">${pct}%</span>
+                </div>
+              </td>
+              <td style="padding:8px 12px; font-size:12px;">${current} / ${total}</td>
+              <td style="padding:8px 12px;"><span class="status-badge ${stBadge}">${status}</span></td>
+              <td style="padding:8px 12px; font-size:12px; color:var(--txt-dim); max-width:320px; overflow:hidden; text-overflow:ellipsis;" title="${msg}">${msg}</td>
+            </tr>
+          `;
+        }).join('');
+
+        tbody.innerHTML = html;
+        if (!hasActiveTask) {
+          progressWrap.style.display = 'none';
+        }
+
+      } catch (err) {
+        if (badge) {
+          badge.className = 'status-badge cancelled';
+          badge.innerText = '🔒 시트 공유 필요';
+        }
+        if (notice) notice.style.display = 'block';
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="6" style="text-align:center; padding:24px; color:#64748b; line-height:1.6;">
+              <div style="font-size:15px; font-weight:700; color:#334155; margin-bottom:6px;">🔒 구글 시트 링크 공유 설정이 필요합니다</div>
+              <div style="font-size:12.5px; color:#64748b; max-width:540px; margin:0 auto 12px;">
+                구글 시트 우측 상단 <b>[공유]</b> 버튼을 누르고 일반 액세스를 <b>'링크가 있는 모든 사용자(뷰어)'</b>로 설정하시면<br>이 화면에 실시간 실행로그와 진행률(%)이 5초마다 자동 연동됩니다.
+              </div>
+              <a href="https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit" target="_blank" style="display:inline-block; background:#0284c7; color:#fff; padding:6px 14px; border-radius:6px; font-size:12px; font-weight:700; text-decoration:none;">
+                📋 구글 시트 공유 설정 열기 ↗
+              </a>
+            </td>
+          </tr>
+        `;
       }
     }
 
