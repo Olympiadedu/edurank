@@ -2985,8 +2985,8 @@ var MON_MONTHS = ['24.1','24.2','24.3','24.4','24.5','24.6','24.7','24.8','24.9'
 var MON_DATE_TO_IDX = {'2024.01':0,'2024.02':1,'2024.03':2,'2024.04':3,'2024.05':4,'2024.06':5,'2024.07':6,'2024.08':7,'2024.09':8,'2024.10':9,'2024.11':10,'2024.12':11,'2025.01':12,'2025.02':13,'2025.03':14,'2025.04':15,'2025.05':16,'2025.06':17,'2025.07':18,'2025.08':19,'2025.09':20,'2025.10':21,'2025.11':22,'2025.12':23,'2026.01':24,'2026.02':25,'2026.03':26,'2026.04':27,'2026.05':28,'2026.06':29,'2026.07':30,'2026.08':31,'2026.09':32,'2026.10':33};
 var MON_YEAR_RANGE = {'2024년':[0,11],'2025년':[12,23],'2026년':[24,33]};
 var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
-var MON_REGION_MAP = {'방이':'송파'};
-var MON_META = {total_posts:3290,updated:'2026.11.19 08:39'};
+var MON_REGION_MAP = {};
+var MON_META = {total_posts:3290,updated:'2026.11.20 09:28'};
 
 var monRegion = '전체', monDate = '전체', monOpenId = null;
 var monSearchQuery = '', monOnlyUs = false, monSortBy = 'mentions', monSubject = '전체';
@@ -3704,6 +3704,101 @@ function monDetailHtml(ac, fp, fc, prosSum, consSum, cur, prev) {
   '</div>';
 }
 
+// ─── URL QUERY PARAMS ─────────────────────────────────────────────────────────
+
+function monApplyUrlParams() {
+  if (typeof URLSearchParams === 'undefined') return null;
+  var params = new URLSearchParams(window.location.search || '');
+  if (!params.toString()) return null;
+
+  // 1. date (?date=전체 | 2026년 | 2026.10)
+  var pDate = (params.get('date') || '').trim();
+  if (pDate) {
+    if (pDate === '전체') {
+      monDate = '전체';
+      document.querySelectorAll('.mon-month-btn').forEach(function(b) { b.classList.remove('active'); });
+      var btnAll = document.querySelector('.mon-btn-all');
+      if (btnAll) btnAll.classList.add('active');
+    } else if (pDate.indexOf('년') > -1 && MON_YEAR_RANGE && MON_YEAR_RANGE[pDate]) {
+      monDate = pDate;
+      var selYr = document.getElementById('mon-year-select');
+      if (selYr) selYr.value = pDate;
+      var btnAll2 = document.querySelector('.mon-btn-all');
+      if (btnAll2) btnAll2.classList.remove('active');
+      monRenderMonthPills(pDate, null);
+    } else if (MON_DATE_TO_IDX && MON_DATE_TO_IDX[pDate] !== undefined) {
+      monDate = pDate;
+      var yrKey = pDate.split('.')[0] + '년';
+      var selYr2 = document.getElementById('mon-year-select');
+      if (selYr2 && MON_YEAR_RANGE && MON_YEAR_RANGE[yrKey]) selYr2.value = yrKey;
+      var btnAll3 = document.querySelector('.mon-btn-all');
+      if (btnAll3) btnAll3.classList.remove('active');
+      monRenderMonthPills(yrKey, pDate);
+    }
+  }
+
+  // 2. region (?region=광진 | 방이 | 송파 등)
+  var pRegion = (params.get('region') || '').trim();
+  if (pRegion) {
+    if (pRegion === '송파') pRegion = '방이';
+    var regionPills = document.querySelectorAll('#mon-region-group .mon-pill');
+    var matchedRegion = false;
+    regionPills.forEach(function(p) {
+      var txt = (p.textContent || '').trim();
+      if (txt === pRegion) {
+        matchedRegion = true;
+      }
+    });
+    if (matchedRegion) {
+      monRegion = pRegion;
+      regionPills.forEach(function(p) {
+        p.classList.toggle('active-region', (p.textContent || '').trim() === pRegion);
+      });
+    }
+  }
+
+  // 3. subject (?subject=수학 | 영어 | 전체)
+  var pSubject = (params.get('subject') || '').trim();
+  if (pSubject && (pSubject === '전체' || pSubject === '수학' || pSubject === '영어')) {
+    monSubject = pSubject;
+    document.querySelectorAll('#mon-subject-group .mon-pill').forEach(function(p) {
+      var txt = (p.textContent || '').trim();
+      var isMatch = (pSubject === '전체' && txt.indexOf('전체') > -1) ||
+                    (pSubject !== '전체' && txt.indexOf(pSubject) > -1);
+      p.classList.toggle('active-subject', isMatch);
+    });
+  }
+
+  // 4. us (?us=1 | true)
+  var pUs = (params.get('us') || '').trim().toLowerCase();
+  if (pUs === '1' || pUs === 'true' || pUs === 'y') {
+    monOnlyUs = true;
+    var usBtn = document.querySelector('.mon-us-filter-btn');
+    if (usBtn) usBtn.classList.add('active');
+  }
+
+  // 5. sort (?sort=mentions | delta | pros | cons)
+  var pSort = (params.get('sort') || '').trim();
+  if (pSort && ['mentions', 'delta', 'pros', 'cons'].indexOf(pSort) > -1) {
+    monSortBy = pSort;
+    document.querySelectorAll('.mon-sort-btn').forEach(function(b) {
+      b.classList.toggle('active', b.getAttribute('data-sort') === monSortBy);
+    });
+  }
+
+  // 6. q (?q=시매쓰)
+  var pQuery = (params.get('q') || '').trim();
+  if (pQuery) {
+    monSearchQuery = pQuery.toLowerCase();
+    var inp = document.getElementById('mon-search-input');
+    if (inp) inp.value = pQuery;
+    var clearBtn = document.getElementById('mon-search-clear');
+    if (clearBtn) clearBtn.style.display = 'inline-flex';
+  }
+
+  return pQuery || null;
+}
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 
 function monInit() {
@@ -3722,5 +3817,27 @@ function monInit() {
       monRenderMonthPills(latestYear, null);
     }
   }
+  var initialQuery = monApplyUrlParams();
   monRenderAll();
+
+  // ?q=학원명 으로 진입 시 정확히 일치하는 학원이 있으면 상세 패널 자동 펼침
+  if (initialQuery) {
+    var list = monGetFiltered();
+    var target = null;
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].name.toLowerCase() === initialQuery.toLowerCase()) {
+        target = list[i];
+        break;
+      }
+    }
+    if (!target && list.length === 1) {
+      target = list[0];
+    }
+    if (target) {
+      var globalIdx = MON_DATA.indexOf(target);
+      if (globalIdx > -1) {
+        monToggleRow('ac-' + globalIdx);
+      }
+    }
+  }
 }
