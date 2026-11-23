@@ -889,20 +889,29 @@
       </div>
     </div>
 
-    <!-- TARGET MONTH SELECTOR -->
+    <!-- TARGET MONTH & PERIOD SELECTOR (OFFICIAL) -->
     <div class="month-picker-card">
       <div class="month-picker-header">
         <div class="month-picker-title">
-          <span>📅</span> 대상 연월 설정 (수집 및 AI 분석 기준)
+          <span>📅</span> 대상 연월 및 기간 설정 (수집 · AI 분석 기준)
+          <span class="action-tag highlight" style="margin-left:6px;">⏱️ 시간초과(4시간) 시 자동 이어하기 적용</span>
         </div>
         <div class="month-pills" id="month-pills">
           <!-- 최근 6개월 역순(최신순) 자바스크립트 자동 생성 -->
         </div>
       </div>
-      <div class="month-input-wrap">
-        <label style="font-size:13px; font-weight:700; color:var(--txt-mid);">직접 입력:</label>
-        <input type="text" id="target-month-input" value="2026-10" placeholder="YYYY-MM" oninput="onCustomMonthInput(this.value)">
-        <span style="font-size:12px; color:var(--txt-dim);">※ 형식: YYYY-MM (예: 2026-10)</span>
+      <div class="month-input-wrap" style="flex-wrap:wrap; gap:14px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <label style="font-size:13px; font-weight:700; color:var(--txt-mid);">기준 연월:</label>
+          <input type="text" id="target-month-input" value="2026-10" placeholder="YYYY-MM" oninput="onCustomMonthInput(this.value)">
+        </div>
+        <div style="display:flex; align-items:center; gap:8px; padding-left:14px; border-left:1.5px solid var(--bdr);">
+          <label style="font-size:13px; font-weight:700; color:var(--txt-mid);">수집 기간 지정:</label>
+          <input type="date" id="official-start-date" value="2026-10-01" style="width:142px; padding:7px 10px; font-size:13.5px; font-weight:700; border-radius:8px; border:1.5px solid var(--bdr); background:var(--ground); color:var(--txt); font-family:inherit;">
+          <span style="font-size:13px; color:var(--txt-dim); font-weight:700;">~</span>
+          <input type="date" id="official-end-date" value="2026-10-31" style="width:142px; padding:7px 10px; font-size:13.5px; font-weight:700; border-radius:8px; border:1.5px solid var(--bdr); background:var(--ground); color:var(--txt); font-family:inherit;">
+          <span style="font-size:12px; color:var(--txt-dim);">※ 월 선택 시 자동 연동되며, 원하는 시작~종료일로 직접 변경 가능합니다.</span>
+        </div>
       </div>
     </div>
 
@@ -912,15 +921,15 @@
       <div class="action-card">
         <div>
           <div class="action-tag-row">
-            <span class="action-tag highlight">신규 대댓글 계층화</span>
-            <span class="action-tag">통합검색 제외</span>
+            <span class="action-tag highlight">기간 지정 수집</span>
+            <span class="action-tag">시간초과 시 자동 이어하기</span>
             <span class="action-tag">실시간 10건 저장</span>
           </div>
           <div class="action-title">
             <span>🏠</span> 맘카페 키워드 수집
           </div>
           <p class="action-desc">
-            선택된 대상 연월의 맘카페 게시글과 대댓글(답글)을 계층 구조(<code>[댓글]</code> / <code>  └ [답글]</code>) 및 작성자 배지(<code>(글쓴이)</code>)와 함께 구글 시트 <code>📋 검색결과</code>에 실시간 저장합니다.
+            상단에 설정된 수집 기간(`시작일 ~ 종료일`) 동안 지정 맘카페의 게시글과 대댓글을 계층 구조로 구글 시트 <code>📋 검색결과</code>에 저장합니다. 실행 제한(4시간) 도달 시 자동 저장 후 멈춘 위치부터 이어서 재실행됩니다.
           </p>
         </div>
         <button class="btn-action collect" onclick="triggerWorkflow('cafe_collect.yml', '맘카페 키워드 수집')">
@@ -932,15 +941,15 @@
       <div class="action-card">
         <div>
           <div class="action-tag-row">
-            <span class="action-tag highlight">전 지역 공개 카페</span>
-            <span class="action-tag">정확도순 + 기간지정</span>
-            <span class="action-tag">미등록 카페 발굴</span>
+            <span class="action-tag highlight">기간 지정 수집</span>
+            <span class="action-tag">전 지역 공개 카페</span>
+            <span class="action-tag">시간초과 시 자동 이어하기</span>
           </div>
           <div class="action-title">
             <span>🔍</span> 카페 통합검색 수집
           </div>
           <p class="action-desc">
-            지정된 52개 맘카페 외에 전국 네이버 공개 카페(영유나라, 입주민 카페, 교육 카페 등)에서 지역+학원 키워드(<code>링크 공란</code> 행)만 단독으로 수집하여 <code>📋 검색결과</code>에 저장합니다.
+            상단에 설정된 수집 기간(`시작일 ~ 종료일`) 동안 전국 네이버 공개 카페에서 지역+학원 키워드(<code>링크 공란</code> 행)만 단독 수집합니다. 실행 제한 도달 시 자동 저장 후 이어서 재실행됩니다.
           </p>
         </div>
         <button class="btn-action integrated" onclick="triggerWorkflow('integrated_search.yml', '네이버 카페 통합검색 수집')">
@@ -948,28 +957,23 @@
         </button>
       </div>
 
-      <!-- CARD 1-3: [임시] 검색허용(art) 기간 수집 -->
+      <!-- CARD 1-3: [임시] 검색허용(art) 게시물 검색 -->
       <div class="action-card" style="border-style:dashed; border-color:#f59e0b;">
         <div>
           <div class="action-tag-row">
             <span class="action-tag" style="background:#fef3c7; color:#b45309; border-color:#fcd34d;">임시 기능</span>
             <span class="action-tag">비공개 검색허용 글</span>
-            <span class="action-tag">시간초과 시 자동 이어하기</span>
+            <span class="action-tag">본문+댓글 고속 추출</span>
           </div>
           <div class="action-title">
-            <span>🧪</span> 검색허용(art) 기간 수집
+            <span>🧪</span> 검색허용 게시물 검색
           </div>
-          <p class="action-desc" style="margin-bottom:12px;">
-            기존 수집기에서 로그인 필요로 빠지던 <strong>검색 허용 게시판(본문+댓글)</strong>을 지정 기간으로 고속 수집합니다. GitHub 실행 제한(4시간) 도달 시 자동 저장 후 멈춘 위치부터 이어서 재실행됩니다.
+          <p class="action-desc">
+            기존 수집기에서 로그인 필요(401)로 제외되던 <strong>네이버 검색 허용 게시판의 본문+댓글</strong>을 상단 지정 기간 기준으로 네이버 검색 열람 토큰(<code>art</code>)을 이용해 수집합니다.
           </p>
-          <div style="display:flex; align-items:center; gap:6px; margin-bottom:14px; flex-wrap:wrap; padding:10px 12px; background:var(--ground); border-radius:8px; border:1px solid var(--bdr);">
-            <input type="date" id="art-start-date" value="2026-10-01" style="padding:5px 8px; border:1px solid var(--bdr-strong); border-radius:6px; font-size:12.5px; font-weight:600; font-family:inherit;">
-            <span style="font-size:12px; color:var(--txt-dim); font-weight:700;">~</span>
-            <input type="date" id="art-end-date" value="2026-11-23" style="padding:5px 8px; border:1px solid var(--bdr-strong); border-radius:6px; font-size:12.5px; font-weight:600; font-family:inherit;">
-          </div>
         </div>
-        <button class="btn-action art-temp" onclick="triggerWorkflow('art_collect.yml', '[임시] 검색허용(art) 기간 수집')">
-          <span>🧪 기간 지정 수집 시작</span>
+        <button class="btn-action art-temp" onclick="triggerWorkflow('art_collect.yml', '[임시] 검색허용 게시물 검색')">
+          <span>🧪 검색허용 게시물 수집 시작</span>
         </button>
       </div>
 
@@ -1293,9 +1297,23 @@
       }).join('');
     }
 
+    function syncDateRangeFromYm(ym) {
+      const m = /^(\d{4})-(\d{2})$/.exec((ym || '').trim());
+      if (!m) return;
+      const year = parseInt(m[1], 10);
+      const month = parseInt(m[2], 10);
+      if (month < 1 || month > 12) return;
+      const lastDay = new Date(year, month, 0).getDate();
+      const sInput = document.getElementById('official-start-date');
+      const eInput = document.getElementById('official-end-date');
+      if (sInput) sInput.value = `${m[1]}-${m[2]}-01`;
+      if (eInput) eInput.value = `${m[1]}-${m[2]}-${String(lastDay).padStart(2, '0')}`;
+    }
+
     function selectMonth(ym) {
       currentTargetMonth = ym;
       document.getElementById('target-month-input').value = ym;
+      syncDateRangeFromYm(ym);
       document.querySelectorAll('.month-pill').forEach(btn => {
         if (btn.innerText.startsWith(ym)) {
           btn.classList.add('active');
@@ -1309,6 +1327,7 @@
     function onCustomMonthInput(val) {
       const trimmed = val.trim();
       currentTargetMonth = trimmed;
+      syncDateRangeFromYm(trimmed);
       document.querySelectorAll('.month-pill').forEach(btn => {
         if (btn.innerText.startsWith(trimmed)) {
           btn.classList.add('active');
@@ -1326,15 +1345,18 @@
       }
 
       const ym = currentTargetMonth || '2026-10';
-      const confirmMsg = `${label} 작업을 시작하시겠습니까?\n\n• 대상 연월: ${ym}\n• 실행 위치: GitHub Actions`;
+      const sDate = (document.getElementById('official-start-date')?.value || '').trim();
+      const eDate = (document.getElementById('official-end-date')?.value || '').trim();
+      const isCollection = ['cafe_collect.yml', 'integrated_search.yml', 'art_collect.yml'].includes(workflowId);
+      const periodDesc = (isCollection && sDate && eDate) ? `${sDate} ~ ${eDate}` : ym;
+
+      const confirmMsg = `${label} 작업을 시작하시겠습니까?\n\n• 대상 기간: ${periodDesc}\n• 실행 위치: GitHub Actions`;
       if (!confirm(confirmMsg)) return;
 
       let inputs = {};
       if (workflowId === 'art_collect.yml') {
-        const sDate = (document.getElementById('art-start-date')?.value || '').trim();
-        const eDate = (document.getElementById('art-end-date')?.value || '').trim();
         if (!sDate || !eDate) {
-          alert('시작일과 종료일을 모두 선택해 주세요.');
+          alert('상단 수집 기간(시작일 ~ 종료일)을 선택해 주세요.');
           return;
         }
         inputs = {
@@ -1344,7 +1366,13 @@
           max_minutes: '240'
         };
       } else if (workflowId === 'cafe_collect.yml' || workflowId === 'integrated_search.yml') {
-        inputs = { target_ym: ym };
+        inputs = {
+          target_ym: ym,
+          start_date: sDate,
+          end_date: eDate,
+          resume_index: '0',
+          max_minutes: '240'
+        };
       } else if (workflowId === 'ai_analyze.yml') {
         const isOverwrite = document.getElementById('ai-overwrite-check')?.checked ? 'true' : 'false';
         inputs = {
