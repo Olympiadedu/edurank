@@ -893,24 +893,35 @@
     <div class="month-picker-card">
       <div class="month-picker-header">
         <div class="month-picker-title">
-          <span>📅</span> 대상 연월 및 기간 설정 (수집 · AI 분석 기준)
-          <span class="action-tag highlight" style="margin-left:6px;">⏱️ 시간초과(4시간) 시 자동 이어하기 적용</span>
+          <span>📅</span> 수집 · 분석 기간 설정
+          <span class="action-tag highlight" style="margin-left:6px;">⏱️ 시간초과(4시간) 시 자동 이어하기</span>
         </div>
-        <div class="month-pills" id="month-pills">
-          <!-- 최근 6개월 역순(최신순) 자바스크립트 자동 생성 -->
+        <div style="display:inline-flex; background:var(--ground); padding:3px; border-radius:9px; border:1px solid var(--bdr); gap:3px;">
+          <button type="button" id="mode-btn-month" class="month-pill active" style="padding:5px 12px; border:none; border-radius:7px;" onclick="setPeriodMode('month')">월별 선택</button>
+          <button type="button" id="mode-btn-range" class="month-pill" style="padding:5px 12px; border:none; border-radius:7px; background:transparent;" onclick="setPeriodMode('range')">기간 직접 지정</button>
         </div>
       </div>
-      <div class="month-input-wrap" style="flex-wrap:wrap; gap:14px;">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <label style="font-size:13px; font-weight:700; color:var(--txt-mid);">기준 연월:</label>
-          <input type="text" id="target-month-input" value="2026-10" placeholder="YYYY-MM" oninput="onCustomMonthInput(this.value)">
+
+      <!-- MODE 1: 월별 선택 -->
+      <div id="period-mode-month">
+        <div class="month-pills" id="month-pills" style="margin-bottom:10px;">
+          <!-- 최근 6개월 역순(최신순) 자바스크립트 자동 생성 -->
         </div>
-        <div style="display:flex; align-items:center; gap:8px; padding-left:14px; border-left:1.5px solid var(--bdr);">
-          <label style="font-size:13px; font-weight:700; color:var(--txt-mid);">수집 기간 지정:</label>
-          <input type="date" id="official-start-date" value="2026-10-01" style="width:142px; padding:7px 10px; font-size:13.5px; font-weight:700; border-radius:8px; border:1.5px solid var(--bdr); background:var(--ground); color:var(--txt); font-family:inherit;">
+        <div class="month-input-wrap" style="margin-top:6px;">
+          <label style="font-size:13px; font-weight:700; color:var(--txt-mid);">직접 입력:</label>
+          <input type="text" id="target-month-input" value="2026-10" placeholder="YYYY-MM" oninput="onCustomMonthInput(this.value)">
+          <span style="font-size:12px; color:var(--txt-dim);">※ 형식: YYYY-MM (예: 2026-10)</span>
+        </div>
+      </div>
+
+      <!-- MODE 2: 기간 직접 지정 -->
+      <div id="period-mode-range" class="hide" style="padding-top:4px;">
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <label style="font-size:13px; font-weight:700; color:var(--txt-mid);">시작일 ~ 종료일:</label>
+          <input type="date" id="official-start-date" value="2026-10-01" style="width:146px; padding:7px 10px; font-size:13.5px; font-weight:700; border-radius:8px; border:1.5px solid var(--bdr); background:var(--ground); color:var(--txt); font-family:inherit;">
           <span style="font-size:13px; color:var(--txt-dim); font-weight:700;">~</span>
-          <input type="date" id="official-end-date" value="2026-10-31" style="width:142px; padding:7px 10px; font-size:13.5px; font-weight:700; border-radius:8px; border:1.5px solid var(--bdr); background:var(--ground); color:var(--txt); font-family:inherit;">
-          <span style="font-size:12px; color:var(--txt-dim);">※ 월 선택 시 자동 연동되며, 원하는 시작~종료일로 직접 변경 가능합니다.</span>
+          <input type="date" id="official-end-date" value="2026-10-31" style="width:146px; padding:7px 10px; font-size:13.5px; font-weight:700; border-radius:8px; border:1.5px solid var(--bdr); background:var(--ground); color:var(--txt); font-family:inherit;">
+          <span style="font-size:12px; color:var(--txt-dim);">※ 원하는 기간 전체를 수집합니다. (AI 판독은 종료일 기준 월 적용)</span>
         </div>
       </div>
     </div>
@@ -1297,6 +1308,32 @@
       }).join('');
     }
 
+    let currentPeriodMode = 'month'; // 'month' | 'range'
+
+    function setPeriodMode(mode) {
+      currentPeriodMode = mode === 'range' ? 'range' : 'month';
+      const monthBox = document.getElementById('period-mode-month');
+      const rangeBox = document.getElementById('period-mode-range');
+      const btnMonth = document.getElementById('mode-btn-month');
+      const btnRange = document.getElementById('mode-btn-range');
+
+      if (currentPeriodMode === 'month') {
+        monthBox?.classList.remove('hide');
+        rangeBox?.classList.add('hide');
+        btnMonth?.classList.add('active');
+        if (btnMonth) btnMonth.style.background = '';
+        btnRange?.classList.remove('active');
+        if (btnRange) btnRange.style.background = 'transparent';
+      } else {
+        monthBox?.classList.add('hide');
+        rangeBox?.classList.remove('hide');
+        btnRange?.classList.add('active');
+        if (btnRange) btnRange.style.background = '';
+        btnMonth?.classList.remove('active');
+        if (btnMonth) btnMonth.style.background = 'transparent';
+      }
+    }
+
     function syncDateRangeFromYm(ym) {
       const m = /^(\d{4})-(\d{2})$/.exec((ym || '').trim());
       if (!m) return;
@@ -1348,28 +1385,46 @@
       const sDate = (document.getElementById('official-start-date')?.value || '').trim();
       const eDate = (document.getElementById('official-end-date')?.value || '').trim();
       const isCollection = ['cafe_collect.yml', 'integrated_search.yml', 'art_collect.yml'].includes(workflowId);
-      const periodDesc = (isCollection && sDate && eDate) ? `${sDate} ~ ${eDate}` : ym;
+      const useRange = (currentPeriodMode === 'range') || (workflowId === 'art_collect.yml');
+
+      let effectiveStart = '';
+      let effectiveEnd = '';
+      if (useRange) {
+        if (currentPeriodMode === 'range') {
+          effectiveStart = sDate;
+          effectiveEnd = eDate;
+        } else {
+          // 월별 모드에서 art_collect.yml 실행 시 해당 월의 1일~말일 자동 계산
+          syncDateRangeFromYm(ym);
+          effectiveStart = (document.getElementById('official-start-date')?.value || '').trim();
+          effectiveEnd = (document.getElementById('official-end-date')?.value || '').trim();
+        }
+      }
+
+      const periodDesc = (isCollection && currentPeriodMode === 'range' && effectiveStart && effectiveEnd)
+        ? `${effectiveStart} ~ ${effectiveEnd}`
+        : ym;
 
       const confirmMsg = `${label} 작업을 시작하시겠습니까?\n\n• 대상 기간: ${periodDesc}\n• 실행 위치: GitHub Actions`;
       if (!confirm(confirmMsg)) return;
 
       let inputs = {};
       if (workflowId === 'art_collect.yml') {
-        if (!sDate || !eDate) {
-          alert('상단 수집 기간(시작일 ~ 종료일)을 선택해 주세요.');
+        if (!effectiveStart || !effectiveEnd) {
+          alert('수집 기간(시작일 ~ 종료일)을 확인해 주세요.');
           return;
         }
         inputs = {
-          start_date: sDate,
-          end_date: eDate,
+          start_date: effectiveStart,
+          end_date: effectiveEnd,
           resume_index: '0',
           max_minutes: '240'
         };
       } else if (workflowId === 'cafe_collect.yml' || workflowId === 'integrated_search.yml') {
         inputs = {
           target_ym: ym,
-          start_date: sDate,
-          end_date: eDate,
+          start_date: currentPeriodMode === 'range' ? effectiveStart : '',
+          end_date: currentPeriodMode === 'range' ? effectiveEnd : '',
           resume_index: '0',
           max_minutes: '240'
         };
