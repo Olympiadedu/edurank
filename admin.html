@@ -921,7 +921,7 @@
           <input type="date" id="official-start-date" value="2026-10-01" style="width:146px; padding:7px 10px; font-size:13.5px; font-weight:700; border-radius:8px; border:1.5px solid var(--bdr); background:var(--ground); color:var(--txt); font-family:inherit;">
           <span style="font-size:13px; color:var(--txt-dim); font-weight:700;">~</span>
           <input type="date" id="official-end-date" value="2026-10-31" style="width:146px; padding:7px 10px; font-size:13.5px; font-weight:700; border-radius:8px; border:1.5px solid var(--bdr); background:var(--ground); color:var(--txt); font-family:inherit;">
-          <span style="font-size:12px; color:var(--txt-dim);">※ 원하는 기간 전체를 수집합니다. (AI 판독은 종료일 기준 월 적용)</span>
+          <span style="font-size:12px; color:var(--txt-dim);">※ 원하는 기간 전체를 수집 및 AI 판독합니다.</span>
         </div>
       </div>
     </div>
@@ -1384,7 +1384,7 @@
       const ym = currentTargetMonth || '2026-10';
       const sDate = (document.getElementById('official-start-date')?.value || '').trim();
       const eDate = (document.getElementById('official-end-date')?.value || '').trim();
-      const isCollection = ['cafe_collect.yml', 'integrated_search.yml', 'art_collect.yml'].includes(workflowId);
+      const isRangeSupported = ['cafe_collect.yml', 'integrated_search.yml', 'art_collect.yml', 'ai_analyze.yml'].includes(workflowId);
       const useRange = (currentPeriodMode === 'range') || (workflowId === 'art_collect.yml');
 
       let effectiveStart = '';
@@ -1401,7 +1401,7 @@
         }
       }
 
-      const periodDesc = (isCollection && currentPeriodMode === 'range' && effectiveStart && effectiveEnd)
+      const periodDesc = (isRangeSupported && currentPeriodMode === 'range' && effectiveStart && effectiveEnd)
         ? `${effectiveStart} ~ ${effectiveEnd}`
         : ym;
 
@@ -1432,6 +1432,8 @@
         const isOverwrite = document.getElementById('ai-overwrite-check')?.checked ? 'true' : 'false';
         inputs = {
           target_ym: ym,
+          start_date: currentPeriodMode === 'range' ? effectiveStart : '',
+          end_date: currentPeriodMode === 'range' ? effectiveEnd : '',
           limit: '0',
           overwrite: isOverwrite,
           prompt_cell: 'B1',
