@@ -6917,14 +6917,45 @@ function monGetMonthsForYear(yr) {
 
 function monBuildYearSelect() {
   var sel = document.getElementById('mon-year-select');
-  if (!sel) return;
   var years = monGetYears();
-  sel.innerHTML = years.map(function(yr) {
-    return '<option value="' + yr + '">' + yr + '</option>';
-  }).join('');
+  if (sel) {
+    sel.innerHTML = years.map(function(yr) {
+      return '<option value="' + yr + '">' + yr + '</option>';
+    }).join('');
+  }
+  monBuildPeriodSelect();
+}
+
+function monBuildPeriodSelect() {
+  var pSel = document.getElementById('mon-period-select');
+  if (!pSel) return;
+  var years = monGetYears();
+  var opts = [];
+  years.forEach(function(yr) {
+    var yrNum = yr.replace('년', '');
+    var months = monGetMonthsForYear(yr);
+    months.forEach(function(key) {
+      var parts = key.split('.');
+      var mNum = parseInt(parts[1], 10);
+      opts.push('<option value="' + key + '">' + yrNum + '년 ' + mNum + '월 (' + key + ')</option>');
+    });
+    opts.push('<option value="' + yr + '">' + yr + ' 전체</option>');
+  });
+  opts.push('<option value="전체">전체 기간 (누적)</option>');
+  pSel.innerHTML = opts.join('');
+  if (monDate) pSel.value = monDate;
+}
+
+function monOnPeriodSelect(val) {
+  if (!val) return;
+  monDate = val;
+  monCloseDrawer();
+  monRenderAll();
 }
 
 function monRenderMonthPills(yr, activeKey) {
+  var pSel = document.getElementById('mon-period-select');
+  if (pSel && monDate) pSel.value = monDate;
   var pills = document.getElementById('mon-month-pills');
   if (!pills) return;
   var months = monGetMonthsForYear(yr);
@@ -6985,7 +7016,7 @@ function monSetRegion(el, val) {
   document.querySelectorAll('#mon-region-group .mon-pill').forEach(function(p) { p.classList.remove('active-region'); });
   el.classList.add('active-region');
   monRegion = val;
-  monOpenId = null;
+  monCloseDrawer();
   monRenderAll();
 }
 
@@ -6993,7 +7024,7 @@ function monSetSubject(el, val) {
   document.querySelectorAll('#mon-subject-group .mon-pill').forEach(function(p) { p.classList.remove('active-subject'); });
   if (el) el.classList.add('active-subject');
   monSubject = val || '전체';
-  monOpenId = null;
+  monCloseDrawer();
   monRenderAll();
 }
 
@@ -7013,7 +7044,7 @@ function monClearSearch() {
 function monToggleUsOnly(btn) {
   monOnlyUs = !monOnlyUs;
   if (btn) btn.classList.toggle('active', monOnlyUs);
-  monOpenId = null;
+  monCloseDrawer();
   monRenderAll();
 }
 
@@ -7288,8 +7319,9 @@ function monRenderTable() {
     var id = 'ac-' + globalIdx;
 
     var tr = document.createElement('tr');
-    tr.className = 'mon-ac-row' + (ac.us ? ' is-us-row' : '');
+    tr.className = 'mon-ac-row' + (ac.us ? ' is-us-row' : '') + (prevOpenId === id ? ' open' : '');
     tr.id = id;
+    tr.setAttribute('data-rank', String(rank));
     tr.innerHTML =
       '<td class="mon-c"><div class="mon-rank' + (rank === 1 ? ' top1' : rank <= 3 ? ' top3' : '') + '">' + rank + '</div></td>' +
       '<td>' +
@@ -7309,50 +7341,85 @@ function monRenderTable() {
       '<td class="mon-c">' + (prosSum > 0 ? '<span class="mon-pros-num">' + prosSum + '</span>' : '<span class="mon-na">—</span>') + '</td>' +
       '<td class="mon-c">' + (consSum > 0 ? '<span class="mon-cons-num">' + consSum + '</span>' : '<span class="mon-na">—</span>') + '</td>' +
       '<td class="mon-c mon-hide-mobile">' + monSentimentBarHtml(prosSum, consSum) + '</td>' +
-      '<td class="mon-c"><span class="mon-chevron">▾</span></td>';
+      '<td class="mon-r" style="font-size:12px;font-weight:700;color:var(--acc);white-space:nowrap;">상세 ▸</td>';
 
     (function(rowId) {
       tr.onclick = function() { monToggleRow(rowId); };
     })(id);
     tbody.appendChild(tr);
 
-    var dt = document.createElement('tr');
-    dt.className = 'mon-detail-row';
-    dt.id = 'dt-' + id;
-    var td = document.createElement('td');
-    td.colSpan = 7;
-    td.innerHTML = monDetailHtml(ac, fp, fc, prosSum, consSum, cur, prev);
-    dt.appendChild(td);
-    tbody.appendChild(dt);
-
     if (prevOpenId === id) {
-      tr.classList.add('open');
-      dt.classList.add('open');
       monOpenId = id;
+      monOpenDrawerForAc(ac, rank);
     }
   });
 }
 
+function monOpenDrawerForAc(ac, rank) {
+  var drawer = document.getElementById('mon-drawer');
+  var backdrop = document.getElementById('mon-drawer-backdrop');
+  var hd = document.getElementById('mon-drawer-hd');
+  var body = document.getElementById('mon-drawer-body');
+  if (!drawer || !hd || !body) return;
+
+  var cur = monGetCount(ac);
+  var prev = monGetPrevCount(ac);
+  var fp = monFilterList(ac.pros);
+  var fc = monFilterList(ac.cons);
+  var prosSum = fp.reduce(function(s, p) { return s + p.count; }, 0);
+  var consSum = fc.reduce(function(s, c) { return s + c.count; }, 0);
+
+  var subjBadge = (ac.subject && ac.subject !== '기타')
+    ? ' <span class="mon-subject-badge ' + (ac.subject === '수학' ? 'math' : 'eng') + '">' + (ac.subject === '수학' ? '수학' : '영어') + '</span>'
+    : '';
+  var usBadge = ac.us ? ' <span class="mon-badge-us">자사</span>' : '';
+
+  hd.innerHTML =
+    '<div class="mon-drawer-title-wrap">' +
+      (rank ? '<span class="mon-drawer-rank">' + rank + '위</span>' : '') +
+      '<span class="mon-drawer-name">' + ac.name + '</span>' +
+      subjBadge + usBadge +
+    '</div>' +
+    '<button type="button" class="mon-drawer-close" onclick="monCloseDrawer()">✕ 닫기</button>';
+
+  body.innerHTML = monDetailHtml(ac, fp, fc, prosSum, consSum, cur, prev);
+  drawer.classList.add('open');
+  drawer.setAttribute('aria-hidden', 'false');
+  if (backdrop) backdrop.classList.add('open');
+}
+
+function monCloseDrawer() {
+  if (monOpenId) {
+    var oldTr = document.getElementById(monOpenId);
+    if (oldTr) oldTr.classList.remove('open');
+    monOpenId = null;
+  }
+  var drawer = document.getElementById('mon-drawer');
+  var backdrop = document.getElementById('mon-drawer-backdrop');
+  if (drawer) {
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+  if (backdrop) backdrop.classList.remove('open');
+}
+
 function monToggleRow(id) {
+  if (monOpenId === id) {
+    monCloseDrawer();
+    return;
+  }
   if (monOpenId && monOpenId !== id) {
     var oldTr = document.getElementById(monOpenId);
-    var oldDt = document.getElementById('dt-' + monOpenId);
     if (oldTr) oldTr.classList.remove('open');
-    if (oldDt) oldDt.classList.remove('open');
   }
   var tr = document.getElementById(id);
-  var dt = document.getElementById('dt-' + id);
-  if (!tr || !dt) return;
-  if (monOpenId === id) {
-    tr.classList.remove('open');
-    dt.classList.remove('open');
-    monOpenId = null;
-  } else {
-    tr.classList.add('open');
-    dt.classList.add('open');
-    monOpenId = id;
-    dt.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
+  var globalIdx = parseInt(String(id).replace('ac-', ''), 10);
+  var ac = MON_DATA[globalIdx];
+  if (!ac) return;
+  if (tr) tr.classList.add('open');
+  monOpenId = id;
+  var rank = tr ? parseInt(tr.getAttribute('data-rank') || '0', 10) : 0;
+  monOpenDrawerForAc(ac, rank);
 }
 
 // ─── SPARKLINE & DETAIL PANEL ────────────────────────────────────────────────
@@ -7547,6 +7614,8 @@ function monApplyUrlParams() {
       if (btnAll3) btnAll3.classList.remove('active');
       monRenderMonthPills(yrKey, pDate);
     }
+    var pSel = document.getElementById('mon-period-select');
+    if (pSel && monDate) pSel.value = monDate;
   }
 
   // 2. region (?region=광진 | 방이 | 송파 등)
@@ -7557,14 +7626,15 @@ function monApplyUrlParams() {
     var matchedRegion = false;
     regionPills.forEach(function(p) {
       var txt = (p.textContent || '').trim();
-      if (txt === pRegion) {
-        matchedRegion = true;
-      }
+      var isMatch = (pRegion === '전체' && txt.indexOf('전체') > -1) || (txt === pRegion);
+      if (isMatch) matchedRegion = true;
     });
     if (matchedRegion) {
       monRegion = pRegion;
       regionPills.forEach(function(p) {
-        p.classList.toggle('active-region', (p.textContent || '').trim() === pRegion);
+        var txt = (p.textContent || '').trim();
+        var isMatch = (pRegion === '전체' && txt.indexOf('전체') > -1) || (txt === pRegion);
+        p.classList.toggle('active-region', isMatch);
       });
     }
   }
@@ -7629,6 +7699,12 @@ function monInit() {
       monRenderMonthPills(latestYear, null);
     }
   }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && monOpenId) {
+      monCloseDrawer();
+    }
+  });
+
   var initialQuery = monApplyUrlParams();
   monRenderAll();
 

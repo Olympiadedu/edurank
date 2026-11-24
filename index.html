@@ -86,34 +86,39 @@ body{
 /* PAGE */
 .mon-page{max-width:1060px;margin:0 auto;padding:26px 20px 90px;}
 
-/* HEADER */
+/* HEADER (방식 2: 우측 통합 컨트롤 + 하단 지역 언더라인 탭) */
 .mon-header{
   background:var(--white);
   border:1px solid var(--bdr);
   border-radius:14px;
-  padding:24px 26px;
-  margin-bottom:16px;
+  padding:20px 24px 0;
+  margin-bottom:14px;
   box-shadow:var(--shadow-sm);
 }
 .mon-header-top{
   display:flex;
-  align-items:flex-start;
+  align-items:center;
   justify-content:space-between;
   gap:16px;
   flex-wrap:wrap;
-  margin-bottom:16px;
+  padding-bottom:16px;
+}
+.mon-title-row{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  flex-wrap:wrap;
 }
 .mon-title{
-  font-size:24px;
+  font-size:21px;
   font-weight:800;
   letter-spacing:-.04em;
   color:var(--black);
   line-height:1.25;
 }
 .mon-subtitle{
-  font-size:13px;
+  font-size:12.5px;
   color:var(--txt-dim);
-  margin-top:4px;
   display:flex;
   align-items:center;
   gap:6px;
@@ -122,52 +127,92 @@ body{
 .mon-sub-sep{opacity:.5;}
 .mon-sub-active{color:var(--acc);font-weight:600;}
 
-/* SEARCH & US FILTER */
+/* UNIFIED RIGHT CONTROLS */
 .mon-search-row{
   display:flex;
   align-items:center;
   gap:8px;
   flex-wrap:wrap;
 }
+.mon-period-select{
+  font-size:13px;
+  font-weight:700;
+  font-family:inherit;
+  color:var(--txt);
+  background:var(--ground);
+  border:1.5px solid var(--bdr);
+  border-radius:8px;
+  padding:7px 28px 7px 11px;
+  cursor:pointer;
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 9px center;
+  transition:border-color .15s;
+}
+.mon-period-select:focus{outline:none;border-color:var(--acc);background:var(--white);}
+
+.mon-subject-seg{
+  display:inline-flex;
+  background:var(--ground);
+  border:1.5px solid var(--bdr);
+  border-radius:8px;
+  padding:2px;
+  gap:2px;
+}
+.mon-subject-seg .mon-pill{
+  font-size:12.5px;
+  font-weight:700;
+  font-family:inherit;
+  padding:5px 11px;
+  border-radius:6px;
+  border:none;
+  background:transparent;
+  color:var(--txt-dim);
+  cursor:pointer;
+  transition:all .12s;
+  white-space:nowrap;
+}
+.mon-subject-seg .mon-pill:hover{color:var(--txt);}
+.mon-subject-seg .mon-pill.active-subject{
+  background:var(--white);
+  color:var(--acc);
+  box-shadow:0 1px 2px rgba(15,23,42,.08);
+}
+
 .mon-search-box{
   position:relative;
   display:flex;
   align-items:center;
 }
-.mon-search-icon{
-  position:absolute;
-  left:12px;
-  font-size:14px;
-  color:var(--txt-dim);
-  pointer-events:none;
-}
 .mon-search-input{
   font-family:inherit;
-  font-size:14px;
+  font-size:13px;
   color:var(--txt);
   background:var(--ground);
   border:1.5px solid var(--bdr);
-  border-radius:9px;
-  padding:8px 32px 8px 34px;
-  width:240px;
+  border-radius:8px;
+  padding:7px 28px 7px 12px;
+  width:200px;
   transition:all .15s;
 }
 .mon-search-input:focus{
   outline:none;
   background:var(--white);
   border-color:var(--acc);
-  box-shadow:0 0 0 3px rgba(0,101,128,.12);
+  box-shadow:0 0 0 3px rgba(0,101,128,.1);
 }
 .mon-search-clear{
   position:absolute;
-  right:8px;
-  width:20px;
-  height:20px;
+  right:7px;
+  width:18px;
+  height:18px;
   border:none;
   background:#cbd5e1;
   color:#fff;
   border-radius:50%;
-  font-size:12px;
+  font-size:11px;
   cursor:pointer;
   display:none;
   align-items:center;
@@ -176,13 +221,13 @@ body{
 }
 .mon-us-filter-btn{
   font-family:inherit;
-  font-size:13.5px;
+  font-size:12.5px;
   font-weight:700;
   color:var(--txt-mid);
-  background:var(--white);
+  background:var(--ground);
   border:1.5px solid var(--bdr);
-  border-radius:9px;
-  padding:8px 13px;
+  border-radius:8px;
+  padding:7px 12px;
   cursor:pointer;
   transition:all .15s;
   white-space:nowrap;
@@ -190,84 +235,125 @@ body{
 .mon-us-filter-btn:hover{border-color:var(--acc);color:var(--acc);}
 .mon-us-filter-btn.active{background:var(--acc);color:#fff;border-color:var(--acc);}
 
-/* PERIOD NAV */
-.mon-period-nav{
-  padding-top:14px;
+/* BOTTOM TAB BAR: REGION UNDERLINE TABS + SORT */
+.mon-header-tabs{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
   border-top:1px solid #f1f5f9;
-  margin-bottom:14px;
+  flex-wrap:wrap;
 }
-.mon-period-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
-.mon-year-select{
-  font-size:14.5px;
-  font-weight:700;
-  font-family:inherit;
-  color:var(--txt);
-  background:var(--white);
-  border:1.5px solid var(--bdr);
-  border-radius:8px;
-  padding:6px 30px 6px 12px;
-  cursor:pointer;
-  appearance:none;
-  -webkit-appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;
-  background-position:right 10px center;
-  transition:border-color .12s;
+.mon-region-tabs{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  overflow-x:auto;
 }
-.mon-year-select:focus{outline:none;border-color:var(--acc);}
-.mon-btn-all{
-  font-size:14px;
-  font-weight:600;
-  font-family:inherit;
-  color:var(--txt-mid);
-  background:var(--white);
-  border:1.5px solid var(--bdr);
-  border-radius:8px;
-  padding:6px 14px;
-  cursor:pointer;
-  transition:all .12s;
-  white-space:nowrap;
-}
-.mon-btn-all:hover{border-color:var(--black);color:var(--black);}
-.mon-btn-all.active{background:var(--black);color:#fff;border-color:var(--black);}
-.mon-month-pills{display:flex;flex-wrap:wrap;gap:6px;}
-.mon-month-btn{
+.mon-region-tabs .mon-pill{
   font-size:13.5px;
   font-weight:600;
   font-family:inherit;
-  color:var(--txt-mid);
-  background:var(--white);
-  border:1.5px solid var(--bdr);
-  border-radius:99px;
-  padding:5px 14px;
+  padding:11px 2px;
+  border:none;
+  border-bottom:2.5px solid transparent;
+  border-radius:0;
+  background:transparent;
+  color:var(--txt-dim);
   cursor:pointer;
   transition:all .12s;
   white-space:nowrap;
 }
-.mon-month-btn:hover{border-color:var(--acc);color:var(--acc);}
-.mon-month-btn.active{background:var(--acc);color:#fff;border-color:var(--acc);}
+.mon-region-tabs .mon-pill:hover{color:var(--txt);}
+.mon-region-tabs .mon-pill.active-region{
+  color:var(--acc);
+  font-weight:800;
+  border-bottom-color:var(--acc);
+}
 
-/* REGION & SUBJECT */
-.mon-region-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:4px;}
-.mon-subject-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:12px;margin-bottom:8px;border-top:1px dashed #e2e8f0;}
-.mon-region-label{font-size:12px;font-weight:800;color:var(--txt-dim);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;min-width:44px;}
-.mon-region-pills{display:flex;gap:6px;flex-wrap:wrap;}
-.mon-pill{
-  font-size:13.5px;
-  padding:5px 14px;
-  border-radius:99px;
-  border:1.5px solid var(--bdr);
+/* SLIDE-OVER DETAIL DRAWER */
+.mon-drawer-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(15,23,42,.28);
+  backdrop-filter:blur(1.5px);
+  z-index:250;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .2s ease;
+}
+.mon-drawer-backdrop.open{
+  opacity:1;
+  pointer-events:auto;
+}
+.mon-drawer{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  max-width:660px;
   background:var(--white);
+  border-left:1px solid var(--bdr);
+  box-shadow:-12px 0 36px rgba(15,23,42,.16);
+  z-index:260;
+  display:flex;
+  flex-direction:column;
+  transform:translateX(102%);
+  transition:transform .24s cubic-bezier(.16,1,.3,1);
+}
+.mon-drawer.open{
+  transform:translateX(0);
+}
+.mon-drawer-hd{
+  padding:16px 22px;
+  background:var(--white);
+  border-bottom:1px solid var(--bdr);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-shrink:0;
+}
+.mon-drawer-title-wrap{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.mon-drawer-rank{
+  font-size:12px;
+  font-weight:800;
+  padding:3px 8px;
+  border-radius:6px;
+  background:var(--black);
+  color:#fff;
+}
+.mon-drawer-name{
+  font-size:19px;
+  font-weight:800;
+  color:var(--black);
+  letter-spacing:-.03em;
+}
+.mon-drawer-close{
+  font-family:inherit;
+  font-size:13px;
+  font-weight:700;
   color:var(--txt-mid);
+  background:var(--ground);
+  border:1px solid var(--bdr);
+  border-radius:8px;
+  padding:6px 12px;
   cursor:pointer;
   transition:all .12s;
-  white-space:nowrap;
-  font-weight:600;
-  font-family:inherit;
 }
-.mon-pill:hover{border-color:var(--black);color:var(--black);}
-.mon-pill.active-region{background:var(--black);color:#fff;border-color:var(--black);}
-.mon-pill.active-subject{background:var(--acc);color:#fff;border-color:var(--acc);}
+.mon-drawer-close:hover{background:#e2e8f0;color:var(--black);}
+.mon-drawer-body{
+  flex:1;
+  overflow-y:auto;
+  padding:18px 22px 28px;
+  background:#f8fafc;
+}
 
 .mon-subject-badge{
   display:inline-block;
@@ -864,51 +950,44 @@ body{
 
   <div class="mon-page">
 
-    <!-- HEADER -->
+    <!-- HEADER (방식 2: 우측 통합 컨트롤 + 하단 지역 밑줄 탭) -->
     <div class="mon-header">
       <div class="mon-header-top">
-        <div>
+        <div class="mon-title-row">
           <h1 class="mon-title" id="mon-title">경쟁학원 온라인 모니터링</h1>
           <div class="mon-subtitle" id="mon-subtitle"></div>
         </div>
         <div class="mon-search-row">
+          <select class="mon-period-select" id="mon-period-select" onchange="monOnPeriodSelect(this.value)"></select>
+          <div id="mon-subject-group" class="mon-subject-seg">
+            <button type="button" class="mon-pill active-subject" onclick="monSetSubject(this,'전체')">전체</button>
+            <button type="button" class="mon-pill" onclick="monSetSubject(this,'수학')">수학</button>
+            <button type="button" class="mon-pill" onclick="monSetSubject(this,'영어')">영어</button>
+          </div>
           <div class="mon-search-box">
-            <span class="mon-search-icon">🔍</span>
-            <input type="text" id="mon-search-input" class="mon-search-input" placeholder="학원명·키워드·후기 검색..." oninput="monOnSearchInput(this.value)">
+            <input type="text" id="mon-search-input" class="mon-search-input" placeholder="학원명·키워드·후기 검색" oninput="monOnSearchInput(this.value)">
             <button type="button" id="mon-search-clear" class="mon-search-clear" onclick="monClearSearch()">×</button>
           </div>
-          <button type="button" class="mon-us-filter-btn" onclick="monToggleUsOnly(this)">⭐ 자사 학원만</button>
+          <button type="button" class="mon-us-filter-btn" onclick="monToggleUsOnly(this)">자사만</button>
         </div>
       </div>
 
-      <div class="mon-period-nav">
-        <div class="mon-period-row">
-          <select class="mon-year-select" id="mon-year-select" onchange="monOnYearChange(this.value)"></select>
-          <button class="mon-btn-all" onclick="monSetAll(this)">전체 기간</button>
-        </div>
-        <div class="mon-month-pills" id="mon-month-pills"></div>
+      <!-- 호환용 숨김 요소 -->
+      <div style="display:none;">
+        <select id="mon-year-select"></select>
+        <div id="mon-month-pills"></div>
       </div>
 
-      <div class="mon-subject-bar">
-        <span class="mon-region-label">과목</span>
-        <div id="mon-subject-group" class="mon-region-pills">
-          <div class="mon-pill active-subject" onclick="monSetSubject(this,'전체')">전체 과목</div>
-          <div class="mon-pill" onclick="monSetSubject(this,'수학')">📐 수학</div>
-          <div class="mon-pill" onclick="monSetSubject(this,'영어')">🔤 영어</div>
-        </div>
-      </div>
-
-      <div class="mon-region-bar">
-        <span class="mon-region-label">지역</span>
-        <div id="mon-region-group" class="mon-region-pills">
-          <div class="mon-pill active-region" onclick="monSetRegion(this,'전체')">전체</div>
-          <div class="mon-pill" onclick="monSetRegion(this,'광진')">광진</div>
-          <div class="mon-pill" onclick="monSetRegion(this,'성동')">성동</div>
-          <div class="mon-pill" onclick="monSetRegion(this,'동대문')">동대문</div>
-          <div class="mon-pill" onclick="monSetRegion(this,'중랑')">중랑</div>
-          <div class="mon-pill" onclick="monSetRegion(this,'중계')">중계</div>
-          <div class="mon-pill" onclick="monSetRegion(this,'미사')">미사</div>
-          <div class="mon-pill" onclick="monSetRegion(this,'방이')">방이</div>
+      <div class="mon-header-tabs">
+        <div id="mon-region-group" class="mon-region-tabs">
+          <button type="button" class="mon-pill active-region" onclick="monSetRegion(this,'전체')">전체 지역</button>
+          <button type="button" class="mon-pill" onclick="monSetRegion(this,'광진')">광진</button>
+          <button type="button" class="mon-pill" onclick="monSetRegion(this,'성동')">성동</button>
+          <button type="button" class="mon-pill" onclick="monSetRegion(this,'동대문')">동대문</button>
+          <button type="button" class="mon-pill" onclick="monSetRegion(this,'중랑')">중랑</button>
+          <button type="button" class="mon-pill" onclick="monSetRegion(this,'중계')">중계</button>
+          <button type="button" class="mon-pill" onclick="monSetRegion(this,'미사')">미사</button>
+          <button type="button" class="mon-pill" onclick="monSetRegion(this,'방이')">방이</button>
         </div>
       </div>
     </div>
@@ -940,7 +1019,7 @@ body{
             <th class="mon-c" style="min-width:60px">장점<span class="mon-th-sub">긍정 건수</span></th>
             <th class="mon-c" style="min-width:60px">단점<span class="mon-th-sub">부정 건수</span></th>
             <th class="mon-c mon-hide-mobile" style="width:130px">평판 비율<span class="mon-th-sub">긍정 vs 부정</span></th>
-            <th style="width:42px;text-align:center"></th>
+            <th style="width:68px;text-align:right">상세</th>
           </tr>
         </thead>
         <tbody id="mon-tbody"></tbody>
@@ -961,7 +1040,14 @@ body{
   </div>
 </div>
 
-<script src="js/monitor.js?v=20261120_0930"></script>
+<!-- RIGHT SLIDE-OVER DETAIL DRAWER -->
+<div class="mon-drawer-backdrop" id="mon-drawer-backdrop" onclick="monCloseDrawer()"></div>
+<aside class="mon-drawer" id="mon-drawer" aria-hidden="true">
+  <div class="mon-drawer-hd" id="mon-drawer-hd"></div>
+  <div class="mon-drawer-body" id="mon-drawer-body"></div>
+</aside>
+
+<script src="js/monitor.js?v=20261124_1615"></script>
 <script>monInit();</script>
 </body>
 </html>
