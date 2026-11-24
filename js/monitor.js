@@ -6784,7 +6784,7 @@ var MON_DATE_TO_IDX = {'2024.01':0,'2024.02':1,'2024.03':2,'2024.04':3,'2024.05'
 var MON_YEAR_RANGE = {'2024년':[0,11],'2025년':[12,23],'2026년':[24,33]};
 var MON_REGIONS = ['광진','성동','동대문','중랑','중계','미사','방이'];
 var MON_REGION_MAP = {};
-var MON_META = {total_posts:7921,updated:'2026.11.24 17:10'};
+var MON_META = {total_posts:7921,updated:'2026.11.24 17:12'};
 
 var monRegion = '전체', monDate = '전체', monOpenId = null;
 var monSearchQuery = '', monOnlyUs = false, monSortBy = 'mentions', monSubject = '전체';
@@ -7445,9 +7445,10 @@ function monSparklineHtml(ac) {
   '</div>';
 }
 
-function monEvalColHtml(items, type) {
+function monEvalColHtml(items, type, acName) {
   var isPos = type === 'pos';
   var title = isPos ? '👍 주요 장점 (긍정 평가)' : '👎 주요 단점 / 아쉬운 점';
+  var safeAc = (acName || '').replace(/'/g, "\\'");
   var html = '<div class="mon-eval-col"><div class="mon-eval-hd ' + (isPos ? 'pos' : 'neg') + '">' + title + '</div>';
   if (!items || !items.length) {
     html += '<div class="mon-eval-empty">선택한 기간/지역에 분류된 ' + (isPos ? '장점' : '단점') + ' 평가가 없습니다.</div>';
@@ -7462,6 +7463,10 @@ function monEvalColHtml(items, type) {
         if (p.region) metaBadges.push('<span class="mon-post-meta-badge reg">' + p.region + '</span>');
         if (p.date) metaBadges.push('<span class="mon-post-meta-badge dt">' + p.date + '</span>');
         var titleHint = (p.text && p.text !== p.quote) ? '<div class="mon-eval-post-title">📄 ' + p.text + '</div>' : '';
+        var safeUrl = (p.url || '').replace(/'/g, "\\'");
+        var safeTitle = (p.text || '').replace(/'/g, "\\'");
+        var safeReg = (p.region || '').replace(/'/g, "\\'");
+        var safeDt = (p.date || '').replace(/'/g, "\\'");
 
         html += '<div class="mon-eval-post' + (isPos ? ' pos' : ' neg') + '">' +
           '<div class="mon-eval-post-body">' +
@@ -7469,7 +7474,7 @@ function monEvalColHtml(items, type) {
             titleHint +
             (metaBadges.length ? '<div class="mon-eval-meta">' + metaBadges.join('') + '</div>' : '') +
           '</div>' +
-          (p.url ? '<a class="mon-eval-link" href="' + p.url + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">원문 ↗</a>' : '') +
+          (p.url ? '<button type="button" class="mon-eval-link" style="border:none;cursor:pointer;font-family:inherit;" onclick="event.stopPropagation();monOpenPostReader(\'' + safeUrl + '\',\'' + safeAc + '\',\'' + safeTitle + '\',\'' + safeReg + '\',\'' + safeDt + '\')">📄 본문·댓글</button>' : '') +
         '</div>';
       });
       html += '</div>';
@@ -7482,6 +7487,7 @@ function monRecentPostsHtml(ac, fp, fc) {
   var regionKey = (MON_REGION_MAP && MON_REGION_MAP[monRegion]) || monRegion;
   var seenUrls = {};
   var combined = [];
+  var safeAc = (ac && ac.name ? ac.name : '').replace(/'/g, "\\'");
 
   function pushPost(p, badge) {
     if (!p || !p.url) return;
@@ -7525,19 +7531,23 @@ function monRecentPostsHtml(ac, fp, fc) {
     var isPos = p.badge.indexOf('장점') === 0;
     var isNeg = p.badge.indexOf('단점') === 0;
     var badgeCls = isPos ? 'pos' : isNeg ? 'neg' : 'neu';
-    return '<a class="mon-rpost-item" href="' + p.url + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">' +
+    var safeUrl = (p.url || '').replace(/'/g, "\\'");
+    var safeTitle = (p.text || '').replace(/'/g, "\\'");
+    var safeReg = (p.region || '').replace(/'/g, "\\'");
+    var safeDt = (p.date || '').replace(/'/g, "\\'");
+    return '<div class="mon-rpost-item" style="cursor:pointer;" onclick="event.stopPropagation();monOpenPostReader(\'' + safeUrl + '\',\'' + safeAc + '\',\'' + safeTitle + '\',\'' + safeReg + '\',\'' + safeDt + '\')">' +
       '<div class="mon-rpost-left">' +
         '<span class="mon-rpost-badge ' + badgeCls + '">' + p.badge + '</span>' +
         (p.region ? '<span class="mon-post-meta-badge reg">' + p.region + '</span>' : '') +
         (p.date ? '<span class="mon-post-meta-badge dt">' + p.date + '</span>' : '') +
         '<span class="mon-rpost-title">' + (p.text || '게시글 원문 확인하기') + '</span>' +
       '</div>' +
-      '<span class="mon-rpost-link">카페 원문 ↗</span>' +
-    '</a>';
+      '<span class="mon-rpost-link">📄 본문·댓글 보기</span>' +
+    '</div>';
   }).join('');
 
   return '<div class="mon-rposts-box">' +
-    '<div class="mon-rposts-hd">💬 관련 카페 게시글 원문 모음 <span>(' + combined.length + '건 중 최근 ' + Math.min(10, combined.length) + '건)</span></div>' +
+    '<div class="mon-rposts-hd">💬 관련 카페 게시글 원문 모음 <span>(' + combined.length + '건 중 최근 ' + Math.min(10, combined.length) + '건 · 클릭 시 수집된 본문·댓글 열람)</span></div>' +
     '<div class="mon-rposts-list">' + rowsHtml + '</div>' +
   '</div>';
 }
@@ -7563,10 +7573,167 @@ function monDetailHtml(ac, fp, fc, prosSum, consSum, cur, prev) {
       '</div>' +
       monSparklineHtml(ac) +
     '</div>' +
-    '<div class="mon-eval-grid">' + monEvalColHtml(fp, 'pos') + monEvalColHtml(fc, 'neg') + '</div>' +
+    '<div class="mon-eval-grid">' + monEvalColHtml(fp, 'pos', ac.name) + monEvalColHtml(fc, 'neg', ac.name) + '</div>' +
     monRecentPostsHtml(ac, fp, fc) +
-    '<div class="mon-detail-notice">* 네이버 지역 맘카페 게시글·댓글을 AI로 자동 분류한 결과이며, 질문·단순 언급 글은 하단 원문 모음에서 확인하실 수 있습니다.</div>' +
+    '<div class="mon-detail-notice">* [📄 본문·댓글]을 클릭하면 카페 로그인 없이 수집된 원문 전체(본문+댓글)를 바로 열람할 수 있습니다.</div>' +
   '</div>';
+}
+
+// ─── COLLECTED POST FULL READER (ON-DEMAND posts_data.json) ──────────────────
+
+var monPostsCache = null;
+var monPostsLoading = false;
+
+function monEscapeHtml(s) {
+  return String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function monHighlightAcademies(rawText, focusAcName) {
+  var safe = monEscapeHtml(rawText);
+  if (!safe) return '';
+
+  // 학원명 길이 역순 정렬
+  var names = (MON_DATA || []).map(function(a) { return a.name; }).filter(Boolean);
+  names.sort(function(a, b) { return b.length - a.length; });
+
+  names.forEach(function(nm) {
+    if (nm.length < 2) return;
+    var escNm = nm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    var cls = (focusAcName && nm === focusAcName) ? 'mon-hl-focus' : 'mon-hl-other';
+    safe = safe.replace(new RegExp(escNm, 'g'), '<mark class="' + cls + '">' + nm + '</mark>');
+  });
+  return safe;
+}
+
+function monFormatCommentsHtml(rawComments, focusAcName) {
+  var text = String(rawComments || '').trim();
+  if (!text) {
+    return '<div style="color:var(--txt-dim);font-size:13px;padding:10px 0;">수집된 댓글이 없습니다.</div>';
+  }
+
+  // --- 구분자 또는 줄바꿈 단위로 댓글 분리 (계층 [댓글 N] / └ [답글 N-M] 및 기존 일반 댓글 모두 호환)
+  var blocks = text.indexOf('\n---\n') > -1 ? text.split('\n---\n') : text.split('\n');
+  var cards = [];
+  var autoIdx = 0;
+
+  blocks.forEach(function(line) {
+    var trimmed = line.trim();
+    if (!trimmed || trimmed === '---') return;
+
+    var isReply = trimmed.indexOf('└') === 0 || trimmed.indexOf('[답글') > -1;
+    var mTag = /^(\s*└?\s*\[(?:댓글|답글)[^\]]*\][^:]{0,30}:)\s*([\s\S]*)$/.exec(trimmed);
+    if (mTag) {
+      var authorPart = monEscapeHtml(mTag[1].trim());
+      var bodyPart = monHighlightAcademies(mTag[2].trim(), focusAcName);
+      cards.push(
+        '<div class="mon-comm-card' + (isReply ? ' reply' : '') + '">' +
+          '<span class="mon-comm-author">' + authorPart + '</span>' +
+          '<span>' + bodyPart + '</span>' +
+        '</div>'
+      );
+    } else {
+      autoIdx++;
+      cards.push(
+        '<div class="mon-comm-card">' +
+          '<span class="mon-comm-author">[댓글 ' + autoIdx + ']</span>' +
+          '<span>' + monHighlightAcademies(trimmed, focusAcName) + '</span>' +
+        '</div>'
+      );
+    }
+  });
+
+  if (!cards.length) {
+    return '<div style="color:var(--txt-dim);font-size:13px;padding:10px 0;">수집된 댓글이 없습니다.</div>';
+  }
+  return '<div class="mon-pmodal-comments">' + cards.join('') + '</div>';
+}
+
+function monRenderPostModal(url, postObj, focusAcName, fallbackTitle, fallbackRegion, fallbackDate) {
+  var hd = document.getElementById('mon-pmodal-hd');
+  var body = document.getElementById('mon-pmodal-body');
+  var backdrop = document.getElementById('mon-post-modal-backdrop');
+  if (!hd || !body || !backdrop) return;
+
+  var title = (postObj && postObj.title) || fallbackTitle || '네이버 카페 게시글';
+  var cafe = (postObj && postObj.cafe) || '네이버 맘카페';
+  var region = (postObj && postObj.region) || fallbackRegion || '';
+  var date = (postObj && postObj.date) || fallbackDate || '';
+  var content = (postObj && postObj.body) || '';
+  var comments = (postObj && postObj.comments) || '';
+
+  var naverSearchUrl = 'https://search.naver.com/search.naver?where=article&query=' + encodeURIComponent(title);
+
+  hd.innerHTML =
+    '<div>' +
+      '<div class="mon-pmodal-meta">' +
+        '<span class="mon-pmodal-cafe">' + monEscapeHtml(cafe) + '</span>' +
+        (region ? '<span>· ' + monEscapeHtml(region) + '</span>' : '') +
+        (date ? '<span>· ' + monEscapeHtml(date) + ' 작성</span>' : '') +
+        (focusAcName ? '<span>· <mark class="mon-hl-focus">' + monEscapeHtml(focusAcName) + '</mark> 하이라이트</span>' : '') +
+      '</div>' +
+      '<div class="mon-pmodal-title">' + monHighlightAcademies(title, focusAcName) + '</div>' +
+    '</div>' +
+    '<div class="mon-pmodal-actions">' +
+      '<a class="mon-pmodal-btn" href="' + naverSearchUrl + '" target="_blank" rel="noopener" title="네이버 검색 결과를 거쳐 카페 원문 열기">🔍 네이버 검색으로 열기 ↗</a>' +
+      (url ? '<a class="mon-pmodal-btn" href="' + url + '" target="_blank" rel="noopener">카페 직통 링크 ↗</a>' : '') +
+      '<button type="button" class="mon-pmodal-btn close" onclick="monClosePostReader()">✕ 닫기</button>' +
+    '</div>';
+
+  var commCount = comments ? (comments.indexOf('\n---\n') > -1 ? comments.split('\n---\n').length : comments.split('\n').filter(Boolean).length) : 0;
+
+  body.innerHTML =
+    '<div class="mon-pmodal-box">' +
+      '<div class="mon-pmodal-sec-hd"><span>📄 수집된 게시글 본문</span></div>' +
+      '<div class="mon-pmodal-content">' + (content ? monHighlightAcademies(content, focusAcName) : '<span style="color:var(--txt-dim);">본문 텍스트가 없습니다.</span>') + '</div>' +
+    '</div>' +
+    '<div class="mon-pmodal-box">' +
+      '<div class="mon-pmodal-sec-hd"><span>💬 수집된 댓글 · 대댓글 전체</span><span>' + commCount + '개 라인</span></div>' +
+      monFormatCommentsHtml(comments, focusAcName) +
+    '</div>';
+
+  backdrop.classList.add('open');
+}
+
+function monOpenPostReader(url, focusAcName, fallbackTitle, fallbackRegion, fallbackDate) {
+  var backdrop = document.getElementById('mon-post-modal-backdrop');
+  var hd = document.getElementById('mon-pmodal-hd');
+  var body = document.getElementById('mon-pmodal-body');
+  if (!backdrop || !hd || !body) return;
+
+  if (monPostsCache) {
+    monRenderPostModal(url, monPostsCache[url], focusAcName, fallbackTitle, fallbackRegion, fallbackDate);
+    return;
+  }
+
+  hd.innerHTML = '<div class="mon-pmodal-title">원문 데이터를 불러오는 중...</div>' +
+    '<button type="button" class="mon-pmodal-btn close" onclick="monClosePostReader()">✕ 닫기</button>';
+  body.innerHTML = '<div style="padding:24px;color:var(--txt-dim);">수집된 본문·댓글 데이터를 로드하고 있습니다...</div>';
+  backdrop.classList.add('open');
+
+  if (monPostsLoading) return;
+  monPostsLoading = true;
+
+  fetch('posts_data.json?v=' + (typeof MON_META !== 'undefined' && MON_META.updated ? encodeURIComponent(MON_META.updated) : Date.now()))
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      monPostsCache = data || {};
+      monPostsLoading = false;
+      monRenderPostModal(url, monPostsCache[url], focusAcName, fallbackTitle, fallbackRegion, fallbackDate);
+    })
+    .catch(function() {
+      monPostsLoading = false;
+      monPostsCache = {};
+      monRenderPostModal(url, null, focusAcName, fallbackTitle, fallbackRegion, fallbackDate);
+    });
+}
+
+function monClosePostReader() {
+  var backdrop = document.getElementById('mon-post-modal-backdrop');
+  if (backdrop) backdrop.classList.remove('open');
 }
 
 // ─── URL QUERY PARAMS ─────────────────────────────────────────────────────────
@@ -7686,8 +7853,13 @@ function monInit() {
     }
   }
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && monOpenId) {
-      monCloseDrawer();
+    if (e.key === 'Escape') {
+      var pBackdrop = document.getElementById('mon-post-modal-backdrop');
+      if (pBackdrop && pBackdrop.classList.contains('open')) {
+        monClosePostReader();
+      } else if (monOpenId) {
+        monCloseDrawer();
+      }
     }
   });
 
