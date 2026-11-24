@@ -6819,6 +6819,13 @@ function monCleanText(s) {
 function monSanitizeData() {
   if (typeof MON_DATA === 'undefined' || !Array.isArray(MON_DATA)) return;
 
+  for (var i = MON_DATA.length - 1; i >= 0; i--) {
+    var nm = (MON_DATA[i] && MON_DATA[i].name) ? String(MON_DATA[i].name).trim() : '';
+    if (!nm || MON_GENERIC_WORDS[nm]) {
+      MON_DATA.splice(i, 1);
+    }
+  }
+
   MON_DATA.forEach(function(ac) {
     var prosMap = {};
     var consMap = {};
@@ -7592,21 +7599,71 @@ function monEscapeHtml(s) {
     .replace(/"/g, '&quot;');
 }
 
+var MON_GENERIC_WORDS = {
+  '수학':1,'영어':1,'국어':1,'과학':1,'논술':1,'독서':1,'코딩':1,
+  '학원':1,'어학원':1,'수학학원':1,'영어학원':1,'국어학원':1,'과학학원':1,
+  '보습학원':1,'종합학원':1,'단과학원':1,'입시학원':1,'내신학원':1,
+  '사고력':1,'사고력수학':1,'연산':1,'교과수학':1,'심화수학':1,
+  '영재원':1,'영재교육원':1,'유치원':1,'영어유치원':1,'영유':1,'일유':1,
+  '공부방':1,'교습소':1,'과외':1,'학습지':1,'인강':1,'홈스쿨':1,'영도':1
+};
+
+function monGetBrandRoots(name) {
+  var nm = String(name || '').trim();
+  if (!nm || MON_GENERIC_WORDS[nm]) return [];
+  var list = [nm];
+  var stripped = nm.replace(/(?:영어수학전문학원|수학전문학원|영어전문학원|전문학원|어학원|수학학원|영어학원|아카데미|교육원|영재교육|학원|수학|영어)$/g, '').trim();
+  if (stripped && stripped.length >= 2 && !MON_GENERIC_WORDS[stripped] && stripped !== nm) {
+    list.push(stripped);
+  }
+  return list;
+}
+
 function monHighlightAcademies(rawText, focusAcName) {
   var safe = monEscapeHtml(rawText);
   if (!safe) return '';
 
-  // 학원명 길이 역순 정렬
-  var names = (MON_DATA || []).map(function(a) { return a.name; }).filter(Boolean);
-  names.sort(function(a, b) { return b.length - a.length; });
+  var tokenToClass = {};
+  var allTokens = [];
 
-  names.forEach(function(nm) {
-    if (nm.length < 2) return;
-    var escNm = nm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    var cls = (focusAcName && nm === focusAcName) ? 'mon-hl-focus' : 'mon-hl-other';
-    safe = safe.replace(new RegExp(escNm, 'g'), '<mark class="' + cls + '">' + nm + '</mark>');
+  function addToken(tok, cls) {
+    if (!tok || tok.length < 2 || MON_GENERIC_WORDS[tok]) return;
+    if (!tokenToClass[tok]) {
+      tokenToClass[tok] = cls;
+      allTokens.push(tok);
+    } else if (cls === 'mon-hl-focus') {
+      tokenToClass[tok] = 'mon-hl-focus';
+    }
+  }
+
+  // 1. 현재 선택된 학원(focusAcName) 및 그 어근(예: 올림피아드학원 -> 올림피아드)을 최우선 노란색 등록
+  if (focusAcName) {
+    monGetBrandRoots(focusAcName).forEach(function(t) {
+      addToken(t, 'mon-hl-focus');
+    });
+  }
+
+  // 2. 나머지 학원 및 어근을 하늘색 등록
+  (MON_DATA || []).forEach(function(a) {
+    if (!a || !a.name) return;
+    var isFocus = focusAcName && a.name === focusAcName;
+    monGetBrandRoots(a.name).forEach(function(t) {
+      addToken(t, isFocus ? 'mon-hl-focus' : 'mon-hl-other');
+    });
   });
-  return safe;
+
+  if (!allTokens.length) return safe;
+
+  // 긴 단어부터 매칭되도록 정렬 후 단 1회(Single-pass) 치환
+  allTokens.sort(function(a, b) { return b.length - a.length; });
+  var pattern = allTokens.map(function(t) {
+    return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }).join('|');
+
+  return safe.replace(new RegExp(pattern, 'g'), function(matched) {
+    var cls = tokenToClass[matched] || 'mon-hl-other';
+    return '<mark class="' + cls + '">' + matched + '</mark>';
+  });
 }
 
 function monFormatCommentsHtml(rawComments, focusAcName) {
@@ -7665,8 +7722,6 @@ function monRenderPostModal(url, postObj, focusAcName, fallbackTitle, fallbackRe
   var content = (postObj && postObj.body) || '';
   var comments = (postObj && postObj.comments) || '';
 
-  var naverSearchUrl = 'https://search.naver.com/search.naver?where=article&query=' + encodeURIComponent(title);
-
   hd.innerHTML =
     '<div>' +
       '<div class="mon-pmodal-meta">' +
@@ -7678,8 +7733,7 @@ function monRenderPostModal(url, postObj, focusAcName, fallbackTitle, fallbackRe
       '<div class="mon-pmodal-title">' + monHighlightAcademies(title, focusAcName) + '</div>' +
     '</div>' +
     '<div class="mon-pmodal-actions">' +
-      '<a class="mon-pmodal-btn" href="' + naverSearchUrl + '" target="_blank" rel="noopener" title="네이버 검색 결과를 거쳐 카페 원문 열기">🔍 네이버 검색으로 열기 ↗</a>' +
-      (url ? '<a class="mon-pmodal-btn" href="' + url + '" target="_blank" rel="noopener">카페 직통 링크 ↗</a>' : '') +
+      (url ? '<a class="mon-pmodal-btn" href="' + url + '" target="_blank" rel="noopener">원문보기 ↗</a>' : '') +
       '<button type="button" class="mon-pmodal-btn close" onclick="monClosePostReader()">✕ 닫기</button>' +
     '</div>';
 
