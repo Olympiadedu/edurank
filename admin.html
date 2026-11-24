@@ -874,18 +874,34 @@
   <main class="container hide" id="dashboard-section">
 
     <!-- RUNNER REPO SELECTOR BAR -->
-    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; padding:12px 18px; background:var(--white); border-radius:14px; border:1.5px solid var(--bdr); box-shadow:var(--shadow-sm); flex-wrap:wrap; gap:10px;">
-      <div style="display:flex; align-items:center; gap:10px;">
-        <span style="font-size:14px; font-weight:800; color:var(--txt);">⚙️ 실행 러너 계정:</span>
-        <select id="runner-owner-select" onchange="onRunnerOwnerChange(this.value)" style="padding:7px 14px; font-size:13.5px; font-weight:800; border-radius:9px; border:1.5px solid var(--bdr); background:var(--ground); color:var(--pri); cursor:pointer;">
-          <option value="sykim4468">👤 개인 계정: sykim4468 (추천 · 무료 2,000분 사용)</option>
-          <option value="Olympiadedu">🏢 조직 계정: Olympiadedu (기본)</option>
-        </select>
+    <div style="margin-bottom:14px; padding:12px 18px; background:var(--white); border-radius:14px; border:1.5px solid var(--bdr); box-shadow:var(--shadow-sm);">
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <span style="font-size:14px; font-weight:800; color:var(--txt);">⚙️ 실행 러너 계정:</span>
+          <select id="runner-owner-select" onchange="onRunnerOwnerChange(this.value)" style="padding:7px 14px; font-size:13.5px; font-weight:800; border-radius:9px; border:1.5px solid var(--bdr); background:var(--ground); color:var(--pri); cursor:pointer;">
+            <option value="sykim4468">👤 개인 계정: sykim4468 (추천 · 2,000분 풀 무료)</option>
+            <option value="Olympiadedu">🏢 조직 계정: Olympiadedu (기본)</option>
+          </select>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span id="runner-quota-badge" style="font-size:12px; padding:4px 12px; border-radius:15px; background:#eff6ff; color:#2563eb; font-weight:700;">
+            현재 러너: <strong id="current-runner-label">sykim4468/naver-cafe-keyword-monitor</strong>
+          </span>
+          <a id="runner-billing-link" href="https://github.com/settings/billing" target="_blank" style="font-size:12px; color:var(--txt-mid); text-decoration:underline;">GitHub 빌링 확인 ↗</a>
+        </div>
       </div>
-      <div style="display:flex; align-items:center; gap:8px;">
-        <span id="runner-quota-badge" style="font-size:12px; padding:4px 12px; border-radius:15px; background:#eff6ff; color:#2563eb; font-weight:700;">
-          현재 러너: <strong id="current-runner-label">sykim4468/naver-cafe-keyword-monitor</strong>
-        </span>
+      <!-- RUNNER USAGE STATS ROW -->
+      <div id="runner-usage-box" style="margin-top:10px; padding:8px 14px; border-radius:9px; background:var(--ground); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:12.5px;">
+        <div>
+          <span style="font-weight:700; color:var(--txt-mid);">⏱️ 이번 달 무료 가용시간: </span>
+          <span id="runner-usage-text" style="color:var(--txt);">조회 중...</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="width:130px; height:8px; background:#e2e8f0; border-radius:4px; overflow:hidden;">
+            <div id="runner-usage-bar" style="width:0%; height:100%; background:var(--pri); transition:width 0.4s ease;"></div>
+          </div>
+          <span id="runner-usage-pct" style="font-weight:800; font-size:12px; color:var(--txt-mid);">0%</span>
+        </div>
       </div>
     </div>
 
@@ -1146,8 +1162,86 @@
       localStorage.setItem('edurank_admin_owner', newOwner);
       const lbl = document.getElementById('current-runner-label');
       if (lbl) lbl.innerText = `${newOwner}/${CONFIG.REPO}`;
+      const billingLink = document.getElementById('runner-billing-link');
+      if (billingLink) {
+        billingLink.href = (newOwner === 'Olympiadedu')
+          ? 'https://github.com/organizations/Olympiadedu/settings/billing'
+          : 'https://github.com/settings/billing';
+      }
       showToast(`실행 러너가 [${newOwner}] 계정으로 변경되었습니다.`);
       fetchRecentRuns(true);
+      updateRunnerUsageUI();
+    }
+
+    async function updateRunnerUsageUI() {
+      if (!authToken) return;
+      const usageText = document.getElementById('runner-usage-text');
+      const usageBar = document.getElementById('runner-usage-bar');
+      const usagePct = document.getElementById('runner-usage-pct');
+      const billingLink = document.getElementById('runner-billing-link');
+
+      if (billingLink) {
+        billingLink.href = (CONFIG.OWNER === 'Olympiadedu')
+          ? 'https://github.com/organizations/Olympiadedu/settings/billing'
+          : 'https://github.com/settings/billing';
+      }
+
+      if (usageText) usageText.innerText = '계산 중...';
+
+      const now = new Date();
+      const yyyy = now.getFullYear();
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      const monthStart = `${yyyy}-${mm}-01`;
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${CONFIG.OWNER}/${CONFIG.REPO}/actions/runs?created=>=${monthStart}&per_page=100`, {
+          headers: {
+            'Authorization': `Bearer ${authToken}`,
+            'Accept': 'application/vnd.github+json'
+          }
+        });
+        if (!res.ok) {
+          if (usageText) usageText.innerText = '조회 실패 (권한 확인)';
+          return;
+        }
+        const data = await res.json();
+        const runs = data.workflow_runs || [];
+
+        let totalSec = 0;
+        runs.forEach(r => {
+          if (r.status === 'completed') {
+            const st = r.run_started_at || r.created_at;
+            const et = r.updated_at;
+            if (st && et) {
+              const t1 = new Date(st).getTime();
+              const t2 = new Date(et).getTime();
+              if (t2 > t1) {
+                totalSec += Math.floor((t2 - t1) / 1000);
+              }
+            }
+          }
+        });
+
+        const usedMin = Math.round(totalSec / 60);
+        const quotaTotal = 2000;
+        const remMin = Math.max(0, quotaTotal - usedMin);
+        const pct = Math.min(100, Math.round((usedMin / quotaTotal) * 100));
+
+        if (usageText) {
+          usageText.innerHTML = `누적 사용 <strong>약 ${usedMin.toLocaleString()}분</strong> / 2,000분 (남은 시간: <span style="color:${remMin < 400 ? 'var(--neg)' : 'var(--acc)'}; font-weight:800;">약 ${remMin.toLocaleString()}분</span>)`;
+        }
+        if (usageBar) {
+          usageBar.style.width = `${pct}%`;
+          usageBar.style.background = pct >= 80 ? 'var(--neg)' : (pct >= 50 ? '#f59e0b' : 'var(--acc)');
+        }
+        if (usagePct) {
+          usagePct.innerText = `${pct}%`;
+          usagePct.style.color = pct >= 80 ? 'var(--neg)' : 'var(--txt-mid)';
+        }
+      } catch (err) {
+        console.error('Usage query error:', err);
+        if (usageText) usageText.innerText = '조회 불가';
+      }
     }
 
     let authToken = '';
@@ -1297,6 +1391,7 @@
 
         // Start polling
         fetchRecentRuns();
+        updateRunnerUsageUI();
         
         if (pollTimer) clearInterval(pollTimer);
         pollTimer = setInterval(fetchRecentRuns, CONFIG.POLL_INTERVAL_MS);
@@ -1568,7 +1663,8 @@
         
 
         if (manual) {
-          showToast('최신 실행 내역이 갱신되었습니다.', 2000);
+          updateRunnerUsageUI();
+          showToast('최신 실행 내역 및 사용 시간이 갱신되었습니다.', 2000);
         }
       } catch (err) {
         console.error('Fetch runs error:', err);
