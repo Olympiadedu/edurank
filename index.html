@@ -134,24 +134,85 @@ body{
   gap:8px;
   flex-wrap:wrap;
 }
-.mon-period-select{
-  font-size:13px;
+/* PERIOD BAR (방식 B: 연도 드롭다운 + 심플 1줄 월 탭 바) */
+.mon-period-bar{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:5px 10px;
+  margin-bottom:12px;
+  background:var(--ground);
+  border:1px solid var(--bdr);
+  border-radius:10px;
+  flex-wrap:wrap;
+}
+.mon-btn-all{
+  font-size:12.5px;
   font-weight:700;
   font-family:inherit;
+  color:var(--txt-dim);
+  background:transparent;
+  border:none;
+  border-radius:6px;
+  padding:5px 10px;
+  cursor:pointer;
+  transition:all .12s;
+  white-space:nowrap;
+}
+.mon-btn-all:hover{color:var(--txt);}
+.mon-btn-all.active{
+  background:var(--black);
+  color:#fff;
+  box-shadow:0 1px 2px rgba(15,23,42,.12);
+}
+.mon-period-sep{
+  color:var(--bdr-strong);
+  font-size:12px;
+  user-select:none;
+}
+.mon-year-select{
+  font-size:12.5px;
+  font-weight:800;
+  font-family:inherit;
   color:var(--txt);
-  background:var(--ground);
-  border:1.5px solid var(--bdr);
-  border-radius:8px;
-  padding:7px 28px 7px 11px;
+  background:var(--white);
+  border:1px solid var(--bdr);
+  border-radius:7px;
+  padding:4px 24px 4px 10px;
   cursor:pointer;
   appearance:none;
   -webkit-appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
   background-repeat:no-repeat;
-  background-position:right 9px center;
-  transition:border-color .15s;
+  background-position:right 8px center;
 }
-.mon-period-select:focus{outline:none;border-color:var(--acc);background:var(--white);}
+.mon-year-select:focus{outline:none;border-color:var(--acc);}
+.mon-month-pills{
+  display:flex;
+  align-items:center;
+  gap:2px;
+  flex-wrap:wrap;
+}
+.mon-month-btn{
+  font-size:12.5px;
+  font-weight:600;
+  font-family:inherit;
+  color:var(--txt-dim);
+  background:transparent;
+  border:none;
+  border-radius:6px;
+  padding:5px 9px;
+  cursor:pointer;
+  transition:all .12s;
+  white-space:nowrap;
+}
+.mon-month-btn:hover{color:var(--txt);background:rgba(15,23,42,.04);}
+.mon-month-btn.active{
+  background:var(--acc);
+  color:#fff;
+  font-weight:800;
+  box-shadow:0 1px 2px rgba(0,101,128,.2);
+}
 
 .mon-subject-seg{
   display:inline-flex;
@@ -958,7 +1019,6 @@ body{
           <div class="mon-subtitle" id="mon-subtitle"></div>
         </div>
         <div class="mon-search-row">
-          <select class="mon-period-select" id="mon-period-select" onchange="monOnPeriodSelect(this.value)"></select>
           <div id="mon-subject-group" class="mon-subject-seg">
             <button type="button" class="mon-pill active-subject" onclick="monSetSubject(this,'전체')">전체</button>
             <button type="button" class="mon-pill" onclick="monSetSubject(this,'수학')">수학</button>
@@ -972,10 +1032,12 @@ body{
         </div>
       </div>
 
-      <!-- 호환용 숨김 요소 -->
-      <div style="display:none;">
-        <select id="mon-year-select"></select>
-        <div id="mon-month-pills"></div>
+      <!-- 방식 B: 연도 선택 + 심플 1줄 월 탭 바 -->
+      <div class="mon-period-bar">
+        <button type="button" class="mon-btn-all" onclick="monSetAll(this)">전체 누적</button>
+        <span class="mon-period-sep">|</span>
+        <select class="mon-year-select" id="mon-year-select" onchange="monOnYearChange(this.value)"></select>
+        <div class="mon-month-pills" id="mon-month-pills"></div>
       </div>
 
       <div class="mon-header-tabs">
@@ -1047,7 +1109,7 @@ body{
   <div class="mon-drawer-body" id="mon-drawer-body"></div>
 </aside>
 
-<script src="js/monitor.js?v=20261124_1615"></script>
+<script src="js/monitor.js?v=20261124_1658"></script>
 <script>monInit();</script>
 </body>
 </html>

@@ -6973,7 +6973,7 @@ function monSetYearTotal(yr) {
   var btnAll = document.querySelector('.mon-btn-all');
   if (btnAll) btnAll.classList.remove('active');
   monRenderMonthPills(yr, null);
-  monOpenId = null;
+  monCloseDrawer();
   monRenderAll();
 }
 
@@ -6988,7 +6988,7 @@ function monOnYearChange(yr) {
     monDate = yr;
     monRenderMonthPills(yr, null);
   }
-  monOpenId = null;
+  monCloseDrawer();
   monRenderAll();
 }
 
@@ -6998,7 +6998,7 @@ function monSetMonth(btn, key) {
   var btnAll = document.querySelector('.mon-btn-all');
   if (btnAll) btnAll.classList.remove('active');
   btn.classList.add('active');
-  monOpenId = null;
+  monCloseDrawer();
   monRenderAll();
 }
 
@@ -7006,7 +7006,7 @@ function monSetAll(btn) {
   monDate = '전체';
   document.querySelectorAll('.mon-month-btn').forEach(function(b) { b.classList.remove('active'); });
   btn.classList.add('active');
-  monOpenId = null;
+  monCloseDrawer();
   monRenderAll();
 }
 
