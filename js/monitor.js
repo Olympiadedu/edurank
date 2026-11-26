@@ -7883,75 +7883,6 @@ function monEvalColHtml(items, type, acName) {
   return html + '</div>';
 }
 
-function monRecentPostsHtml(ac, fp, fc) {
-  var regionKey = (MON_REGION_MAP && MON_REGION_MAP[monRegion]) || monRegion;
-  var seenUrls = {};
-  var combined = [];
-  var safeAc = (ac && ac.name ? ac.name : '').replace(/'/g, "\\'");
-
-  function pushPost(p, badge) {
-    if (!p || !p.url) return;
-    if (seenUrls[p.url]) return;
-    if (monRegion !== '전체' && p.region && p.region !== regionKey) return;
-    if (monDate !== '전체' && p.date) {
-      if (monDate.indexOf('년') > -1) {
-        var yr = monDate.replace('년', '');
-        if (p.date.indexOf(yr + '.') !== 0) return;
-      } else if (p.date !== monDate) {
-        return;
-      }
-    }
-    seenUrls[p.url] = true;
-    combined.push({
-      text: p.text || p.quote || '네이버 카페 게시글 원문 보기',
-      url: p.url,
-      region: p.region || '',
-      date: p.date || '',
-      badge: badge || '단순 언급'
-    });
-  }
-
-  fp.forEach(function(it) {
-    (it.posts || []).forEach(function(p) { pushPost(p, '장점 · ' + it.label); });
-  });
-  fc.forEach(function(it) {
-    (it.posts || []).forEach(function(p) { pushPost(p, '단점 · ' + it.label); });
-  });
-  (ac.allPosts || []).forEach(function(p) {
-    pushPost(p, '단순 언급');
-  });
-
-  if (!combined.length) return '';
-
-  combined.sort(function(a, b) {
-    return (b.date || '').localeCompare(a.date || '');
-  });
-
-  var rowsHtml = combined.slice(0, 10).map(function(p) {
-    var isPos = p.badge.indexOf('장점') === 0;
-    var isNeg = p.badge.indexOf('단점') === 0;
-    var badgeCls = isPos ? 'pos' : isNeg ? 'neg' : 'neu';
-    var safeUrl = (p.url || '').replace(/'/g, "\\'");
-    var safeTitle = (p.text || '').replace(/'/g, "\\'");
-    var safeReg = (p.region || '').replace(/'/g, "\\'");
-    var safeDt = (p.date || '').replace(/'/g, "\\'");
-    return '<div class="mon-rpost-item" style="cursor:pointer;" onclick="event.stopPropagation();monOpenPostReader(\'' + safeUrl + '\',\'' + safeAc + '\',\'' + safeTitle + '\',\'' + safeReg + '\',\'' + safeDt + '\')">' +
-      '<div class="mon-rpost-left">' +
-        '<span class="mon-rpost-badge ' + badgeCls + '">' + p.badge + '</span>' +
-        (p.region ? '<span class="mon-post-meta-badge reg">' + p.region + '</span>' : '') +
-        (p.date ? '<span class="mon-post-meta-badge dt">' + p.date + '</span>' : '') +
-        '<span class="mon-rpost-title">' + (p.text || '게시글 원문 확인하기') + '</span>' +
-      '</div>' +
-      '<span class="mon-rpost-link">📄 본문·댓글 보기</span>' +
-    '</div>';
-  }).join('');
-
-  return '<div class="mon-rposts-box">' +
-    '<div class="mon-rposts-hd">💬 관련 카페 게시글 원문 모음 <span>(' + combined.length + '건 중 최근 ' + Math.min(10, combined.length) + '건 · 클릭 시 수집된 본문·댓글 열람)</span></div>' +
-    '<div class="mon-rposts-list">' + rowsHtml + '</div>' +
-  '</div>';
-}
-
 function monDetailHtml(ac, fp, fc, prosSum, consSum, cur, prev) {
   var totalEval = prosSum + consSum;
   var posPct = totalEval > 0 ? Math.round((prosSum / totalEval) * 100) + '%' : '—';
@@ -7974,7 +7905,6 @@ function monDetailHtml(ac, fp, fc, prosSum, consSum, cur, prev) {
       monSparklineHtml(ac) +
     '</div>' +
     '<div class="mon-eval-grid">' + monEvalColHtml(fp, 'pos', ac.name) + monEvalColHtml(fc, 'neg', ac.name) + '</div>' +
-    monRecentPostsHtml(ac, fp, fc) +
     '<div class="mon-detail-notice">* [📄 본문·댓글]을 클릭하면 카페 로그인 없이 수집된 원문 전체(본문+댓글)를 바로 열람할 수 있습니다.</div>' +
   '</div>';
 }
