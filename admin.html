@@ -973,23 +973,23 @@
 
     <!-- ACTION CARDS GRID -->
     <div class="grid-cards">
-      <!-- CARD 1: 맘카페 수집 -->
+      <!-- CARD 1: 맘카페 수집 (검색허용 art 통합) -->
       <div class="action-card">
         <div>
           <div class="action-tag-row">
             <span class="action-tag highlight">기간 지정 수집</span>
+            <span class="action-tag" style="background:#fef3c7; color:#b45309; border-color:#fcd34d;">검색허용(art) 자동 통합</span>
             <span class="action-tag">시간초과 시 자동 이어하기</span>
-            <span class="action-tag">실시간 10건 저장</span>
           </div>
           <div class="action-title">
             <span>🏠</span> 맘카페 키워드 수집
           </div>
           <p class="action-desc">
-            상단에 설정된 수집 기간(`시작일 ~ 종료일`) 동안 지정 맘카페의 게시글과 대댓글을 계층 구조로 구글 시트 <code>📋 검색결과</code>에 저장합니다. 실행 제한(4시간) 도달 시 자동 저장 후 멈춘 위치부터 이어서 재실행됩니다.
+            상단에 설정된 수집 기간(`시작일 ~ 종료일`) 동안 지정 맘카페의 게시글과 대댓글을 한 번에 수집합니다. 공개 글(Playwright)과 비공개 카페 내 <strong>검색허용(art) 게시물</strong>까지 동시에 추출해 <code>📋 검색결과</code> 시트에 저장합니다.
           </p>
         </div>
-        <button class="btn-action collect" onclick="triggerWorkflow('cafe_collect.yml', '맘카페 키워드 수집')">
-          <span>🚀 맘카페 수집 시작</span>
+        <button class="btn-action collect" onclick="triggerWorkflow('cafe_collect.yml', '맘카페 키워드 수집 (검색허용 포함)')">
+          <span>🚀 맘카페 통합 수집 시작</span>
         </button>
       </div>
 
@@ -1010,26 +1010,6 @@
         </div>
         <button class="btn-action integrated" onclick="triggerWorkflow('integrated_search.yml', '네이버 카페 통합검색 수집')">
           <span>🔍 통합검색만 수집 시작</span>
-        </button>
-      </div>
-
-      <!-- CARD 1-3: [임시] 검색허용(art) 게시물 검색 -->
-      <div class="action-card" style="border-style:dashed; border-color:#f59e0b;">
-        <div>
-          <div class="action-tag-row">
-            <span class="action-tag" style="background:#fef3c7; color:#b45309; border-color:#fcd34d;">임시 기능</span>
-            <span class="action-tag">비공개 검색허용 글</span>
-            <span class="action-tag">본문+댓글 고속 추출</span>
-          </div>
-          <div class="action-title">
-            <span>🧪</span> 검색허용 게시물 검색
-          </div>
-          <p class="action-desc">
-            기존 수집기에서 로그인 필요(401)로 제외되던 <strong>네이버 검색 허용 게시판의 본문+댓글</strong>을 상단 지정 기간 기준으로 네이버 검색 열람 토큰(<code>art</code>)을 이용해 수집합니다.
-          </p>
-        </div>
-        <button class="btn-action art-temp" onclick="triggerWorkflow('art_collect.yml', '[임시] 검색허용 게시물 검색')">
-          <span>🧪 검색허용 게시물 수집 시작</span>
         </button>
       </div>
 
@@ -1524,21 +1504,14 @@
       const ym = currentTargetMonth || '2026-10';
       const sDate = (document.getElementById('official-start-date')?.value || '').trim();
       const eDate = (document.getElementById('official-end-date')?.value || '').trim();
-      const isRangeSupported = ['cafe_collect.yml', 'integrated_search.yml', 'art_collect.yml', 'ai_analyze.yml'].includes(workflowId);
-      const useRange = (currentPeriodMode === 'range') || (workflowId === 'art_collect.yml');
+      const isRangeSupported = ['cafe_collect.yml', 'integrated_search.yml', 'ai_analyze.yml'].includes(workflowId);
+      const useRange = (currentPeriodMode === 'range');
 
       let effectiveStart = '';
       let effectiveEnd = '';
       if (useRange) {
-        if (currentPeriodMode === 'range') {
-          effectiveStart = sDate;
-          effectiveEnd = eDate;
-        } else {
-          // 월별 모드에서 art_collect.yml 실행 시 해당 월의 1일~말일 자동 계산
-          syncDateRangeFromYm(ym);
-          effectiveStart = (document.getElementById('official-start-date')?.value || '').trim();
-          effectiveEnd = (document.getElementById('official-end-date')?.value || '').trim();
-        }
+        effectiveStart = sDate;
+        effectiveEnd = eDate;
       }
 
       const periodDesc = (isRangeSupported && currentPeriodMode === 'range' && effectiveStart && effectiveEnd)
@@ -1553,18 +1526,7 @@
       if (!confirm(confirmMsg)) return;
 
       let inputs = {};
-      if (workflowId === 'art_collect.yml') {
-        if (!effectiveStart || !effectiveEnd) {
-          alert('수집 기간(시작일 ~ 종료일)을 확인해 주세요.');
-          return;
-        }
-        inputs = {
-          start_date: effectiveStart,
-          end_date: effectiveEnd,
-          resume_index: String(resumeNum),
-          max_minutes: '240'
-        };
-      } else if (workflowId === 'cafe_collect.yml' || workflowId === 'integrated_search.yml') {
+      if (workflowId === 'cafe_collect.yml' || workflowId === 'integrated_search.yml') {
         inputs = {
           target_ym: ym,
           start_date: currentPeriodMode === 'range' ? effectiveStart : '',
