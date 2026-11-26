@@ -8167,7 +8167,6 @@ function monRenderPostModal(url, postObj, focusAcName, fallbackTitle, fallbackRe
       '<div class="mon-pmodal-title">' + monHighlightAcademies(title, focusAcName) + '</div>' +
     '</div>' +
     '<div class="mon-pmodal-actions">' +
-      (url ? '<a class="mon-pmodal-btn" href="' + url + '" target="_blank" rel="noopener">원문보기 ↗</a>' : '') +
       '<button type="button" class="mon-pmodal-btn close" onclick="monClosePostReader()">✕ 닫기</button>' +
     '</div>';
 
